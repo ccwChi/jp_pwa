@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3411/ -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:3000/ -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(pkill -f \"next dev -p 3411\")",
+      "Bash(mkdir -p \"c:\\\\Users\\\\user\\\\Desktop\\\\Jeff\\\\09. JeffDoForSelf\\\\08. langu_practice\\\\jp_pwa\\\\src\\\\lib\" \"c:\\\\Users\\\\user\\\\Desktop\\\\Jeff\\\\09. JeffDoForSelf\\\\08. langu_practice\\\\jp_pwa\\\\src\\\\app\\\\notes\\\\new\" \"c:\\\\Users\\\\user\\\\Desktop\\\\Jeff\\\\09. JeffDoForSelf\\\\08. langu_practice\\\\jp_pwa\\\\src\\\\app\\\\notes\\\\[id]\" \"c:\\\\Users\\\\user\\\\Desktop\\\\Jeff\\\\09. JeffDoForSelf\\\\08. langu_practice\\\\jp_pwa\\\\src\\\\app\\\\vocab\\\\[id]\")",
+      "Bash(curl -s http://localhost:3000/notes -o /tmp/notes.html -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:3000/notes/new -o /tmp/new.html -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:3000/vocab -o /tmp/vocab.html -w \"%{http_code}\\\\n\")",
+      "Bash(mkdir -p \"c:\\\\Users\\\\user\\\\Desktop\\\\Jeff\\\\09. JeffDoForSelf\\\\08. langu_practice\\\\jp_pwa\\\\src\\\\app\\\\notes\\\\[id]\\\\edit\")",
+      "Bash(mkdir -p \"c:\\\\Users\\\\user\\\\Desktop\\\\Jeff\\\\09. JeffDoForSelf\\\\08. langu_practice\\\\jp_pwa\\\\src\\\\app\\\\reading\\\\[id]\")",
+      "Bash(curl -s http://localhost:3000/reading/eki-announcement)",
+      "Bash(grep -o '<ruby>.\\\\{0,40\\\\}')",
+      "Bash(curl -s http://localhost:3000/reading)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\user\\Desktop\\Jeff\\09. JeffDoForSelf\\08. langu_practice\\jp_pwa\\src\\app\\notes",
+      "c:\\Users\\user\\Desktop\\Jeff\\09. JeffDoForSelf\\08. langu_practice\\jp_pwa\\src\\app\\notes\\[id]",
+      "c:\\Users\\user\\Desktop\\Jeff\\09. JeffDoForSelf\\08. langu_practice\\jp_pwa\\src\\app\\reading"
+    ]
+  }
+}

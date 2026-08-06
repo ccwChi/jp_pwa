@@ -1,26 +1,465 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* ── 日式留白 (Washi / Ma) ── */
+  --bg:      #e9e5d8;
+  --ink:     #242220;
+  --sub:     #5c584e;
+  --line:    rgba(36, 34, 32, 0.16);
+  --seal:    #a83c2b;
+  --ai:      #2f4a5c;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --transition: 0.2s ease;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg:   #1c1a16;
+    --ink:  #ece7da;
+    --sub:  #a19b8a;
+    --line: rgba(236, 231, 218, 0.14);
+    --seal: #d97354;
+    --ai:   #7fa2b8;
   }
 }
 
+:root[data-theme="dark"] {
+  --bg:   #1c1a16;
+  --ink:  #ece7da;
+  --sub:  #a19b8a;
+  --line: rgba(236, 231, 218, 0.14);
+  --seal: #d97354;
+  --ai:   #7fa2b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 4rem;
+}
+
+.mark {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  color: var(--sub);
+  margin-bottom: 2.6rem;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr auto;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--line);
+  transition: padding-left var(--transition), color var(--transition);
+  cursor: pointer;
+}
+
+.row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.row:hover {
+  padding-left: 0.5rem;
+}
+
+.row.soon {
+  cursor: not-allowed;
+  color: var(--sub);
+}
+
+.row.soon:hover {
+  padding-left: 0;
+}
+
+.num {
+  font-size: 1.1rem;
+  color: var(--seal);
+}
+
+.row.soon .num {
+  color: var(--sub);
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.desc {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: var(--sub);
+  grid-column: 2;
+  margin-top: 0.35rem;
+  max-width: 44ch;
+  line-height: 1.8;
+}
+
+.tag {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.72rem;
+  color: var(--sub);
+  border: 1px solid var(--line);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 2.2rem 1fr;
+  }
+
+  .tag {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 0.6rem;
+  }
+}
+
+a.row {
+  text-decoration: none;
+  color: inherit;
+}
+
+.row.note-row {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+/* ── page chrome shared by note pages ── */
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.back-link {
+  font-size: 0.82rem;
+  color: var(--sub);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--ink);
+}
+
+.page-title {
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.95rem;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.btn:hover {
+  border-color: var(--ink);
+}
+
+.icon-btn {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: var(--sub);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+}
+
+.icon-btn:hover {
+  color: var(--seal);
+}
+
+.head-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.empty-hint {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--sub);
+  padding: 2rem 0;
+}
+
+/* ── note form ── */
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 640px;
+}
+
+.paste-box {
+  font-family: inherit;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 1rem;
+  resize: vertical;
+}
+
+.paste-box:focus {
+  outline: none;
+  border-color: var(--ai);
+}
+
+.btn-submit {
+  align-self: flex-start;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  color: var(--bg);
+  background: var(--ink);
+  border-color: var(--ink);
+  padding: 0.7rem 1.4rem;
+  font-size: 0.88rem;
+}
+
+/* ── note detail ── */
+
+.source-text {
+  font-size: 1.15rem;
+  line-height: 2.1;
+  white-space: pre-wrap;
+}
+
+/* ── shared filter chips (article levels, note tags) ── */
+
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: var(--sub);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip.active {
+  color: var(--bg);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+/* ── article detail ── */
+
+.article-tabs {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.75rem 0;
+  border-bottom: 1px solid var(--line);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.article-tab {
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--sub);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.7rem 0;
+  cursor: pointer;
+}
+
+.article-tab.active {
+  color: var(--ink);
+  border-bottom-color: var(--seal);
+}
+
+.romaji-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: var(--sub);
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.sentence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sentence-jp {
+  font-size: 1.4rem;
+  line-height: 2.6;
+}
+
+ruby rt {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.55em;
+  color: var(--sub);
+}
+
+.sentence-romaji {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--ai);
+  margin-top: 0.4rem;
+}
+
+.sentence-zh {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--sub);
+  margin-top: 0.4rem;
+}
+
+.vocab-list,
+.grammar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.vocab-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.vocab-item-word {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.vocab-item-reading {
+  font-size: 0.8rem;
+  color: var(--sub);
+}
+
+.vocab-item-meaning {
+  font-size: 0.85rem;
+  color: var(--sub);
+  margin-left: auto;
+}
+
+.grammar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-left: 2px solid var(--ai);
+  padding-left: 0.9rem;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.grammar-point {
+  font-weight: 600;
+  color: var(--ai);
+}
+
+.grammar-explanation {
+  font-size: 0.88rem;
+  color: var(--sub);
+  line-height: 1.8;
+}
+
+.quiz-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.75rem;
+}
+
+.quiz-question {
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.quiz-option {
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.65rem 0.9rem;
+  cursor: pointer;
+}
+
+.quiz-option:hover:not(:disabled) {
+  border-color: var(--ai);
+}
+
+.quiz-option:disabled {
+  cursor: default;
+}
+
+.quiz-option.correct {
+  border-color: #4a7a5f;
+  color: #4a7a5f;
+}
+
+.quiz-option.wrong {
+  border-color: var(--seal);
+  color: var(--seal);
 }
