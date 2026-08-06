@@ -1,18 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { getArticle, getAdjacentParts } from '@/lib/articles';
+import { setProgress, setRead, useReadSet, useFontScale, setFontScale } from '@/lib/storage';
 import Sentence from '../Sentence';
 
 const TABS = ['文章', '閱讀測驗', '重點單字', '文法'];
+const FONT_SCALE_MIN = 0.8;
+const FONT_SCALE_MAX = 1.6;
+const FONT_SCALE_STEP = 0.1;
+
+function clampFontScale(value) {
+  return Math.min(FONT_SCALE_MAX, Math.max(FONT_SCALE_MIN, Math.round(value * 10) / 10));
+}
 
 export default function ArticleDetailPage() {
   const { id } = useParams();
   const article = getArticle(id);
   const [tab, setTab] = useState('文章');
   const [showRomaji, setShowRomaji] = useState(false);
+  const readSet = useReadSet();
+  const fontScale = useFontScale();
+
+  useEffect(() => {
+    if (article?.seriesId) setProgress(article.seriesId, article.id);
+  }, [article?.seriesId, article?.id]);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--font-scale', fontScale);
+  }, [fontScale]);
 
   if (!article) {
     return (
@@ -25,10 +43,21 @@ export default function ArticleDetailPage() {
     );
   }
 
+  const readKey = article.seriesId || article.id;
+  const read = readSet.has(readKey);
+
   return (
     <main className="container">
       <div className="page-head">
         <Link href="/reading" className="back-link">← 文章列表</Link>
+        <label className="read-toggle">
+          <input
+            type="checkbox"
+            checked={read}
+            onChange={e => setRead(readKey, e.target.checked)}
+          />
+          標記已學習
+        </label>
       </div>
 
       {article.seriesId && <div className="series-title">{article.seriesTitle}</div>}
@@ -49,14 +78,35 @@ export default function ArticleDetailPage() {
 
       {tab === '文章' && (
         <section>
-          <label className="romaji-toggle">
-            <input
-              type="checkbox"
-              checked={showRomaji}
-              onChange={e => setShowRomaji(e.target.checked)}
-            />
-            羅馬拼音
-          </label>
+          <div className="reading-controls">
+            <label className="romaji-toggle">
+              <input
+                type="checkbox"
+                checked={showRomaji}
+                onChange={e => setShowRomaji(e.target.checked)}
+              />
+              羅馬拼音
+            </label>
+
+            <div className="font-scale-control">
+              <button
+                type="button"
+                className="font-scale-btn"
+                onClick={() => setFontScale(clampFontScale(fontScale - FONT_SCALE_STEP))}
+                aria-label="縮小字級"
+              >
+                A−
+              </button>
+              <button
+                type="button"
+                className="font-scale-btn"
+                onClick={() => setFontScale(clampFontScale(fontScale + FONT_SCALE_STEP))}
+                aria-label="放大字級"
+              >
+                A+
+              </button>
+            </div>
+          </div>
 
           <div className="sentence-list">
             {article.sentences.map((s, i) => (

@@ -1,7 +1,9 @@
 'use client';
 
+import { useRef } from 'react';
 import Link from 'next/link';
 import { useNotes } from '@/lib/storage';
+import { downloadBackup, restoreBackupFromFile } from '@/lib/backup';
 
 function preview(content) {
   const firstLine = content.split('\n')[0];
@@ -10,12 +12,40 @@ function preview(content) {
 
 export default function NotesPage() {
   const notes = useNotes();
+  const fileInputRef = useRef(null);
+
+  async function handleImportFile(e) {
+    const file = e.target.files[0];
+    e.target.value = '';
+    if (!file) return;
+
+    if (!confirm('匯入將覆蓋目前裝置上同名的資料（筆記、進度、已讀、字級設定），確定要繼續嗎？')) return;
+
+    try {
+      await restoreBackupFromFile(file);
+      alert('匯入完成，頁面即將重新整理。');
+      window.location.reload();
+    } catch {
+      alert('匯入失敗，請確認選擇的是本站匯出的備份檔。');
+    }
+  }
 
   return (
     <main className="container">
       <div className="page-head">
         <Link href="/" className="back-link">← 首頁</Link>
-        <Link href="/notes/new" className="btn">+ 新增筆記</Link>
+        <div className="head-actions">
+          <button type="button" className="icon-btn" onClick={downloadBackup}>匯出資料</button>
+          <button type="button" className="icon-btn" onClick={() => fileInputRef.current?.click()}>匯入資料</button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="application/json"
+            hidden
+            onChange={handleImportFile}
+          />
+          <Link href="/notes/new" className="btn">+ 新增筆記</Link>
+        </div>
       </div>
 
       <h1 className="page-title">個人筆記</h1>

@@ -2,10 +2,12 @@
 
 import { useState } from 'react';
 import { parseFurigana, readingOf, toRomaji } from '@/lib/furigana';
+import { saveNote } from '@/lib/storage';
 
 export default function Sentence({ jp, zh, showRomaji }) {
   const parts = parseFurigana(jp);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
 
   function handlePlay() {
     if (typeof window === 'undefined' || !window.speechSynthesis) return;
@@ -19,6 +21,12 @@ export default function Sentence({ jp, zh, showRomaji }) {
     window.speechSynthesis.speak(utterance);
   }
 
+  function handleSaveNote() {
+    saveNote({ content: `${jp}\n${zh}` });
+    setIsSaved(true);
+    setTimeout(() => setIsSaved(false), 1500);
+  }
+
   return (
     <div className="sentence">
       <div className="sentence-jp-row">
@@ -29,6 +37,14 @@ export default function Sentence({ jp, zh, showRomaji }) {
           aria-label="播放這句發音"
         >
           {isPlaying ? '❚❚' : '▶'}
+        </button>
+        <button
+          type="button"
+          className={`save-note-btn${isSaved ? ' saved' : ''}`}
+          onClick={handleSaveNote}
+          aria-label="存入筆記"
+        >
+          {isSaved ? '已存入' : '＋筆記'}
         </button>
         <p className="sentence-jp">
           {parts.map((p, i) =>
