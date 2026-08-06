@@ -293,7 +293,41 @@ a.row {
   border-color: var(--ink);
 }
 
+.row-meta {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.76rem;
+  color: var(--sub);
+  margin-top: 0.5rem;
+}
+
 /* ── article detail ── */
+
+.series-title {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--sub);
+  margin-bottom: 0.5rem;
+}
+
+.part-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.part-nav-link {
+  font-size: 0.88rem;
+  color: var(--ai);
+  text-decoration: none;
+}
+
+.part-nav-link:hover {
+  color: var(--seal);
+}
 
 .article-tabs {
   display: flex;
@@ -336,9 +370,41 @@ a.row {
   gap: 2rem;
 }
 
+.sentence-jp-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
 .sentence-jp {
   font-size: 1.4rem;
   line-height: 2.6;
+}
+
+.play-btn {
+  flex-shrink: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-top: 0.55rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ai);
+  font-size: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.play-btn:hover {
+  border-color: var(--ai);
+}
+
+.play-btn.playing {
+  border-color: var(--seal);
+  color: var(--seal);
 }
 
 ruby rt {

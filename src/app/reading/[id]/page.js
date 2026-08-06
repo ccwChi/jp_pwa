@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { getArticle } from '@/lib/articles';
+import { getArticle, getAdjacentParts } from '@/lib/articles';
 import Sentence from '../Sentence';
 
 const TABS = ['文章', '閱讀測驗', '重點單字', '文法'];
@@ -31,7 +31,8 @@ export default function ArticleDetailPage() {
         <Link href="/reading" className="back-link">← 文章列表</Link>
       </div>
 
-      <h1 className="page-title">{article.title}</h1>
+      {article.seriesId && <div className="series-title">{article.seriesTitle}</div>}
+      <h1 className="page-title">{article.partTitle ? `第${article.partTitle}章` : article.title}</h1>
       <span className="tag">{article.level}</span>
 
       <div className="article-tabs">
@@ -89,7 +90,29 @@ export default function ArticleDetailPage() {
           ))}
         </div>
       )}
+
+      {article.seriesId && <PartNav article={article} />}
     </main>
+  );
+}
+
+function PartNav({ article }) {
+  const { prev, next } = getAdjacentParts(article);
+  if (!prev && !next) return null;
+
+  return (
+    <div className="part-nav">
+      {prev ? (
+        <Link href={`/reading/${prev.id}`} className="part-nav-link">← 第{prev.partTitle}章</Link>
+      ) : (
+        <span />
+      )}
+      {next ? (
+        <Link href={`/reading/${next.id}`} className="part-nav-link">第{next.partTitle}章 →</Link>
+      ) : (
+        <span />
+      )}
+    </div>
   );
 }
 

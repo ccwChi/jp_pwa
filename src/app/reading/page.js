@@ -2,16 +2,16 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getArticles, getLevels } from '@/lib/articles';
+import { getSeriesList, getLevels } from '@/lib/articles';
 
 export default function ReadingPage() {
-  const articles = getArticles();
+  const series = getSeriesList();
   const levels = getLevels();
   const [activeLevel, setActiveLevel] = useState('全部');
 
   const visible = activeLevel === '全部'
-    ? articles
-    : articles.filter(a => a.level === activeLevel);
+    ? series
+    : series.filter(s => s.level === activeLevel);
 
   return (
     <main className="container">
@@ -34,13 +34,14 @@ export default function ReadingPage() {
       </div>
 
       <div className="rows">
-        {visible.map(article => (
-          <Link href={`/reading/${article.id}`} key={article.id} className="row note-row">
+        {visible.map(s => (
+          <Link href={`/reading/${s.firstId}`} key={s.seriesId} className="row note-row">
             <div>
-              <div className="name">{article.title}</div>
-              <div className="desc">{article.excerpt}</div>
+              <div className="name">{s.title}</div>
+              <div className="desc">{s.excerpt}</div>
+              {s.partsCount > 1 && <div className="row-meta">共 {s.partsCount} 章</div>}
             </div>
-            <span className="tag">{article.level}</span>
+            <span className="tag">{s.level}</span>
           </Link>
         ))}
       </div>

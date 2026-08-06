@@ -14,7 +14,8 @@
       "Bash(mkdir -p \"c:\\\\Users\\\\user\\\\Desktop\\\\Jeff\\\\09. JeffDoForSelf\\\\08. langu_practice\\\\jp_pwa\\\\src\\\\app\\\\reading\\\\[id]\")",
       "Bash(curl -s http://localhost:3000/reading/eki-announcement)",
       "Bash(grep -o '<ruby>.\\\\{0,40\\\\}')",
-      "Bash(curl -s http://localhost:3000/reading)"
+      "Bash(curl -s http://localhost:3000/reading)",
+      "Bash(curl -s http://localhost:3000/reading/gon-gitsune-1)"
     ],
     "additionalDirectories": [
       "c:\\Users\\user\\Desktop\\Jeff\\09. JeffDoForSelf\\08. langu_practice\\jp_pwa\\src\\app\\notes",
