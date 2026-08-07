@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated dictionary data (regenerate with scripts/build-dictionary.mjs)
+/public/dict/*.json

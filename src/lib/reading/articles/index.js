@@ -1,16 +1,12 @@
-// Each file in this folder default-exports an array of article objects —
-// one file can hold a single standalone article, or every chapter of a
-// long work (see gon-gitsune.js). Add a new file, then register it below;
-// nothing else in the app needs to change.
-import ekiAnnouncement from './eki-announcement';
-import jikoshoukai from './jikoshoukai';
-import gonGitsune from './gon-gitsune';
+// Each file in ./data default-exports an array of article objects — one
+// file can hold a single standalone article, or every chapter of a long
+// work (see data/ごん狐.js). Just drop a new file into ./data; it's picked
+// up automatically.
+const modules = import.meta.glob('./data/*.js', { eager: true, import: 'default' });
 
-export const articles = [
-  ...ekiAnnouncement,
-  ...jikoshoukai,
-  ...gonGitsune,
-];
+export const articles = Object.keys(modules)
+  .sort()
+  .flatMap(path => modules[path]);
 
 export function getArticles() {
   return articles;

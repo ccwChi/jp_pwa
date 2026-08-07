@@ -15,7 +15,22 @@
       "Bash(curl -s http://localhost:3000/reading/eki-announcement)",
       "Bash(grep -o '<ruby>.\\\\{0,40\\\\}')",
       "Bash(curl -s http://localhost:3000/reading)",
-      "Bash(curl -s http://localhost:3000/reading/gon-gitsune-1)"
+      "Bash(curl -s http://localhost:3000/reading/gon-gitsune-1)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(curl -s http://localhost:3000/reading/gon-gitsune-1 -o /dev/null -w \"%{http_code}\\\\n\")",
+      "WebFetch(domain:share.gemini.google)",
+      "WebFetch(domain:gemini.google.com)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/reading)",
+      "Bash(npx next *)",
+      "Bash(node -e \"require\\('@babel/core'\\)\")",
+      "Bash(npx --no-install next build)",
+      "Bash(node -e ' *)",
+      "Bash(node --experimental-vm-modules -e ' *)",
+      "Bash(curl -s -o /tmp/page.html -w \"%{http_code}\\\\n\" \"http://localhost:3100/reading/%E3%81%94%E3%82%93%E7%8B%90-1\")",
+      "Bash(curl -s -o /tmp/page.html -w \"%{http_code}\\\\n\" \"http://localhost:3000/reading/%E3%81%94%E3%82%93%E7%8B%90-1\")",
+      "Bash(curl -s \"http://localhost:3000/reading\" -o /tmp/list.html)",
+      "Bash(curl -s -o /tmp/gon.html -w \"%{http_code}\\\\n\" \"http://localhost:3000/reading/gon-gitsune-1\")",
+      "Bash(curl -s -o /tmp/page2.html -w \"%{http_code}\\\\n\" --url-query \"\" \"http://localhost:3000/reading/ごん狐-1\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\user\\Desktop\\Jeff\\09. JeffDoForSelf\\08. langu_practice\\jp_pwa\\src\\app\\notes",

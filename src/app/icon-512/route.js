@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { IconMark } from '@/lib/icon-mark';
+import { IconMark } from '@/app/IconMark';
 
 const size = { width: 512, height: 512 };
 

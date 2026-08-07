@@ -141,9 +141,11 @@ export function setRead(seriesId, value) {
   readStore.set(next);
 }
 
+const emptyReadSet = new Set();
+
 export function useReadSet() {
   const getSnapshot = useMemo(() => cached(() => new Set(readStore.get())), []);
-  return useSyncExternalStore(subscribe, getSnapshot, () => new Set());
+  return useSyncExternalStore(subscribe, getSnapshot, () => emptyReadSet);
 }
 
 // ── Font scale: user-chosen reading font size multiplier ─────────────────
@@ -159,3 +161,90 @@ export function setFontScale(value) {
 }
 
 export const useFontScale = fontScaleStore.useValue;
+
+// ── Speech rate: playback speed multiplier for both single-sentence and
+// whole-article TTS ────────────────────────────────────────────────────
+
+const speechRateStore = createStore('nj_speech_rate', 1);
+
+export function getSpeechRate() {
+  return speechRateStore.get();
+}
+
+export function setSpeechRate(value) {
+  speechRateStore.set(value);
+}
+
+export const useSpeechRate = speechRateStore.useValue;
+
+// ── Listen mode: hands-free, eyes-free playback prefs ─────────────────────
+
+const listenZhStore = createStore('nj_listen_zh', false);
+
+export function getListenZh() {
+  return listenZhStore.get();
+}
+
+export function setListenZh(value) {
+  listenZhStore.set(value);
+}
+
+export const useListenZh = listenZhStore.useValue;
+
+const listenBlackoutStore = createStore('nj_listen_blackout', true);
+
+export function getListenBlackout() {
+  return listenBlackoutStore.get();
+}
+
+export function setListenBlackout(value) {
+  listenBlackoutStore.set(value);
+}
+
+export const useListenBlackout = listenBlackoutStore.useValue;
+
+const listenGapStore = createStore('nj_listen_gap', 1200);
+
+export function getListenGap() {
+  return listenGapStore.get();
+}
+
+export function setListenGap(value) {
+  listenGapStore.set(value);
+}
+
+export const useListenGap = listenGapStore.useValue;
+
+// ── Chinese translation blur: hide zh text behind a click-to-reveal blur ──
+
+const zhBlurStore = createStore('nj_zh_blur', false);
+
+export function getZhBlur() {
+  return zhBlurStore.get();
+}
+
+export function setZhBlur(value) {
+  zhBlurStore.set(value);
+}
+
+export const useZhBlur = zhBlurStore.useValue;
+
+// ── Import draft: autosaved in-progress state for the long-article import
+// tool (src/app/reading/import). Single slot, no subscribers — the import
+// tool reads it once on mount, so this skips the createStore/useSyncExternalStore
+// machinery and just reuses the read/write primitives directly. ─────────────
+
+const IMPORT_DRAFT_KEY = 'nj_import_draft';
+
+export function loadImportDraft() {
+  return readRaw(IMPORT_DRAFT_KEY, null);
+}
+
+export function saveImportDraft(draft) {
+  writeRaw(IMPORT_DRAFT_KEY, draft);
+}
+
+export function clearImportDraft() {
+  window.localStorage.removeItem(IMPORT_DRAFT_KEY);
+  notify();
+}

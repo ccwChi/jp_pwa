@@ -10,7 +10,8 @@ export function IconMark({ size }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: '#a83c2b',
+        background: '#0d4d31',
+        borderRadius: '50%',
       }}
     >
       <div
@@ -21,9 +22,9 @@ export function IconMark({ size }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#ece7da',
-          color: '#a83c2b',
-          fontSize: size * 0.4,
+          color: '#ece7da',
+          fontSize: size * 0.5,
+          fontWidth: 'bolder',
           fontFamily: 'sans-serif',
           fontWeight: 700,
         }}

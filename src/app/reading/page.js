@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getSeriesList, getLevels, getArticle } from '@/lib/articles';
+import { getSeriesList, getLevels, getArticle } from '@/lib/reading/articles';
 import { useProgressMap } from '@/lib/storage';
 
 export default function ReadingPage() {
@@ -19,6 +19,7 @@ export default function ReadingPage() {
     <main className="container">
       <div className="page-head">
         <Link href="/" className="back-link">← 首頁</Link>
+        <Link href="/reading/import" className="btn">+ 匯入長篇文章</Link>
       </div>
 
       <h1 className="page-title">文章閱讀</h1>
