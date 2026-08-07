@@ -1251,6 +1251,146 @@ ruby rt {
   color: var(--seal);
 }
 
+/* ── grammar learning: category sections on the list page ── */
+
+.grammar-category {
+  margin-top: 2.4rem;
+}
+
+.grammar-category-heading {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: var(--sub);
+  margin-bottom: 0.4rem;
+}
+
+.grammar-row-pattern {
+  font-size: 1.1rem;
+}
+
+.grammar-row-pattern.read {
+  color: var(--sub);
+}
+
+.grammar-row-check {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--ai);
+}
+
+/* ── grammar learning: lesson detail page ── */
+
+.grammar-hero {
+  margin-top: 1.5rem;
+}
+
+.grammar-hero-pattern {
+  font-size: 2rem;
+}
+
+.grammar-hero-meaning {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  color: var(--sub);
+  margin-top: 0.5rem;
+}
+
+.grammar-structure-box {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  background: color-mix(in srgb, var(--ai) 8%, transparent);
+  border-left: 2px solid var(--ai);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.grammar-structure-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--sub);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.grammar-explanation-body {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.grammar-note {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--seal);
+  border-left: 2px solid var(--seal);
+  padding-left: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+.grammar-section-label {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: var(--sub);
+  margin-top: 2.2rem;
+  margin-bottom: 0.9rem;
+}
+
+.grammar-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.grammar-example {
+  padding: 0.7rem 0.9rem;
+  background: color-mix(in srgb, var(--ai) 6%, transparent);
+  border-radius: 6px;
+}
+
+.grammar-example-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.grammar-example-jp {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.grammar-example-jp rt {
+  font-size: 0.6em;
+  color: var(--sub);
+}
+
+.grammar-example-zh {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--zh);
+  margin-top: 0.3rem;
+}
+
+.grammar-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+
+.grammar-nav-link {
+  color: var(--ai);
+  text-decoration: none;
+}
+
+.grammar-nav-link:hover {
+  text-decoration: underline;
+}
+
 /* ── generic form field (import tool, reused wherever a labeled field is needed) ── */
 
 .field {

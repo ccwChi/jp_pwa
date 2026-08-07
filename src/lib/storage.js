@@ -148,6 +148,29 @@ export function useReadSet() {
   return useSyncExternalStore(subscribe, getSnapshot, () => emptyReadSet);
 }
 
+// ── Grammar: lesson ids the user has marked as learned ───────────────────
+
+const grammarReadStore = createStore('nj_grammar_read', []);
+
+export function isGrammarRead(lessonId) {
+  return grammarReadStore.get().includes(lessonId);
+}
+
+export function setGrammarRead(lessonId, value) {
+  const current = grammarReadStore.get();
+  const next = value
+    ? (current.includes(lessonId) ? current : [...current, lessonId])
+    : current.filter(id => id !== lessonId);
+  grammarReadStore.set(next);
+}
+
+const emptyGrammarReadSet = new Set();
+
+export function useGrammarReadSet() {
+  const getSnapshot = useMemo(() => cached(() => new Set(grammarReadStore.get())), []);
+  return useSyncExternalStore(subscribe, getSnapshot, () => emptyGrammarReadSet);
+}
+
 // ── Font scale: user-chosen reading font size multiplier ─────────────────
 
 const fontScaleStore = createStore('nj_font_scale', 1);
