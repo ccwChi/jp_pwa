@@ -1286,13 +1286,16 @@ ruby rt {
 }
 
 .grammar-hero-pattern {
-  font-size: 2rem;
+  font-size: 2.6rem;
+  letter-spacing: 0.04em;
 }
 
 .grammar-hero-meaning {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  font-size: 1.05rem;
   color: var(--sub);
-  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+  margin-top: 0.6rem;
 }
 
 .grammar-structure-box {
@@ -1313,19 +1316,52 @@ ruby rt {
   margin-bottom: 0.3rem;
 }
 
+.grammar-plus {
+  color: var(--ai);
+  font-weight: 700;
+  margin: 0 0.3em;
+}
+
+.grammar-pipe {
+  color: var(--sub);
+  margin: 0 0.6em;
+}
+
 .grammar-explanation-body {
   margin-top: 1.5rem;
   font-size: 1rem;
   line-height: 1.9;
 }
 
-.grammar-note {
+.grammar-term {
+  color: var(--seal);
+  font-weight: 600;
+}
+
+.grammar-note-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: color-mix(in srgb, var(--seal) 8%, transparent);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-top: 1.2rem;
+}
+
+.grammar-note-icon {
+  flex-shrink: 0;
+  line-height: 1.7;
+}
+
+.grammar-note-text {
   font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
   font-size: 0.85rem;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+.grammar-note-text .grammar-term {
   color: var(--seal);
-  border-left: 2px solid var(--seal);
-  padding-left: 0.9rem;
-  margin-top: 1.2rem;
 }
 
 .grammar-section-label {
@@ -1344,9 +1380,33 @@ ruby rt {
 }
 
 .grammar-example {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
   padding: 0.7rem 0.9rem;
   background: color-mix(in srgb, var(--ai) 6%, transparent);
   border-radius: 6px;
+}
+
+.grammar-example-num {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.15rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ai) 18%, transparent);
+  color: var(--ai);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.grammar-example-body {
+  flex: 1;
+  min-width: 0;
 }
 
 .grammar-example-row {

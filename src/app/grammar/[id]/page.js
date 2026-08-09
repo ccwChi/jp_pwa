@@ -49,24 +49,29 @@ export default function GrammarDetailPage() {
 
       <div className="grammar-hero">
         <h1 className="grammar-hero-pattern">{lesson.title}</h1>
-        <p className="grammar-hero-meaning">{lesson.meaning}</p>
+        <p className="grammar-hero-meaning">「{lesson.meaning}」</p>
       </div>
 
       <div className="grammar-structure-box">
         <span className="grammar-structure-label">句型結構</span>
-        {lesson.structure}
+        {renderStructure(lesson.structure)}
       </div>
 
-      <p className="grammar-explanation-body">{lesson.explanation}</p>
+      <p className="grammar-explanation-body">{renderTerms(lesson.explanation)}</p>
 
-      {lesson.notes && <p className="grammar-note">{lesson.notes}</p>}
+      {lesson.notes && (
+        <div className="grammar-note-box">
+          <span className="grammar-note-icon" aria-hidden="true">💡</span>
+          <p className="grammar-note-text">{renderTerms(lesson.notes)}</p>
+        </div>
+      )}
 
       {lesson.examples?.length > 0 && (
         <>
           <div className="grammar-section-label">例句</div>
           <div className="grammar-examples">
             {lesson.examples.map((ex, i) => (
-              <ExampleRow key={i} ex={ex} rate={speechRate} />
+              <ExampleRow key={i} index={i + 1} ex={ex} rate={speechRate} />
             ))}
           </div>
         </>
@@ -93,7 +98,7 @@ export default function GrammarDetailPage() {
   );
 }
 
-function ExampleRow({ ex, rate }) {
+function ExampleRow({ ex, rate, index }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const parts = parseFurigana(ex.jp);
 
@@ -111,28 +116,58 @@ function ExampleRow({ ex, rate }) {
 
   return (
     <div className="grammar-example">
-      <div className="grammar-example-row">
-        <p className="grammar-example-jp">
-          {parts.map((p, i) =>
-            p.reading ? (
-              <ruby key={i}>{p.text}<rt>{p.reading}</rt></ruby>
-            ) : (
-              <span key={i}>{p.text}</span>
-            )
-          )}
-        </p>
-        <button
-          type="button"
-          className={`vocab-panel-play${isPlaying ? ' playing' : ''}`}
-          onClick={speak}
-          aria-label="播放例句發音"
-        >
-          {isPlaying ? '❚❚' : '▶'}
-        </button>
+      <span className="grammar-example-num" aria-hidden="true">{index}</span>
+      <div className="grammar-example-body">
+        <div className="grammar-example-row">
+          <p className="grammar-example-jp">
+            {parts.map((p, i) =>
+              p.reading ? (
+                <ruby key={i}>{p.text}<rt>{p.reading}</rt></ruby>
+              ) : (
+                <span key={i}>{p.text}</span>
+              )
+            )}
+          </p>
+          <button
+            type="button"
+            className={`vocab-panel-play${isPlaying ? ' playing' : ''}`}
+            onClick={speak}
+            aria-label="播放例句發音"
+          >
+            {isPlaying ? '❚❚' : '▶'}
+          </button>
+        </div>
+        <p className="grammar-example-zh">{ex.zh}</p>
       </div>
-      <p className="grammar-example-zh">{ex.zh}</p>
     </div>
   );
+}
+
+// Wraps 「…」-quoted terms (the convention this dataset already uses to call
+// out the grammar point being discussed) in a highlighted span, so the eye
+// can scan straight to the terms without changing any of the underlying text.
+function renderTerms(text) {
+  if (!text) return text;
+  const parts = text.split(/(「[^」]*」)/g);
+  return parts.map((part, i) =>
+    part.startsWith('「') && part.endsWith('」') ? (
+      <span key={i} className="grammar-term">{part}</span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
+
+// Highlights the "+" / "｜" delimiters in a structure formula so the pattern
+// reads as a sequence of parts at a glance.
+function renderStructure(text) {
+  if (!text) return text;
+  const parts = text.split(/([+｜])/g);
+  return parts.map((part, i) => {
+    if (part === '+') return <span key={i} className="grammar-plus">+</span>;
+    if (part === '｜') return <span key={i} className="grammar-pipe">｜</span>;
+    return <span key={i}>{part}</span>;
+  });
 }
 
 function QuizTab({ quiz }) {
