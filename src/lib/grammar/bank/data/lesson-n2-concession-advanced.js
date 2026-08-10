@@ -6,6 +6,7 @@ const items = [
     id: 'lesson-quiz-mono-wo-1',
     grammarIds: ['mono-wo'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「〜ものを」和「〜のに」相比，語氣上有什麼特色？',
       options: ['完全一樣，沒有差別', '帶有更強烈的悔恨、責備情緒', 'ものを比較口語、隨意', 'ものを只能用在肯定句'],
@@ -16,6 +17,7 @@ const items = [
     id: 'lesson-quiz-nishitemo-niseyo-nishiro-1',
     grammarIds: ['nishitemo-niseyo-nishiro'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「就算再忙，至少也該回個訊息吧」該用哪個句型？',
       options: [
@@ -31,6 +33,7 @@ const items = [
     id: 'lesson-quiz-nagara-mo-1',
     grammarIds: ['nagara-mo'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「雖然小，但是個很舒適的房間」該怎麼說？',
       options: ['狭いのに、居心地のいい部屋です', '狭いながらも、居心地のいい部屋です', '狭いくせに、居心地のいい部屋です', '狭いものを、居心地のいい部屋です'],
@@ -41,6 +44,7 @@ const items = [
     id: 'lesson-quiz-toiitemo-1',
     grammarIds: ['toiitemo'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「雖說會日文，但也只是會一些簡單的招呼而已」該怎麼說？',
       options: [

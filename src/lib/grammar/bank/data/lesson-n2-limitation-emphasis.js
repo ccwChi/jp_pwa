@@ -6,6 +6,7 @@ const items = [
     id: 'lesson-quiz-ni-kagitte-1',
     grammarIds: ['ni-kagitte'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「偏偏在趕時間的時候，電車就誤點」，這種「偏偏…」的語感該用哪個句型？',
       options: [
@@ -21,6 +22,7 @@ const items = [
     id: 'lesson-quiz-nominarazu-1',
     grammarIds: ['nominarazu'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「のみならず」和「だけでなく」相比，語感上有什麼不同？',
       options: ['完全一樣沒有差別', 'のみならず更書面、正式', 'だけでなく更書面、正式', 'のみならず只能用於否定句'],
@@ -31,6 +33,7 @@ const items = [
     id: 'lesson-quiz-sura-1',
     grammarIds: ['sura'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「他連自己的名字都不會寫」該怎麼說？',
       options: [
@@ -46,6 +49,7 @@ const items = [
     id: 'lesson-quiz-naimademo-1',
     grammarIds: ['naimademo'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「雖然不到每天，但至少一週想運動三次」該用哪個句型？',
       options: [

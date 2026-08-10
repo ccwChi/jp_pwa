@@ -6,6 +6,7 @@ const items = [
     id: 'lesson-quiz-beku-1',
     grammarIds: ['beku'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「べく」和「べきだ」意思上有什麼不同？',
       options: ['完全一樣', 'べく表示目的（為了…），べきだ表示義務（應該…）', 'べく表示義務，べきだ表示目的', '兩者都表示禁止'],
@@ -16,6 +17,7 @@ const items = [
     id: 'lesson-quiz-wo-kikkake-ni-1',
     grammarIds: ['wo-kikkake-ni'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「因為被朋友邀請，藉這個機會開始打網球」該用哪個句型？',
       options: [
@@ -31,6 +33,7 @@ const items = [
     id: 'lesson-quiz-wo-tsujite-1',
     grammarIds: ['wo-tsujite'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「這個地區一整年氣候都很溫暖」（強調整段期間），該用哪個句型？',
       options: [
@@ -46,6 +49,7 @@ const items = [
     id: 'lesson-quiz-ni-oujite-1',
     grammarIds: ['ni-oujite'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「依照收入的不同，稅金的金額也會改變」該怎麼說？',
       options: [

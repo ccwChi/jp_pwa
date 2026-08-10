@@ -32,6 +32,13 @@
 //                                          // old exam grading (4級≈N4 ... 1級≈N1)
 //                                          // already encodes vocab difficulty this way,
 //                                          // so there's no separate difficulty field.
+//     section?: 'vocabulary' | 'grammar' | 'reading' | 'listening',
+//       // which JLPT section this drills. Defaults to 'grammar' in practice
+//       // since that's the app's whole domain today; only needs to be set
+//       // explicitly once vocabulary/reading/listening items show up. This is
+//       // the normalized, filterable tag — distinct from examMeta.section
+//       // below, which (for past-exam items) preserves the section label as
+//       // printed on the original exam paper.
 //     jp?, zh?, target?,
 //     meaning?: { prompt, options, answerIndex },
 //     cloze?:   { options, answerIndex },
@@ -58,6 +65,7 @@
 //     id: 'exam-2000-4kyuu-bunpou-q3',
 //     grammarIds: ['te-iru'],
 //     level: 'N4',
+//     section: 'grammar',
 //     jp: '窓[まど]が開[あ]いています。',
 //     zh: '窗戶開著。',
 //     target: 'ています',
@@ -76,10 +84,11 @@ const bankItems = Object.keys(modules)
 // `grammarIds` to be eligible at all); the rest are optional extra filters
 // for narrowing that pool further by level/part-of-speech/topic. `tags`
 // matches when the item's own `tags` array contains every tag requested.
-export function getBankItems(grammarId, { level, tags, verbCategory, verbConjugation, adjCategory, adjConjugation } = {}) {
+export function getBankItems(grammarId, { level, section, tags, verbCategory, verbConjugation, adjCategory, adjConjugation } = {}) {
   return bankItems.filter(item => {
     if (!item.grammarIds.includes(grammarId)) return false;
     if (level && item.level !== level) return false;
+    if (section && item.section !== section) return false;
     if (verbCategory && item.verbCategory !== verbCategory) return false;
     if (verbConjugation && item.verbConjugation !== verbConjugation) return false;
     if (adjCategory && item.adjCategory !== adjCategory) return false;

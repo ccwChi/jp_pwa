@@ -6,6 +6,7 @@ const items = [
     id: 'lesson-quiz-masu-form-1',
     grammarIds: ['masu-form'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '「飲む」的ます形是？',
       options: ['飲みます', '飲むます', '飲きます', '飲します'],
@@ -16,6 +17,7 @@ const items = [
     id: 'lesson-quiz-dictionary-form-1',
     grammarIds: ['dictionary-form'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '「食べます」的辞書形是？',
       options: ['食べる', '食べます', '食べた', '食べて'],
@@ -26,6 +28,7 @@ const items = [
     id: 'lesson-quiz-te-form-1',
     grammarIds: ['te-form'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '「飲む」的て形是？',
       options: ['飲んで', '飲みて', '飲って', '飲いて'],
@@ -36,6 +39,7 @@ const items = [
     id: 'lesson-quiz-ta-form-1',
     grammarIds: ['ta-form'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '「話す」的て形是「話して」，那た形是？',
       options: ['話した', '話しだ', '話して', '話す'],
@@ -46,6 +50,7 @@ const items = [
     id: 'lesson-quiz-nai-form-1',
     grammarIds: ['nai-form'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '「買う」的ない形是？',
       options: ['買わない', '買あない', '買いない', '買らない'],

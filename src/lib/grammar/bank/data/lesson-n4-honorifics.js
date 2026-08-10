@@ -6,6 +6,7 @@ const items = [
     id: 'lesson-quiz-sonkeigo-verbs-1',
     grammarIds: ['sonkeigo-verbs'],
     level: 'N4',
+    section: 'grammar',
     meaning: {
       prompt: '要禮貌地問客人「請問您要吃點什麼？」，該用哪個動詞？',
       options: ['食べます', '召し上がります', 'いただきます', 'もらいます'],
@@ -16,6 +17,7 @@ const items = [
     id: 'lesson-quiz-kenjougo-verbs-1',
     grammarIds: ['kenjougo-verbs'],
     level: 'N4',
+    section: 'grammar',
     meaning: {
       prompt: '自我介紹時說「敝姓田中」，該用哪個謙譲語動詞？',
       options: ['田中といいます', '田中とおっしゃいます', '田中と申します', '田中となさいます'],
@@ -26,6 +28,7 @@ const items = [
     id: 'lesson-quiz-o-ni-naru-o-suru-1',
     grammarIds: ['o-ni-naru-o-suru'],
     level: 'N4',
+    section: 'grammar',
     meaning: {
       prompt: '想禮貌地說「讓我來幫您拿行李」（謙譲語），該用哪個句型？',
       options: ['お荷物を持ちになります', 'お荷物をお持ちします', 'お荷物を持たせます', 'お荷物をいただきます'],

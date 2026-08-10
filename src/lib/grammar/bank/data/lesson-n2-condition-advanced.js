@@ -6,6 +6,7 @@ const items = [
     id: 'lesson-quiz-nai-koto-niwa-1',
     grammarIds: ['nai-koto-niwa'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「不實際做做看的話，就不會知道」該用哪個句型？',
       options: ['やってみればわかりません', 'やってみないことには、わかりません', 'やってみるとしたら、わかりません', 'やってみるものを、わかりません'],
@@ -16,6 +17,7 @@ const items = [
     id: 'lesson-quiz-te-hajimete-1',
     grammarIds: ['te-hajimete'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「直到自己當了父母，才明白父母的辛勞有多可貴」該怎麼說？',
       options: [
@@ -31,6 +33,7 @@ const items = [
     id: 'lesson-quiz-ba-koso-1',
     grammarIds: ['ba-koso'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「正因為有家人的支持，才能一路努力到現在」，這種強調唯一原因的說法該用哪個句型？',
       options: [
@@ -46,6 +49,7 @@ const items = [
     id: 'lesson-quiz-nukini-nukide-1',
     grammarIds: ['nukini-nukide'],
     level: 'N2',
+    section: 'grammar',
     meaning: {
       prompt: '「沒有他的協助，這個專案就不會成功」該用哪個句型？',
       options: [

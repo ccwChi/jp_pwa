@@ -6,6 +6,7 @@ const items = [
     id: 'lesson-quiz-ba-hodo-1',
     grammarIds: ['ba-hodo'],
     level: 'N3',
+    section: 'grammar',
     meaning: {
       prompt: '「越讀書就越懂」該怎麼說？',
       options: ['勉強すればするほど、わかるようになります', '勉強するとわかるようになります', '勉強するなら、わかるようになります', '勉強したら、わかるようになります'],
@@ -16,6 +17,7 @@ const items = [
     id: 'lesson-quiz-to-shitara-1',
     grammarIds: ['to-shitara'],
     level: 'N3',
+    section: 'grammar',
     meaning: {
       prompt: '「假如中了樂透的話，你要買什麼？」該用哪個句型？',
       options: [
@@ -31,6 +33,7 @@ const items = [
     id: 'lesson-quiz-ta-totan-1',
     grammarIds: ['ta-totan'],
     level: 'N3',
+    section: 'grammar',
     meaning: {
       prompt: '「他一坐上椅子就睡著了」該怎麼說？',
       options: [
@@ -46,6 +49,7 @@ const items = [
     id: 'lesson-quiz-shidai-1',
     grammarIds: ['shidai'],
     level: 'N3',
+    section: 'grammar',
     meaning: {
       prompt: '「一到機場就立刻打電話」該用哪個句型？',
       options: ['空港に着いたら、電話します', '空港に着くと、電話します', '空港に着き次第、電話します', '空港に着くところで、電話します'],

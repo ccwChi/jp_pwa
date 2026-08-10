@@ -6,6 +6,7 @@ const items = [
     id: 'lesson-quiz-tai-desu-1',
     grammarIds: ['tai-desu'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '「飲む」的ます形去掉ます是「飲み」，加上たいです是？',
       options: ['飲みたいです', '飲むたいです', '飲みますたいです', '飲たいです'],
@@ -16,6 +17,7 @@ const items = [
     id: 'lesson-quiz-mashou-1',
     grammarIds: ['mashou'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '想邀請對方「一起吃午飯吧」，該用哪個句型？',
       options: ['〜たいです', '〜ましょう', '〜てください', '〜なければなりません'],
@@ -26,6 +28,7 @@ const items = [
     id: 'lesson-quiz-masenka-1',
     grammarIds: ['masenka'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '想委婉地邀約「這個週末要不要一起去看電影？」，該用哪個句型？',
       options: ['〜ましょう', '〜ませんか', '〜てください', '〜たいです'],
@@ -36,6 +39,7 @@ const items = [
     id: 'lesson-quiz-tsumori-1',
     grammarIds: ['tsumori'],
     level: 'N5',
+    section: 'grammar',
     meaning: {
       prompt: '想表達「打算明年去日本留學」，該用哪個句型？',
       options: ['〜たいです', '〜つもりです', '〜てください', '〜ませんか'],
