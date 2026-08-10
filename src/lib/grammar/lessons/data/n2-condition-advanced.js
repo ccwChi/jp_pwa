@@ -76,7 +76,7 @@ export default [
     level: 'N2',
     category: '条件・仮定表現の応用',
     order: 204,
-    title: '〜（を）抜きにして／〜抜きでは',
+    title: '〜（を）抜(ぬ)きにして／〜抜(ぬ)きでは',
     structure: '名詞（を）+ 抜きにして、〜　｜　名詞 + 抜きでは、〜（否定）',
     meaning: '「抜きにして」表示撇開…不談；「抜きでは」表示沒有…就無法…',
     explanation:

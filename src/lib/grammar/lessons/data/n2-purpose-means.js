@@ -51,7 +51,7 @@ export default [
     level: 'N2',
     category: '目的・手段・きっかけ表現',
     order: 603,
-    title: '〜を通じて／〜を通して',
+    title: '〜を通(つう)じて／〜を通(とお)して',
     structure: '名詞 + を通じて／を通して',
     meaning: '表示透過某個媒介、手段，或在某段期間內持續，「透過…、藉由…」「整個…期間」',
     explanation:
@@ -74,7 +74,7 @@ export default [
     level: 'N2',
     category: '目的・手段・きっかけ表現',
     order: 604,
-    title: '〜に応じて',
+    title: '〜に応(おう)じて',
     structure: '名詞 + に応じて',
     meaning: '表示依照某個狀況、條件的變化而相應調整，「依照…、根據…而…」',
     explanation:

@@ -75,7 +75,7 @@ export default [
     level: 'N3',
     category: '条件表現の応用',
     order: 204,
-    title: '〜次第',
+    title: '〜次第(しだい)',
     structure: '動詞ます形（去ます）+ 次第、〜（一…就…）　｜　名詞 + 次第だ（依…而定）',
     meaning: '「動詞ます形+次第」表示「一…就立刻…」；「名詞+次第だ」表示「依…而定」',
     explanation:

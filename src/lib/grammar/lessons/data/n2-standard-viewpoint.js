@@ -51,7 +51,7 @@ export default [
     level: 'N2',
     category: '評価・観点表現の応用',
     order: 703,
-    title: '〜に沿って',
+    title: '〜に沿(そ)って',
     structure: '名詞 + に沿って',
     meaning: '表示依照既定的方針、路線、期望去做，不偏離，「沿著…、按照…（方針）」',
     explanation:
@@ -74,7 +74,7 @@ export default [
     level: 'N2',
     category: '評価・観点表現の応用',
     order: 704,
-    title: '〜を問わず',
+    title: '〜を問(と)わず',
     structure: '名詞 + を問わず',
     meaning: '表示不論、不分某個條件、屬性的差異，一律適用，「不分…、不論…」',
     explanation:

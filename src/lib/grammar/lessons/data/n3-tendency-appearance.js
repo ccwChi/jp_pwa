@@ -52,7 +52,7 @@ export default [
     level: 'N3',
     category: '傾向・様子表現',
     order: 503,
-    title: '〜気味',
+    title: '〜気味(ぎみ)',
     structure: '動詞ます形（去ます）／名詞 + 気味',
     meaning: '表示稍微感覺到某種（通常是不太好的）傾向或徵兆，「有點…的樣子、有…的跡象」',
     explanation:

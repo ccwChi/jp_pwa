@@ -74,7 +74,7 @@ export default [
     level: 'N3',
     category: '限定・程度表現',
     order: 404,
-    title: '〜に限らず',
+    title: '〜に限(かぎ)らず',
     structure: '名詞 + に限らず',
     meaning: '表示不僅限於前項範圍，還包括更廣的範圍，「不限於…、不僅…」',
     explanation:

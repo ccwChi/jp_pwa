@@ -64,7 +64,8 @@ export default function ArticlePracticeClient({ id }) {
         <Link href="/grammar/practice" className="back-link">← 文法學習題</Link>
       </div>
 
-      <h1 className="page-title">{set.title}</h1>
+      <h1 className="page-title">{set.titleZh || set.title}</h1>
+      {set.titleZh && <p className="practice-title-jp">{set.title}</p>}
       <p className="row-meta">文章問答：讀完每句話，選出標記文字在句中的意思或用法。</p>
       {set.intro && <p className="row-meta practice-intro">{set.intro}</p>}
 

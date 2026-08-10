@@ -4,7 +4,7 @@ export default [
     level: 'N2',
     category: '結果・経過表現',
     order: 501,
-    title: '〜末に／〜末の',
+    title: '〜末(すえ)に／〜末(すえ)の',
     structure: '動詞た形／名詞の + 末（に）',
     meaning: '表示經過長時間的努力、掙扎，最後得到某個結果，「經過…最後…」',
     explanation:

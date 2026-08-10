@@ -4,7 +4,7 @@ export default [
     level: 'N2',
     category: '推量・必然性表現',
     order: 801,
-    title: '〜に決まっている',
+    title: '〜に決(き)まっている',
     structure: '普通形（名詞・な形容詞現在肯定 + 語幹）+ に決まっている',
     meaning: '表示說話者主觀上非常確信，「肯定是…、一定是…」，語氣比「に違いない」更口語、直接',
     explanation:
@@ -52,7 +52,7 @@ export default [
     level: 'N2',
     category: '推量・必然性表現',
     order: 803,
-    title: '〜も同然だ',
+    title: '〜も同然(どうぜん)だ',
     structure: '動詞普通形／名詞（＋も）+ 同然だ',
     meaning: '表示狀態幾乎等同於某個情況，跟…沒兩樣，「幾乎等同於…、跟…沒兩樣」',
     explanation:

@@ -4,7 +4,7 @@ export default [
     level: 'N4',
     category: '複合動詞・程度表現',
     order: 501,
-    title: '〜出す',
+    title: '〜出(だ)す',
     structure: '動詞ます形（去ます）+ 出す',
     meaning: '表示動作、狀態突然開始，「突然…起來」',
     explanation:
@@ -27,7 +27,7 @@ export default [
     level: 'N4',
     category: '複合動詞・程度表現',
     order: 502,
-    title: '〜始める・〜続ける・〜終わる',
+    title: '〜始(はじ)める・〜続(つづ)ける・〜終(お)わる',
     structure: '動詞ます形（去ます）+ 始める／続ける／終わる',
     meaning: '表示動作的開始、持續、結束三個階段',
     explanation:

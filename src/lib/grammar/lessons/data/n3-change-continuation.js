@@ -28,7 +28,7 @@ export default [
     level: 'N3',
     category: '変化・継続表現',
     order: 602,
-    title: '〜一方だ',
+    title: '〜一方(いっぽう)だ',
     structure: '動詞辞書形 + 一方だ',
     meaning: '表示情況不斷朝著單一方向發展，沒有停下來的跡象，「不斷地…、一直…下去」',
     explanation:

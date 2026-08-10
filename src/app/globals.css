@@ -1498,7 +1498,19 @@ ruby rt {
 
 .practice-set-title {
   font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.practice-set-title-jp {
+  font-size: 0.8rem;
+  color: var(--sub);
   margin-bottom: 0.7rem;
+}
+
+.practice-title-jp {
+  font-size: 0.85rem;
+  color: var(--sub);
+  margin-top: -0.4rem;
 }
 
 .practice-set-tags {

@@ -4,7 +4,7 @@ export default [
     level: 'N3',
     category: '伝達・観点の応用表現',
     order: 901,
-    title: '〜と言われている',
+    title: '〜と言(い)われている',
     structure: '普通形 + と言われている',
     meaning: '轉述一般社會上普遍的說法、看法，「據說…、大家都說…」',
     explanation:
@@ -76,7 +76,7 @@ export default [
     level: 'N3',
     category: '伝達・観点の応用表現',
     order: 904,
-    title: '〜に関して／〜に関する',
+    title: '〜に関(かん)して／〜に関(かん)する',
     structure: '名詞 + に関して（＋動詞）／に関する（＋名詞）',
     meaning: '表示話題、內容涉及的範圍，「關於…」',
     explanation:

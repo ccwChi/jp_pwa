@@ -4,7 +4,7 @@ export default [
     level: 'N4',
     category: '推量・様態・伝聞',
     order: 201,
-    title: '〜そうです（様態）',
+    title: '〜そうです（様態(ようたい)）',
     structure: '動詞ます形（去ます）／い形容詞（去い）／な形容詞語幹 + そうです',
     meaning: '根據眼前所見的樣子推測，「看起來好像…」',
     explanation:
@@ -28,7 +28,7 @@ export default [
     level: 'N4',
     category: '推量・様態・伝聞',
     order: 202,
-    title: '〜そうです（伝聞）',
+    title: '〜そうです（伝聞(でんぶん)）',
     structure: '普通形 + そうです',
     meaning: '轉述從別人或媒體得到的資訊，「聽說…」',
     explanation:

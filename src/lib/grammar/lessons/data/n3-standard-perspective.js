@@ -28,7 +28,7 @@ export default [
     level: 'N3',
     category: '基準・観点表現',
     order: 702,
-    title: '〜に対して',
+    title: '〜に対(たい)して',
     structure: '名詞 + に対して',
     meaning: '表示動作、態度指向的對象，或表示對比，「對於…、相對於…」',
     explanation:
@@ -98,7 +98,7 @@ export default [
     level: 'N3',
     category: '基準・観点表現',
     order: 705,
-    title: '〜に基づいて',
+    title: '〜に基(もと)づいて',
     structure: '名詞 + に基づいて',
     meaning: '表示以某個事實、資料、規則作為依據，「根據…、基於…」',
     explanation:

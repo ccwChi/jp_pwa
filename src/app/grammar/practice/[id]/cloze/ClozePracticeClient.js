@@ -54,7 +54,8 @@ export default function ClozePracticeClient({ id }) {
         <Link href="/grammar/practice" className="back-link">← 文法學習題</Link>
       </div>
 
-      <h1 className="page-title">{set.title}</h1>
+      <h1 className="page-title">{set.titleZh || set.title}</h1>
+      {set.titleZh && <p className="practice-title-jp">{set.title}</p>}
       <p className="row-meta">克漏字：先讀中文句子，再從選項中選出日文句子空格處該填入的文法。</p>
       {set.intro && <p className="row-meta practice-intro">{set.intro}</p>}
 

@@ -4,7 +4,7 @@ export default [
     level: 'N2',
     category: '限定・強調表現',
     order: 301,
-    title: '〜に限って',
+    title: '〜に限(かぎ)って',
     structure: '名詞 + に限って',
     meaning: '表示偏偏在這種情況、這個人身上發生了和預期相反的事，「偏偏…、唯獨…」',
     explanation:

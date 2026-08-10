@@ -27,7 +27,7 @@ export default [
     level: 'N5',
     category: '比較・存在',
     order: 412,
-    title: '〜（の中）で一番〜',
+    title: '〜（の中(なか)）で一番(いちばん)〜',
     structure: '範圍 + で + 一番 + 形容詞',
     meaning: '三者以上的比較，「在…之中最…」',
     explanation:

@@ -76,7 +76,7 @@ export default [
     level: 'N4',
     category: '名詞化・伝達表現',
     order: 804,
-    title: '〜という＋名詞',
+    title: '〜という＋名詞(めいし)',
     structure: '名詞／文 + という + 名詞',
     meaning: '用來解釋、介紹一個對方可能不知道的名稱或內容，「叫做…的…」',
     explanation:

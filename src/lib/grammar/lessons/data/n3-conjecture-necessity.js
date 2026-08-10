@@ -100,7 +100,7 @@ export default [
     level: 'N3',
     category: '推量・必要性表現',
     order: 805,
-    title: '〜に違いない',
+    title: '〜に違(ちが)いない',
     structure: '普通形（名詞・な形容詞現在肯定 + 語幹）+ に違いない',
     meaning: '表示根據某個依據，做出非常有把握的推測，「肯定是…、一定是…」',
     explanation:

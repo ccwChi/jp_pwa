@@ -42,7 +42,8 @@ export default function GrammarPracticePage() {
           const clozeDone = clozeDoneSet.has(set.id);
           return (
             <div className="practice-set-card" key={set.id}>
-              <div className="practice-set-title">{set.title}</div>
+              <div className="practice-set-title">{set.titleZh || set.title}</div>
+              {set.titleZh && <div className="practice-set-title-jp">{set.title}</div>}
               <div className="practice-set-tags">
                 {set.grammarIds.map(gid => (
                   <span className="tag practice-set-tag" key={gid}>{getLesson(gid)?.title || gid}</span>
