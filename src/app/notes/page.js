@@ -55,7 +55,7 @@ export default function NotesPage() {
       ) : (
         <div className="rows">
           {notes.map(note => (
-            <Link href={`/notes/${note.id}`} key={note.id} className="row note-row">
+            <Link href={`/notes/view?id=${note.id}`} key={note.id} className="row note-row">
               <div>
                 <div className="name">{preview(note.content)}</div>
                 <div className="desc">{note.content.slice(0, 60)}</div>

@@ -10,7 +10,7 @@ export default function NewNotePage() {
 
   function handleSave(content) {
     const note = saveNote({ content });
-    router.push(`/notes/${note.id}`);
+    router.push(`/notes/view?id=${note.id}`);
   }
 
   return (

@@ -19,7 +19,9 @@ export default function ReadingPage() {
     <main className="container">
       <div className="page-head">
         <Link href="/" className="back-link">← 首頁</Link>
-        <Link href="/reading/import" className="btn">+ 匯入長篇文章</Link>
+        {process.env.NEXT_PUBLIC_STATIC_EXPORT !== 'true' && (
+          <Link href="/reading/import" className="btn">+ 匯入長篇文章</Link>
+        )}
       </div>
 
       <h1 className="page-title">文章閱讀</h1>

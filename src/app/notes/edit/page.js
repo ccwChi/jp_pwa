@@ -1,12 +1,13 @@
 'use client';
 
-import { useParams, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useNote, saveNote } from '@/lib/storage';
-import NoteForm from '../../NoteForm';
+import NoteForm from '../NoteForm';
 
-export default function EditNotePage() {
-  const { id } = useParams();
+function EditNoteContent() {
+  const id = useSearchParams().get('id');
   const router = useRouter();
   const note = useNote(id);
 
@@ -23,18 +24,26 @@ export default function EditNotePage() {
 
   function handleSave(content) {
     saveNote({ id: note.id, content });
-    router.push(`/notes/${note.id}`);
+    router.push(`/notes/view?id=${note.id}`);
   }
 
   return (
     <main className="container">
       <div className="page-head">
-        <Link href={`/notes/${note.id}`} className="back-link">← 返回筆記</Link>
+        <Link href={`/notes/view?id=${note.id}`} className="back-link">← 返回筆記</Link>
       </div>
 
       <h1 className="page-title">編輯筆記</h1>
 
       <NoteForm initialContent={note.content} onSave={handleSave} />
     </main>
+  );
+}
+
+export default function EditNotePage() {
+  return (
+    <Suspense fallback={null}>
+      <EditNoteContent />
+    </Suspense>
   );
 }

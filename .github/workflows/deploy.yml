@@ -1,0 +1,63 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # The article-import tool writes files to disk via a POST API route,
+      # which needs a Node server — unsupported by `output: export`. It's a
+      # dev-only authoring convenience (see AGENTS.md notes in the repo), so
+      # it's simply excluded from the files that get built for Pages.
+      - name: Remove dev-only import tool
+        run: rm -rf src/app/api src/app/reading/import
+
+      - name: Build static export
+        run: npm run build
+        env:
+          NEXT_STATIC_EXPORT: 'true'
+          NEXT_PUBLIC_STATIC_EXPORT: 'true'
+          NEXT_PUBLIC_BASE_PATH: /jp_pwa
+
+      # GitHub Pages ignores dotfiles/underscore-prefixed paths (like
+      # Next's _next/ asset folder) unless this marker file is present.
+      - name: Disable Jekyll processing
+        run: touch out/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

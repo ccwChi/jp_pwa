@@ -2,7 +2,9 @@ const CACHE_NAME = 'nj-cache-v1';
 
 self.addEventListener('install', event => {
   self.skipWaiting();
-  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.add('/')));
+  // self.registration.scope already includes whatever path (e.g. a GitHub
+  // Pages /repo-name/ prefix) the service worker was registered under.
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.add(self.registration.scope)));
 });
 
 self.addEventListener('activate', event => {

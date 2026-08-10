@@ -1,11 +1,12 @@
 'use client';
 
-import { useParams, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useNote, deleteNote } from '@/lib/storage';
 
-export default function NoteDetailPage() {
-  const { id } = useParams();
+function NoteDetailContent() {
+  const id = useSearchParams().get('id');
   const router = useRouter();
   const note = useNote(id);
 
@@ -31,12 +32,20 @@ export default function NoteDetailPage() {
       <div className="page-head">
         <Link href="/notes" className="back-link">← 筆記列表</Link>
         <div className="head-actions">
-          <Link href={`/notes/${note.id}/edit`} className="icon-btn">編輯</Link>
+          <Link href={`/notes/edit?id=${note.id}`} className="icon-btn">編輯</Link>
           <button className="icon-btn" onClick={handleDelete} aria-label="刪除筆記">刪除</button>
         </div>
       </div>
 
       <p className="source-text">{note.content}</p>
     </main>
+  );
+}
+
+export default function NoteDetailPage() {
+  return (
+    <Suspense fallback={null}>
+      <NoteDetailContent />
+    </Suspense>
   );
 }

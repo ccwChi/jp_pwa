@@ -1451,6 +1451,150 @@ ruby rt {
   text-decoration: underline;
 }
 
+/* ── grammar learning: per-lesson practice-mode checkmarks (list page) ── */
+
+.grammar-legend {
+  margin-bottom: 1.2rem;
+}
+
+.grammar-check-badges {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.grammar-check-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.72rem;
+  color: var(--sub);
+}
+
+.grammar-check-badge.done {
+  border-color: var(--ai);
+  color: var(--bg);
+  background: var(--ai);
+}
+
+/* ── grammar practice: set list (/grammar/practice) ── */
+
+.practice-set-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.practice-set-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+}
+
+.practice-set-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.practice-set-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.practice-set-tag {
+  font-size: 0.68rem;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.practice-set-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.practice-mode-btn.done {
+  border-color: var(--ai);
+  color: var(--ai);
+}
+
+/* ── grammar practice: exercise pages (article / cloze) ── */
+
+.practice-intro {
+  margin-bottom: 1.5rem;
+}
+
+.practice-result-banner {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--ai);
+  background: color-mix(in srgb, var(--ai) 10%, transparent);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.practice-article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.practice-sentence-block {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+}
+
+.practice-sentence-jp {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.practice-sentence-jp rt {
+  font-size: 0.55em;
+  color: var(--sub);
+}
+
+.practice-cloze-zh {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.practice-target {
+  background: color-mix(in srgb, var(--ai) 20%, transparent);
+  color: var(--ink);
+  border-radius: 3px;
+  padding: 0 0.15em;
+}
+
+.practice-target.correct {
+  background: color-mix(in srgb, #4a7a5f 22%, transparent);
+}
+
+.practice-target.wrong {
+  background: color-mix(in srgb, var(--seal) 22%, transparent);
+}
+
+.practice-blank {
+  display: inline-block;
+  min-width: 3em;
+  border-bottom: 2px solid var(--ai);
+  text-align: center;
+  color: var(--ai);
+}
+
+.practice-question {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--sub);
+  margin: 0.9rem 0 0.7rem;
+}
+
 /* ── generic form field (import tool, reused wherever a labeled field is needed) ── */
 
 .field {

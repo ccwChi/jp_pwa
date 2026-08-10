@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# scripts/build-pages-local.mjs staging area
+/.pages-build-backup/
+
 # production
 /build
 

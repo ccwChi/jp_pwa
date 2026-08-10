@@ -171,6 +171,41 @@ export function useGrammarReadSet() {
   return useSyncExternalStore(subscribe, getSnapshot, () => emptyGrammarReadSet);
 }
 
+// ── Grammar practice: completed practice-set ids, one store per exercise
+// mode (文章問答 / 克漏字). A practice set groups several grammar lessons,
+// so "done" is tracked per set, not per lesson — the grammar list page
+// derives each lesson's per-mode checkmark by looking up which set
+// contains it (see getGrammarPracticeStatus in lib/grammar/practice). ────
+
+const practiceArticleDoneStore = createStore('nj_grammar_practice_article_done', []);
+const practiceClozeDoneStore = createStore('nj_grammar_practice_cloze_done', []);
+
+export function isPracticeSetDone(mode, setId) {
+  const store = mode === 'cloze' ? practiceClozeDoneStore : practiceArticleDoneStore;
+  return store.get().includes(setId);
+}
+
+export function setPracticeSetDone(mode, setId, value) {
+  const store = mode === 'cloze' ? practiceClozeDoneStore : practiceArticleDoneStore;
+  const current = store.get();
+  const next = value
+    ? (current.includes(setId) ? current : [...current, setId])
+    : current.filter(id => id !== setId);
+  store.set(next);
+}
+
+const emptyPracticeDoneSet = new Set();
+
+export function usePracticeArticleDoneSet() {
+  const getSnapshot = useMemo(() => cached(() => new Set(practiceArticleDoneStore.get())), []);
+  return useSyncExternalStore(subscribe, getSnapshot, () => emptyPracticeDoneSet);
+}
+
+export function usePracticeClozeDoneSet() {
+  const getSnapshot = useMemo(() => cached(() => new Set(practiceClozeDoneStore.get())), []);
+  return useSyncExternalStore(subscribe, getSnapshot, () => emptyPracticeDoneSet);
+}
+
 // ── Font scale: user-chosen reading font size multiplier ─────────────────
 
 const fontScaleStore = createStore('nj_font_scale', 1);
