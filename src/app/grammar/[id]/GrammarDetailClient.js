@@ -1,14 +1,25 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { pickBankItem } from '@/lib/grammar/bank';
 import { getLesson, getAdjacentLessons } from '@/lib/grammar/lessons';
+import { getPracticeSetForGrammar } from '@/lib/grammar/practice';
 import { parseFurigana, readingOf } from '@/lib/reading/furigana';
-import { setGrammarRead, useGrammarReadSet, useSpeechRate } from '@/lib/storage';
+import {
+  setGrammarRead,
+  useGrammarReadSet,
+  usePracticeArticleDoneSet,
+  usePracticeClozeDoneSet,
+  useSpeechRate,
+} from '@/lib/storage';
 
 export default function GrammarDetailClient({ id }) {
   const lesson = getLesson(id);
   const readSet = useGrammarReadSet();
+  const articleDoneSet = usePracticeArticleDoneSet();
+  const clozeDoneSet = usePracticeClozeDoneSet();
   const speechRate = useSpeechRate();
 
   if (!lesson) {
@@ -77,9 +88,11 @@ export default function GrammarDetailClient({ id }) {
       {lesson.quiz?.length > 0 && (
         <>
           <div className="grammar-section-label">練習</div>
-          <QuizTab quiz={lesson.quiz} lessonId={lesson.id} />
+          <QuizTab lessonId={lesson.id} />
         </>
       )}
+
+      <LearningPath lesson={lesson} read={read} articleDoneSet={articleDoneSet} clozeDoneSet={clozeDoneSet} />
 
       {(prev || next) && (
         <div className="grammar-nav">
@@ -92,6 +105,60 @@ export default function GrammarDetailClient({ id }) {
         </div>
       )}
     </main>
+  );
+}
+
+// Shows where this lesson sits inside its practice set (if any) and links
+// straight to whichever mode (文章問答／克漏字) isn't done yet, so finishing
+// a lesson's quiz always has one obvious next step instead of leaving the
+// user to find the covering practice set on their own.
+function LearningPath({ lesson, read, articleDoneSet, clozeDoneSet }) {
+  const set = getPracticeSetForGrammar(lesson.id);
+  if (!set) return null;
+
+  const quizDone = lesson.quiz?.length > 0 ? read : true;
+  const articleDone = articleDoneSet.has(set.id);
+  const clozeDone = clozeDoneSet.has(set.id);
+  const position = set.grammarIds.indexOf(lesson.id) + 1;
+  const doneCount = (articleDone ? 1 : 0) + (clozeDone ? 1 : 0);
+
+  const steps = [
+    { label: '讀規則', done: true },
+    { label: '小測驗', done: quizDone },
+    { label: '文章問答', done: articleDone },
+    { label: '克漏字', done: clozeDone },
+  ];
+  const currentIndex = steps.findIndex(s => !s.done);
+
+  const nextMode = !articleDone ? 'article' : 'cloze';
+  const nextModeLabel = !articleDone ? '文章問答' : '克漏字';
+  const allDone = articleDone && clozeDone;
+
+  return (
+    <div className="grammar-path">
+      <div className="grammar-path-label">學習路徑 · {set.titleZh || set.title}</div>
+      <div className="grammar-path-steps">
+        {steps.map((step, i) => (
+          <div
+            key={step.label}
+            className={`grammar-path-step${step.done ? ' done' : ''}${i === currentIndex ? ' current' : ''}`}
+          >
+            {step.label}
+          </div>
+        ))}
+      </div>
+      <div className="grammar-path-cta">
+        <div>
+          <div className="grammar-path-set-name">{set.titleZh || set.title}（{set.grammarIds.length} 點）</div>
+          <div className="grammar-path-set-sub">
+            {lesson.title} 是這組的第 {position} 點・已完成 {doneCount}/2 練習
+          </div>
+        </div>
+        <Link href={`/grammar/practice/${set.id}/${nextMode}`} className="btn grammar-path-btn">
+          {allDone ? '重新練習' : `開始${nextModeLabel}`} →
+        </Link>
+      </div>
+    </div>
   );
 }
 
@@ -167,8 +234,19 @@ function renderStructure(text) {
   });
 }
 
-function QuizTab({ quiz, lessonId }) {
+// Draws one question at random from lessonId's question-bank pool (see
+// lib/grammar/bank) instead of a single fixed quiz item, so revisiting a
+// lesson has a chance of showing a different question each time. Wrapped in
+// next/dynamic(ssr:false) below because this component is only safe to
+// render client-side: the random draw would otherwise get baked into the
+// static export's HTML at build time and every visitor would see the same
+// "random" pick.
+function QuizTabInner({ lessonId }) {
+  const [item] = useState(() => pickBankItem(lessonId, { requireJp: false }));
   const [answers, setAnswers] = useState({});
+
+  if (!item?.meaning) return null;
+  const quiz = [item.meaning];
 
   function choose(qIndex, optIndex) {
     if (answers[qIndex] !== undefined) return;
@@ -185,7 +263,7 @@ function QuizTab({ quiz, lessonId }) {
 
         return (
           <div className="quiz-item" key={qi}>
-            <p className="quiz-question">{q.question}</p>
+            <p className="quiz-question">{q.prompt}</p>
             <div className="quiz-options">
               {q.options.map((opt, oi) => {
                 let state = '';
@@ -211,3 +289,8 @@ function QuizTab({ quiz, lessonId }) {
     </div>
   );
 }
+
+const QuizTab = dynamic(() => Promise.resolve(QuizTabInner), {
+  ssr: false,
+  loading: () => <p className="empty-hint">載入題目中…</p>,
+});

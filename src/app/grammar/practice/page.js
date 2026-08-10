@@ -4,12 +4,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { getPracticeSets, getPracticeLevels } from '@/lib/grammar/practice';
 import { getLesson } from '@/lib/grammar/lessons';
-import { usePracticeArticleDoneSet, usePracticeClozeDoneSet } from '@/lib/storage';
+import { useGrammarReadSet, usePracticeArticleDoneSet, usePracticeClozeDoneSet } from '@/lib/storage';
 
 export default function GrammarPracticePage() {
   const levels = getPracticeLevels();
   const [activeLevel, setActiveLevel] = useState(levels[0] || 'N5');
   const sets = getPracticeSets().filter(set => set.level === activeLevel);
+  const readSet = useGrammarReadSet();
   const articleDoneSet = usePracticeArticleDoneSet();
   const clozeDoneSet = usePracticeClozeDoneSet();
 
@@ -46,7 +47,12 @@ export default function GrammarPracticePage() {
               {set.titleZh && <div className="practice-set-title-jp">{set.title}</div>}
               <div className="practice-set-tags">
                 {set.grammarIds.map(gid => (
-                  <span className="tag practice-set-tag" key={gid}>{getLesson(gid)?.title || gid}</span>
+                  <span
+                    className={`tag practice-set-tag${readSet.has(gid) ? ' done' : ''}`}
+                    key={gid}
+                  >
+                    {getLesson(gid)?.title || gid}
+                  </span>
                 ))}
               </div>
               <div className="practice-set-actions">

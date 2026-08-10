@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { pickBankItem } from '@/lib/grammar/bank';
 import { getPracticeSet } from '@/lib/grammar/practice';
 import { splitOnTarget } from '@/lib/grammar/practice/sentenceParts';
 import { parseFurigana, readingOf } from '@/lib/reading/furigana';
 import { setPracticeSetDone, useSpeechRate } from '@/lib/storage';
+import PracticeResultPanel from '../../PracticeResultPanel';
 
 function renderRuby(text, keyPrefix) {
   return parseFurigana(text).map((p, i) =>
@@ -22,12 +24,23 @@ export default function ArticlePracticeClient({ id }) {
   const speechRate = useSpeechRate();
   const [answers, setAnswers] = useState({});
 
-  const total = set?.sentences.length || 0;
+  // Drawn once per mount from the grammar question bank — this component is
+  // only ever rendered client-side (see page.js's ssr:false dynamic import),
+  // so picking a fresh random question per visit never causes a
+  // server/client hydration mismatch. Slots without a usable bank item
+  // (shouldn't happen given every practice-set sentence seeds its own
+  // grammarId's pool, but defensive) are simply skipped.
+  const [slots] = useState(() =>
+    set
+      ? set.grammarIds
+          .map(grammarId => ({ grammarId, item: pickBankItem(grammarId, { requireJp: true }) }))
+          .filter(slot => slot.item)
+      : []
+  );
+
+  const total = slots.length;
   const answeredCount = Object.keys(answers).length;
   const allAnswered = total > 0 && answeredCount === total;
-  const correctCount = Object.entries(answers).filter(
-    ([i, choice]) => set.sentences[i].meaning.answerIndex === choice
-  ).length;
 
   useEffect(() => {
     if (set && allAnswered) setPracticeSetDone('article', set.id, true);
@@ -69,14 +82,8 @@ export default function ArticlePracticeClient({ id }) {
       <p className="row-meta">文章問答：讀完每句話，選出標記文字在句中的意思或用法。</p>
       {set.intro && <p className="row-meta practice-intro">{set.intro}</p>}
 
-      {allAnswered && (
-        <div className="practice-result-banner">
-          完成！答對 {correctCount} / {total} 題。
-        </div>
-      )}
-
       <div className="practice-article">
-        {set.sentences.map((s, i) => {
+        {slots.map(({ item: s }, i) => {
           const { before, target, after } = splitOnTarget(s.jp, s.target);
           const chosen = answers[i];
           const answered = chosen !== undefined;
@@ -124,6 +131,8 @@ export default function ArticlePracticeClient({ id }) {
           );
         })}
       </div>
+
+      {allAnswered && <PracticeResultPanel set={set} slots={slots} answers={answers} mode="article" />}
     </main>
   );
 }

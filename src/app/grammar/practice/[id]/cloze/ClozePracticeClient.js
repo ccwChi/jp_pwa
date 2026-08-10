@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { pickBankItem } from '@/lib/grammar/bank';
 import { getPracticeSet } from '@/lib/grammar/practice';
 import { splitOnTarget } from '@/lib/grammar/practice/sentenceParts';
 import { parseFurigana } from '@/lib/reading/furigana';
 import { setPracticeSetDone } from '@/lib/storage';
+import PracticeResultPanel from '../../PracticeResultPanel';
 
 function renderRuby(text, keyPrefix) {
   return parseFurigana(text).map((p, i) =>
@@ -21,12 +23,19 @@ export default function ClozePracticeClient({ id }) {
   const set = getPracticeSet(id);
   const [answers, setAnswers] = useState({});
 
-  const total = set?.sentences.length || 0;
+  // See ArticlePracticeClient for why drawing here (client-only mount) is
+  // hydration-safe.
+  const [slots] = useState(() =>
+    set
+      ? set.grammarIds
+          .map(grammarId => ({ grammarId, item: pickBankItem(grammarId, { requireJp: true, requireCloze: true }) }))
+          .filter(slot => slot.item)
+      : []
+  );
+
+  const total = slots.length;
   const answeredCount = Object.keys(answers).length;
   const allAnswered = total > 0 && answeredCount === total;
-  const correctCount = Object.entries(answers).filter(
-    ([i, choice]) => set.sentences[i].cloze.answerIndex === choice
-  ).length;
 
   useEffect(() => {
     if (set && allAnswered) setPracticeSetDone('cloze', set.id, true);
@@ -59,14 +68,8 @@ export default function ClozePracticeClient({ id }) {
       <p className="row-meta">克漏字：先讀中文句子，再從選項中選出日文句子空格處該填入的文法。</p>
       {set.intro && <p className="row-meta practice-intro">{set.intro}</p>}
 
-      {allAnswered && (
-        <div className="practice-result-banner">
-          完成！答對 {correctCount} / {total} 題。
-        </div>
-      )}
-
       <div className="practice-article">
-        {set.sentences.map((s, i) => {
+        {slots.map(({ item: s }, i) => {
           const { before, after } = splitOnTarget(s.jp, s.target);
           const chosen = answers[i];
           const answered = chosen !== undefined;
@@ -110,6 +113,8 @@ export default function ClozePracticeClient({ id }) {
           );
         })}
       </div>
+
+      {allAnswered && <PracticeResultPanel set={set} slots={slots} answers={answers} mode="cloze" />}
     </main>
   );
 }

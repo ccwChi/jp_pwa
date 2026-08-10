@@ -20,7 +20,7 @@ export default function GrammarPage() {
   );
 
   return (
-    <main className="container">
+    <main className="container grammar-list-page">
       <div className="page-head">
         <Link href="/" className="back-link">← 首頁</Link>
         <Link href="/grammar/practice" className="btn">文法學習題 →</Link>

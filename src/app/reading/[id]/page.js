@@ -10,5 +10,8 @@ export async function generateStaticParams() {
 
 export default async function ReadingArticlePage({ params }) {
   const { id } = await params;
-  return <ArticleDetailClient id={id} />;
+  // Turbopack/App Router does not decode non-ASCII dynamic segments here —
+  // article ids contain raw Japanese text, so the raw param arrives as its
+  // percent-encoded URL form (e.g. "%E3%81%94..." instead of "ごん狐-1").
+  return <ArticleDetailClient id={decodeURIComponent(id)} />;
 }
