@@ -1,1 +1,50 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 @AGENTS.md
+
+## What this is
+
+Nihongo Journey (日文語感練習) — a Japanese-learning PWA built with Next.js App Router. All UI copy is Traditional Chinese, targeting JLPT N5–N2 learners. It has two content pillars: 文章閱讀 (graded reading, sentence-by-sentence furigana + translation) and 文法學習 (grammar lessons + practice). There is no backend/database — all user state lives in browser `localStorage`, and the production build is a static export deployed to GitHub Pages.
+
+## Commands
+
+- `npm run dev` — dev server (Next.js, hot reload)
+- `npm run build` — standard Next.js build
+- `npm run build:pages` — dry-runs the actual GitHub Pages static-export build locally (sets `NEXT_STATIC_EXPORT=true`, temporarily moves out the server-only routes, restores them after, even on failure)
+- `npm run lint` — ESLint (`eslint-config-next`, flat config)
+- `npm run start` — serve a production build
+
+There is no test suite/runner configured in this repo.
+
+Dictionary data (`public/dict/jmdict.json`) is generated manually and out-of-band with `node scripts/build-dictionary.mjs <path-to-jmdict-simplified-eng.json>` — not part of `npm run build`, and rarely needs re-running.
+
+## Architecture
+
+### Content = code, auto-loaded from `./data`
+
+Reading articles (`src/lib/reading/articles/data/*.js`), grammar lessons (`src/lib/grammar/lessons/data/*.js`), and grammar practice sets (`src/lib/grammar/practice/data/*.js`) are plain JS modules, each default-exporting an array of content objects. Every one of these three areas is collected the same way via `import.meta.glob('./data/*.js', { eager: true, import: 'default' })` in that folder's `index.js` — **to add content, just drop a new file into the relevant `./data` folder; nothing else needs registering.** `src/lib/grammar/bank/index.js` is a read-only adapter layer on top of lessons + practice sets (plus its own optional `./data` files) that pools practice questions per grammar point — see the extensive header comment there for the item shape.
+
+- A reading "series" is one or more article-part objects sharing a `seriesId`; a standalone article is just a series of one. See `src/lib/reading/articles/index.js` for the series/part grouping helpers.
+- Furigana is authored inline as `漢字[かな]` directly in `jp` sentence strings (parsed by `src/lib/reading/furigana.js` via regex — this is the one and only annotation mechanism, no separate lookup/dictionary step for rendering ruby text).
+- `src/doc/article-format-prompt.md` is the prompt template used to have an AI convert raw Japanese text into a properly-shaped article object (sentences/vocab/grammar) — reuse it when authoring new reading content.
+- `resources/` holds raw past-JLPT-N4 exam PDFs/audio/images — reference material for authoring content, not consumed by the app itself.
+
+### Client-side persistence (no backend)
+
+`src/lib/storage.js` implements every piece of user state (notes, reading/grammar progress, practice completion, font/speech/listen-mode prefs) as a small localStorage-backed store built on `useSyncExternalStore`, each under a key prefixed `nj_`. Follow the existing `createStore(key, fallback)` pattern for new persisted state rather than inventing a new mechanism. `src/lib/backup.js` provides full export/import by scanning for the `nj_` prefix, so new stores are automatically covered by backup/restore with no changes needed there.
+
+### Static export deploy (GitHub Pages)
+
+`next.config.mjs` only turns on `output: 'export'` (+ `/jp_pwa` basePath, unoptimized images) when `NEXT_STATIC_EXPORT=true` — local dev/build are unaffected. `.github/workflows/deploy.yml` builds with that flag on every push to `main` and publishes `out/` to Pages.
+
+Two routes are dev-only authoring tools that need a real Node server and cannot survive static export, so the deploy workflow deletes them before building: `src/app/api/articles/import/route.js` (writes a new article `./data` file to disk from the import wizard) and `src/app/reading/import/` (the wizard UI itself, `useImportWizard.js` + `ImportTool.js`). `npm run build:pages` reproduces this locally by temporarily moving those two paths out of `src/app` and back.
+
+### PWA shell
+
+`src/app/manifest.js` + `src/app/RegisterSW.js` + `public/sw.js` wire up installability and offline support. The service worker is a simple stale-while-revalidate cache (`nj-cache-v1`) keyed off `self.registration.scope`, so it works correctly under the GitHub Pages basePath without hardcoding it.
+
+### Routing shape
+
+Dynamic detail pages (`src/app/reading/[id]/page.js`, `src/app/grammar/[id]/page.js`, `.../practice/[id]/{article,cloze}/page.js`) are thin server components that call `generateStaticParams()` off the content index (required since static export has no on-demand rendering) and immediately hand off to a co-located `*Client.js` component that does the actual (client-side) rendering — reading article ids can contain raw Japanese text, so these pages `decodeURIComponent` the route param before use.
