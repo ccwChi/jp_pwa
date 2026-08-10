@@ -3,12 +3,12 @@
 // convention as reading/articles and grammar/lessons — just drop a new file
 // in ./data and it's picked up automatically).
 //
-// A practice set groups a handful of grammar lessons (grammarIds) around one
-// short narrative. Every sentence in the set is tagged with the single
-// grammarId it drills, and carries both a "meaning" quiz (文章問答 mode —
-// what does this word/pattern mean here) and a "cloze" quiz (克漏字模式 —
-// fill in the blank) for the same target substring, so one authored
-// narrative powers both practice modes.
+// A practice set is pure metadata: it groups a handful of grammar lessons
+// (grammarIds) under one title/intro, but doesn't carry any question content
+// itself. The actual sentences + "meaning" quiz (文章問答 mode) and "cloze"
+// quiz (克漏字模式) come from the question bank (src/lib/grammar/bank) —
+// at practice time, each grammarId in the set draws one bank item tagged
+// with that id (see ArticlePracticeClient/ClozePracticeClient).
 const modules = import.meta.glob('./data/*.js', { eager: true, import: 'default' });
 
 export const practiceSets = Object.keys(modules)

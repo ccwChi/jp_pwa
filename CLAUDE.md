@@ -24,12 +24,18 @@ Dictionary data (`public/dict/jmdict.json`) is generated manually and out-of-ban
 
 ### Content = code, auto-loaded from `./data`
 
-Reading articles (`src/lib/reading/articles/data/*.js`), grammar lessons (`src/lib/grammar/lessons/data/*.js`), and grammar practice sets (`src/lib/grammar/practice/data/*.js`) are plain JS modules, each default-exporting an array of content objects. Every one of these three areas is collected the same way via `import.meta.glob('./data/*.js', { eager: true, import: 'default' })` in that folder's `index.js` — **to add content, just drop a new file into the relevant `./data` folder; nothing else needs registering.** `src/lib/grammar/bank/index.js` is a read-only adapter layer on top of lessons + practice sets (plus its own optional `./data` files) that pools practice questions per grammar point — see the extensive header comment there for the item shape.
+Reading articles (`src/lib/reading/articles/data/*.js`), grammar lessons (`src/lib/grammar/lessons/data/*.js`), grammar practice sets (`src/lib/grammar/practice/data/*.js`), and grammar bank questions (`src/lib/grammar/bank/data/*.js`) are plain JS modules, each default-exporting an array of content objects. Every one of these areas is collected the same way via `import.meta.glob('./data/*.js', { eager: true, import: 'default' })` in that folder's `index.js` — **to add content, just drop a new file into the relevant `./data` folder; nothing else needs registering.**
 
 - A reading "series" is one or more article-part objects sharing a `seriesId`; a standalone article is just a series of one. See `src/lib/reading/articles/index.js` for the series/part grouping helpers.
 - Furigana is authored inline as `漢字[かな]` directly in `jp` sentence strings (parsed by `src/lib/reading/furigana.js` via regex — this is the one and only annotation mechanism, no separate lookup/dictionary step for rendering ruby text).
 - `src/doc/article-format-prompt.md` is the prompt template used to have an AI convert raw Japanese text into a properly-shaped article object (sentences/vocab/grammar) — reuse it when authoring new reading content.
 - `resources/` holds raw past-JLPT-N4 exam PDFs/audio/images — reference material for authoring content, not consumed by the app itself.
+
+### Grammar question bank (tag-based, decoupled from lessons/practice sets)
+
+Every grammar quiz question in the app — lesson quick-quizzes, practice-set article/cloze questions, future JLPT past-exam transcriptions — lives as a standalone item in `src/lib/grammar/bank/data/*.js`, never embedded in a lesson or practice-set object. A lesson (`lessons/data`) only carries its explanation/examples; a practice set (`practice/data`) only carries its `grammarIds` + title/intro metadata. Neither stores its own questions.
+
+Each bank item is tagged (`grammarIds`, `level`, `verbCategory`/`verbConjugation`/`adjCategory`/`adjConjugation`, free-form `tags`) — see the shape documented in `src/lib/grammar/bank/index.js`'s header comment. `getBankItems(grammarId, filters)` / `pickBankItem(grammarId, filters)` are how a lesson or practice screen decides which questions it's allowed to draw: `grammarId` is the required tag, everything else in `filters` narrows the pool further. `GrammarDetailClient`'s quiz tab and the article/cloze practice clients all draw randomly from this pool at render time (client-only, so the random pick doesn't get baked into the static export). One grammar point can have several bank items — more variety, drawn from a shared pool rather than one fixed question per point.
 
 ### Client-side persistence (no backend)
 

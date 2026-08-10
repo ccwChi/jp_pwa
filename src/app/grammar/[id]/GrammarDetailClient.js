@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { pickBankItem } from '@/lib/grammar/bank';
+import { hasQuizFor, pickBankItem } from '@/lib/grammar/bank';
 import { getLesson, getAdjacentLessons } from '@/lib/grammar/lessons';
 import { getPracticeSetForGrammar } from '@/lib/grammar/practice';
 import { parseFurigana, readingOf } from '@/lib/reading/furigana';
@@ -85,7 +85,7 @@ export default function GrammarDetailClient({ id }) {
         </>
       )}
 
-      {lesson.quiz?.length > 0 && (
+      {hasQuizFor(lesson.id) && (
         <>
           <div className="grammar-section-label">練習</div>
           <QuizTab lessonId={lesson.id} />
@@ -116,7 +116,7 @@ function LearningPath({ lesson, read, articleDoneSet, clozeDoneSet }) {
   const set = getPracticeSetForGrammar(lesson.id);
   if (!set) return null;
 
-  const quizDone = lesson.quiz?.length > 0 ? read : true;
+  const quizDone = hasQuizFor(lesson.id) ? read : true;
   const articleDone = articleDoneSet.has(set.id);
   const clozeDone = clozeDoneSet.has(set.id);
   const position = set.grammarIds.indexOf(lesson.id) + 1;

@@ -1,13 +1,12 @@
-import { getLessons } from '@/lib/grammar/lessons';
-import { getPracticeSets } from '@/lib/grammar/practice';
-
 // A "bank item" is one practice question tagged with the grammar point(s)
-// it drills. This module is a read-only adapter, not a new content store:
-// it derives its starting pool from content that already exists — every
-// practice-set sentence and every lesson's inline quiz — so every grammar
-// point that already had a sentence or a quiz gets a pool of size >= 1 for
-// free, and any point that had both now has 2 different questions to draw
-// from, with zero content rewritten.
+// it drills. Every question in the app — every lesson's inline quiz, every
+// practice-set sentence's meaning/cloze quiz, and any future JLPT past-exam
+// transcription — is authored directly as a bank item in ./data; nothing is
+// derived from lessons/practice-set content anymore. A lesson or practice
+// set never embeds its own questions — it only lists which grammarIds (and
+// optionally which other tags) it wants questions for, and getBankItems /
+// pickBankItem decide, from each item's own tags, whether it's eligible to
+// be drawn for that request.
 //
 // To add more variety (or a question that spans several grammar points at
 // once — a single sentence commonly drills more than one pattern), drop a
@@ -44,6 +43,10 @@ import { getPracticeSets } from '@/lib/grammar/practice';
 //     adjCategory?: 'i-adjective' | 'na-adjective',
 //     adjConjugation?: 'negative' | 'te' | 'ta' | 'adverbial' | 'conditional',
 //
+//     // free-form topic/scenario/source tags beyond the fixed fields above
+//     // (e.g. ['animals', 'daily-life']) — matched via the `tags` filter
+//     tags?: string[],
+//
 //     // past-exam provenance
 //     isPastExam?: boolean,
 //     examMeta?: { year, section, questionNumber },  // e.g. { year: 2000, section: '文法', questionNumber: 3 }
@@ -64,50 +67,36 @@ import { getPracticeSets } from '@/lib/grammar/practice';
 //     isPastExam: true,
 //     examMeta: { year: 2000, section: '文法', questionNumber: 3 },
 //   }
-const extraModules = import.meta.glob('./data/*.js', { eager: true, import: 'default' });
-const extraItems = Object.keys(extraModules)
+const modules = import.meta.glob('./data/*.js', { eager: true, import: 'default' });
+const bankItems = Object.keys(modules)
   .sort()
-  .flatMap(path => extraModules[path]);
+  .flatMap(path => modules[path]);
 
-const fromPracticeSets = getPracticeSets().flatMap(set =>
-  set.sentences.map(s => ({
-    id: `practice-${set.id}-${s.grammarId}`,
-    grammarIds: [s.grammarId],
-    level: set.level,
-    jp: s.jp,
-    zh: s.zh,
-    target: s.target,
-    meaning: s.meaning,
-    cloze: s.cloze,
-  }))
-);
-
-const fromLessonQuizzes = getLessons()
-  .filter(lesson => lesson.quiz?.length > 0)
-  .map(lesson => ({
-    id: `lesson-quiz-${lesson.id}`,
-    grammarIds: [lesson.id],
-    level: lesson.level,
-    meaning: {
-      prompt: lesson.quiz[0].question,
-      options: lesson.quiz[0].options,
-      answerIndex: lesson.quiz[0].answerIndex,
-    },
-  }));
-
-const bankItems = [...fromPracticeSets, ...fromLessonQuizzes, ...extraItems];
-
-export function getBankItems(grammarId) {
-  return bankItems.filter(item => item.grammarIds.includes(grammarId));
+// grammarId is the primary, always-required tag (an item must list it in
+// `grammarIds` to be eligible at all); the rest are optional extra filters
+// for narrowing that pool further by level/part-of-speech/topic. `tags`
+// matches when the item's own `tags` array contains every tag requested.
+export function getBankItems(grammarId, { level, tags, verbCategory, verbConjugation, adjCategory, adjConjugation } = {}) {
+  return bankItems.filter(item => {
+    if (!item.grammarIds.includes(grammarId)) return false;
+    if (level && item.level !== level) return false;
+    if (verbCategory && item.verbCategory !== verbCategory) return false;
+    if (verbConjugation && item.verbConjugation !== verbConjugation) return false;
+    if (adjCategory && item.adjCategory !== adjCategory) return false;
+    if (adjConjugation && item.adjConjugation !== adjConjugation) return false;
+    if (tags && !tags.every(t => item.tags?.includes(t))) return false;
+    return true;
+  });
 }
 
 // Picks one random item for grammarId, filtered to whatever the calling
 // practice mode actually needs (article mode needs jp+target to render the
-// highlighted sentence; cloze mode needs the cloze field). Returns null if
-// nothing in the pool meets the requirement — callers should treat that as
-// "skip this grammar point," not crash.
-export function pickBankItem(grammarId, { requireJp = false, requireCloze = false } = {}) {
-  const pool = getBankItems(grammarId).filter(item => {
+// highlighted sentence; cloze mode needs the cloze field) plus whichever
+// extra tag filters (level/tags/verbCategory/...) it wants to narrow by.
+// Returns null if nothing in the pool meets the requirement — callers
+// should treat that as "skip this grammar point," not crash.
+export function pickBankItem(grammarId, { requireJp = false, requireCloze = false, ...tagFilters } = {}) {
+  const pool = getBankItems(grammarId, tagFilters).filter(item => {
     if (requireJp && !item.jp) return false;
     if (requireCloze && !item.cloze) return false;
     if (!requireCloze && !item.meaning) return false;
@@ -115,4 +104,11 @@ export function pickBankItem(grammarId, { requireJp = false, requireCloze = fals
   });
   if (pool.length === 0) return null;
   return pool[Math.floor(Math.random() * pool.length)];
+}
+
+// Whether lessonId has at least one meaning-quiz question in the bank — used
+// to decide whether a lesson's detail page shows a "小測驗" section at all,
+// now that lessons no longer carry their own embedded `quiz` field.
+export function hasQuizFor(grammarId) {
+  return bankItems.some(item => item.grammarIds.includes(grammarId) && item.meaning);
 }

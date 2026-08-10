@@ -1,0 +1,143 @@
+// Extracted from practice/data/n3-g02-concession-conditional.js's inline sentences field — one
+// bank item per original sentence, tagged with its grammarId so it stays in
+// that grammar point's practice pool (see src/lib/grammar/bank/index.js).
+const items = [
+  {
+    id: 'practice-n3-concession-conditional-kuse-ni',
+    grammarIds: ['kuse-ni'],
+    level: 'N3',
+    jp: '下手[へた]なくせに、いつも自信[じしん]満々[まんまん]です。',
+    zh: '明明很不擅長，卻總是很有自信。',
+    target: '下手[へた]なくせに',
+    meaning: {
+      prompt: '句中的「下手なくせに」在這裡的作用是什麼？',
+      options: ['帶輕蔑、責備語氣的逆接「明明…卻…」', '中性客觀的逆接，較書面', '表示假設條件', '表示驚訝的逆接，較正式'],
+      answerIndex: 0,
+    },
+    cloze: {
+      options: ['下手[へた]なくせに', '下手[へた]なものの', '下手[へた]とはいえ', '下手[へた]にもかかわらず'],
+      answerIndex: 0,
+    },
+  },
+  {
+    id: 'practice-n3-concession-conditional-mono-no',
+    grammarIds: ['mono-no'],
+    level: 'N3',
+    jp: '日本語[にほんご]を三年間[さんねんかん]勉強[べんきょう]したものの、まだ上手[じょうず]に話[はな]せません。',
+    zh: '雖然學了三年日文，但還是無法說得很好。',
+    target: 'したものの',
+    meaning: {
+      prompt: '句中的「したものの」在這裡的作用是什麼？',
+      options: ['表示雖然承認前項事實，但後項不如預期，語感較書面客觀', '帶輕蔑責備語氣的逆接', '表示假設條件', '表示因果關係'],
+      answerIndex: 0,
+    },
+    cloze: {
+      options: ['したものの', 'したくせに', 'したとしたら', 'したとたん'],
+      answerIndex: 0,
+    },
+  },
+  {
+    id: 'practice-n3-concession-conditional-towa-ie',
+    grammarIds: ['towa-ie'],
+    level: 'N3',
+    jp: '春[はる]とはいえ、まだ朝[あさ]は寒[さむ]いです。',
+    zh: '雖說已經是春天，但早上還是很冷。',
+    target: '春[はる]とはいえ',
+    meaning: {
+      prompt: '句中的「春とはいえ」在這裡的作用是什麼？',
+      options: ['表示雖說如此，但結論和一般預期不同，帶提醒糾正語感', '表示假設', '表示負面原因', '表示只要滿足最低條件'],
+      answerIndex: 0,
+    },
+    cloze: {
+      options: ['春[はる]とはいえ', '春[はる]のくせに', '春[はる]としたら', '春[はる]次第[しだい]で'],
+      answerIndex: 0,
+    },
+  },
+  {
+    id: 'practice-n3-concession-conditional-nimo-kakawarazu',
+    grammarIds: ['nimo-kakawarazu'],
+    level: 'N3',
+    jp: '大雨[おおあめ]にもかかわらず、たくさんの人[ひと]が集[あつ]まりました。',
+    zh: '儘管下大雨，還是聚集了很多人。',
+    target: 'にもかかわらず',
+    meaning: {
+      prompt: '句中的「にもかかわらず」在這裡的作用是什麼？',
+      options: ['表示不受前項影響，帶驚訝語感的逆接，語感正式', '表示中性客觀的逆接', '表示假設條件', '表示原因'],
+      answerIndex: 0,
+    },
+    cloze: {
+      options: ['にもかかわらず', 'のくせに', 'としたら', '次第[しだい]で'],
+      answerIndex: 0,
+    },
+  },
+  {
+    id: 'practice-n3-concession-conditional-ba-hodo',
+    grammarIds: ['ba-hodo'],
+    level: 'N3',
+    jp: '勉強[べんきょう]すればするほど、わかるようになります。',
+    zh: '越讀書就越懂。',
+    target: 'すればするほど',
+    meaning: {
+      prompt: '句中的「すればするほど」在這裡的作用是什麼？',
+      options: ['表示隨著程度加深，結果也隨之變化「越…越…」', '表示逆接', '表示假設中最低限度的條件', '表示原因'],
+      answerIndex: 0,
+    },
+    cloze: {
+      options: ['すればするほど', 'するとしたら', 'するとたん', 'する次第[しだい]で'],
+      answerIndex: 0,
+    },
+  },
+  {
+    id: 'practice-n3-concession-conditional-to-shitara',
+    grammarIds: ['to-shitara'],
+    level: 'N3',
+    jp: 'もし宝[たから]くじが当[あ]たったとしたら、何[なに]を買[か]いますか。',
+    zh: '假如中了樂透的話，你要買什麼？',
+    target: '当[あ]たったとしたら',
+    meaning: {
+      prompt: '句中的「当たったとしたら」在這裡的作用是什麼？',
+      options: ['表示在假設某個前提成立的情況下「假如…的話」', '表示越…越…', '表示前一動作剛結束，後面意外的事發生', '表示依…而定'],
+      answerIndex: 0,
+    },
+    cloze: {
+      options: ['当[あ]たったとしたら', '当[あ]たったとたん', '当[あ]たるくせに', '当[あ]たり次第[しだい]'],
+      answerIndex: 0,
+    },
+  },
+  {
+    id: 'practice-n3-concession-conditional-ta-totan',
+    grammarIds: ['ta-totan'],
+    level: 'N3',
+    jp: '家[いえ]を出[で]たとたん、雨[あめ]が降[ふ]り出[だ]しました。',
+    zh: '剛出門就下起雨來了。',
+    target: '出[で]たとたん',
+    meaning: {
+      prompt: '句中的「出たとたん」在這裡的作用是什麼？',
+      options: ['表示前一動作剛結束，後一意外的事緊接發生「剛…就…」', '表示程度加深的變化', '表示假設條件', '表示依…而定'],
+      answerIndex: 0,
+    },
+    cloze: {
+      options: ['出[で]たとたん', '出[で]るとしたら', '出[で]るくせに', '出[で]次第[しだい]'],
+      answerIndex: 0,
+    },
+  },
+  {
+    id: 'practice-n3-concession-conditional-shidai',
+    grammarIds: ['shidai'],
+    level: 'N3',
+    jp: '空港[くうこう]に着[つ]き次第[しだい]、電話[でんわ]します。',
+    zh: '一到機場就立刻打電話。',
+    target: '着[つ]き次第[しだい]',
+    meaning: {
+      prompt: '句中的「着き次第」在這裡的作用是什麼？',
+      options: ['動詞ます形＋次第，表示「一…就立刻…」', '名詞＋次第だ，表示「依…而定」', '表示假設', '表示逆接'],
+      answerIndex: 0,
+    },
+    cloze: {
+      options: ['着[つ]き次第[しだい]', '着[つ]いたとたん', '着[つ]いたら', '着[つ]くとしたら'],
+      answerIndex: 0,
+    },
+  },
+];
+
+export default items;
