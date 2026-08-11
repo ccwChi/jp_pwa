@@ -206,6 +206,20 @@ export function usePracticeClozeDoneSet() {
   return useSyncExternalStore(subscribe, getSnapshot, () => emptyPracticeDoneSet);
 }
 
+// ── Grammar: last-selected level tab on the /grammar list page ───────────
+
+const grammarLevelStore = createStore('nj_grammar_level', null);
+
+export function getGrammarLevel() {
+  return grammarLevelStore.get();
+}
+
+export function setGrammarLevel(value) {
+  grammarLevelStore.set(value);
+}
+
+export const useGrammarLevel = grammarLevelStore.useValue;
+
 // ── Font scale: user-chosen reading font size multiplier ─────────────────
 
 const fontScaleStore = createStore('nj_font_scale', 1);

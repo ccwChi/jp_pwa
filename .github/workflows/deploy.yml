@@ -27,12 +27,13 @@ jobs:
 
       - run: npm ci
 
-      # The article-import tool writes files to disk via a POST API route,
-      # which needs a Node server — unsupported by `output: export`. It's a
-      # dev-only authoring convenience (see AGENTS.md notes in the repo), so
-      # it's simply excluded from the files that get built for Pages.
-      - name: Remove dev-only import tool
-        run: rm -rf src/app/api src/app/reading/import
+      # The article-import tool and the practice-bank POS tagging tool both
+      # write files to disk via a POST API route, which needs a Node server —
+      # unsupported by `output: export`. They're dev-only authoring
+      # conveniences (see AGENTS.md notes in the repo), so they're simply
+      # excluded from the files that get built for Pages.
+      - name: Remove dev-only import/tagging tools
+        run: rm -rf src/app/api src/app/reading/import src/app/practice/tag
 
       - name: Build static export
         run: npm run build

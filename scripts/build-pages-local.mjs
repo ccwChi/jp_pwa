@@ -1,6 +1,7 @@
 // Local dry-run of the GitHub Pages static export (see .github/workflows/deploy.yml
-// for the real deploy build). Temporarily excludes the dev-only article-import
-// tool (a POST API route, unsupported by `output: export`), builds, then always
+// for the real deploy build). Temporarily excludes dev-only tools backed by
+// POST API routes (unsupported by `output: export`) — the article-import
+// wizard and the practice-bank POS tagging tool — builds, then always
 // restores the excluded files — even if the build fails — so the working tree
 // is never left in a broken state.
 import { cpSync, existsSync, rmSync } from 'node:fs';
@@ -13,6 +14,7 @@ const root = path.resolve(import.meta.dirname, '..');
 const EXCLUDED = [
   ['src/app/api', '.pages-build-backup/api'],
   ['src/app/reading/import', '.pages-build-backup/reading-import'],
+  ['src/app/practice/tag', '.pages-build-backup/practice-tag'],
 ];
 
 // Copy-then-delete rather than rename: a running `next dev` file watcher

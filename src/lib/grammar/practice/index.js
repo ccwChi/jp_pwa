@@ -6,9 +6,9 @@
 // A practice set is pure metadata: it groups a handful of grammar lessons
 // (grammarIds) under one title/intro, but doesn't carry any question content
 // itself. The actual sentences + "meaning" quiz (文章問答 mode) and "cloze"
-// quiz (克漏字模式) come from the question bank (src/lib/grammar/bank) —
-// at practice time, each grammarId in the set draws one bank item tagged
-// with that id (see ArticlePracticeClient/ClozePracticeClient).
+// quiz (克漏字模式) come from the question bank (src/lib/practice/bank) —
+// at practice time, each grammarId in the set draws one bank item whose
+// pointIds include that id (see ArticlePracticeClient/ClozePracticeClient).
 const modules = import.meta.glob('./data/*.js', { eager: true, import: 'default' });
 
 export const practiceSets = Object.keys(modules)

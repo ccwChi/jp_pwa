@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <style>
+    .frame { fill: none; stroke: #888; stroke-width: 1; }
+    .fish { fill: none; stroke: #333; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .water { fill: none; stroke: #333; stroke-width: 2; }
+    .weed { fill: none; stroke: #2a7; stroke-width: 2.5; stroke-linecap: round; }
+    .label { font-family: sans-serif; font-size: 16px; fill: #333; }
+  </style>
+
+  <line x1="200" y1="0" x2="200" y2="400" class="frame" />
+  <line x1="0" y1="200" x2="400" y2="200" class="frame" />
+
+  <!-- 1: single fish flying in the sky -->
+  <g>
+    <text x="10" y="20" class="label">1</text>
+    <path class="fish" d="M40,100 Q60,85 90,95 L110,100 L90,105 Q60,115 40,100 Z" />
+    <path class="fish" d="M120,60 L135,50 L135,70 Z" />
+  </g>
+
+  <!-- 2: a group/school of fish flying in the sky -->
+  <g>
+    <text x="210" y="20" class="label">2</text>
+    <path class="fish" d="M240,60 Q255,50 275,58 L290,62 L275,66 Q255,74 240,60 Z" />
+    <path class="fish" d="M260,100 Q275,90 295,98 L310,102 L295,106 Q275,114 260,100 Z" />
+    <path class="fish" d="M235,140 Q250,130 270,138 L285,142 L270,146 Q250,154 235,140 Z" />
+  </g>
+
+  <!-- 3: several fish + seaweed underwater -->
+  <g>
+    <text x="10" y="220" class="label">3</text>
+    <path class="water" d="M20,230 Q200,210 380,230" />
+    <path class="fish" d="M50,260 Q65,250 85,258 L100,262 L85,266 Q65,274 50,260 Z" />
+    <path class="fish" d="M120,290 Q135,280 155,288 L170,292 L155,296 Q135,304 120,290 Z" />
+    <path class="weed" d="M60,380 Q55,350 65,330 Q75,350 70,380" />
+    <path class="weed" d="M100,380 Q95,340 108,315 Q118,340 112,380" />
+  </g>
+
+  <!-- 4: single fish + seaweed underwater -->
+  <g>
+    <text x="210" y="220" class="label">4</text>
+    <path class="water" d="M220,230 Q300,215 380,230" />
+    <path class="fish" d="M260,280 Q278,268 302,278 L320,283 L302,288 Q278,298 260,280 Z" />
+    <path class="weed" d="M330,380 Q325,345 340,320 Q350,345 344,380" />
+    <path class="weed" d="M240,380 Q235,350 248,330 Q258,350 252,380" />
+  </g>
+</svg>

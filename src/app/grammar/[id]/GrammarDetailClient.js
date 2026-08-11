@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { hasQuizFor, pickBankItem } from '@/lib/grammar/bank';
+import { hasQuizFor, pickBankItem } from '@/lib/practice/bank';
 import { getLesson, getAdjacentLessons } from '@/lib/grammar/lessons';
 import { getPracticeSetForGrammar } from '@/lib/grammar/practice';
 import { parseFurigana, readingOf } from '@/lib/reading/furigana';
@@ -235,14 +235,14 @@ function renderStructure(text) {
 }
 
 // Draws one question at random from lessonId's question-bank pool (see
-// lib/grammar/bank) instead of a single fixed quiz item, so revisiting a
+// lib/practice/bank) instead of a single fixed quiz item, so revisiting a
 // lesson has a chance of showing a different question each time. Wrapped in
 // next/dynamic(ssr:false) below because this component is only safe to
 // render client-side: the random draw would otherwise get baked into the
 // static export's HTML at build time and every visitor would see the same
 // "random" pick.
 function QuizTabInner({ lessonId }) {
-  const [item] = useState(() => pickBankItem(lessonId, { requireJp: false }));
+  const [item] = useState(() => pickBankItem({ pointId: lessonId, requireJp: false }));
   const [answers, setAnswers] = useState({});
 
   if (!item?.meaning) return null;

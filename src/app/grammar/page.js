@@ -1,14 +1,20 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { getCategories, getLevels } from '@/lib/grammar/lessons';
 import { getGrammarPracticeStatus } from '@/lib/grammar/practice';
-import { useGrammarReadSet, usePracticeArticleDoneSet, usePracticeClozeDoneSet } from '@/lib/storage';
+import {
+  setGrammarLevel,
+  useGrammarLevel,
+  useGrammarReadSet,
+  usePracticeArticleDoneSet,
+  usePracticeClozeDoneSet,
+} from '@/lib/storage';
 
 export default function GrammarPage() {
   const levels = getLevels();
-  const [activeLevel, setActiveLevel] = useState(levels[0] || '全部');
+  const storedLevel = useGrammarLevel();
+  const activeLevel = storedLevel && levels.includes(storedLevel) ? storedLevel : (levels[0] || '全部');
   const readSet = useGrammarReadSet();
   const articleDoneSet = usePracticeArticleDoneSet();
   const clozeDoneSet = usePracticeClozeDoneSet();
@@ -30,12 +36,12 @@ export default function GrammarPage() {
       <p className="row-meta">已學習 {readCount} / {total}</p>
       <p className="row-meta grammar-legend">文 = 文章問答　填 = 克漏字　讀 = 詳解＋練習題</p>
 
-      <div className="tag-filter">
+      <div className="article-tabs">
         {levels.map(level => (
           <button
             key={level}
-            className={`chip${activeLevel === level ? ' active' : ''}`}
-            onClick={() => setActiveLevel(level)}
+            className={`article-tab${activeLevel === level ? ' active' : ''}`}
+            onClick={() => setGrammarLevel(level)}
           >
             {level}
           </button>

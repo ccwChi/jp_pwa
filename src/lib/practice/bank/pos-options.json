@@ -1,0 +1,44 @@
+{
+  "verbCategory": [
+    "godan",
+    "ichidan",
+    "suru",
+    "kuru"
+  ],
+  "verbConjugation": [
+    "dictionary",
+    "masu",
+    "nai",
+    "te",
+    "ta",
+    "tari",
+    "stem",
+    "volitional",
+    "potential",
+    "passive",
+    "causative",
+    "causative-passive",
+    "imperative",
+    "prohibitive",
+    "conditional-ba",
+    "conditional-tara",
+    "conditional-to",
+    "conditional-nara"
+  ],
+  "adjCategory": [
+    "i-adjective",
+    "na-adjective"
+  ],
+  "adjConjugation": [
+    "dictionary",
+    "negative",
+    "te",
+    "ta",
+    "adverbial",
+    "noun-modifying",
+    "conditional-ba",
+    "conditional-tara",
+    "conditional-nara",
+    "presumptive"
+  ]
+}

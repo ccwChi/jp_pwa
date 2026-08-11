@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { pickBankItem } from '@/lib/grammar/bank';
+import { pickBankItem } from '@/lib/practice/bank';
 import { getPracticeSet } from '@/lib/grammar/practice';
 import { splitOnTarget } from '@/lib/grammar/practice/sentenceParts';
 import { parseFurigana } from '@/lib/reading/furigana';
@@ -28,7 +28,7 @@ export default function ClozePracticeClient({ id }) {
   const [slots] = useState(() =>
     set
       ? set.grammarIds
-          .map(grammarId => ({ grammarId, item: pickBankItem(grammarId, { requireJp: true, requireCloze: true }) }))
+          .map(grammarId => ({ grammarId, item: pickBankItem({ pointId: grammarId, requireJp: true, requireCloze: true }) }))
           .filter(slot => slot.item)
       : []
   );
