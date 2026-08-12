@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { findNextUntagged, saveItemTags, loadPosOptions, addPosOption } from '@/lib/practice/bank/devTagStore';
 
-const POS_FIELDS = ['verbCategory', 'verbConjugation', 'adjCategory', 'adjConjugation'];
+const POS_FIELDS = ['verbCategory', 'verbConjugation', 'adjCategory', 'adjConjugation', 'otherCategory'];
 
 export async function GET() {
   const [{ item, remaining }, posOptions] = await Promise.all([findNextUntagged(), loadPosOptions()]);
@@ -21,8 +21,10 @@ export async function POST(request) {
     // them immediately.
     if (newOptions) {
       for (const field of POS_FIELDS) {
-        const value = newOptions[field];
-        if (value) await addPosOption(field, value);
+        const values = newOptions[field] || [];
+        for (const value of values) {
+          await addPosOption(field, value);
+        }
       }
     }
 

@@ -1,14 +1,21 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { getPracticeSets, getPracticeLevels } from '@/lib/grammar/practice';
 import { getLesson } from '@/lib/grammar/lessons';
-import { useGrammarReadSet, usePracticeArticleDoneSet, usePracticeClozeDoneSet } from '@/lib/storage';
+import {
+  setGrammarPracticeLevel,
+  useGrammarPracticeLevel,
+  useGrammarReadSet,
+  usePracticeArticleDoneSet,
+  usePracticeClozeDoneSet,
+} from '@/lib/storage';
 
 export default function GrammarPracticePage() {
   const levels = getPracticeLevels();
-  const [activeLevel, setActiveLevel] = useState(levels[0] || 'N5');
+  const storedLevel = useGrammarPracticeLevel();
+  const defaultLevel = levels.includes('N5') ? 'N5' : (levels[0] || 'N5');
+  const activeLevel = storedLevel && levels.includes(storedLevel) ? storedLevel : defaultLevel;
   const sets = getPracticeSets().filter(set => set.level === activeLevel);
   const readSet = useGrammarReadSet();
   const articleDoneSet = usePracticeArticleDoneSet();
@@ -17,7 +24,10 @@ export default function GrammarPracticePage() {
   return (
     <main className="container">
       <div className="page-head">
-        <Link href="/grammar" className="back-link">← 文法列表</Link>
+        <Link href="/grammar/lessons" className="back-link">← 文法列表</Link>
+        {process.env.NEXT_PUBLIC_STATIC_EXPORT !== 'true' && (
+          <Link href="/practice/tag" className="btn">POS 標記工具 →</Link>
+        )}
       </div>
 
       <h1 className="page-title">文法學習題</h1>
@@ -30,7 +40,7 @@ export default function GrammarPracticePage() {
           <button
             key={level}
             className={`chip${activeLevel === level ? ' active' : ''}`}
-            onClick={() => setActiveLevel(level)}
+            onClick={() => setGrammarPracticeLevel(level)}
           >
             {level}
           </button>

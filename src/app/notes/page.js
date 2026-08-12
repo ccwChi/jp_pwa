@@ -44,7 +44,7 @@ export default function NotesPage() {
             hidden
             onChange={handleImportFile}
           />
-          <Link href="/notes/new" className="btn">+ 新增筆記</Link>
+          <Link href="/notes/new" className="btn btn-primary">+ 新增筆記</Link>
         </div>
       </div>
 

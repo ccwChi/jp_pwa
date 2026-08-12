@@ -202,7 +202,7 @@ export default function ArticleDetailClient({ id }) {
   const read = readSet.has(readKey);
 
   return (
-    <main className="container">
+    <main className="container reading-detail-page">
       <div className="page-head">
         <Link href="/reading" className="back-link">← 文章列表</Link>
         <label className="read-toggle">
@@ -219,7 +219,7 @@ export default function ArticleDetailClient({ id }) {
         <>
           <div className="article-title-row">
             <h1 className="series-heading">{article.seriesTitle}</h1>
-            <span className="tag">{article.level}</span>
+            <span className="tag" data-level={article.level}>{article.level}</span>
           </div>
           {article.partTitle && <div className="part-title">第{article.partTitle}章</div>}
           <PartTabs article={article} />
@@ -227,7 +227,7 @@ export default function ArticleDetailClient({ id }) {
       ) : (
         <div className="article-title-row">
           <h1 className="page-title">{article.title}</h1>
-          <span className="tag">{article.level}</span>
+          <span className="tag" data-level={article.level}>{article.level}</span>
         </div>
       )}
 
@@ -246,68 +246,73 @@ export default function ArticleDetailClient({ id }) {
       {tab === '文章' && (
         <section>
           <div className="reading-controls">
-            <button
-              type="button"
-              className="listen-mode-btn"
-              onClick={() => setListenMode(true)}
-            >
-              🚗 聆聽模式
-            </button>
+            <div className="ctrl-cluster">
+              <button
+                type="button"
+                className="listen-mode-btn"
+                onClick={() => setListenMode(true)}
+              >
+                聆聽模式
+              </button>
 
-            <div className="speech-rate-control">
-              <span className="speech-rate-icon" aria-hidden="true">🔊</span>
-              <input
-                ref={speechRateSliderRef}
-                type="range"
-                className="speech-rate-slider"
-                min={SPEECH_RATE_MIN}
-                max={SPEECH_RATE_MAX}
-                step={SPEECH_RATE_STEP}
-                value={speechRate}
-                onChange={e => setSpeechRate(clampSpeechRate(parseFloat(e.target.value)))}
-                aria-label="朗讀速度"
-              />
-              <span className="speech-rate-value">{speechRate.toFixed(1)}x</span>
+              <div className="speech-rate-control">
+                <input
+                  ref={speechRateSliderRef}
+                  type="range"
+                  className="speech-rate-slider"
+                  min={SPEECH_RATE_MIN}
+                  max={SPEECH_RATE_MAX}
+                  step={SPEECH_RATE_STEP}
+                  value={speechRate}
+                  onChange={e => setSpeechRate(clampSpeechRate(parseFloat(e.target.value)))}
+                  aria-label="朗讀速度"
+                />
+                <span className="speech-rate-value">{speechRate.toFixed(1)}x</span>
+              </div>
             </div>
 
-            <label className="romaji-toggle">
-              <input
-                type="checkbox"
-                checked={showRomaji}
-                onChange={e => setShowRomaji(e.target.checked)}
-              />
-              羅馬拼音
-            </label>
+            <div className="reading-controls-divider" aria-hidden="true" />
 
-            <label className="zh-blur-toggle">
-              <span className="switch">
+            <div className="ctrl-cluster">
+              <label className="romaji-toggle">
                 <input
                   type="checkbox"
-                  checked={zhBlur}
-                  onChange={e => setZhBlur(e.target.checked)}
+                  checked={showRomaji}
+                  onChange={e => setShowRomaji(e.target.checked)}
                 />
-                <span className="switch-track" />
-              </span>
-              中文翻譯
-            </label>
+                羅馬拼音
+              </label>
 
-            <div className="font-scale-control">
-              <button
-                type="button"
-                className="font-scale-btn"
-                onClick={() => setFontScale(clampFontScale(fontScale - FONT_SCALE_STEP))}
-                aria-label="縮小字級"
-              >
-                A−
-              </button>
-              <button
-                type="button"
-                className="font-scale-btn"
-                onClick={() => setFontScale(clampFontScale(fontScale + FONT_SCALE_STEP))}
-                aria-label="放大字級"
-              >
-                A+
-              </button>
+              <label className="zh-blur-toggle">
+                <span className="switch">
+                  <input
+                    type="checkbox"
+                    checked={zhBlur}
+                    onChange={e => setZhBlur(e.target.checked)}
+                  />
+                  <span className="switch-track" />
+                </span>
+                中文翻譯
+              </label>
+
+              <div className="font-scale-control">
+                <button
+                  type="button"
+                  className="font-scale-btn"
+                  onClick={() => setFontScale(clampFontScale(fontScale - FONT_SCALE_STEP))}
+                  aria-label="縮小字級"
+                >
+                  A−
+                </button>
+                <button
+                  type="button"
+                  className="font-scale-btn"
+                  onClick={() => setFontScale(clampFontScale(fontScale + FONT_SCALE_STEP))}
+                  aria-label="放大字級"
+                >
+                  A+
+                </button>
+              </div>
             </div>
           </div>
 
@@ -589,7 +594,6 @@ function ListenMode({ article, rate, listenZh, listenGap, listenBlackout, onExit
 
   useEffect(() => {
     scrollToIndex(index, 'smooth');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
   // The scroller unmounts while dimmed (a different subtree is returned
@@ -747,10 +751,10 @@ function ListenMode({ article, rate, listenZh, listenGap, listenBlackout, onExit
 
       <div className="listen-bottom-row">
         <button type="button" className="listen-dim-btn" onClick={() => setDimmed(true)}>
-          🌑 開車模式：畫面全黑
+          開車模式：畫面全黑
         </button>
         <button type="button" className="listen-dim-btn" onClick={() => setSettingsOpen(o => !o)}>
-          ⚙ 設定
+          設定 · 停頓<span className="settings-value">{LISTEN_GAPS.find(g => g.value === listenGap)?.label}</span>
         </button>
       </div>
 
@@ -845,7 +849,7 @@ function QuizTab({ quiz }) {
         return (
           <div className="quiz-item" key={qi}>
             <p className="quiz-question">{q.question}</p>
-            <div className="quiz-options">
+            <div className={`quiz-options${q.options.every(o => o.length <= 6) ? ' short' : ''}`}>
               {q.options.map((opt, oi) => {
                 let state = '';
                 if (answered) {

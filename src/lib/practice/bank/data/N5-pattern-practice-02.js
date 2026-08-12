@@ -339,8 +339,12 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "verbCategory": "godan",
-    "verbConjugation": "masu",
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "masu"
+    ],
     "posReviewed": true
   },
   {
@@ -373,8 +377,12 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "verbCategory": "ichidan",
-    "verbConjugation": "dictionary",
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
     "posReviewed": true
   },
   {

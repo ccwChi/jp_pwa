@@ -68,6 +68,15 @@ export default function ClozePracticeClient({ id }) {
       <p className="row-meta">克漏字：先讀中文句子，再從選項中選出日文句子空格處該填入的文法。</p>
       {set.intro && <p className="row-meta practice-intro">{set.intro}</p>}
 
+      {total > 0 && (
+        <div className="practice-progress">
+          <span className="practice-progress-count">第 {Math.min(answeredCount + 1, total)} ／ 共 {total} 題</span>
+          <div className="series-progress-track">
+            <div className="series-progress-fill" style={{ width: `${(answeredCount / total) * 100}%` }} />
+          </div>
+        </div>
+      )}
+
       <div className="practice-article">
         {slots.map(({ item: s }, i) => {
           const { before, after } = splitOnTarget(s.jp, s.target);
@@ -90,7 +99,7 @@ export default function ClozePracticeClient({ id }) {
                 {renderRuby(after, `${i}-a`)}
               </p>
 
-              <div className="quiz-options">
+              <div className={`quiz-options${s.cloze.options.every(o => o.length <= 6) ? ' short' : ''}`}>
                 {s.cloze.options.map((opt, oi) => {
                   let state = '';
                   if (answered) {

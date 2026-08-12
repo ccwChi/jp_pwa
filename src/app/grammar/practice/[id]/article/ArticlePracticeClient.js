@@ -82,6 +82,15 @@ export default function ArticlePracticeClient({ id }) {
       <p className="row-meta">文章問答：讀完每句話，選出標記文字在句中的意思或用法。</p>
       {set.intro && <p className="row-meta practice-intro">{set.intro}</p>}
 
+      {total > 0 && (
+        <div className="practice-progress">
+          <span className="practice-progress-count">第 {Math.min(answeredCount + 1, total)} ／ 共 {total} 題</span>
+          <div className="series-progress-track">
+            <div className="series-progress-fill" style={{ width: `${(answeredCount / total) * 100}%` }} />
+          </div>
+        </div>
+      )}
+
       <div className="practice-article">
         {slots.map(({ item: s }, i) => {
           const { before, target, after } = splitOnTarget(s.jp, s.target);
@@ -108,7 +117,7 @@ export default function ArticlePracticeClient({ id }) {
               <p className="grammar-example-zh">{s.zh}</p>
 
               <p className="practice-question">{s.meaning.prompt}</p>
-              <div className="quiz-options">
+              <div className={`quiz-options${s.meaning.options.every(o => o.length <= 6) ? ' short' : ''}`}>
                 {s.meaning.options.map((opt, oi) => {
                   let state = '';
                   if (answered) {

@@ -220,6 +220,58 @@ export function setGrammarLevel(value) {
 
 export const useGrammarLevel = grammarLevelStore.useValue;
 
+// ── Grammar: last-selected level tab on the /grammar/practice page ───────
+
+const grammarPracticeLevelStore = createStore('nj_grammar_practice_level', null);
+
+export function getGrammarPracticeLevel() {
+  return grammarPracticeLevelStore.get();
+}
+
+export function setGrammarPracticeLevel(value) {
+  grammarPracticeLevelStore.set(value);
+}
+
+export const useGrammarPracticeLevel = grammarPracticeLevelStore.useValue;
+
+// ── Reading: favorited seriesIds, shown pinned to the top of the list ────
+
+const readingFavoritesStore = createStore('nj_reading_favorites', []);
+
+export function isReadingFavorite(seriesId) {
+  return readingFavoritesStore.get().includes(seriesId);
+}
+
+export function setReadingFavorite(seriesId, value) {
+  const current = readingFavoritesStore.get();
+  const next = value
+    ? (current.includes(seriesId) ? current : [...current, seriesId])
+    : current.filter(id => id !== seriesId);
+  readingFavoritesStore.set(next);
+}
+
+const emptyReadingFavoriteSet = new Set();
+
+export function useReadingFavoriteSet() {
+  const getSnapshot = useMemo(() => cached(() => new Set(readingFavoritesStore.get())), []);
+  return useSyncExternalStore(subscribe, getSnapshot, () => emptyReadingFavoriteSet);
+}
+
+// ── Reading: selected level tags on the /reading list page (multi-select;
+// empty array means no filter, i.e. show every level) ────────────────────
+
+const readingLevelTagsStore = createStore('nj_reading_level_tags', []);
+
+export function getReadingLevelTags() {
+  return readingLevelTagsStore.get();
+}
+
+export function setReadingLevelTags(value) {
+  readingLevelTagsStore.set(value);
+}
+
+export const useReadingLevelTags = readingLevelTagsStore.useValue;
+
 // ── Font scale: user-chosen reading font size multiplier ─────────────────
 
 const fontScaleStore = createStore('nj_font_scale', 1);

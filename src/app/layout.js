@@ -1,3 +1,4 @@
+import '../app/jp-serif.css';
 import '../app/globals.css';
 import RegisterSW from './RegisterSW';
 

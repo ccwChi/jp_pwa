@@ -67,9 +67,9 @@ export async function saveItemTags(id, tags) {
     if (index === -1) continue;
 
     const item = { ...items[index] };
-    for (const field of ['verbCategory', 'verbConjugation', 'adjCategory', 'adjConjugation']) {
-      const value = tags[field];
-      if (value) item[field] = value;
+    for (const field of ['verbCategory', 'verbConjugation', 'adjCategory', 'adjConjugation', 'otherCategory']) {
+      const values = tags[field];
+      if (values && values.length > 0) item[field] = values;
       else delete item[field];
     }
     item.posReviewed = true;

@@ -26,7 +26,7 @@ export default function GrammarDetailClient({ id }) {
     return (
       <main className="container">
         <div className="page-head">
-          <Link href="/grammar" className="back-link">← 文法列表</Link>
+          <Link href="/grammar/lessons" className="back-link">← 文法列表</Link>
         </div>
         <p className="empty-hint">找不到這個文法點。</p>
       </main>
@@ -37,9 +37,9 @@ export default function GrammarDetailClient({ id }) {
   const { prev, next } = getAdjacentLessons(lesson);
 
   return (
-    <main className="container">
+    <main className="container grammar-detail-page">
       <div className="page-head">
-        <Link href="/grammar" className="back-link">← 文法列表</Link>
+        <Link href="/grammar/lessons" className="back-link">← 文法列表</Link>
         <label className="read-toggle">
           <input
             type="checkbox"
@@ -52,7 +52,7 @@ export default function GrammarDetailClient({ id }) {
 
       <div className="article-title-row">
         <span className="desc">{lesson.category}</span>
-        <span className="tag">{lesson.level}</span>
+        <span className="tag" data-level={lesson.level}>{lesson.level}</span>
       </div>
 
       <div className="grammar-hero">
@@ -264,7 +264,7 @@ function QuizTabInner({ lessonId }) {
         return (
           <div className="quiz-item" key={qi}>
             <p className="quiz-question">{q.prompt}</p>
-            <div className="quiz-options">
+            <div className={`quiz-options${q.options.every(o => o.length <= 6) ? ' short' : ''}`}>
               {q.options.map((opt, oi) => {
                 let state = '';
                 if (answered) {

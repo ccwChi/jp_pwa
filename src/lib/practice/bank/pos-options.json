@@ -40,5 +40,15 @@
     "conditional-tara",
     "conditional-nara",
     "presumptive"
+  ],
+  "otherCategory": [
+    "adverb",
+    "conjunction",
+    "particle",
+    "interjection",
+    "prefix",
+    "suffix",
+    "counter",
+    "expression"
   ]
 }

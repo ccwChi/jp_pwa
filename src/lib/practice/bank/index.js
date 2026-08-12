@@ -36,12 +36,17 @@
 //     cloze?:   { options, answerIndex },
 //
 //     // optional part-of-speech tags — only set the ones relevant to this item.
-//     // Valid values live in ./pos-options.json (VERB_CATEGORIES etc. below),
-//     // not hardcoded here, since the dev tagging tool can extend them.
-//     verbCategory?: string,
-//     verbConjugation?: string,
-//     adjCategory?: string,
-//     adjConjugation?: string,
+//     // Each is an array because a single item can straddle more than one
+//     // value (e.g. a sentence exercising both て-form and た-form). Valid
+//     // values live in ./pos-options.json (VERB_CATEGORIES etc. below), not
+//     // hardcoded here, since the dev tagging tool can extend them.
+//     verbCategory?: string[],
+//     verbConjugation?: string[],
+//     adjCategory?: string[],
+//     adjConjugation?: string[],
+//     otherCategory?: string[],  // for items testing a non-verb/non-adjective
+//       // word (adverb, conjunction, particle, interjection, ...) — no
+//       // matching "conjugation" field since these word classes don't conjugate
 //     posReviewed?: boolean,  // set by the dev tagging tool once a human has
 //       // looked at this item and decided its POS tags (even if the decision
 //       // was "no verb/adjective here, nothing to tag") — see src/app/practice/tag.
@@ -85,6 +90,7 @@ export const VERB_CATEGORIES = posOptions.verbCategory;
 export const VERB_CONJUGATIONS = posOptions.verbConjugation;
 export const ADJ_CATEGORIES = posOptions.adjCategory;
 export const ADJ_CONJUGATIONS = posOptions.adjConjugation;
+export const OTHER_CATEGORIES = posOptions.otherCategory;
 
 export const TYPES = [
   'reading',
@@ -110,16 +116,17 @@ const bankItems = Object.keys(modules)
 // Single filters object — pointId is the only filter that looks inside an
 // array (an item matches if its `pointIds` includes it); everything else is
 // an equality check. Omitting a filter means "don't narrow by this."
-export function getBankItems({ pointId, level, type, section, tags, verbCategory, verbConjugation, adjCategory, adjConjugation } = {}) {
+export function getBankItems({ pointId, level, type, section, tags, verbCategory, verbConjugation, adjCategory, adjConjugation, otherCategory } = {}) {
   return bankItems.filter(item => {
     if (pointId && !item.pointIds?.includes(pointId)) return false;
     if (level && item.level !== level) return false;
     if (type && item.type !== type) return false;
     if (section && item.section !== section) return false;
-    if (verbCategory && item.verbCategory !== verbCategory) return false;
-    if (verbConjugation && item.verbConjugation !== verbConjugation) return false;
-    if (adjCategory && item.adjCategory !== adjCategory) return false;
-    if (adjConjugation && item.adjConjugation !== adjConjugation) return false;
+    if (verbCategory && !item.verbCategory?.includes(verbCategory)) return false;
+    if (verbConjugation && !item.verbConjugation?.includes(verbConjugation)) return false;
+    if (adjCategory && !item.adjCategory?.includes(adjCategory)) return false;
+    if (adjConjugation && !item.adjConjugation?.includes(adjConjugation)) return false;
+    if (otherCategory && !item.otherCategory?.includes(otherCategory)) return false;
     if (tags && !tags.every(t => item.tags?.includes(t))) return false;
     return true;
   });
