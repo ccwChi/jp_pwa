@@ -28,7 +28,12 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "counter",
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n2-nishitemo-niseyo-nishiro-1",

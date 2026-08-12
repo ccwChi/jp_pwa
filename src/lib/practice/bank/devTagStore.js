@@ -16,7 +16,7 @@ import path from 'node:path';
 
 const BANK_DIR = path.join(process.cwd(), 'src', 'lib', 'practice', 'bank', 'data');
 const POS_OPTIONS_PATH = path.join(process.cwd(), 'src', 'lib', 'practice', 'bank', 'pos-options.json');
-const FILE_PATTERN = /^const items = ([\s\S]*);\n\nexport default items;\n?$/;
+const FILE_PATTERN = /^const items = ([\s\S]*);\r?\n\r?\nexport default items;\r?\n?$/;
 
 async function listDataFiles() {
   const files = await fs.readdir(BANK_DIR);
