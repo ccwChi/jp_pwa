@@ -78,7 +78,10 @@
 //
 //     // past-exam provenance
 //     isPastExam?: boolean,
-//     examMeta?: { examId, year, level, section, sourcePdf, sourceNote, questionNumber },
+//     examMeta?: { examId, year, session?, level, section, sourcePdf, sourceNote, questionNumber },
+//       // session is a two-digit sitting month ("07"/"12") set only for
+//       // years with more than one JLPT sitting — see src/lib/past-exams
+//       // for the source JSON this is migrated from.
 //   }
 //
 // TYPES is a fixed, closed enum — don't invent new ones ad hoc, add to this
@@ -130,12 +133,19 @@ const bankItems = Object.keys(modules)
 // Single filters object — pointId is the only filter that looks inside an
 // array (an item matches if its `pointIds` includes it); everything else is
 // an equality check. Omitting a filter means "don't narrow by this."
-export function getBankItems({ pointId, level, type, section, tags, verbCategory, verbConjugation, adjCategory, adjConjugation, otherCategory } = {}) {
+// `type` narrows to one exact type; `types` (array) narrows to any of
+// several — pass whichever fits the caller, they can be combined though
+// normally only one is used. `examId` matches item.examMeta.examId, for
+// pulling every question belonging to one past-exam paper in bulk (see
+// src/lib/past-exams for listing which papers exist).
+export function getBankItems({ pointId, level, type, types, section, examId, tags, verbCategory, verbConjugation, adjCategory, adjConjugation, otherCategory } = {}) {
   return bankItems.filter(item => {
     if (pointId && !item.pointIds?.includes(pointId)) return false;
     if (level && item.level !== level) return false;
     if (type && item.type !== type) return false;
+    if (types && !types.includes(item.type)) return false;
     if (section && item.section !== section) return false;
+    if (examId && item.examMeta?.examId !== examId) return false;
     if (verbCategory && !item.verbCategory?.includes(verbCategory)) return false;
     if (verbConjugation && !item.verbConjugation?.includes(verbConjugation)) return false;
     if (adjCategory && !item.adjCategory?.includes(adjCategory)) return false;

@@ -272,6 +272,64 @@ export function setReadingLevelTags(value) {
 
 export const useReadingLevelTags = readingLevelTagsStore.useValue;
 
+// ── Practice: last-selected level on the /practice/exam picker page ──────
+
+const practiceExamLevelStore = createStore('nj_practice_exam_level', null);
+
+export function getPracticeExamLevel() {
+  return practiceExamLevelStore.get();
+}
+
+export function setPracticeExamLevel(value) {
+  practiceExamLevelStore.set(value);
+}
+
+export const usePracticeExamLevel = practiceExamLevelStore.useValue;
+
+// ── Practice: most recent score per past-exam paper, examId → result ─────
+
+const practiceExamResultsStore = createStore('nj_practice_exam_results', {});
+
+export function getPracticeExamResult(examId) {
+  return practiceExamResultsStore.get()[examId] || null;
+}
+
+export function setPracticeExamResult(examId, { correctCount, total }) {
+  practiceExamResultsStore.set({
+    ...practiceExamResultsStore.get(),
+    [examId]: { correctCount, total, updatedAt: Date.now() },
+  });
+}
+
+export const usePracticeExamResults = practiceExamResultsStore.useValue;
+
+// ── Practice: last-selected level + multi-selected types on the
+// /practice/general picker page (empty types array means "any type") ─────
+
+const practiceGeneralLevelStore = createStore('nj_practice_general_level', null);
+
+export function getPracticeGeneralLevel() {
+  return practiceGeneralLevelStore.get();
+}
+
+export function setPracticeGeneralLevel(value) {
+  practiceGeneralLevelStore.set(value);
+}
+
+export const usePracticeGeneralLevel = practiceGeneralLevelStore.useValue;
+
+const practiceGeneralTypesStore = createStore('nj_practice_general_types', []);
+
+export function getPracticeGeneralTypes() {
+  return practiceGeneralTypesStore.get();
+}
+
+export function setPracticeGeneralTypes(value) {
+  practiceGeneralTypesStore.set(value);
+}
+
+export const usePracticeGeneralTypes = practiceGeneralTypesStore.useValue;
+
 // ── Font scale: user-chosen reading font size multiplier ─────────────────
 
 const fontScaleStore = createStore('nj_font_scale', 1);

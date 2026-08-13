@@ -1967,6 +1967,12 @@ ruby rt {
   padding: 1.2rem 1.4rem;
 }
 
+a.practice-set-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .practice-set-title {
   font-size: var(--fs-xl);
   margin-bottom: 0.2rem;
@@ -2155,6 +2161,50 @@ ruby rt {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.8rem;
+}
+
+/* ── past-exam practice (/practice/exam/[examId]) ── */
+
+.exam-section-header {
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.exam-section-header:first-child {
+  margin-top: 0;
+}
+
+.exam-section-title {
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-md);
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+
+.exam-question-prompt {
+  white-space: pre-line;
+}
+
+.exam-listening-assets {
+  margin-bottom: 0.8rem;
+}
+
+.exam-listening-script {
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-sm);
+  color: var(--sub);
+  white-space: pre-line;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+}
+
+.exam-listening-image {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--line);
 }
 
 .practice-question {
