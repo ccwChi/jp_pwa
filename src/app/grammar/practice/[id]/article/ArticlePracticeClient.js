@@ -3,26 +3,18 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { pickBankItem } from '@/lib/practice/bank';
+import { renderAnnotatedText, NotePanel } from '@/lib/practice/bank/notes';
 import { getPracticeSet } from '@/lib/grammar/practice';
 import { splitOnTarget } from '@/lib/grammar/practice/sentenceParts';
-import { parseFurigana, readingOf } from '@/lib/reading/furigana';
+import { readingOf } from '@/lib/reading/furigana';
 import { setPracticeSetDone, useSpeechRate } from '@/lib/storage';
 import PracticeResultPanel from '../../PracticeResultPanel';
-
-function renderRuby(text, keyPrefix) {
-  return parseFurigana(text).map((p, i) =>
-    p.reading ? (
-      <ruby key={`${keyPrefix}-${i}`}>{p.text}<rt>{p.reading}</rt></ruby>
-    ) : (
-      <span key={`${keyPrefix}-${i}`}>{p.text}</span>
-    )
-  );
-}
 
 export default function ArticlePracticeClient({ id }) {
   const set = getPracticeSet(id);
   const speechRate = useSpeechRate();
   const [answers, setAnswers] = useState({});
+  const [activeNote, setActiveNote] = useState(null);
 
   // Drawn once per mount from the grammar question bank — this component is
   // only ever rendered client-side (see page.js's ssr:false dynamic import),
@@ -101,9 +93,11 @@ export default function ArticlePracticeClient({ id }) {
             <div className="practice-sentence-block" key={i}>
               <div className="grammar-example-row">
                 <p className="practice-sentence-jp">
-                  {renderRuby(before, `${i}-b`)}
-                  <mark className="practice-target">{renderRuby(target, `${i}-t`)}</mark>
-                  {renderRuby(after, `${i}-a`)}
+                  {renderAnnotatedText(before, s.notes, `${i}-b`, { onClick: setActiveNote })}
+                  <mark className="practice-target">
+                    {renderAnnotatedText(target, s.notes, `${i}-t`, { onClick: setActiveNote })}
+                  </mark>
+                  {renderAnnotatedText(after, s.notes, `${i}-a`, { onClick: setActiveNote })}
                 </p>
                 <button
                   type="button"
@@ -142,6 +136,8 @@ export default function ArticlePracticeClient({ id }) {
       </div>
 
       {allAnswered && <PracticeResultPanel set={set} slots={slots} answers={answers} mode="article" />}
+
+      {activeNote && <NotePanel note={activeNote} onClose={() => setActiveNote(null)} rate={speechRate} />}
     </main>
   );
 }

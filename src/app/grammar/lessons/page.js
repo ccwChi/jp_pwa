@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { getCategories, getLevels } from '@/lib/grammar/lessons';
 import { getGrammarPracticeStatus } from '@/lib/grammar/practice';
+import { isLevelUnlocked } from '@/lib/entitlements';
 import {
   setGrammarLevel,
   useGrammarLevel,
@@ -15,7 +16,9 @@ export default function GrammarLessonsPage() {
   const levels = getLevels();
   const storedLevel = useGrammarLevel();
   const defaultLevel = levels.includes('N5') ? 'N5' : (levels[0] || '全部');
-  const activeLevel = storedLevel && levels.includes(storedLevel) ? storedLevel : defaultLevel;
+  const activeLevel = storedLevel && levels.includes(storedLevel) && isLevelUnlocked(storedLevel)
+    ? storedLevel
+    : defaultLevel;
   const readSet = useGrammarReadSet();
   const articleDoneSet = usePracticeArticleDoneSet();
   const clozeDoneSet = usePracticeClozeDoneSet();
@@ -38,15 +41,19 @@ export default function GrammarLessonsPage() {
       <p className="row-meta grammar-legend">文 = 文章問答　填 = 克漏字　讀 = 詳解＋練習題</p>
 
       <div className="article-tabs">
-        {levels.map(level => (
-          <button
-            key={level}
-            className={`article-tab${activeLevel === level ? ' active' : ''}`}
-            onClick={() => setGrammarLevel(level)}
-          >
-            {level}
-          </button>
-        ))}
+        {levels.map(level => {
+          const unlocked = isLevelUnlocked(level);
+          return (
+            <button
+              key={level}
+              className={`article-tab${activeLevel === level ? ' active' : ''}${unlocked ? '' : ' locked'}`}
+              onClick={() => unlocked && setGrammarLevel(level)}
+              disabled={!unlocked}
+            >
+              {level}{!unlocked && ' 🔒'}
+            </button>
+          );
+        })}
       </div>
 
       {categories.map(({ category, items }) => (

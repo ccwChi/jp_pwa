@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { pickBankItem } from '@/lib/practice/bank';
+import { renderAnnotatedText, NotePanel } from '@/lib/practice/bank/notes';
 import { getPracticeSet } from '@/lib/grammar/practice';
 import { splitOnTarget } from '@/lib/grammar/practice/sentenceParts';
 import { parseFurigana } from '@/lib/reading/furigana';
@@ -22,6 +23,7 @@ function renderRuby(text, keyPrefix) {
 export default function ClozePracticeClient({ id }) {
   const set = getPracticeSet(id);
   const [answers, setAnswers] = useState({});
+  const [activeNote, setActiveNote] = useState(null);
 
   // See ArticlePracticeClient for why drawing here (client-only mount) is
   // hydration-safe.
@@ -88,7 +90,7 @@ export default function ClozePracticeClient({ id }) {
             <div className="practice-sentence-block" key={i}>
               <p className="grammar-example-zh practice-cloze-zh">{s.zh}</p>
               <p className="practice-sentence-jp">
-                {renderRuby(before, `${i}-b`)}
+                {renderAnnotatedText(before, s.notes, `${i}-b`, { onClick: setActiveNote })}
                 {answered ? (
                   <mark className={`practice-target${chosen === s.cloze.answerIndex ? ' correct' : ' wrong'}`}>
                     {renderRuby(chosenOption, `${i}-c`)}
@@ -96,7 +98,7 @@ export default function ClozePracticeClient({ id }) {
                 ) : (
                   <span className="practice-blank">＿＿＿</span>
                 )}
-                {renderRuby(after, `${i}-a`)}
+                {renderAnnotatedText(after, s.notes, `${i}-a`, { onClick: setActiveNote })}
               </p>
 
               <div className={`quiz-options${s.cloze.options.every(o => o.length <= 6) ? ' short' : ''}`}>
@@ -124,6 +126,8 @@ export default function ClozePracticeClient({ id }) {
       </div>
 
       {allAnswered && <PracticeResultPanel set={set} slots={slots} answers={answers} mode="cloze" />}
+
+      {activeNote && <NotePanel note={activeNote} onClose={() => setActiveNote(null)} />}
     </main>
   );
 }

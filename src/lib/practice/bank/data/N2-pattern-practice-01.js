@@ -64,7 +64,12 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "expression",
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n2-nagara-mo-1",
@@ -95,7 +100,12 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "expression",
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n2-toiitemo-1",
@@ -126,7 +136,12 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "expression",
+      "conjunction"
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n2-nai-koto-niwa-1",
@@ -157,7 +172,82 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "conjunction",
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "専門家",
+        "word": "専門家",
+        "reading": "せんもんか",
+        "meaning": "專家",
+        "type": "vocab",
+        "sentence": {
+          "jp": "専門家[せんもんか]の意見[いけん]を聞[き]きます。",
+          "zh": "聽取專家的意見。"
+        }
+      },
+      {
+        "surface": "に",
+        "word": "に",
+        "meaning": "（表示動作對象）向、對",
+        "type": "grammar"
+      },
+      {
+        "surface": "相談しない",
+        "word": "相談する",
+        "reading": "そうだんしない",
+        "meaning": "不商量、不諮詢（否定形）",
+        "type": "vocab",
+        "sentence": {
+          "jp": "先生[せんせい]に相談[そうだん]しました。",
+          "zh": "向老師商量過了。"
+        }
+      },
+      {
+        "surface": "ないことには",
+        "word": "ないことには",
+        "meaning": "如果不……的話（就無法……）",
+        "type": "grammar",
+        "sentence": {
+          "jp": "行[い]ってみないことには、わかりません。",
+          "zh": "不親自去看看的話，是不會知道的。"
+        }
+      },
+      {
+        "surface": "この",
+        "word": "この",
+        "meaning": "這個",
+        "type": "vocab"
+      },
+      {
+        "surface": "問題",
+        "word": "問題",
+        "reading": "もんだい",
+        "meaning": "問題",
+        "type": "vocab"
+      },
+      {
+        "surface": "は",
+        "word": "は",
+        "meaning": "（提示主題助詞）",
+        "type": "grammar"
+      },
+      {
+        "surface": "解決しません",
+        "word": "解決する",
+        "reading": "かいけつしません",
+        "meaning": "不解決、無法解決（禮貌否定形）",
+        "type": "vocab",
+        "sentence": {
+          "jp": "問題[もんだい]が解決[かいけつ]した。",
+          "zh": "問題解決了。"
+        }
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n2-te-hajimete-1",

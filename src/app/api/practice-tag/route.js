@@ -10,7 +10,7 @@ export async function GET() {
 
 export async function POST(request) {
   const body = await request.json();
-  const { id, tags, newOptions } = body || {};
+  const { id, tags, newOptions, notes } = body || {};
 
   if (!id) {
     return NextResponse.json({ error: '缺少題目 id' }, { status: 400 });
@@ -28,7 +28,7 @@ export async function POST(request) {
       }
     }
 
-    const saved = await saveItemTags(id, tags || {});
+    const saved = await saveItemTags(id, tags || {}, notes);
     const [{ item: nextItem, remaining }, posOptions] = await Promise.all([findNextUntagged(), loadPosOptions()]);
     return NextResponse.json({ saved, next: nextItem, remaining, posOptions });
   } catch (err) {

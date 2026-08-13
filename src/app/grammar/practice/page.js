@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { getPracticeSets, getPracticeLevels } from '@/lib/grammar/practice';
 import { getLesson } from '@/lib/grammar/lessons';
+import { isLevelUnlocked } from '@/lib/entitlements';
 import {
   setGrammarPracticeLevel,
   useGrammarPracticeLevel,
@@ -15,7 +16,9 @@ export default function GrammarPracticePage() {
   const levels = getPracticeLevels();
   const storedLevel = useGrammarPracticeLevel();
   const defaultLevel = levels.includes('N5') ? 'N5' : (levels[0] || 'N5');
-  const activeLevel = storedLevel && levels.includes(storedLevel) ? storedLevel : defaultLevel;
+  const activeLevel = storedLevel && levels.includes(storedLevel) && isLevelUnlocked(storedLevel)
+    ? storedLevel
+    : defaultLevel;
   const sets = getPracticeSets().filter(set => set.level === activeLevel);
   const readSet = useGrammarReadSet();
   const articleDoneSet = usePracticeArticleDoneSet();
@@ -36,15 +39,19 @@ export default function GrammarPracticePage() {
       </p>
 
       <div className="tag-filter">
-        {levels.map(level => (
-          <button
-            key={level}
-            className={`chip${activeLevel === level ? ' active' : ''}`}
-            onClick={() => setGrammarPracticeLevel(level)}
-          >
-            {level}
-          </button>
-        ))}
+        {levels.map(level => {
+          const unlocked = isLevelUnlocked(level);
+          return (
+            <button
+              key={level}
+              className={`chip${activeLevel === level ? ' active' : ''}${unlocked ? '' : ' locked'}`}
+              onClick={() => unlocked && setGrammarPracticeLevel(level)}
+              disabled={!unlocked}
+            >
+              {level}{!unlocked && ' 🔒'}
+            </button>
+          );
+        })}
       </div>
 
       <div className="practice-set-list">

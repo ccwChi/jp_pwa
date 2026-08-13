@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { parseFurigana } from '@/lib/reading/furigana';
 import { labelForPosValue } from '@/lib/practice/bank/posLabels';
@@ -32,7 +32,7 @@ const POS_FIELDS = Object.keys(FIELD_LABELS);
 // the form instead of needing translation.
 function buildAiPrompt(item, posOptions) {
   const lines = [];
-  lines.push('請幫我判斷以下日文題目中「目標詞／文法點」的詞性分類，並簡短說明理由（繁體中文回答）。');
+  lines.push('請幫我判斷以下日文題目中「目標詞／文法點」的詞性分類，並簡短說明理由（繁體中文回答），然後我只有初階程度，我也想知道句子中其他字彙(如果是漢字也要跟我說平假平拼音)跟其他動詞形容詞文法，也請幫我解釋。');
   lines.push('');
   lines.push('【題目資訊】');
   lines.push(`等級：${item.level}　類型：${item.type}${item.section ? `　小節：${item.section}` : ''}`);
@@ -98,6 +98,25 @@ function buildAiPrompt(item, posOptions) {
     lines.push(`${FIELD_LABELS[field]}：`);
   }
   lines.push('理由：');
+  lines.push('');
+  lines.push('【額外需求：生詞與文法標註】');
+  lines.push('請針對句子中值得初學者特別留意的單字與文法點，各自標出以下資訊：');
+  lines.push('- surface：這個字彙／文法點在原句中實際出現的字面文字（用來比對位置，不可省略或改寫）');
+  lines.push('- word：字典形或代表形式');
+  lines.push('- reading：假名讀音（只有包含漢字時需要）');
+  lines.push('- meaning：中文意思或用法說明');
+  lines.push('- type：vocab（單字）或 grammar（文法點）');
+  lines.push('- sentence（選填）：如果能舉一個額外的例句幫助理解，用 { "jp": "...", "zh": "..." } 附上（jp 需標假名，格式為 漢字[かな]）');
+  lines.push('');
+  lines.push('請在回答最後另外附上一段 ```json 區塊（只放這個 JSON，不要夾雜其他文字），格式如下：');
+  lines.push('```json');
+  lines.push('{');
+  lines.push('  "notes": [');
+  lines.push('    { "surface": "留学した", "word": "留学する", "reading": "りゅうがくした", "meaning": "留學（過去式）", "type": "vocab", "sentence": { "jp": "去年[きょねん]日本[にほん]に留学[りゅうがく]した。", "zh": "去年去日本留學了。" } },');
+  lines.push('    { "surface": "といっても", "word": "といっても", "meaning": "雖說……（但程度沒那麼誇張）", "type": "grammar" }');
+  lines.push('  ]');
+  lines.push('}');
+  lines.push('```');
 
   return lines.join('\n');
 }
@@ -131,6 +150,61 @@ function PromptBlock({ item, posOptions }) {
         onFocus={e => e.target.select()}
         rows={14}
       />
+    </section>
+  );
+}
+
+// Parses the ```json { "notes": [...] }``` block the prompt above asks the
+// AI to append, and hands the cleaned array up to the parent so it rides
+// along in the next save — this is how a bank item picks up the clickable
+// vocab/grammar notes rendered during practice (see lib/practice/bank/notes.js).
+function NotesPasteBox({ value, onChange }) {
+  const [raw, setRaw] = useState('');
+  const [parseError, setParseError] = useState('');
+
+  function handleParse() {
+    setParseError('');
+    try {
+      const jsonText = raw.trim().replace(/^```json/i, '').replace(/```$/, '').trim();
+      const parsed = JSON.parse(jsonText);
+      const notes = Array.isArray(parsed) ? parsed : parsed.notes;
+      if (!Array.isArray(notes)) throw new Error('找不到 notes 陣列');
+      const cleaned = notes
+        .filter(n => n && n.surface && n.meaning)
+        .map(n => ({
+          surface: String(n.surface),
+          word: String(n.word || n.surface),
+          ...(n.reading ? { reading: String(n.reading) } : {}),
+          meaning: String(n.meaning),
+          type: n.type === 'grammar' ? 'grammar' : 'vocab',
+          ...(n.sentence?.jp ? { sentence: { jp: String(n.sentence.jp), zh: String(n.sentence.zh || '') } } : {}),
+        }));
+      onChange(cleaned);
+    } catch (err) {
+      setParseError(`JSON 解析失敗：${err.message}`);
+      onChange([]);
+    }
+  }
+
+  return (
+    <section className="prompt-block">
+      <div className="prompt-block-head">
+        <span className="field-label">貼上 AI 回覆的生詞／文法 JSON（選填）</span>
+        <button type="button" className="btn" onClick={handleParse} disabled={!raw.trim()}>解析</button>
+      </div>
+      <textarea
+        className="prompt-textarea"
+        placeholder="把 AI 回覆最後那段 ```json ...``` 貼在這裡"
+        value={raw}
+        onChange={e => setRaw(e.target.value)}
+        rows={8}
+      />
+      {parseError && <p className="import-error">{parseError}</p>}
+      {value.length > 0 && (
+        <p className="field-hint">
+          已解析 {value.length} 筆標註：{value.map(n => n.surface).join('、')}
+        </p>
+      )}
     </section>
   );
 }
@@ -198,11 +272,14 @@ export default function TagToolClient() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [explainTarget, setExplainTarget] = useState(null); // { field, value } | null
+  const [notes, setNotes] = useState([]); // parsed from the pasted AI JSON, see NotesPasteBox
+  const questionRef = useRef(null);
 
   function resetForm() {
     setValues({});
     setNewOptions({});
     setCustomInputs({});
+    setNotes([]);
   }
 
   async function loadNext() {
@@ -267,7 +344,7 @@ export default function TagToolClient() {
       const res = await fetch('/api/practice-tag', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: item.id, tags, newOptions }),
+        body: JSON.stringify({ id: item.id, tags, newOptions, notes }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || '儲存失敗');
@@ -275,6 +352,7 @@ export default function TagToolClient() {
       setRemaining(data.remaining);
       setPosOptions(data.posOptions);
       resetForm();
+      questionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } catch (err) {
       setError(err.message);
     } finally {
@@ -304,9 +382,11 @@ export default function TagToolClient() {
         <p>全部題目都標記完成了 🎉</p>
       ) : (
         <>
-          <p className="field-hint">剩餘待標題目：{remaining}</p>
+          <p className="field-hint" ref={questionRef}>剩餘待標題目：{remaining}</p>
 
           <PromptBlock item={item} posOptions={posOptions} />
+
+          <NotesPasteBox value={notes} onChange={setNotes} />
 
           <form onSubmit={handleSubmit}>
             {POS_FIELDS.map(field => (

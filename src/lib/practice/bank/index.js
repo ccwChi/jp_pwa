@@ -51,6 +51,20 @@
 //       // looked at this item and decided its POS tags (even if the decision
 //       // was "no verb/adjective here, nothing to tag") — see src/app/practice/tag.
 //
+//     // optional word/grammar-point annotations shown as clickable notes
+//     // during practice (see lib/practice/bank/notes.js's renderAnnotatedText
+//     // + NotePanel) — the same idea as a reading article's vocab list, but
+//     // scoped to this one item's jp sentence. `surface` is matched against
+//     // the rendered sentence exactly like vocabMatch.js already does for
+//     // articles. Authored via the dev tagging tool: it generates an AI
+//     // prompt asking for this breakdown as JSON, which gets pasted back in.
+//     notes?: Array<{
+//       surface: string, word?: string, reading?: string, meaning: string,
+//       type?: 'vocab' | 'grammar',
+//       sentence?: { jp: string, zh: string },  // optional extra example,
+//         // same shape as a reading article's vocab entry.sentence
+//     }>,
+//
 //     // free-form topic/scenario/source tags beyond the fixed fields above
 //     // (e.g. ['animals', 'daily-life']) — matched via the `tags` filter
 //     tags?: string[],

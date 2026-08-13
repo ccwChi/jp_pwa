@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { getSeriesList, getLevels, getArticle, getSeriesParts } from '@/lib/reading/articles';
+import { isLevelUnlocked } from '@/lib/entitlements';
 import {
   setReadingFavorite,
   setReadingLevelTags,
@@ -61,16 +62,20 @@ export default function ReadingPage() {
         >
           全部
         </button>
-        {levels.map(level => (
-          <button
-            key={level}
-            className={`chip${selectedTags.includes(level) ? ' active' : ''}`}
-            data-level={level}
-            onClick={() => toggleTag(level)}
-          >
-            {level}
-          </button>
-        ))}
+        {levels.map(level => {
+          const unlocked = isLevelUnlocked(level);
+          return (
+            <button
+              key={level}
+              className={`chip${selectedTags.includes(level) ? ' active' : ''}${unlocked ? '' : ' locked'}`}
+              data-level={level}
+              onClick={() => unlocked && toggleTag(level)}
+              disabled={!unlocked}
+            >
+              {level}{!unlocked && ' 🔒'}
+            </button>
+          );
+        })}
       </div>
 
       <div className="rows">
@@ -82,29 +87,40 @@ export default function ReadingPage() {
             ? getSeriesParts(s.seriesId).findIndex(p => p.id === resumeArticle.id)
             : -1;
           const isFavorite = favoriteSet.has(s.seriesId);
-
-          return (
-            <div className="reading-row" key={s.seriesId}>
-              <Link href={href} className="reading-row-main">
-                <div>
-                  <div className="name">{s.title}</div>
-                  <div className="desc">{s.excerpt}</div>
-                  {s.partsCount > 1 && (
-                    <div className="row-meta">
-                      {resumeArticle ? `讀到第${resumeArticle.partTitle}章 · 共${s.partsCount}章` : `共 ${s.partsCount} 章`}
-                      {partIndex >= 0 && (
-                        <div className="series-progress-track">
-                          <div
-                            className="series-progress-fill"
-                            style={{ width: `${((partIndex + 1) / s.partsCount) * 100}%` }}
-                          />
-                        </div>
-                      )}
+          const unlocked = isLevelUnlocked(s.level);
+          const rowContent = (
+            <div>
+              <div className="name">{s.title}</div>
+              <div className="desc">{s.excerpt}</div>
+              {s.partsCount > 1 && (
+                <div className="row-meta">
+                  {resumeArticle ? `讀到第${resumeArticle.partTitle}章 · 共${s.partsCount}章` : `共 ${s.partsCount} 章`}
+                  {partIndex >= 0 && (
+                    <div className="series-progress-track">
+                      <div
+                        className="series-progress-fill"
+                        style={{ width: `${((partIndex + 1) / s.partsCount) * 100}%` }}
+                      />
                     </div>
                   )}
                 </div>
-                <span className="tag" data-level={s.level}>{s.level}</span>
-              </Link>
+              )}
+            </div>
+          );
+
+          return (
+            <div className="reading-row" key={s.seriesId}>
+              {unlocked ? (
+                <Link href={href} className="reading-row-main">
+                  {rowContent}
+                  <span className="tag" data-level={s.level}>{s.level}</span>
+                </Link>
+              ) : (
+                <div className="reading-row-main reading-row-locked">
+                  {rowContent}
+                  <span className="tag" data-level={s.level}>{s.level} 🔒</span>
+                </div>
+              )}
               <button
                 type="button"
                 className={`reading-fav-btn${isFavorite ? ' active' : ''}`}

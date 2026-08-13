@@ -30,26 +30,26 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg:      #1c1a16;
-    --surface: #262319;
+    --surface: #302b1e;
     --ink:     #ece7da;
     --sub:     #c3bcaa;
-    --line:    rgba(236, 231, 218, 0.18);
-    --seal:    #e8815f;
-    --ai:      #8fbfdb;
-    --good:    #6fbf8a;
+    --line:    rgba(236, 231, 218, 0.24);
+    --seal:    #ff8a54;
+    --ai:      #4fb8ea;
+    --good:    #3fcf82;
     --zh:      #d9d4c5;
   }
 }
 
 :root[data-theme="dark"] {
   --bg:      #1c1a16;
-  --surface: #262319;
+  --surface: #302b1e;
   --ink:     #ece7da;
   --sub:     #c3bcaa;
-  --line:    rgba(236, 231, 218, 0.18);
-  --seal:    #e8815f;
-  --ai:      #8fbfdb;
-  --good:    #6fbf8a;
+  --line:    rgba(236, 231, 218, 0.24);
+  --seal:    #ff8a54;
+  --ai:      #4fb8ea;
+  --good:    #3fcf82;
   --zh:      #d9d4c5;
 }
 
@@ -437,6 +437,26 @@ a.row {
   color: var(--bg);
   background: var(--ink);
   border-color: var(--ink);
+}
+
+/* ── membership gating: locked levels stay visible but inert, so the app
+   can advertise what's behind the paywall instead of hiding it outright ── */
+
+.chip.locked,
+.article-tab.locked {
+  color: var(--sub);
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.chip.locked:hover,
+.article-tab.locked:hover {
+  color: var(--sub);
+}
+
+.reading-row-locked {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .row-meta {
@@ -978,6 +998,38 @@ ruby rt {
 .vocab-hit:hover {
   color: var(--seal);
   border-bottom-color: var(--seal);
+}
+
+/* ── practice bank item notes: same interaction as .vocab-hit, but split
+   vocab/grammar visually so a glance tells you which kind of note it is ── */
+
+.note-hit {
+  cursor: pointer;
+  border-bottom: 1px dotted var(--ai);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.note-hit:hover {
+  color: var(--seal);
+  border-bottom-color: var(--seal);
+}
+
+.note-hit-grammar {
+  border-bottom: 1px solid var(--seal);
+}
+
+.note-hit-grammar:hover {
+  color: var(--ai);
+  border-bottom-color: var(--ai);
+}
+
+.note-type-badge {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: var(--fs-2xs);
+  color: var(--sub);
+  border: 1px solid var(--line);
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
 }
 
 .vocab-panel {

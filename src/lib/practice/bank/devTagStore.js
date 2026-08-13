@@ -59,7 +59,7 @@ export async function findNextUntagged() {
   return { item: next?.item ?? null, filename: next?.filename ?? null, remaining };
 }
 
-export async function saveItemTags(id, tags) {
+export async function saveItemTags(id, tags, notes) {
   const files = await listDataFiles();
   for (const filename of files) {
     const items = await loadFile(filename);
@@ -72,6 +72,10 @@ export async function saveItemTags(id, tags) {
       if (values && values.length > 0) item[field] = values;
       else delete item[field];
     }
+    // Only overwrite existing notes when a fresh, non-empty batch was pasted
+    // in — an empty submit (nothing pasted this round) shouldn't wipe notes
+    // saved on a previous visit to this item.
+    if (notes && notes.length > 0) item.notes = notes;
     item.posReviewed = true;
     items[index] = item;
 
