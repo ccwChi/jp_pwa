@@ -353,6 +353,22 @@ export function setZhBlur(value) {
 
 export const useZhBlur = zhBlurStore.useValue;
 
+// ── Theme: 'light' | 'dark' | 'system' (default) — applied to <html data-theme>
+// by ThemeToggle; a blocking inline script in layout.js mirrors this same key
+// before hydration so the page never flashes the wrong theme. ─────────────
+
+const themeStore = createStore('nj_theme', 'system');
+
+export function getTheme() {
+  return themeStore.get();
+}
+
+export function setTheme(value) {
+  themeStore.set(value);
+}
+
+export const useTheme = themeStore.useValue;
+
 // ── Import draft: autosaved in-progress state for the long-article import
 // tool (src/app/reading/import). Single slot, no subscribers — the import
 // tool reads it once on mount, so this skips the createStore/useSyncExternalStore

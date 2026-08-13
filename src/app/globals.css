@@ -76,7 +76,7 @@ html {
 }
 
 body {
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  font-family: var(--font-zh), var(--font-jp), sans-serif;
   background-color: var(--bg);
   color: var(--ink);
   line-height: 1.7;
@@ -91,7 +91,7 @@ body {
 }
 
 .mark {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   letter-spacing: 0.35em;
   color: var(--sub);
@@ -215,7 +215,7 @@ body {
 }
 
 .desc {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: var(--sub);
   grid-column: 2;
@@ -225,7 +225,7 @@ body {
 }
 
 .tag {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--sub);
   border: 1px solid var(--line);
@@ -292,7 +292,7 @@ a.row {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .back-link {
@@ -313,7 +313,7 @@ a.row {
 }
 
 .btn {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--ink);
   background: transparent;
@@ -344,7 +344,7 @@ a.row {
 }
 
 .icon-btn {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--sub);
   background: transparent;
@@ -363,7 +363,7 @@ a.row {
 }
 
 .empty-hint {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
   padding: 2rem 0;
@@ -397,7 +397,7 @@ a.row {
 
 .btn-submit {
   align-self: flex-start;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   color: var(--bg);
   background: var(--ink);
   border-color: var(--ink);
@@ -408,6 +408,7 @@ a.row {
 /* ── note detail ── */
 
 .source-text {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-lg);
   line-height: 2.1;
   white-space: pre-wrap;
@@ -423,7 +424,7 @@ a.row {
 }
 
 .chip {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--sub);
   background: transparent;
@@ -460,7 +461,7 @@ a.row {
 }
 
 .row-meta {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: var(--sub);
   margin-top: 0.5rem;
@@ -528,7 +529,7 @@ a.row {
 }
 
 .pagination-btn {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: inherit;
   background: none;
@@ -544,7 +545,7 @@ a.row {
 }
 
 .pagination-info {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: var(--sub);
 }
@@ -581,7 +582,7 @@ a.row {
 }
 
 .part-title {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   letter-spacing: 0.08em;
   color: var(--sub);
@@ -596,7 +597,7 @@ a.row {
 }
 
 .part-tabs-label {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   letter-spacing: 0.1em;
   color: var(--sub);
@@ -607,7 +608,7 @@ a.row {
   display: flex;
   flex-wrap: wrap;
   border-bottom: 1px solid var(--line);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .part-tab {
@@ -634,7 +635,7 @@ a.row {
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .part-nav-link {
@@ -652,7 +653,7 @@ a.row {
   gap: 1.5rem;
   margin: 1.75rem 0;
   border-bottom: 1px solid var(--line);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .article-tab {
@@ -725,7 +726,7 @@ a.row {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
   cursor: pointer;
@@ -735,7 +736,7 @@ a.row {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
   cursor: pointer;
@@ -791,14 +792,14 @@ a.row {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
   cursor: pointer;
 }
 
 .listen-mode-btn {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--ai);
   background: transparent;
@@ -821,7 +822,7 @@ a.row {
 }
 
 .speech-rate-value {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--sub);
   min-width: 2.6em;
@@ -874,7 +875,7 @@ a.row {
 }
 
 .font-scale-btn {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--ai);
   background: transparent;
@@ -919,6 +920,7 @@ a.row {
 }
 
 .sentence-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: calc(var(--fs-lg) * var(--font-scale, 1));
   line-height: 2.15;
 }
@@ -952,7 +954,7 @@ a.row {
   flex-shrink: 0;
   width: 1.7rem;
   height: 1.7rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: 0.85rem;
   color: var(--ai);
   background: transparent;
@@ -975,7 +977,7 @@ a.row {
 }
 
 ruby rt {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-jp), sans-serif;
   font-size: calc(0.55em * var(--font-scale, 1));
   color: var(--sub);
   -webkit-user-select: none;
@@ -983,7 +985,7 @@ ruby rt {
 }
 
 .sentence-romaji {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--ai);
   margin-top: 0.3rem;
@@ -1024,7 +1026,7 @@ ruby rt {
 }
 
 .note-type-badge {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--sub);
   border: 1px solid var(--line);
@@ -1043,7 +1045,7 @@ ruby rt {
   border-radius: 10px;
   padding: 0.7rem 1.1rem 0.9rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   transition: border-left-color var(--transition), border-left-width var(--transition);
 }
 
@@ -1081,7 +1083,7 @@ ruby rt {
 }
 
 .vocab-panel-word {
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-lg);
   color: var(--ink);
 }
@@ -1118,6 +1120,7 @@ ruby rt {
 }
 
 .vocab-panel-example-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-base);
   line-height: 1.7;
 }
@@ -1176,7 +1179,7 @@ ruby rt {
 }
 
 .listen-dim-hint {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: rgba(255, 255, 255, 0.28);
   letter-spacing: 0.03em;
@@ -1187,7 +1190,7 @@ ruby rt {
 }
 
 .listen-dim-btn {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--sub);
   background: transparent;
@@ -1213,7 +1216,7 @@ ruby rt {
   position: fixed;
   z-index: 70;
   transform: translate(-50%, -130%);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--bg);
   background: var(--ai);
@@ -1241,7 +1244,7 @@ ruby rt {
 }
 
 .listen-progress {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
 }
@@ -1306,18 +1309,19 @@ ruby rt {
 }
 
 .listen-scroller-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: calc(var(--fs-lg) * var(--font-scale, 1));
   line-height: 1.9;
 }
 
 .listen-scroller-jp rt {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-jp), sans-serif;
   font-size: 0.5em;
   color: var(--sub);
 }
 
 .listen-scroller-zh {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: var(--zh);
   margin-top: 0.35rem;
@@ -1369,7 +1373,7 @@ ruby rt {
   align-items: center;
   gap: 0.8rem;
   margin-top: 0.5rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .listen-zh-toggle {
@@ -1404,7 +1408,7 @@ ruby rt {
 }
 
 .sentence-zh {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: var(--zh);
   margin-top: 0.35rem;
@@ -1434,7 +1438,7 @@ ruby rt {
 .vocab-item {
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--line);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .vocab-item-top {
@@ -1444,7 +1448,7 @@ ruby rt {
 }
 
 .vocab-item-word {
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-lg);
   color: var(--ink);
 }
@@ -1474,6 +1478,7 @@ ruby rt {
 }
 
 .vocab-item-example-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-base);
   line-height: 1.7;
 }
@@ -1495,7 +1500,7 @@ ruby rt {
   gap: 0.3rem;
   border-left: 2px solid var(--ai);
   padding-left: 0.9rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .grammar-point {
@@ -1525,7 +1530,7 @@ ruby rt {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 /* short, discrete options (particles, single words) scan faster in a
@@ -1584,7 +1589,7 @@ ruby rt {
 }
 
 .grammar-category-heading {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   letter-spacing: 0.15em;
   color: var(--sub);
@@ -1600,7 +1605,7 @@ ruby rt {
 }
 
 .grammar-row-check {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--ai);
 }
@@ -1612,12 +1617,13 @@ ruby rt {
 }
 
 .grammar-hero-pattern {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-3xl);
   letter-spacing: 0.04em;
 }
 
 .grammar-hero-meaning {
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-md);
   color: var(--sub);
   letter-spacing: 0.05em;
@@ -1625,7 +1631,7 @@ ruby rt {
 }
 
 .grammar-structure-box {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   background: color-mix(in srgb, var(--ai) 8%, transparent);
   border-left: 3px solid var(--ai);
   border-radius: 2px 6px 6px 2px;
@@ -1681,7 +1687,7 @@ ruby rt {
 }
 
 .grammar-note-text {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-base);
   color: var(--ink);
   line-height: 1.7;
@@ -1692,7 +1698,7 @@ ruby rt {
 }
 
 .grammar-section-label {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   letter-spacing: 0.15em;
   color: var(--sub);
@@ -1727,7 +1733,7 @@ ruby rt {
   border-radius: 50%;
   background: color-mix(in srgb, var(--ai) 18%, transparent);
   color: var(--ai);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   font-weight: 600;
 }
@@ -1744,6 +1750,7 @@ ruby rt {
 }
 
 .grammar-example-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-lg);
   line-height: 1.8;
 }
@@ -1754,7 +1761,7 @@ ruby rt {
 }
 
 .grammar-example-zh {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: var(--zh);
   margin-top: 0.3rem;
@@ -1828,7 +1835,7 @@ ruby rt {
   border-radius: 8px;
   padding: 1rem 1.2rem 1.15rem;
   background: color-mix(in srgb, var(--ai) 7%, transparent);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .grammar-path-label {
@@ -1901,7 +1908,7 @@ ruby rt {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-base);
 }
 
@@ -1933,7 +1940,7 @@ ruby rt {
   height: 1.6rem;
   border-radius: 50%;
   border: 1px solid var(--line);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--sub);
 }
@@ -1966,12 +1973,14 @@ ruby rt {
 }
 
 .practice-set-title-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-sm);
   color: var(--sub);
   margin-bottom: 0.7rem;
 }
 
 .practice-title-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
   margin-top: -0.4rem;
@@ -1986,7 +1995,7 @@ ruby rt {
 
 .practice-set-tag {
   font-size: var(--fs-2xs);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .practice-set-tag.done {
@@ -2018,7 +2027,7 @@ ruby rt {
 }
 
 .practice-progress-count {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
   white-space: nowrap;
@@ -2042,6 +2051,7 @@ ruby rt {
 }
 
 .practice-sentence-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-lg);
   line-height: 2;
 }
@@ -2090,7 +2100,7 @@ ruby rt {
 }
 
 .practice-complete-score {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: var(--ai);
   background: color-mix(in srgb, var(--ai) 10%, transparent);
@@ -2100,7 +2110,7 @@ ruby rt {
 }
 
 .practice-complete-review-label {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   letter-spacing: 0.1em;
   color: var(--sub);
@@ -2115,7 +2125,7 @@ ruby rt {
 }
 
 .practice-complete-chip {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   text-decoration: none;
   border: 1px solid var(--line);
@@ -2148,7 +2158,7 @@ ruby rt {
 }
 
 .practice-question {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-sm);
   color: var(--sub);
   margin: 0.9rem 0 0.7rem;
@@ -2165,14 +2175,14 @@ ruby rt {
 }
 
 .field-label {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   letter-spacing: 0.06em;
   color: var(--sub);
 }
 
 .field-hint {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
   margin-bottom: 1rem;
@@ -2226,7 +2236,7 @@ ruby rt {
   border: 1px solid var(--ai);
   background: transparent;
   color: var(--ai);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: 0.7rem;
   cursor: pointer;
   padding: 0;
@@ -2296,7 +2306,7 @@ ruby rt {
 }
 
 .pos-modal-section h3 {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   letter-spacing: 0.1em;
   color: var(--seal);
@@ -2314,6 +2324,7 @@ ruby rt {
 }
 
 .pos-modal-example-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-md);
 }
 
@@ -2361,7 +2372,7 @@ ruby rt {
 }
 
 .import-error {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--seal);
   margin: 0.75rem 0;
@@ -2385,7 +2396,7 @@ ruby rt {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1.25rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .import-search input {
@@ -2418,12 +2429,13 @@ ruby rt {
 }
 
 .import-row-jp {
+  font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-lg);
   line-height: 1.8;
 }
 
 .import-row-zh {
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--sub);
   margin-top: 0.25rem;
@@ -2432,7 +2444,7 @@ ruby rt {
 .import-gap {
   display: block;
   width: 100%;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
   color: var(--line);
   background: transparent;
@@ -2461,7 +2473,7 @@ ruby rt {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .import-chapter-rail-title {
@@ -2502,7 +2514,7 @@ ruby rt {
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
 }
 
 .import-chapter-name-row input[type="text"] {
@@ -2527,7 +2539,7 @@ ruby rt {
   border-radius: 4px;
   padding: 1rem;
   margin: 1.25rem 0;
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   color: var(--seal);
 }
@@ -2547,10 +2559,47 @@ ruby rt {
   transform: translateX(-50%);
   background: var(--ink);
   color: var(--bg);
-  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-xs);
   padding: 0.6rem 1.1rem;
   border-radius: 999px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   z-index: 50;
+}
+
+/* ── theme toggle: fixed on every page (rendered from layout.js) ── */
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 80;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--ai);
+  transform: scale(1.05);
+}
+
+.theme-toggle-icon {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle-icon-sun,
+:root[data-theme="light"] .theme-toggle-icon-moon {
+  display: inline;
 }

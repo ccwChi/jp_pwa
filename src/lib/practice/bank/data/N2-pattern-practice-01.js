@@ -278,7 +278,12 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "expression",
+      "conjunction"
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n2-ba-koso-1",

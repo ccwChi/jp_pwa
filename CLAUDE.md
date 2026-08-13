@@ -20,6 +20,8 @@ There is no test suite/runner configured in this repo.
 
 Dictionary data (`public/dict/jmdict.json`) is generated manually and out-of-band with `node scripts/build-dictionary.mjs <path-to-jmdict-simplified-eng.json>` — not part of `npm run build`, and rarely needs re-running.
 
+`node scripts/pos-tag-status.mjs` reports per-file progress on POS-tagging the practice bank (how many items in each `src/lib/practice/bank/data/*.js` file still lack `posReviewed`) — read-only, useful for checking `/practice/tag` queue progress without opening every data file.
+
 ## Architecture
 
 ### Content = code, auto-loaded from `./data`
