@@ -29,7 +29,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "改善しつつあります",
+        "word": "つつある",
+        "meaning": "表示某個變化正逐漸進行中，語感書面",
+        "type": "grammar"
+      },
+      {
+        "surface": "経済の状況",
+        "word": "経済状況",
+        "reading": "けいざいじょうきょう",
+        "meaning": "經濟狀況",
+        "type": "vocab"
+      },
+      {
+        "surface": "徐々に",
+        "word": "徐々に",
+        "reading": "じょじょに",
+        "meaning": "漸漸地、逐漸地",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ippou-da-1",
@@ -61,7 +93,40 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "一方です",
+        "word": "一方だ",
+        "reading": "いっぽうだ",
+        "meaning": "表示情況朝單一方向不斷發展，沒有停止跡象",
+        "type": "grammar"
+      },
+      {
+        "surface": "環境汚染",
+        "word": "環境汚染",
+        "reading": "かんきょうおせん",
+        "meaning": "環境污染",
+        "type": "vocab"
+      },
+      {
+        "surface": "年々",
+        "word": "年々",
+        "reading": "ねんねん",
+        "meaning": "年年、逐年",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-bakari-da-1",
@@ -93,7 +158,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "増えるばかりです",
+        "word": "ばかりだ",
+        "meaning": "表示情況只會朝一個（通常負面）方向發展，帶無奈語感",
+        "type": "grammar"
+      },
+      {
+        "surface": "締め切り",
+        "word": "締め切り",
+        "reading": "しめきり",
+        "meaning": "截止日期",
+        "type": "vocab"
+      },
+      {
+        "surface": "近づいて",
+        "word": "近づく",
+        "reading": "ちかづく",
+        "meaning": "接近、靠近",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-tsutsu-1",
@@ -125,7 +222,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "言いつつ",
+        "word": "つつ",
+        "meaning": "表示逆接「雖然…卻…」，書面語",
+        "type": "grammar"
+      },
+      {
+        "surface": "忙しい",
+        "word": "忙しい",
+        "reading": "いそがしい",
+        "meaning": "忙碌的",
+        "type": "vocab"
+      },
+      {
+        "surface": "毎晩",
+        "word": "毎晩",
+        "reading": "まいばん",
+        "meaning": "每天晚上",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-kuse-ni-1",
@@ -157,7 +286,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "下手なくせに",
+        "word": "くせに",
+        "meaning": "帶輕蔑、責備語氣的逆接「明明…卻…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "下手",
+        "word": "下手",
+        "reading": "へた",
+        "meaning": "不擅長、笨拙",
+        "type": "vocab"
+      },
+      {
+        "surface": "自慢しています",
+        "word": "自慢する",
+        "reading": "じまんする",
+        "meaning": "自誇、炫耀",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-mono-no-1",
@@ -189,7 +350,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "導入したものの",
+        "word": "ものの",
+        "meaning": "表示雖然承認前項事實，但後項卻不如預期，語感較書面客觀",
+        "type": "grammar"
+      },
+      {
+        "surface": "導入した",
+        "word": "導入する",
+        "reading": "どうにゅうする",
+        "meaning": "引進、導入",
+        "type": "vocab"
+      },
+      {
+        "surface": "効率",
+        "word": "効率",
+        "reading": "こうりつ",
+        "meaning": "效率",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-towa-ie-1",
@@ -221,7 +414,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "便利だとはいえ",
+        "word": "とはいえ",
+        "meaning": "表示雖說如此，但結論和一般預期不同，帶「話雖如此」語氣",
+        "type": "grammar"
+      },
+      {
+        "surface": "使いすぎ",
+        "word": "使いすぎる",
+        "reading": "つかいすぎる",
+        "meaning": "使用過度",
+        "type": "vocab"
+      },
+      {
+        "surface": "注意が必要です",
+        "word": "必要",
+        "reading": "ひつよう",
+        "meaning": "必要的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-nimo-kakawarazu-1",
@@ -253,7 +478,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "練習したにもかかわらず",
+        "word": "にもかかわらず",
+        "meaning": "表示不受前項影響，帶意外、驚訝語感的逆接，語感正式",
+        "type": "grammar"
+      },
+      {
+        "surface": "何度も",
+        "word": "何度も",
+        "reading": "なんども",
+        "meaning": "好幾次",
+        "type": "vocab"
+      },
+      {
+        "surface": "負けてしまいました",
+        "word": "負ける",
+        "reading": "まける",
+        "meaning": "輸掉",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ba-hodo-1",
@@ -285,7 +542,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbConjugation": [
+      "conditional-ba"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "読めば読むほど",
+        "word": "ば〜ほど",
+        "meaning": "表示隨著程度加深，結果也隨之變化「越…越…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "小説",
+        "word": "小説",
+        "reading": "しょうせつ",
+        "meaning": "小說",
+        "type": "vocab"
+      },
+      {
+        "surface": "面白くなります",
+        "word": "面白い",
+        "reading": "おもしろい",
+        "meaning": "有趣的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-to-shitara-1",
@@ -317,7 +606,45 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "転職するとしたら",
+        "word": "としたら",
+        "meaning": "表示在假設某個前提成立的情況下，做出判斷或推測",
+        "type": "grammar"
+      },
+      {
+        "surface": "転職する",
+        "word": "転職する",
+        "reading": "てんしょくする",
+        "meaning": "轉職、換工作",
+        "type": "vocab"
+      },
+      {
+        "surface": "やりがい",
+        "word": "やりがい",
+        "meaning": "成就感、值得做的價值",
+        "type": "vocab"
+      },
+      {
+        "surface": "重視したい",
+        "word": "重視する",
+        "reading": "じゅうしする",
+        "meaning": "重視",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ta-totan-1",
@@ -349,7 +676,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "消したとたん",
+        "word": "たとたん",
+        "meaning": "表示前一個動作剛結束，後一個意外的事就緊接著發生「剛…就…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "電気を消した",
+        "word": "消す",
+        "reading": "けす",
+        "meaning": "關掉、熄滅",
+        "type": "vocab"
+      },
+      {
+        "surface": "真っ暗",
+        "word": "真っ暗",
+        "reading": "まっくら",
+        "meaning": "一片漆黑",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-shidai-1",
@@ -381,7 +740,40 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "出次第",
+        "word": "次第",
+        "reading": "しだい",
+        "meaning": "表示「一…就馬上…」，強調毫不拖延",
+        "type": "grammar"
+      },
+      {
+        "surface": "結果",
+        "word": "結果",
+        "reading": "けっか",
+        "meaning": "結果",
+        "type": "vocab"
+      },
+      {
+        "surface": "お知らせします",
+        "word": "知らせる",
+        "reading": "しらせる",
+        "meaning": "通知",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-wake-da-1",
@@ -413,7 +805,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "上手なわけです",
+        "word": "わけだ",
+        "meaning": "表示根據前面的資訊，合理推導出的結論，帶「原來如此、難怪」語感",
+        "type": "grammar"
+      },
+      {
+        "surface": "長年",
+        "word": "長年",
+        "reading": "ながねん",
+        "meaning": "多年、長年",
+        "type": "vocab"
+      },
+      {
+        "surface": "料理教室に通っています",
+        "word": "通う",
+        "reading": "かよう",
+        "meaning": "定期往返、上（課）",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-wake-de-wa-nai-1",
@@ -445,7 +869,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "好きなわけではないです",
+        "word": "わけではない",
+        "meaning": "表示部分否定，語感委婉，並非把話說死",
+        "type": "grammar"
+      },
+      {
+        "surface": "一人で暮らす",
+        "word": "暮らす",
+        "reading": "くらす",
+        "meaning": "生活、過日子",
+        "type": "vocab"
+      },
+      {
+        "surface": "慣れています",
+        "word": "慣れる",
+        "reading": "なれる",
+        "meaning": "習慣、熟悉",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-wake-ni-wa-ikanai-1",
@@ -477,7 +933,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "手を抜くわけにはいきません",
+        "word": "わけにはいかない",
+        "meaning": "表示因社會常理、道德、責任等因素，不能做某事",
+        "type": "grammar"
+      },
+      {
+        "surface": "患者",
+        "word": "患者",
+        "reading": "かんじゃ",
+        "meaning": "病患",
+        "type": "vocab"
+      },
+      {
+        "surface": "手を抜く",
+        "word": "手を抜く",
+        "reading": "てをぬく",
+        "meaning": "偷工減料、敷衍了事",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-beki-da-1",
@@ -509,7 +997,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "行動するべきです",
+        "word": "べきだ",
+        "meaning": "表示從道德、常識上判斷「應該做…」，語氣較強烈",
+        "type": "grammar"
+      },
+      {
+        "surface": "環境を守る",
+        "word": "守る",
+        "reading": "まもる",
+        "meaning": "保護、遵守",
+        "type": "vocab"
+      },
+      {
+        "surface": "一人一人",
+        "word": "一人一人",
+        "reading": "ひとりひとり",
+        "meaning": "每個人、各自",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ni-chigai-nai-1",
@@ -541,7 +1061,33 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "帰ったに違いありません",
+        "word": "に違いない",
+        "reading": "にちがいない",
+        "meaning": "表示根據某個依據，做出把握非常高的推測「肯定是…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "静かさ",
+        "word": "静かさ",
+        "reading": "しずかさ",
+        "meaning": "安靜（程度）",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-dake-de-naku-1",
@@ -573,7 +1119,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "便利なだけでなく",
+        "word": "だけでなく",
+        "meaning": "表示不僅止於前項，還包含後項「不僅…而且…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "美しいです",
+        "word": "美しい",
+        "reading": "うつくしい",
+        "meaning": "美麗的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-dokoro-ka-1",
@@ -605,7 +1176,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "合格するどころか",
+        "word": "どころか",
+        "meaning": "表示程度上完全相反，甚至更誇張，帶強烈語氣反駁預期「別說…了」",
+        "type": "grammar"
+      },
+      {
+        "surface": "合格する",
+        "word": "合格する",
+        "reading": "ごうかくする",
+        "meaning": "合格、考上",
+        "type": "vocab"
+      },
+      {
+        "surface": "解けませんでした",
+        "word": "解ける",
+        "reading": "とける",
+        "meaning": "（題目）解得開、解得出",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-sae-1",
@@ -637,7 +1240,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "conditional-ba"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "説明書さえ読めば",
+        "word": "さえ〜ば",
+        "meaning": "表示只要滿足這一個最低限度的條件，其他都不重要",
+        "type": "grammar"
+      },
+      {
+        "surface": "説明書",
+        "word": "説明書",
+        "reading": "せつめいしょ",
+        "meaning": "說明書",
+        "type": "vocab"
+      },
+      {
+        "surface": "操作できます",
+        "word": "操作する",
+        "reading": "そうさする",
+        "meaning": "操作",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ni-kagirazu-1",
@@ -669,7 +1304,40 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "高齢者に限らず",
+        "word": "に限らず",
+        "reading": "にかぎらず",
+        "meaning": "表示不僅限於前項範圍，還擴及更廣的範圍，語感正式",
+        "type": "grammar"
+      },
+      {
+        "surface": "症状",
+        "word": "症状",
+        "reading": "しょうじょう",
+        "meaning": "症狀",
+        "type": "vocab"
+      },
+      {
+        "surface": "高齢者",
+        "word": "高齢者",
+        "reading": "こうれいしゃ",
+        "meaning": "高齡者、長者",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-to-iwarete-iru-1",
@@ -701,7 +1369,34 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "passive",
+      "te"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "良いと言われています",
+        "word": "と言われている",
+        "reading": "といわれている",
+        "meaning": "表示轉述一般社會上普遍的說法、看法",
+        "type": "grammar"
+      },
+      {
+        "surface": "地方",
+        "word": "地方",
+        "reading": "ちほう",
+        "meaning": "地方、地區",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-to-sarete-iru-1",
@@ -733,7 +1428,40 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "passive",
+      "ta"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "建てられたとされています",
+        "word": "とされている",
+        "meaning": "表示被普遍認定、視為某種看法，語感比「と言われている」更正式書面",
+        "type": "grammar"
+      },
+      {
+        "surface": "江戸時代",
+        "word": "江戸時代",
+        "reading": "えどじだい",
+        "meaning": "江戶時代",
+        "type": "vocab"
+      },
+      {
+        "surface": "建てられた",
+        "word": "建てる",
+        "reading": "たてる",
+        "meaning": "建造",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-koto-naku-1",
@@ -765,7 +1493,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "泣くことなく",
+        "word": "ことなく",
+        "meaning": "表示自始至終沒有做某件事，語感比「ないで」更書面正式",
+        "type": "grammar"
+      },
+      {
+        "surface": "話し続けました",
+        "word": "話し続ける",
+        "reading": "はなしつづける",
+        "meaning": "持續說話、說個不停",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ni-kanshite-1",
@@ -797,7 +1550,33 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "規則に関して",
+        "word": "に関して",
+        "reading": "にかんして",
+        "meaning": "表示話題、內容涉及的範圍，語感比「について」更正式書面",
+        "type": "grammar"
+      },
+      {
+        "surface": "規則",
+        "word": "規則",
+        "reading": "きそく",
+        "meaning": "規則",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-sei-de-1",
@@ -829,7 +1608,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "遅れたせいで",
+        "word": "せいで",
+        "meaning": "表示負面結果的原因，帶有責怪、歸咎的語氣「都怪…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "面接に遅刻して",
+        "word": "遅刻する",
+        "reading": "ちこくする",
+        "meaning": "遲到",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-okage-de-1",
@@ -861,7 +1665,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "処置してくれたおかげで",
+        "word": "おかげで",
+        "meaning": "表示正面結果的原因，帶感謝、慶幸的語氣「多虧…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "処置して",
+        "word": "処置する",
+        "reading": "しょちする",
+        "meaning": "處理、處置（醫療）",
+        "type": "vocab"
+      },
+      {
+        "surface": "命が助かりました",
+        "word": "助かる",
+        "reading": "たすかる",
+        "meaning": "得救、保住性命",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-koto-kara-1",
@@ -893,7 +1729,39 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "残っていることから",
+        "word": "ことから",
+        "meaning": "表示從某個線索、事實推斷出後面的結論或由來",
+        "type": "grammar"
+      },
+      {
+        "surface": "手の跡",
+        "word": "跡",
+        "reading": "あと",
+        "meaning": "痕跡",
+        "type": "vocab"
+      },
+      {
+        "surface": "犯人",
+        "word": "犯人",
+        "reading": "はんにん",
+        "meaning": "犯人",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-amari-ni-1",
@@ -925,7 +1793,26 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "悲しさのあまり",
+        "word": "あまり",
+        "meaning": "表示程度過度，因而導致某個通常負面、意外的結果「因為太過…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "手につきませんでした",
+        "word": "手につく",
+        "reading": "てにつく",
+        "meaning": "（因分心）無法專心做事",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ni-oite-1",
@@ -957,7 +1844,26 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "ホテルにおいて",
+        "word": "において",
+        "meaning": "表示動作發生的場合、領域，語感比「で」更書面正式",
+        "type": "grammar"
+      },
+      {
+        "surface": "国際会議",
+        "word": "国際会議",
+        "reading": "こくさいかいぎ",
+        "meaning": "國際會議",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ni-taishite-1",
@@ -989,7 +1895,40 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "意見に対して",
+        "word": "に対して",
+        "reading": "にたいして",
+        "meaning": "表示動作、態度指向的對象，或表示對比",
+        "type": "grammar"
+      },
+      {
+        "surface": "住民",
+        "word": "住民",
+        "reading": "じゅうみん",
+        "meaning": "居民",
+        "type": "vocab"
+      },
+      {
+        "surface": "真剣に向き合う",
+        "word": "向き合う",
+        "reading": "むきあう",
+        "meaning": "面對、正視",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ni-totte-1",
@@ -1021,7 +1960,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "現代人にとって",
+        "word": "にとって",
+        "meaning": "表示從某個立場、角度來評價、判斷後面的事「對…來說」",
+        "type": "grammar"
+      },
+      {
+        "surface": "貴重です",
+        "word": "貴重",
+        "reading": "きちょう",
+        "meaning": "寶貴的、珍貴的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-to-shite-1",
@@ -1053,7 +2017,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "代表として",
+        "word": "として",
+        "meaning": "表示以某種身分、立場、資格「作為…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "大会に出席しました",
+        "word": "出席する",
+        "reading": "しゅっせきする",
+        "meaning": "出席",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ni-motozuite-1",
@@ -1085,7 +2074,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "データに基づいて",
+        "word": "に基づいて",
+        "reading": "にもとづいて",
+        "meaning": "表示以某個事實、資料、規則作為依據「根據…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "過去のデータ",
+        "word": "データ",
+        "meaning": "數據、資料",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-gachi-1",
@@ -1117,7 +2131,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "欠席がちでした",
+        "word": "がち",
+        "meaning": "表示容易發生某個（通常負面的）傾向",
+        "type": "grammar"
+      },
+      {
+        "surface": "体が弱く",
+        "word": "弱い",
+        "reading": "よわい",
+        "meaning": "虛弱的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-ppoi-1",
@@ -1149,7 +2188,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "needsReview": true,
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "先生っぽいです",
+        "word": "っぽい",
+        "meaning": "表示帶有某種傾向、性質，或外表看起來很像，語感較口語",
+        "type": "grammar"
+      },
+      {
+        "surface": "話し方",
+        "word": "話し方",
+        "reading": "はなしかた",
+        "meaning": "說話方式",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-kimi-1",
@@ -1181,7 +2245,40 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "寝不足気味で",
+        "word": "気味",
+        "reading": "ぎみ",
+        "meaning": "表示稍微感覺到某種（通常不太好的）傾向或徵兆",
+        "type": "grammar"
+      },
+      {
+        "surface": "寝不足",
+        "word": "寝不足",
+        "reading": "ねぶそく",
+        "meaning": "睡眠不足",
+        "type": "vocab"
+      },
+      {
+        "surface": "集中できません",
+        "word": "集中する",
+        "reading": "しゅうちゅうする",
+        "meaning": "集中（精神）",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "extra-n3-tagaru-1",
@@ -1213,7 +2310,32 @@ const items = [
       ],
       "answerIndex": 0
     },
-    "needsReview": true
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "needsReview": true,
+    "notes": [
+      {
+        "surface": "行きたがっています",
+        "word": "たがる",
+        "meaning": "表示描述第三人稱表現出來想做某事的樣子",
+        "type": "grammar"
+      },
+      {
+        "surface": "海外旅行",
+        "word": "海外旅行",
+        "reading": "かいがいりょこう",
+        "meaning": "海外旅行",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-change-tendency-tsutsu-aru",
@@ -1244,7 +2366,39 @@ const items = [
         "上昇[じょうしょう]し気味[ぎみ]です"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "上昇しつつあります",
+        "word": "つつある",
+        "meaning": "表示某個變化正在逐漸進行中，語感書面",
+        "type": "grammar"
+      },
+      {
+        "surface": "地球の気温",
+        "word": "気温",
+        "reading": "きおん",
+        "meaning": "氣溫",
+        "type": "vocab"
+      },
+      {
+        "surface": "上昇し",
+        "word": "上昇する",
+        "reading": "じょうしょうする",
+        "meaning": "上升",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-change-tendency-ippou-da",
@@ -1275,7 +2429,33 @@ const items = [
         "上[あ]がる気味[ぎみ]です"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "上がる一方です",
+        "word": "一方だ",
+        "reading": "いっぽうだ",
+        "meaning": "表示情況不斷朝單一方向發展，沒有停下來的跡象",
+        "type": "grammar"
+      },
+      {
+        "surface": "物価",
+        "word": "物価",
+        "reading": "ぶっか",
+        "meaning": "物價",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-change-tendency-bakari-da",
@@ -1306,7 +2486,32 @@ const items = [
         "悪[わる]くなりがちです"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "悪くなるばかりです",
+        "word": "ばかりだ",
+        "meaning": "表示情況只會朝一個（通常負面的）方向發展，帶無奈語感",
+        "type": "grammar"
+      },
+      {
+        "surface": "状況",
+        "word": "状況",
+        "reading": "じょうきょう",
+        "meaning": "狀況",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-change-tendency-tsutsu",
@@ -1337,7 +2542,32 @@ const items = [
         "聞[き]き気味[ぎみ]で"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "聞きつつ",
+        "word": "つつ",
+        "meaning": "書面語的「ながら」，表示兩個動作同時進行",
+        "type": "grammar"
+      },
+      {
+        "surface": "音楽",
+        "word": "音楽",
+        "reading": "おんがく",
+        "meaning": "音樂",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-change-tendency-gachi",
@@ -1368,7 +2598,32 @@ const items = [
         "休[やす]む一方[いっぽう]です"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "休みがちです",
+        "word": "がち",
+        "meaning": "表示容易發生某個（通常負面的）傾向",
+        "type": "grammar"
+      },
+      {
+        "surface": "忙しくて",
+        "word": "忙しい",
+        "reading": "いそがしい",
+        "meaning": "忙碌的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-change-tendency-ppoi",
@@ -1399,7 +2654,32 @@ const items = [
         "子供[こども]たがります"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "子供っぽいです",
+        "word": "っぽい",
+        "meaning": "表示帶有某種傾向、性質，或看起來很像",
+        "type": "grammar"
+      },
+      {
+        "surface": "三十歳",
+        "word": "三十歳",
+        "reading": "さんじゅっさい",
+        "meaning": "三十歲",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-change-tendency-kimi",
@@ -1430,7 +2710,33 @@ const items = [
         "疲[つか]れたがります"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "疲れ気味です",
+        "word": "気味",
+        "reading": "ぎみ",
+        "meaning": "表示稍微感覺到某種（通常不太好的）傾向或徵兆",
+        "type": "grammar"
+      },
+      {
+        "surface": "疲れ",
+        "word": "疲れる",
+        "reading": "つかれる",
+        "meaning": "疲累",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-change-tendency-tagaru",
@@ -1461,7 +2767,31 @@ const items = [
         "やり気味[ぎみ]です"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "やりたがっています",
+        "word": "たがる",
+        "meaning": "描述第三人稱表現出來想做某事的樣子",
+        "type": "grammar"
+      },
+      {
+        "surface": "ゲーム",
+        "word": "ゲーム",
+        "meaning": "遊戲",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-concession-conditional-kuse-ni",
@@ -1492,7 +2822,32 @@ const items = [
         "下手[へた]にもかかわらず"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "下手なくせに",
+        "word": "くせに",
+        "meaning": "帶輕蔑、責備語氣的逆接「明明…卻…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "自信満々です",
+        "word": "自信満々",
+        "reading": "じしんまんまん",
+        "meaning": "充滿自信",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-concession-conditional-mono-no",
@@ -1523,7 +2878,32 @@ const items = [
         "したとたん"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "notes": [
+      {
+        "surface": "勉強したものの",
+        "word": "ものの",
+        "meaning": "表示雖然承認前項事實，但後項不如預期，語感較書面客觀",
+        "type": "grammar"
+      },
+      {
+        "surface": "三年間",
+        "word": "三年間",
+        "reading": "さんねんかん",
+        "meaning": "三年間",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-concession-conditional-towa-ie",
@@ -1554,7 +2934,26 @@ const items = [
         "春[はる]次第[しだい]で"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "春とはいえ",
+        "word": "とはいえ",
+        "meaning": "表示雖說如此，但結論和一般預期不同，帶提醒糾正語感",
+        "type": "grammar"
+      },
+      {
+        "surface": "朝は寒いです",
+        "word": "寒い",
+        "reading": "さむい",
+        "meaning": "寒冷的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-concession-conditional-nimo-kakawarazu",
@@ -1585,7 +2984,26 @@ const items = [
         "次第[しだい]で"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "大雨にもかかわらず",
+        "word": "にもかかわらず",
+        "meaning": "表示不受前項影響，帶驚訝語感的逆接，語感正式",
+        "type": "grammar"
+      },
+      {
+        "surface": "集まりました",
+        "word": "集まる",
+        "reading": "あつまる",
+        "meaning": "聚集",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-concession-conditional-ba-hodo",
@@ -1616,7 +3034,31 @@ const items = [
         "する次第[しだい]で"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbConjugation": [
+      "conditional-ba"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "notes": [
+      {
+        "surface": "すればするほど",
+        "word": "ば〜ほど",
+        "meaning": "表示隨著程度加深，結果也隨之變化「越…越…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "わかるようになります",
+        "word": "わかる",
+        "meaning": "懂、明白",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-concession-conditional-to-shitara",
@@ -1647,7 +3089,32 @@ const items = [
         "当[あ]たり次第[しだい]"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "notes": [
+      {
+        "surface": "当たったとしたら",
+        "word": "としたら",
+        "meaning": "表示在假設某個前提成立的情況下「假如…的話」",
+        "type": "grammar"
+      },
+      {
+        "surface": "宝くじ",
+        "word": "宝くじ",
+        "reading": "たからくじ",
+        "meaning": "樂透、彩券",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-concession-conditional-ta-totan",
@@ -1678,7 +3145,32 @@ const items = [
         "出[で]次第[しだい]"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "verbCategory": [
+      "ichidan"
+    ],
+    "notes": [
+      {
+        "surface": "出たとたん",
+        "word": "たとたん",
+        "meaning": "表示前一動作剛結束，後一意外的事緊接發生「剛…就…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "降り出しました",
+        "word": "降り出す",
+        "reading": "ふりだす",
+        "meaning": "（雨、雪等）開始下",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-concession-conditional-shidai",
@@ -1709,7 +3201,33 @@ const items = [
         "着[つ]くとしたら"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "着き次第",
+        "word": "次第",
+        "reading": "しだい",
+        "meaning": "動詞ます形＋次第，表示「一…就立刻…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "空港",
+        "word": "空港",
+        "reading": "くうこう",
+        "meaning": "機場",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-conjecture-necessity-wake-da",
@@ -1740,7 +3258,32 @@ const items = [
         "上手[じょうず]に違[ちが]いないです"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "上手なわけです",
+        "word": "わけだ",
+        "meaning": "表示根據前面的資訊，合理推導出的結論「難怪…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "十年間",
+        "word": "十年間",
+        "reading": "じゅうねんかん",
+        "meaning": "十年間",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-conjecture-necessity-wake-de-wa-nai",
@@ -1771,7 +3314,32 @@ const items = [
         "嫌[きら]いに違[ちが]いないです"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "嫌いなわけではないです",
+        "word": "わけではない",
+        "meaning": "表示部分否定「並不是說…（全部）」，語感委婉",
+        "type": "grammar"
+      },
+      {
+        "surface": "嫌い",
+        "word": "嫌い",
+        "reading": "きらい",
+        "meaning": "討厭",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-conjecture-necessity-wake-ni-wa-ikanai",
@@ -1802,7 +3370,32 @@ const items = [
         "行[い]くに違[ちが]いないです"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai"
+    ],
+    "notes": [
+      {
+        "surface": "行かないわけにはいきません",
+        "word": "わけにはいかない",
+        "meaning": "雙重否定，表示「不能不做、必須做」",
+        "type": "grammar"
+      },
+      {
+        "surface": "約束したので",
+        "word": "約束する",
+        "reading": "やくそくする",
+        "meaning": "約定、承諾",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-conjecture-necessity-beki-da",
@@ -1833,7 +3426,32 @@ const items = [
         "守[まも]るに違[ちが]いないです"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "守るべきです",
+        "word": "べきだ",
+        "meaning": "表示從道德、常識判斷「應該做…」，語氣較強",
+        "type": "grammar"
+      },
+      {
+        "surface": "約束",
+        "word": "約束",
+        "reading": "やくそく",
+        "meaning": "約定",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-conjecture-necessity-ni-chigai-nai",
@@ -1864,7 +3482,27 @@ const items = [
         "日本人[にほんじん]であるべきです"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "日本人に違いありません",
+        "word": "に違いない",
+        "reading": "にちがいない",
+        "meaning": "表示根據依據做出非常有把握的推測「肯定是…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "話し方",
+        "word": "話し方",
+        "reading": "はなしかた",
+        "meaning": "說話方式",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-limitation-reason-dake-de-naku",
@@ -1895,7 +3533,26 @@ const items = [
         "に限[かぎ]らず"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "英語だけでなく",
+        "word": "だけでなく",
+        "meaning": "表示不僅止於前項，還包含後項「不僅…而且…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "フランス語",
+        "word": "フランス語",
+        "reading": "フランスご",
+        "meaning": "法語",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-limitation-reason-dokoro-ka",
@@ -1926,7 +3583,26 @@ const items = [
         "に限[かぎ]らず"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "休みどころか",
+        "word": "どころか",
+        "meaning": "表示程度上完全相反，甚至更誇張「別說…了，就連…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "残業ばかりです",
+        "word": "残業",
+        "reading": "ざんぎょう",
+        "meaning": "加班",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-limitation-reason-sae",
@@ -1957,7 +3633,32 @@ const items = [
         "ばかり"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "conditional-ba"
+    ],
+    "notes": [
+      {
+        "surface": "時間さえあれば",
+        "word": "さえ〜ば",
+        "meaning": "表示只要滿足最低限度的條件",
+        "type": "grammar"
+      },
+      {
+        "surface": "行きたいです",
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "去",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-limitation-reason-ni-kagirazu",
@@ -1988,7 +3689,40 @@ const items = [
         "さえ"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai"
+    ],
+    "notes": [
+      {
+        "surface": "週末に限らず",
+        "word": "に限らず",
+        "reading": "にかぎらず",
+        "meaning": "表示不僅限於前項範圍，還包括更廣的範圍",
+        "type": "grammar"
+      },
+      {
+        "surface": "平日",
+        "word": "平日",
+        "reading": "へいじつ",
+        "meaning": "平日",
+        "type": "vocab"
+      },
+      {
+        "surface": "込んでいます",
+        "word": "込む",
+        "reading": "こむ",
+        "meaning": "擁擠",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-limitation-reason-sei-de",
@@ -2019,7 +3753,26 @@ const items = [
         "あまり"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "彼のせいで",
+        "word": "せいで",
+        "meaning": "表示負面結果的原因，帶責怪語氣「都怪…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "遅刻しました",
+        "word": "遅刻する",
+        "reading": "ちこくする",
+        "meaning": "遲到",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-limitation-reason-okage-de",
@@ -2050,7 +3803,26 @@ const items = [
         "あまり"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "先生のおかげで",
+        "word": "おかげで",
+        "meaning": "表示正面結果的原因，帶感謝、慶幸語氣「多虧…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "合格しました",
+        "word": "合格する",
+        "reading": "ごうかくする",
+        "meaning": "合格、考上",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-limitation-reason-koto-kara",
@@ -2081,7 +3853,32 @@ const items = [
         "あまり"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "雲が多いことから",
+        "word": "ことから",
+        "meaning": "表示從某個線索、事實推斷出結論或由來",
+        "type": "grammar"
+      },
+      {
+        "surface": "雲が多い",
+        "word": "雲",
+        "reading": "くも",
+        "meaning": "雲",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-limitation-reason-amari-ni",
@@ -2112,7 +3909,32 @@ const items = [
         "ことから"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "驚きのあまり",
+        "word": "あまり",
+        "meaning": "表示程度過度，因而導致（通常負面）結果「因為太過…以致於…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "驚き",
+        "word": "驚く",
+        "reading": "おどろく",
+        "meaning": "驚訝",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-quotation-to-iwarete-iru",
@@ -2143,7 +3965,34 @@ const items = [
         "に関[かん]して"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "passive",
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "体にいいと言われています",
+        "word": "と言われている",
+        "reading": "といわれている",
+        "meaning": "轉述一般社會普遍的說法、看法「據說…、大家都說…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "納豆",
+        "word": "納豆",
+        "reading": "なっとう",
+        "meaning": "納豆",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-quotation-to-sarete-iru",
@@ -2174,7 +4023,33 @@ const items = [
         "に関[かん]して"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "passive",
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "十八歳以上とされています",
+        "word": "とされている",
+        "meaning": "表示被普遍認定、視為某種看法，語感較正式書面",
+        "type": "grammar"
+      },
+      {
+        "surface": "成人",
+        "word": "成人",
+        "reading": "せいじん",
+        "meaning": "成年人",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-quotation-koto-naku",
@@ -2205,7 +4080,39 @@ const items = [
         "諦[あきら]めると言[い]われて"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "諦めることなく",
+        "word": "ことなく",
+        "meaning": "表示自始至終沒有做某件事，語感比「ないで」更書面",
+        "type": "grammar"
+      },
+      {
+        "surface": "諦める",
+        "word": "諦める",
+        "reading": "あきらめる",
+        "meaning": "放棄",
+        "type": "vocab"
+      },
+      {
+        "surface": "頑張りました",
+        "word": "頑張る",
+        "reading": "がんばる",
+        "meaning": "努力、加油",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-quotation-ni-kanshite",
@@ -2236,7 +4143,33 @@ const items = [
         "ことなく"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "この件に関して",
+        "word": "に関して",
+        "reading": "にかんして",
+        "meaning": "表示話題、內容涉及的範圍「關於…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "詳しく説明します",
+        "word": "詳しい",
+        "reading": "くわしい",
+        "meaning": "詳細的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-standard-perspective-ni-oite",
@@ -2267,7 +4200,33 @@ const items = [
         "として"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "この分野において",
+        "word": "において",
+        "meaning": "表示動作發生的場合、領域、時間點，語感比「で」更書面",
+        "type": "grammar"
+      },
+      {
+        "surface": "分野",
+        "word": "分野",
+        "reading": "ぶんや",
+        "meaning": "領域、範疇",
+        "type": "vocab"
+      },
+      {
+        "surface": "第一人者",
+        "word": "第一人者",
+        "reading": "だいいちにんしゃ",
+        "meaning": "第一把交椅、頂尖人物",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-standard-perspective-ni-taishite",
@@ -2298,7 +4257,33 @@ const items = [
         "に基[もと]づいて"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "学生に対して",
+        "word": "に対して",
+        "reading": "にたいして",
+        "meaning": "表示動作、態度指向的對象，或表示對比",
+        "type": "grammar"
+      },
+      {
+        "surface": "厳しいです",
+        "word": "厳しい",
+        "reading": "きびしい",
+        "meaning": "嚴格的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-standard-perspective-ni-totte",
@@ -2329,7 +4314,32 @@ const items = [
         "として"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "子供にとって",
+        "word": "にとって",
+        "meaning": "表示從某個立場、角度來看「對…來說」",
+        "type": "grammar"
+      },
+      {
+        "surface": "大切です",
+        "word": "大切",
+        "reading": "たいせつ",
+        "meaning": "重要的、寶貴的",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-standard-perspective-to-shite",
@@ -2360,7 +4370,32 @@ const items = [
         "に基[もと]づいて"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "先生として",
+        "word": "として",
+        "meaning": "表示身分、立場、資格「作為…、以…的身分」",
+        "type": "grammar"
+      },
+      {
+        "surface": "働いています",
+        "word": "働く",
+        "reading": "はたらく",
+        "meaning": "工作",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-n3-standard-perspective-ni-motozuite",
@@ -2391,7 +4426,33 @@ const items = [
         "に対[たい]して"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "事件に基づいて",
+        "word": "に基づいて",
+        "reading": "にもとづいて",
+        "meaning": "表示以某個事實、資料、規則作為依據「根據…、基於…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "実際の事件",
+        "word": "事件",
+        "reading": "じけん",
+        "meaning": "事件",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   }
 ];
 

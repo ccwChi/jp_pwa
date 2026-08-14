@@ -28,7 +28,30 @@ const items = [
         "あんな"
       ],
       "answerIndex": 0
-    }
+    },
+    "notes": [
+      {
+        "surface": "どんな",
+        "word": "どんな",
+        "meaning": "疑問詞，「哪樣的」，用來詢問性質、種類",
+        "type": "grammar"
+      },
+      {
+        "surface": "音楽",
+        "word": "音楽",
+        "reading": "おんがく",
+        "meaning": "音樂",
+        "type": "vocab"
+      },
+      {
+        "surface": "好きです",
+        "word": "好き",
+        "reading": "すき",
+        "meaning": "喜歡（な形容詞）",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-demonstratives-giving-agemasu",
@@ -59,7 +82,43 @@ const items = [
         "ありました"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "masu",
+      "ta"
+    ],
+    "notes": [
+      {
+        "surface": "あげました",
+        "word": "あげる",
+        "meaning": "給予（視角站在給予者這邊）",
+        "type": "grammar"
+      },
+      {
+        "surface": "友達",
+        "word": "友達",
+        "reading": "ともだち",
+        "meaning": "朋友",
+        "type": "vocab"
+      },
+      {
+        "surface": "誕生日",
+        "word": "誕生日",
+        "reading": "たんじょうび",
+        "meaning": "生日",
+        "type": "vocab"
+      },
+      {
+        "surface": "プレゼント",
+        "word": "プレゼント",
+        "meaning": "禮物",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-demonstratives-giving-moraimasu",
@@ -90,7 +149,36 @@ const items = [
         "いました"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "masu",
+      "ta"
+    ],
+    "notes": [
+      {
+        "surface": "もらいました",
+        "word": "もらう",
+        "meaning": "從別人那裡得到（視角站在接收者這邊）",
+        "type": "grammar"
+      },
+      {
+        "surface": "から",
+        "word": "から",
+        "meaning": "表示動作或事物的起點「從…」",
+        "type": "vocab"
+      },
+      {
+        "surface": "誕生日",
+        "word": "誕生日",
+        "reading": "たんじょうび",
+        "meaning": "生日",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-demonstratives-giving-kuremasu",
@@ -121,7 +209,36 @@ const items = [
         "いました"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "masu",
+      "ta"
+    ],
+    "notes": [
+      {
+        "surface": "くれました",
+        "word": "くれる",
+        "meaning": "別人給我／我方（視角站在接收者這邊）",
+        "type": "grammar"
+      },
+      {
+        "surface": "田中さん",
+        "word": "田中さん",
+        "meaning": "田中先生／小姐",
+        "type": "vocab"
+      },
+      {
+        "surface": "本",
+        "word": "本",
+        "reading": "ほん",
+        "meaning": "書",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-copula-patterns-desu-da",
@@ -152,7 +269,26 @@ const items = [
         "ですか"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "です",
+        "word": "です",
+        "meaning": "禮貌體斷定句「是～」",
+        "type": "grammar"
+      },
+      {
+        "surface": "台湾人",
+        "word": "台湾人",
+        "reading": "たいわんじん",
+        "meaning": "台灣人",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-copula-patterns-ja-nai-dewa-arimasen",
@@ -183,7 +319,26 @@ const items = [
         "です"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "ではありません",
+        "word": "です",
+        "meaning": "「です」的否定形「不是～」",
+        "type": "grammar"
+      },
+      {
+        "surface": "商品",
+        "word": "商品",
+        "reading": "しょうひん",
+        "meaning": "商品",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-copula-patterns-deshita",
@@ -214,7 +369,26 @@ const items = [
         "ではありません"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "でした",
+        "word": "です",
+        "meaning": "「です」的過去肯定形「（過去）是～」",
+        "type": "grammar"
+      },
+      {
+        "surface": "休み",
+        "word": "休み",
+        "reading": "やすみ",
+        "meaning": "放假、休息",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-copula-patterns-to-omoimasu",
@@ -245,7 +419,40 @@ const items = [
         "ながら"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "masu"
+    ],
+    "otherCategory": [
+      "particle"
+    ],
+    "notes": [
+      {
+        "surface": "と思います",
+        "word": "と思う",
+        "reading": "とおもう",
+        "meaning": "表達說話者的意見或推測「我覺得…」",
+        "type": "grammar"
+      },
+      {
+        "surface": "雨",
+        "word": "雨",
+        "reading": "あめ",
+        "meaning": "雨",
+        "type": "vocab"
+      },
+      {
+        "surface": "降る",
+        "word": "降る",
+        "reading": "ふる",
+        "meaning": "（雨、雪）下",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-copula-patterns-deshou",
@@ -276,7 +483,26 @@ const items = [
         "たいです"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "でしょう",
+        "word": "でしょう",
+        "meaning": "表示推測「大概…吧」",
+        "type": "grammar"
+      },
+      {
+        "surface": "晴れる",
+        "word": "晴れる",
+        "reading": "はれる",
+        "meaning": "放晴",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-copula-patterns-n-desu",
@@ -307,7 +533,33 @@ const items = [
         "たら"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "んです",
+        "word": "んです",
+        "meaning": "對聽者強調背景說明、理由",
+        "type": "grammar"
+      },
+      {
+        "surface": "遅れた",
+        "word": "遅れる",
+        "reading": "おくれる",
+        "meaning": "遲到、延誤",
+        "type": "vocab"
+      },
+      {
+        "surface": "電車",
+        "word": "電車",
+        "reading": "でんしゃ",
+        "meaning": "電車",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-verb-conjugation-masu-form",
@@ -414,7 +666,37 @@ const items = [
         "開[あ]けない"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "開けて",
+        "word": "開ける",
+        "reading": "あける",
+        "meaning": "打開（て形，連接動作或接續句型）",
+        "type": "grammar"
+      },
+      {
+        "surface": "掃除します",
+        "word": "掃除する",
+        "reading": "そうじする",
+        "meaning": "打掃",
+        "type": "vocab"
+      },
+      {
+        "surface": "窓",
+        "word": "窓",
+        "reading": "まど",
+        "meaning": "窗戶",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-verb-conjugation-ta-form",
@@ -445,7 +727,37 @@ const items = [
         "行[い]かない"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "notes": [
+      {
+        "surface": "行った",
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "去（普通體過去肯定形）",
+        "type": "grammar"
+      },
+      {
+        "surface": "京都",
+        "word": "京都",
+        "reading": "きょうと",
+        "meaning": "京都",
+        "type": "vocab"
+      },
+      {
+        "surface": "先週",
+        "word": "先週",
+        "reading": "せんしゅう",
+        "meaning": "上禮拜",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-verb-conjugation-nai-form",
@@ -476,7 +788,30 @@ const items = [
         "行[い]って"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai"
+    ],
+    "notes": [
+      {
+        "surface": "行かない",
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "不去（普通體現在否定形）",
+        "type": "grammar"
+      },
+      {
+        "surface": "学校",
+        "word": "学校",
+        "reading": "がっこう",
+        "meaning": "學校",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-te-form-uses-te-iru",
@@ -507,7 +842,29 @@ const items = [
         "てはいけません"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "見ています",
+        "word": "見る",
+        "reading": "みる",
+        "meaning": "正在看（て形+います，表示動作進行或狀態持續）",
+        "type": "grammar"
+      },
+      {
+        "surface": "テレビ",
+        "word": "テレビ",
+        "meaning": "電視",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-te-form-uses-te-kudasai",
@@ -538,7 +895,30 @@ const items = [
         "ています"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "待ってください",
+        "word": "待つ",
+        "reading": "まつ",
+        "meaning": "等待（て形+ください，禮貌請求）",
+        "type": "grammar"
+      },
+      {
+        "surface": "少し",
+        "word": "少し",
+        "reading": "すこし",
+        "meaning": "稍微、一點",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-te-form-uses-te-mo-ii",
@@ -569,7 +949,29 @@ const items = [
         "てみますか"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "座ってもいいですか",
+        "word": "座る",
+        "reading": "すわる",
+        "meaning": "坐（て形+もいいですか，徵求許可）",
+        "type": "grammar"
+      },
+      {
+        "surface": "ここ",
+        "word": "ここ",
+        "meaning": "這裡",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-te-form-uses-te-wa-ikenai",
@@ -600,7 +1002,29 @@ const items = [
         "てみます"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "吸ってはいけません",
+        "word": "吸う",
+        "reading": "すう",
+        "meaning": "吸（菸）（て形+はいけません，表示禁止）",
+        "type": "grammar"
+      },
+      {
+        "surface": "たばこ",
+        "word": "たばこ",
+        "meaning": "香菸",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-te-form-uses-te-kara",
@@ -631,7 +1055,37 @@ const items = [
         "てはいけない"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "洗ってから",
+        "word": "洗う",
+        "reading": "あらう",
+        "meaning": "洗（て形+から，先做完某動作才做下一個動作）",
+        "type": "grammar"
+      },
+      {
+        "surface": "ご飯",
+        "word": "ご飯",
+        "reading": "ごはん",
+        "meaning": "飯、餐",
+        "type": "vocab"
+      },
+      {
+        "surface": "手",
+        "word": "手",
+        "reading": "て",
+        "meaning": "手",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-te-form-uses-te-miru",
@@ -662,7 +1116,30 @@ const items = [
         "てはいけない"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "食べてみてください",
+        "word": "食べる",
+        "reading": "たべる",
+        "meaning": "吃（て形+みる，嘗試做…看看）",
+        "type": "grammar"
+      },
+      {
+        "surface": "料理",
+        "word": "料理",
+        "reading": "りょうり",
+        "meaning": "料理、菜餚",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-te-form-uses-nagara",
@@ -693,7 +1170,40 @@ const items = [
         "ては"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "otherCategory": [
+      "conjunction"
+    ],
+    "notes": [
+      {
+        "surface": "聞きながら",
+        "word": "聞く",
+        "reading": "きく",
+        "meaning": "聽（ます形語幹+ながら，一邊…一邊…）",
+        "type": "grammar"
+      },
+      {
+        "surface": "音楽",
+        "word": "音楽",
+        "reading": "おんがく",
+        "meaning": "音樂",
+        "type": "vocab"
+      },
+      {
+        "surface": "勉強します",
+        "word": "勉強する",
+        "reading": "べんきょうする",
+        "meaning": "學習、讀書",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-obligation-ability-nakereba-narimasen",
@@ -724,7 +1234,37 @@ const items = [
         "たことがあります"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai",
+      "conditional-ba"
+    ],
+    "notes": [
+      {
+        "surface": "行かなければなりません",
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "必須去（ない形+ば+なりません，表示義務）",
+        "type": "grammar"
+      },
+      {
+        "surface": "九時",
+        "word": "九時",
+        "reading": "くじ",
+        "meaning": "九點",
+        "type": "vocab"
+      },
+      {
+        "surface": "までに",
+        "word": "までに",
+        "meaning": "在…之前（期限）",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-obligation-ability-nakutemo-ii",
@@ -755,7 +1295,31 @@ const items = [
         "てもいいです"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai",
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "行かなくてもいいです",
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "不去也沒關係（ない形+てもいいです）",
+        "type": "grammar"
+      },
+      {
+        "surface": "仕事",
+        "word": "仕事",
+        "reading": "しごと",
+        "meaning": "工作",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-obligation-ability-dekiru-potential",
@@ -786,7 +1350,30 @@ const items = [
         "話[はな]したいです"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "potential"
+    ],
+    "notes": [
+      {
+        "surface": "話せます",
+        "word": "話す",
+        "reading": "はなす",
+        "meaning": "會說、能說（可能形）",
+        "type": "grammar"
+      },
+      {
+        "surface": "日本語",
+        "word": "日本語",
+        "reading": "にほんご",
+        "meaning": "日文",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-obligation-ability-koto-ga-arimasu",
@@ -817,7 +1404,30 @@ const items = [
         "なければなりません"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "notes": [
+      {
+        "surface": "登ったことがあります",
+        "word": "登る",
+        "reading": "のぼる",
+        "meaning": "爬（た形+ことがあります，表示過去經驗）",
+        "type": "grammar"
+      },
+      {
+        "surface": "富士山",
+        "word": "富士山",
+        "reading": "ふじさん",
+        "meaning": "富士山",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-obligation-ability-tari-tari-suru",
@@ -848,7 +1458,37 @@ const items = [
         "ています"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "tari"
+    ],
+    "notes": [
+      {
+        "surface": "読んだり",
+        "word": "読む",
+        "reading": "よむ",
+        "meaning": "讀（た形變化+り，列舉代表性動作）",
+        "type": "grammar"
+      },
+      {
+        "surface": "見たりします",
+        "word": "見る",
+        "reading": "みる",
+        "meaning": "看（たり形）",
+        "type": "vocab"
+      },
+      {
+        "surface": "週末",
+        "word": "週末",
+        "reading": "しゅうまつ",
+        "meaning": "週末",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-desire-adjectives-tai-desu",
@@ -879,7 +1519,30 @@ const items = [
         "つもりです"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "行きたいです",
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "想去（ます形語幹+たい，表示願望）",
+        "type": "grammar"
+      },
+      {
+        "surface": "旅行",
+        "word": "旅行",
+        "reading": "りょこう",
+        "meaning": "旅行",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-desire-adjectives-mashou",
@@ -910,7 +1573,30 @@ const items = [
         "つもりです"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "volitional"
+    ],
+    "notes": [
+      {
+        "surface": "食べましょう",
+        "word": "食べる",
+        "reading": "たべる",
+        "meaning": "一起吃吧（ます形+ましょう，禮貌勸誘）",
+        "type": "grammar"
+      },
+      {
+        "surface": "昼ごはん",
+        "word": "昼ごはん",
+        "reading": "ひるごはん",
+        "meaning": "午飯",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-desire-adjectives-masenka",
@@ -941,7 +1627,38 @@ const items = [
         "つもりです"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "masu",
+      "nai"
+    ],
+    "notes": [
+      {
+        "surface": "行きませんか",
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "要不要去（ます形否定+か，委婉邀約）",
+        "type": "grammar"
+      },
+      {
+        "surface": "映画",
+        "word": "映画",
+        "reading": "えいが",
+        "meaning": "電影",
+        "type": "vocab"
+      },
+      {
+        "surface": "今度",
+        "word": "今度",
+        "reading": "こんど",
+        "meaning": "這次、下次",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-desire-adjectives-tsumori",
@@ -972,7 +1689,30 @@ const items = [
         "ませんか"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "留学するつもりです",
+        "word": "留学する",
+        "reading": "りゅうがくする",
+        "meaning": "打算留學（辭書形+つもりです，表示事先的打算）",
+        "type": "grammar"
+      },
+      {
+        "surface": "来年",
+        "word": "来年",
+        "reading": "らいねん",
+        "meaning": "明年",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-desire-adjectives-i-adjective-conjugation",
@@ -1003,7 +1743,36 @@ const items = [
         "高[たか]いでした"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "negative"
+    ],
+    "notes": [
+      {
+        "surface": "高くないです",
+        "word": "高い",
+        "reading": "たかい",
+        "meaning": "貴、高（い形容詞否定形）",
+        "type": "grammar"
+      },
+      {
+        "surface": "ラーメン",
+        "word": "ラーメン",
+        "meaning": "拉麵",
+        "type": "vocab"
+      },
+      {
+        "surface": "店",
+        "word": "店",
+        "reading": "みせ",
+        "meaning": "店",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-desire-adjectives-na-adjective-conjugation",
@@ -1034,7 +1803,30 @@ const items = [
         "静[しず]いです"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "notes": [
+      {
+        "surface": "静かです",
+        "word": "静か",
+        "reading": "しずか",
+        "meaning": "安靜（な形容詞現在肯定形）",
+        "type": "grammar"
+      },
+      {
+        "surface": "町",
+        "word": "町",
+        "reading": "まち",
+        "meaning": "城鎮",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-desire-adjectives-adjective-te-connection",
@@ -1065,7 +1857,37 @@ const items = [
         "広[ひろ]かった"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "te"
+    ],
+    "notes": [
+      {
+        "surface": "広くて",
+        "word": "広い",
+        "reading": "ひろい",
+        "meaning": "寬敞（い形容詞て形，連接兩個性質）",
+        "type": "grammar"
+      },
+      {
+        "surface": "明るい",
+        "word": "明るい",
+        "reading": "あかるい",
+        "meaning": "明亮",
+        "type": "vocab"
+      },
+      {
+        "surface": "部屋",
+        "word": "部屋",
+        "reading": "へや",
+        "meaning": "房間",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-desire-adjectives-adjective-adverbial-change",
@@ -1096,7 +1918,30 @@ const items = [
         "寒[さむ]かったです"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "adverbial"
+    ],
+    "notes": [
+      {
+        "surface": "寒くなりました",
+        "word": "寒い",
+        "reading": "さむい",
+        "meaning": "冷（い形容詞副詞化+なります，表示自然發生的變化）",
+        "type": "grammar"
+      },
+      {
+        "surface": "最近",
+        "word": "最近",
+        "reading": "さいきん",
+        "meaning": "最近",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-comparison-conditional-yori-hoga",
@@ -1127,7 +1972,33 @@ const items = [
         "なら"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "のほうが",
+        "word": "ほう",
+        "meaning": "表示兩者比較中較優的一方",
+        "type": "grammar"
+      },
+      {
+        "surface": "夏",
+        "word": "夏",
+        "reading": "なつ",
+        "meaning": "夏天",
+        "type": "vocab"
+      },
+      {
+        "surface": "冬",
+        "word": "冬",
+        "reading": "ふゆ",
+        "meaning": "冬天",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-comparison-conditional-ichiban",
@@ -1158,7 +2029,33 @@ const items = [
         "しか"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "adverb"
+    ],
+    "notes": [
+      {
+        "surface": "一番",
+        "word": "一番",
+        "reading": "いちばん",
+        "meaning": "最…（三者以上比較最高程度）",
+        "type": "grammar"
+      },
+      {
+        "surface": "果物",
+        "word": "果物",
+        "reading": "くだもの",
+        "meaning": "水果",
+        "type": "vocab"
+      },
+      {
+        "surface": "りんご",
+        "word": "りんご",
+        "meaning": "蘋果",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-comparison-conditional-arimasu-imasu",
@@ -1189,7 +2086,36 @@ const items = [
         "ました"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "masu"
+    ],
+    "notes": [
+      {
+        "surface": "います",
+        "word": "いる",
+        "meaning": "（有生命的人、動物）存在",
+        "type": "grammar"
+      },
+      {
+        "surface": "公園",
+        "word": "公園",
+        "reading": "こうえん",
+        "meaning": "公園",
+        "type": "vocab"
+      },
+      {
+        "surface": "子供",
+        "word": "子供",
+        "reading": "こども",
+        "meaning": "小孩",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-comparison-conditional-position-words",
@@ -1220,7 +2146,31 @@ const items = [
         "の前[まえ]"
       ],
       "answerIndex": 0
-    }
+    },
+    "notes": [
+      {
+        "surface": "の隣",
+        "word": "隣",
+        "reading": "となり",
+        "meaning": "隔壁、旁邊（搭配「の」描述相對位置）",
+        "type": "grammar"
+      },
+      {
+        "surface": "銀行",
+        "word": "銀行",
+        "reading": "ぎんこう",
+        "meaning": "銀行",
+        "type": "vocab"
+      },
+      {
+        "surface": "郵便局",
+        "word": "郵便局",
+        "reading": "ゆうびんきょく",
+        "meaning": "郵局",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-comparison-conditional-to-conditional",
@@ -1251,7 +2201,36 @@ const items = [
         "なら"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "conditional-to"
+    ],
+    "notes": [
+      {
+        "surface": "押すと",
+        "word": "押す",
+        "reading": "おす",
+        "meaning": "按（辭書形+と，表示一…就…的必然結果）",
+        "type": "grammar"
+      },
+      {
+        "surface": "ボタン",
+        "word": "ボタン",
+        "meaning": "按鈕",
+        "type": "vocab"
+      },
+      {
+        "surface": "開きます",
+        "word": "開く",
+        "reading": "あく",
+        "meaning": "開（自動詞）",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-comparison-conditional-tara-conditional",
@@ -1282,7 +2261,37 @@ const items = [
         "なら"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "conditional-tara"
+    ],
+    "notes": [
+      {
+        "surface": "降ったら",
+        "word": "降る",
+        "reading": "ふる",
+        "meaning": "下（雨）（た形+ら，泛用條件表現）",
+        "type": "grammar"
+      },
+      {
+        "surface": "試合",
+        "word": "試合",
+        "reading": "しあい",
+        "meaning": "比賽",
+        "type": "vocab"
+      },
+      {
+        "surface": "中止",
+        "word": "中止",
+        "reading": "ちゅうし",
+        "meaning": "取消、中止",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-comparison-conditional-ba-conditional",
@@ -1313,7 +2322,29 @@ const items = [
         "あるなら"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "conditional-ba"
+    ],
+    "notes": [
+      {
+        "surface": "あれば",
+        "word": "ある",
+        "meaning": "如果有的話（條件形ば，較書面正式）",
+        "type": "grammar"
+      },
+      {
+        "surface": "時間",
+        "word": "時間",
+        "reading": "じかん",
+        "meaning": "時間",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-comparison-conditional-nara-conditional",
@@ -1344,7 +2375,37 @@ const items = [
         "ば"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "conditional-nara"
+    ],
+    "notes": [
+      {
+        "surface": "行くなら",
+        "word": "行く",
+        "reading": "いく",
+        "meaning": "如果要去的話（辭書形+なら，針對話題給建議）",
+        "type": "grammar"
+      },
+      {
+        "surface": "新幹線",
+        "word": "新幹線",
+        "reading": "しんかんせん",
+        "meaning": "新幹線",
+        "type": "vocab"
+      },
+      {
+        "surface": "便利です",
+        "word": "便利",
+        "reading": "べんり",
+        "meaning": "方便（な形容詞）",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-reason-time-kara-reason",
@@ -1375,7 +2436,33 @@ const items = [
         "まえに"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "conjunction"
+    ],
+    "notes": [
+      {
+        "surface": "から",
+        "word": "から",
+        "meaning": "因為…（主觀、直接的原因）",
+        "type": "grammar"
+      },
+      {
+        "surface": "熱",
+        "word": "熱",
+        "reading": "ねつ",
+        "meaning": "發燒、體溫",
+        "type": "vocab"
+      },
+      {
+        "surface": "休みます",
+        "word": "休む",
+        "reading": "やすむ",
+        "meaning": "休息、請假",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-reason-time-node-reason",
@@ -1406,7 +2493,33 @@ const items = [
         "あとで"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "conjunction"
+    ],
+    "notes": [
+      {
+        "surface": "ので",
+        "word": "ので",
+        "meaning": "因為…（較客觀、委婉的原因）",
+        "type": "grammar"
+      },
+      {
+        "surface": "傘",
+        "word": "傘",
+        "reading": "かさ",
+        "meaning": "雨傘",
+        "type": "vocab"
+      },
+      {
+        "surface": "持っていきます",
+        "word": "持っていく",
+        "reading": "もっていく",
+        "meaning": "帶去",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-reason-time-toki",
@@ -1437,7 +2550,30 @@ const items = [
         "ながら"
       ],
       "answerIndex": 0
-    }
+    },
+    "notes": [
+      {
+        "surface": "とき",
+        "word": "とき",
+        "meaning": "…的時候，標示某時間點或狀態發生時",
+        "type": "grammar"
+      },
+      {
+        "surface": "公園",
+        "word": "公園",
+        "reading": "こうえん",
+        "meaning": "公園",
+        "type": "vocab"
+      },
+      {
+        "surface": "遊びました",
+        "word": "遊ぶ",
+        "reading": "あそぶ",
+        "meaning": "玩耍",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-reason-time-mae-ni",
@@ -1468,7 +2604,40 @@ const items = [
         "ので"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "寝るまえに",
+        "word": "寝る",
+        "reading": "ねる",
+        "meaning": "睡覺（辭書形+まえに，表示「在…之前」）",
+        "type": "grammar"
+      },
+      {
+        "surface": "磨きます",
+        "word": "磨く",
+        "reading": "みがく",
+        "meaning": "刷、磨",
+        "type": "vocab"
+      },
+      {
+        "surface": "歯",
+        "word": "歯",
+        "reading": "は",
+        "meaning": "牙齒",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-reason-time-ato-de",
@@ -1499,7 +2668,33 @@ const items = [
         "から"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "otherCategory": [
+      "expression"
+    ],
+    "notes": [
+      {
+        "surface": "食べたあとで",
+        "word": "食べる",
+        "reading": "たべる",
+        "meaning": "吃（た形+あとで，表示「在…之後」）",
+        "type": "grammar"
+      },
+      {
+        "surface": "薬",
+        "word": "薬",
+        "reading": "くすり",
+        "meaning": "藥",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-quantity-misc-counters",
@@ -1530,7 +2725,27 @@ const items = [
         "三匹[さんびき]"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "counter"
+    ],
+    "notes": [
+      {
+        "surface": "三冊",
+        "word": "冊",
+        "reading": "さつ",
+        "meaning": "量詞，用於計算書本、冊數",
+        "type": "grammar"
+      },
+      {
+        "surface": "買いました",
+        "word": "買う",
+        "reading": "かう",
+        "meaning": "買",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-quantity-misc-kurai-gurai",
@@ -1561,7 +2776,32 @@ const items = [
         "すぎ"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "notes": [
+      {
+        "surface": "くらい",
+        "word": "くらい",
+        "meaning": "大約…（表示大概的數量或時間）",
+        "type": "grammar"
+      },
+      {
+        "surface": "駅",
+        "word": "駅",
+        "reading": "えき",
+        "meaning": "車站",
+        "type": "vocab"
+      },
+      {
+        "surface": "かかります",
+        "word": "かかる",
+        "meaning": "花費（時間、金錢）",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-quantity-misc-sugiru",
@@ -1592,7 +2832,30 @@ const items = [
         "ながらでした"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "notes": [
+      {
+        "surface": "飲みすぎました",
+        "word": "飲む",
+        "reading": "のむ",
+        "meaning": "喝太多了（ます形語幹+すぎる，表示程度超過合理範圍）",
+        "type": "grammar"
+      },
+      {
+        "surface": "お酒",
+        "word": "お酒",
+        "reading": "おさけ",
+        "meaning": "酒",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   },
   {
     "id": "practice-quantity-misc-question-word-ka",
@@ -1623,7 +2886,27 @@ const items = [
         "何[なに]は"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "notes": [
+      {
+        "surface": "何か",
+        "word": "何か",
+        "reading": "なにか",
+        "meaning": "疑問詞＋か，表示不特定的對象「什麼（東西）」",
+        "type": "grammar"
+      },
+      {
+        "surface": "飲みますか",
+        "word": "飲む",
+        "reading": "のむ",
+        "meaning": "喝",
+        "type": "vocab"
+      }
+    ],
+    "posReviewed": true
   }
 ];
 

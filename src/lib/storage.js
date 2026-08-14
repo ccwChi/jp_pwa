@@ -294,14 +294,31 @@ export function getPracticeExamResult(examId) {
   return practiceExamResultsStore.get()[examId] || null;
 }
 
-export function setPracticeExamResult(examId, { correctCount, total }) {
+export function setPracticeExamResult(examId, { correctCount, total, elapsedSeconds }) {
   practiceExamResultsStore.set({
     ...practiceExamResultsStore.get(),
-    [examId]: { correctCount, total, updatedAt: Date.now() },
+    [examId]: { correctCount, total, elapsedSeconds, updatedAt: Date.now() },
   });
 }
 
 export const usePracticeExamResults = practiceExamResultsStore.useValue;
+
+// ── Practice: exam-mode toggle — true shows correct/wrong the instant you
+// pick an option (like every other quiz in the app), false hides it until
+// the paper is submitted, closer to a real sitting. Sticks across papers
+// since it's a study-style preference, not per-exam state ─────────────────
+
+const practiceExamInstantFeedbackStore = createStore('nj_practice_exam_instant_feedback', true);
+
+export function getPracticeExamInstantFeedback() {
+  return practiceExamInstantFeedbackStore.get();
+}
+
+export function setPracticeExamInstantFeedback(value) {
+  practiceExamInstantFeedbackStore.set(value);
+}
+
+export const usePracticeExamInstantFeedback = practiceExamInstantFeedbackStore.useValue;
 
 // ── Practice: last-selected level + multi-selected types on the
 // /practice/general picker page (empty types array means "any type") ─────

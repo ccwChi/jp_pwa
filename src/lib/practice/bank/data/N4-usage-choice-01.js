@@ -16,7 +16,14 @@ const items = [
         "雨が降っておきました"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-hajimeru-tsuzukeru-owaru-1",
@@ -35,7 +42,14 @@ const items = [
         "書き出しました"
       ],
       "answerIndex": 2
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-yasui-nikui-1",
@@ -54,7 +68,20 @@ const items = [
         "この漢字は読まれています"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-garu-1",
@@ -73,7 +100,23 @@ const items = [
         "妹は新しいゲームをほしいがります"
       ],
       "answerIndex": 1
-    }
+    },
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "otherCategory": [
+      "suffix"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "adjConjugation": [
+      "stem"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sou-desu-appearance-1",
@@ -92,7 +135,14 @@ const items = [
         "雨みたいそうです"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sou-desu-hearsay-1",
@@ -111,7 +161,14 @@ const items = [
         "結婚みたいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-you-da-1",
@@ -130,7 +187,14 @@ const items = [
         "誰かいたいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mitai-da-1",
@@ -149,7 +213,11 @@ const items = [
         "学生だみたいです"
       ],
       "answerIndex": 2
-    }
+    },
+    "otherCategory": [
+      "suffix"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-rashii-1",
@@ -168,7 +236,11 @@ const items = [
         "一定會發生的事實"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "suffix"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-noni-1",
@@ -187,7 +259,11 @@ const items = [
         "〜たら"
       ],
       "answerIndex": 2
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-tame-ni-1",
@@ -206,7 +282,11 @@ const items = [
         "大雨ば、電車が止まっています"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-you-ni-purpose-1",
@@ -225,7 +305,11 @@ const items = [
         "話せるとおりに、練習しています"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-you-ni-naru-suru-1",
@@ -244,7 +328,14 @@ const items = [
         "漢字が読めるのにしました"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "potential"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sonkeigo-verbs-1",
@@ -263,7 +354,14 @@ const items = [
         "もらいます"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "masu"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kenjougo-verbs-1",
@@ -282,7 +380,14 @@ const items = [
         "田中となさいます"
       ],
       "answerIndex": 2
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "masu"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-o-ni-naru-o-suru-1",
@@ -301,7 +406,14 @@ const items = [
         "お荷物をいただきます"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-koto-ni-suru-1",
@@ -320,7 +432,14 @@ const items = [
         "運動するようです"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-koto-ni-naru-1",
@@ -339,7 +458,14 @@ const items = [
         "転勤したいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sou-da-tte-1",
@@ -358,7 +484,11 @@ const items = [
         "つもりだ"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-to-iu-noun-1",
@@ -377,7 +507,11 @@ const items = [
         "村上春樹そうな作家"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-passive-basic-1",
@@ -396,7 +530,14 @@ const items = [
         "読める"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "passive"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-passive-suffering-1",
@@ -415,7 +556,14 @@ const items = [
         "我喜歡下雨"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "passive"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-causative-1",
@@ -434,7 +582,14 @@ const items = [
         "食べらせる"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "causative"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-causative-passive-1",
@@ -453,7 +608,14 @@ const items = [
         "可能形"
       ],
       "answerIndex": 2
-    }
+    },
+    "verbConjugation": [
+      "causative-passive"
+    ],
+    "verbCategory": [
+      "suru"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-morau-1",
@@ -472,7 +634,14 @@ const items = [
         "友達に宿題を手伝わせました"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-kureru-1",
@@ -491,7 +660,14 @@ const items = [
         "沒有主詞"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-ageru-1",
@@ -510,7 +686,11 @@ const items = [
         "這個句型是最禮貌的說法"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-itadakemasu-ka-1",
@@ -529,7 +709,14 @@ const items = [
         "説明しろ"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sasete-kudasai-1",
@@ -548,7 +735,14 @@ const items = [
         "この仕事をしてもらいます"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "causative"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-shimau-1",
@@ -567,7 +761,14 @@ const items = [
         "〜てみる"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-oku-1",
@@ -586,7 +787,14 @@ const items = [
         "準備してあります"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-aru-1",
@@ -605,7 +813,14 @@ const items = [
         "沒有差別，只是用字不同"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-hoshii-1",
@@ -624,7 +839,14 @@ const items = [
         "私は母に医者にしてもらいます"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-tokoro-1",
@@ -643,7 +865,14 @@ const items = [
         "出かけておくところです"
       ],
       "answerIndex": 2
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ta-bakari-1",
@@ -662,7 +891,14 @@ const items = [
         "日本に来ようとします"
       ],
       "answerIndex": 2
-    }
+    },
+    "verbCategory": [
+      "kuru"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mama-1",
@@ -681,7 +917,14 @@ const items = [
         "電気をつけながら寝てしまいました"
       ],
       "answerIndex": 2
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-toori-ni-1",
@@ -700,7 +943,11 @@ const items = [
         "レシピのまま料理を作りました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   }
 ];
 

@@ -16,7 +16,11 @@ const items = [
         "気温は上昇し気味です"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ippou-da-1",
@@ -35,7 +39,11 @@ const items = [
         "物価は上がる気味です"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-bakari-da-1",
@@ -54,7 +62,11 @@ const items = [
         "大概、差不多"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-tsutsu-1",
@@ -73,7 +85,11 @@ const items = [
         "原因"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kuse-ni-1",
@@ -92,7 +108,11 @@ const items = [
         "くせに只能用在自己身上"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mono-no-1",
@@ -111,7 +131,11 @@ const items = [
         "〜ながら"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-towa-ie-1",
@@ -130,7 +154,11 @@ const items = [
         "春に対して、まだ朝は寒いです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nimo-kakawarazu-1",
@@ -149,7 +177,11 @@ const items = [
         "大雨に対して、たくさんの人が集まりました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ba-hodo-1",
@@ -168,7 +200,11 @@ const items = [
         "勉強したら、わかるようになります"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-to-shitara-1",
@@ -187,7 +223,11 @@ const items = [
         "宝くじが当たったばかりで、何を買いますか"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ta-totan-1",
@@ -206,7 +246,11 @@ const items = [
         "椅子に座ったとおりに、眠ってしまいました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-shidai-1",
@@ -225,7 +269,11 @@ const items = [
         "空港に着くところで、電話します"
       ],
       "answerIndex": 2
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wake-da-1",
@@ -244,7 +292,11 @@ const items = [
         "日本語が上手にちがいないです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wake-de-wa-nai-1",
@@ -263,7 +315,11 @@ const items = [
         "嫌いにちがいないです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wake-ni-wa-ikanai-1",
@@ -282,7 +338,11 @@ const items = [
         "行かないわけではないです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-beki-da-1",
@@ -301,7 +361,11 @@ const items = [
         "約束は守るがちです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-chigai-nai-1",
@@ -320,7 +384,11 @@ const items = [
         "兩者都不是推測"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-dake-de-naku-1",
@@ -339,7 +407,11 @@ const items = [
         "彼は英語について、フランス語も話せます"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-dokoro-ka-1",
@@ -358,7 +430,11 @@ const items = [
         "休みのわりに、残業ばかりです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sae-1",
@@ -377,7 +453,11 @@ const items = [
         "時間のわりに、行きたいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-kagirazu-1",
@@ -396,7 +476,11 @@ const items = [
         "週末のせいで、平日も込んでいます"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-to-iwarete-iru-1",
@@ -415,7 +499,11 @@ const items = [
         "納豆は体にいいかもしれません"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-to-sarete-iru-1",
@@ -434,7 +522,11 @@ const items = [
         "とされている只能用在口語"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-koto-naku-1",
@@ -453,7 +545,11 @@ const items = [
         "只能用在疑問句"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-kanshite-1",
@@ -472,7 +568,11 @@ const items = [
         "に関してます"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sei-de-1",
@@ -491,7 +591,11 @@ const items = [
         "只能用在中性的結果"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-okage-de-1",
@@ -510,7 +614,11 @@ const items = [
         "先生にもかかわらず、試験に合格しました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-koto-kara-1",
@@ -529,7 +637,11 @@ const items = [
         "願望"
       ],
       "answerIndex": 2
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-amari-ni-1",
@@ -548,7 +660,11 @@ const items = [
         "驚きのおかげで、声が出ませんでした"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-oite-1",
@@ -567,7 +683,11 @@ const items = [
         "においてます"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-taishite-1",
@@ -586,7 +706,11 @@ const items = [
         "彼は学生に関して、厳しいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-totte-1",
@@ -605,7 +729,11 @@ const items = [
         "子供のせいで、遊びはとても大切です"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-to-shite-1",
@@ -624,7 +752,11 @@ const items = [
         "彼は先生において、この学校で働いています"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-motozuite-1",
@@ -643,7 +775,11 @@ const items = [
         "この映画は実際の事件にとって作られました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-gachi-1",
@@ -662,7 +798,11 @@ const items = [
         "只能用在天氣"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "suffix"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ppoi-1",
@@ -681,7 +821,11 @@ const items = [
         "彼は子供次第です"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "suffix"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kimi-1",
@@ -700,7 +844,11 @@ const items = [
         "最近、疲れ次第です"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "suffix"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-tagaru-1",
@@ -719,7 +867,17 @@ const items = [
         "弟はゲームをやりっぽいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "suffix"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "verbCategory": [
+      "godan"
+    ],
+    "posReviewed": true
   }
 ];
 

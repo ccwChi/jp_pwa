@@ -28,7 +28,13 @@
 //       sectionId: string,   // e.g. 'vocabulary' | 'listening' | 'readingGrammar'
 //       title: string,       // e.g. '文字・語彙'
 //       points?: number,
-//       minutes?: number,
+//       minutes?: number,    // summed across all sections to drive the whole
+//         // exam's single countdown/stopwatch in ExamPracticeClient
+//       audioUrl?: string,   // one continuous recording covering every
+//         // problem in this section in order (public/exam-audio/{examId}/...),
+//         // played once start-to-finish — unlike a bank item's own
+//         // (per-question) audioUrl, this is section-wide since real JLPT
+//         // listening tracks aren't cut per question
 //       problems: Array<{
 //         problemId: string,   // e.g. 'I', 'II', ...
 //         instruction: string, // shown as the practice page's section header

@@ -16,7 +16,14 @@ const items = [
         "寒でした"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "ta"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-na-adjective-conjugation-1",
@@ -35,7 +42,14 @@ const items = [
         "静かです町"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "na-adjective"
+    ],
+    "adjConjugation": [
+      "noun-modifying"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-adjective-te-connection-1",
@@ -54,7 +68,14 @@ const items = [
         "広かって"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-adjective-adverbial-change-1",
@@ -73,7 +94,14 @@ const items = [
         "で"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "adverbial"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-yori-hoga-1",
@@ -92,7 +120,11 @@ const items = [
         "ほど"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ichiban-1",
@@ -111,7 +143,11 @@ const items = [
         "まで"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-arimasu-imasu-1",
@@ -130,7 +166,8 @@ const items = [
         "します"
       ],
       "answerIndex": 1
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-position-words-1",
@@ -149,7 +186,11 @@ const items = [
         "へ"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-to-conditional-1",
@@ -168,7 +209,11 @@ const items = [
         "のに"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbConjugation": [
+      "conditional-to"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-tara-conditional-1",
@@ -187,7 +232,11 @@ const items = [
         "し"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "conditional-tara"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ba-conditional-1",
@@ -206,7 +255,14 @@ const items = [
         "読んば"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "conditional-ba"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nara-conditional-1",
@@ -225,7 +281,11 @@ const items = [
         "なら"
       ],
       "answerIndex": 3
-    }
+    },
+    "verbConjugation": [
+      "conditional-nara"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-desu-da-1",
@@ -244,7 +304,8 @@ const items = [
         "ました"
       ],
       "answerIndex": 1
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ja-nai-dewa-arimasen-1",
@@ -263,7 +324,8 @@ const items = [
         "でしょう"
       ],
       "answerIndex": 2
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-deshita-1",
@@ -282,7 +344,8 @@ const items = [
         "ですか"
       ],
       "answerIndex": 1
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-to-omoimasu-1",
@@ -301,7 +364,17 @@ const items = [
         "ながら"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-deshou-1",
@@ -320,7 +393,11 @@ const items = [
         "ませんか"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-n-desu-1",
@@ -339,7 +416,11 @@ const items = [
         "ばかり"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kore-sore-are-dore-1",
@@ -358,7 +439,8 @@ const items = [
         "どれ"
       ],
       "answerIndex": 0
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kono-sono-ano-dono-1",
@@ -377,7 +459,8 @@ const items = [
         "どの"
       ],
       "answerIndex": 2
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-koko-soko-asoko-doko-1",
@@ -396,7 +479,8 @@ const items = [
         "どこ"
       ],
       "answerIndex": 3
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-konna-sonna-anna-donna-1",
@@ -415,7 +499,8 @@ const items = [
         "あんな"
       ],
       "answerIndex": 2
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-tai-desu-1",
@@ -434,7 +519,14 @@ const items = [
         "飲たいです"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mashou-1",
@@ -453,7 +545,11 @@ const items = [
         "〜なければなりません"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "volitional"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-masenka-1",
@@ -472,7 +568,11 @@ const items = [
         "〜たいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "masu"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-tsumori-1",
@@ -491,7 +591,14 @@ const items = [
         "〜ませんか"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-agemasu-1",
@@ -510,7 +617,8 @@ const items = [
         "あります"
       ],
       "answerIndex": 0
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-moraimasu-1",
@@ -529,7 +637,8 @@ const items = [
         "います"
       ],
       "answerIndex": 1
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kuremasu-1",
@@ -548,7 +657,8 @@ const items = [
         "します"
       ],
       "answerIndex": 2
-    }
+    },
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nakereba-narimasen-1",
@@ -567,7 +677,14 @@ const items = [
         "行きたいです"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nakutemo-ii-1",
@@ -586,7 +703,14 @@ const items = [
         "行ってはいけません"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-dekiru-potential-1",
@@ -605,7 +729,14 @@ const items = [
         "泳ぎられる"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "potential"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-koto-ga-arimasu-1",
@@ -624,7 +755,11 @@ const items = [
         "〜てみます"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "ta"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-tari-tari-suru-1",
@@ -643,7 +778,11 @@ const items = [
         "〜てはいけません"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "tari"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wa-topic-1",
@@ -662,7 +801,11 @@ const items = [
         "で"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ga-subject-1",
@@ -681,7 +824,11 @@ const items = [
         "は"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wo-object-1",
@@ -700,7 +847,11 @@ const items = [
         "で"
       ],
       "answerIndex": 2
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-time-target-1",
@@ -719,7 +870,11 @@ const items = [
         "は"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-de-location-method-1",
@@ -738,7 +893,11 @@ const items = [
         "へ"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-to-and-with-1",
@@ -757,7 +916,11 @@ const items = [
         "で"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mo-also-1",
@@ -776,7 +939,11 @@ const items = [
         "を"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-no-possessive-nominalizer-1",
@@ -795,7 +962,11 @@ const items = [
         "に"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ya-partial-and-1",
@@ -814,7 +985,11 @@ const items = [
         "で"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-e-direction-1",
@@ -833,7 +1008,11 @@ const items = [
         "と"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kara-from-1",
@@ -852,7 +1031,11 @@ const items = [
         "で"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-made-until-1",
@@ -871,7 +1054,11 @@ const items = [
         "と"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ka-question-1",
@@ -890,7 +1077,11 @@ const items = [
         "の"
       ],
       "answerIndex": 2
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ne-confirmation-1",
@@ -909,7 +1100,11 @@ const items = [
         "に"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-yo-emphasis-1",
@@ -928,7 +1123,11 @@ const items = [
         "も"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kedo-ga-contrast-1",
@@ -947,7 +1146,11 @@ const items = [
         "の"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-shi-listing-reasons-1",
@@ -966,7 +1169,11 @@ const items = [
         "の"
       ],
       "answerIndex": 2
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nado-etc-1",
@@ -985,7 +1192,11 @@ const items = [
         "は"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-yori-comparison-particle-1",
@@ -1004,7 +1215,11 @@ const items = [
         "ほど"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-dake-only-1",
@@ -1023,7 +1238,11 @@ const items = [
         "まで"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-shika-nai-1",
@@ -1042,7 +1261,14 @@ const items = [
         "意向形"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "verbConjugation": [
+      "nai"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-counters-1",
@@ -1061,7 +1287,11 @@ const items = [
         "三人"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "counter"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kurai-gurai-1",
@@ -1080,7 +1310,11 @@ const items = [
         "どこでかかりますか"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sugiru-1",
@@ -1099,7 +1333,14 @@ const items = [
         "高かすぎます"
       ],
       "answerIndex": 0
-    }
+    },
+    "adjCategory": [
+      "i-adjective"
+    ],
+    "adjConjugation": [
+      "stem"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-question-word-ka-1",
@@ -1118,7 +1359,11 @@ const items = [
         "何を"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kara-reason-1",
@@ -1137,7 +1382,11 @@ const items = [
         "ながら"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-node-reason-1",
@@ -1156,7 +1405,11 @@ const items = [
         "ながら"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-toki-1",
@@ -1175,7 +1428,11 @@ const items = [
         "ている形"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "ta"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mae-ni-1",
@@ -1194,7 +1451,14 @@ const items = [
         "寝ながらまえに"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ato-de-1",
@@ -1213,7 +1477,14 @@ const items = [
         "食べようあとで"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-iru-1",
@@ -1232,7 +1503,14 @@ const items = [
         "田中先生離婚了"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbCategory": [
+      "suru"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-kudasai-1",
@@ -1251,7 +1529,11 @@ const items = [
         "〜てはいけません"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-mo-ii-1",
@@ -1270,7 +1552,11 @@ const items = [
         "〜ています"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-wa-ikenai-1",
@@ -1289,7 +1575,11 @@ const items = [
         "〜たいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-kara-1",
@@ -1308,7 +1598,11 @@ const items = [
         "〜とき"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-miru-1",
@@ -1327,7 +1621,11 @@ const items = [
         "〜てもいい"
       ],
       "answerIndex": 1
-    }
+    },
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nagara-1",
@@ -1346,7 +1644,14 @@ const items = [
         "聞ながら"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "stem"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-masu-form-1",
@@ -1365,7 +1670,14 @@ const items = [
         "飲します"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "masu"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-dictionary-form-1",
@@ -1384,7 +1696,14 @@ const items = [
         "食べて"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "ichidan"
+    ],
+    "verbConjugation": [
+      "dictionary"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-form-1",
@@ -1403,7 +1722,14 @@ const items = [
         "飲いて"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "te"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ta-form-1",
@@ -1422,7 +1748,14 @@ const items = [
         "話す"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "ta"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nai-form-1",
@@ -1441,7 +1774,14 @@ const items = [
         "買らない"
       ],
       "answerIndex": 0
-    }
+    },
+    "verbCategory": [
+      "godan"
+    ],
+    "verbConjugation": [
+      "nai"
+    ],
+    "posReviewed": true
   }
 ];
 

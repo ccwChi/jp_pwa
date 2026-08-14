@@ -16,7 +16,11 @@ const items = [
         "ものを只能用在肯定句"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nishitemo-niseyo-nishiro-1",
@@ -35,7 +39,11 @@ const items = [
         "忙しいものを、返事ぐらいはするべきです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nagara-mo-1",
@@ -54,7 +62,11 @@ const items = [
         "狭いものを、居心地のいい部屋です"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-toiitemo-1",
@@ -73,7 +85,11 @@ const items = [
         "日本語ができるものを、簡単な挨拶ぐらいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nai-koto-niwa-1",
@@ -92,7 +108,11 @@ const items = [
         "やってみるものを、わかりません"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-te-hajimete-1",
@@ -111,7 +131,11 @@ const items = [
         "親になるものを、親のありがたさがわかりました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ba-koso-1",
@@ -130,7 +154,11 @@ const items = [
         "家族の支えがあるものを、ここまで頑張ってこられました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nukini-nukide-1",
@@ -149,7 +177,11 @@ const items = [
         "彼の協力にしても、このプロジェクトは成功しませんでした"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-kimatteiru-1",
@@ -168,7 +200,11 @@ const items = [
         "只能用在疑問句"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-hokanaranai-1",
@@ -187,7 +223,11 @@ const items = [
         "表示願望"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mo-douzen-da-1",
@@ -206,7 +246,11 @@ const items = [
         "彼とは幼なじみで、家族どころではありません"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-dokorode-wa-nai-1",
@@ -225,7 +269,11 @@ const items = [
         "仕事が忙しくて、旅行にほかなりません"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-kagitte-1",
@@ -244,7 +292,11 @@ const items = [
         "急いでいるときに沿って、電車が遅れます"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nominarazu-1",
@@ -263,7 +315,11 @@ const items = [
         "のみならず只能用於否定句"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sura-1",
@@ -282,7 +338,11 @@ const items = [
         "彼は自分の名前のみならず書けませんでした"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "particle"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-naimademo-1",
@@ -301,7 +361,11 @@ const items = [
         "毎日とは言わないばかりに、週に三回は運動したいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mai-1",
@@ -320,7 +384,11 @@ const items = [
         "もう二度と同じ失敗はしがちだ"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-nbakari-ni-1",
@@ -339,7 +407,11 @@ const items = [
         "表示委婉的拒絕"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kano-youni-1",
@@ -358,7 +430,11 @@ const items = [
         "彼は何も知らないながらも振る舞っています"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wari-niwa-1",
@@ -377,7 +453,11 @@ const items = [
         "この店は値段が安いあまり、味がいいです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-beku-1",
@@ -396,7 +476,11 @@ const items = [
         "兩者都表示禁止"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wo-kikkake-ni-1",
@@ -415,7 +499,11 @@ const items = [
         "友達に誘われたのに沿って、テニスを始めました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wo-tsujite-1",
@@ -434,7 +522,11 @@ const items = [
         "この地域は一年のみならず温暖な気候です"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-oujite-1",
@@ -453,7 +545,11 @@ const items = [
         "収入のみならず、税金の金額が変わります"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-sue-ni-1",
@@ -472,7 +568,11 @@ const items = [
         "長い議論のわりに、結論が出ました"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ageku-1",
@@ -491,7 +591,11 @@ const items = [
         "あげく只能用在現在式"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ta-tokorode-1",
@@ -510,7 +614,11 @@ const items = [
         "今から急ぐとしたら、間に合わないでしょう"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-mono-da-1",
@@ -529,7 +637,11 @@ const items = [
         "よくこの川で泳いだかねません"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-karashite-1",
@@ -548,7 +660,11 @@ const items = [
         "表示唯一的必要條件"
       ],
       "answerIndex": 0
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kara-suruto-1",
@@ -567,7 +683,11 @@ const items = [
         "専門家に応じて、この計画には無理があるようです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ni-sotte-1",
@@ -586,7 +706,11 @@ const items = [
         "会社の方針すら、計画を進めます"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-wo-towazu-1",
@@ -605,7 +729,11 @@ const items = [
         "この仕事は経験の有無を通じて、応募できます"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kanenai-1",
@@ -624,7 +752,11 @@ const items = [
         "百分之百會發生的事"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kaneru-1",
@@ -643,7 +775,11 @@ const items = [
         "表示已經回答完畢"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-kkonai-1",
@@ -662,7 +798,11 @@ const items = [
         "こんな難しい問題、できないまでもです"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "expression"
+    ],
+    "posReviewed": true
   },
   {
     "id": "lesson-quiz-ge-1",
@@ -681,7 +821,11 @@ const items = [
         "彼女は寂し気味な顔をしています"
       ],
       "answerIndex": 1
-    }
+    },
+    "otherCategory": [
+      "suffix"
+    ],
+    "posReviewed": true
   }
 ];
 

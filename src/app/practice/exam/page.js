@@ -12,6 +12,14 @@ import {
 const exams = getPastExamsList();
 const levels = [...new Set(exams.map(e => e.level))].sort();
 
+function formatClock(totalSeconds) {
+  const sign = totalSeconds < 0 ? '-' : '';
+  const abs = Math.abs(totalSeconds);
+  const m = Math.floor(abs / 60);
+  const s = abs % 60;
+  return `${sign}${m}:${String(s).padStart(2, '0')}`;
+}
+
 function examLabel(exam) {
   if (!exam.session) return `${exam.year}年`;
   const month = Number(exam.session);
@@ -60,7 +68,10 @@ export default function PracticeExamPage() {
               <div className="practice-set-title">{examLabel(exam)} {exam.level} 考古題</div>
               <div className="row-meta">共 {exam.questionCount} 題</div>
               {result && (
-                <div className="row-meta">上次 {result.correctCount} / {result.total}</div>
+                <div className="row-meta">
+                  上次 {result.correctCount} / {result.total}
+                  {typeof result.elapsedSeconds === 'number' && `，耗時 ${formatClock(result.elapsedSeconds)}`}
+                </div>
               )}
             </Link>
           );

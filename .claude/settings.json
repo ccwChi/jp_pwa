@@ -30,7 +30,19 @@
       "Bash(curl -s -o /tmp/page.html -w \"%{http_code}\\\\n\" \"http://localhost:3000/reading/%E3%81%94%E3%82%93%E7%8B%90-1\")",
       "Bash(curl -s \"http://localhost:3000/reading\" -o /tmp/list.html)",
       "Bash(curl -s -o /tmp/gon.html -w \"%{http_code}\\\\n\" \"http://localhost:3000/reading/gon-gitsune-1\")",
-      "Bash(curl -s -o /tmp/page2.html -w \"%{http_code}\\\\n\" --url-query \"\" \"http://localhost:3000/reading/ごん狐-1\")"
+      "Bash(curl -s -o /tmp/page2.html -w \"%{http_code}\\\\n\" --url-query \"\" \"http://localhost:3000/reading/ごん狐-1\")",
+      "Bash(mkdir -p \"/c/Users/user/AppData/Local/Temp/claude/c--Users-user-Desktop-Jeff-09--JeffDoForSelf-08--langu-practice-jp-pwa/1fe33acc-244c-462e-b0bd-e758c2f46c90/scratchpad\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --remote-debugging-port=9333 --user-data-dir=\"/c/Users/user/AppData/Local/Temp/claude/chrome-profile-theme\" http://localhost:3411)",
+      "Bash(curl -s http://localhost:9333/json/version)",
+      "Bash(node -e \"console.log\\(require.resolve\\('ws'\\)\\)\")",
+      "Bash(node -e \"console.log\\(require.resolve\\('puppeteer-core'\\)\\)\")",
+      "Bash(node -e \"console.log\\(require.resolve\\('jsdom'\\)\\)\")",
+      "Bash(node -e \"console.log\\(typeof WebSocket\\)\")",
+      "Bash(node \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-user-Desktop-Jeff-09--JeffDoForSelf-08--langu-practice-jp-pwa\\\\1fe33acc-244c-462e-b0bd-e758c2f46c90\\\\scratchpad\\\\cdp-test.mjs\")",
+      "Bash(node \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-user-Desktop-Jeff-09--JeffDoForSelf-08--langu-practice-jp-pwa\\\\1fe33acc-244c-462e-b0bd-e758c2f46c90\\\\scratchpad\\\\cdp-click-test.mjs\")",
+      "Bash(node \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-user-Desktop-Jeff-09--JeffDoForSelf-08--langu-practice-jp-pwa\\\\1fe33acc-244c-462e-b0bd-e758c2f46c90\\\\scratchpad\\\\cdp-click-test2.mjs\")",
+      "Bash(taskkill //F //IM chrome.exe)",
+      "Bash(taskkill //F //PID 42468)"
     ],
     "additionalDirectories": [
       "c:\\Users\\user\\Desktop\\Jeff\\09. JeffDoForSelf\\08. langu_practice\\jp_pwa\\src\\app\\notes",
