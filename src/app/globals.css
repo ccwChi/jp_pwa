@@ -148,6 +148,11 @@ body {
     animation: panel-in 0.2s ease;
   }
 
+  .selection-note-menu,
+  .selection-note-toast {
+    animation: panel-in 0.15s ease;
+  }
+
   .pos-modal {
     animation: modal-in 0.18s ease;
   }
@@ -405,6 +410,13 @@ a.row {
   font-size: var(--fs-xs);
 }
 
+.note-form-label {
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-xs);
+  color: var(--sub);
+  margin-bottom: -0.7rem;
+}
+
 /* ── note detail ── */
 
 .source-text {
@@ -412,6 +424,141 @@ a.row {
   font-size: var(--fs-lg);
   line-height: 2.1;
   white-space: pre-wrap;
+}
+
+/* ── note flashcards: front shows the original text, click flips to the
+   meaning/notes side — same click-to-reveal idea as .sentence-zh's blur,
+   but a full Anki-style flip since a note may have no back at all yet ── */
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.note-card {
+  position: relative;
+  min-height: 160px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.note-card-lg {
+  min-height: 280px;
+  max-width: 640px;
+}
+
+.note-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.note-card.flipped .note-card-inner {
+  transform: rotateY(180deg);
+}
+
+.note-card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 1.4rem;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  backface-visibility: hidden;
+}
+
+.note-card-front {
+  font-family: var(--font-jp), sans-serif;
+  font-size: var(--fs-lg);
+  line-height: 1.7;
+}
+
+.note-card-back {
+  transform: rotateY(180deg);
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-base);
+  line-height: 1.8;
+  color: var(--ink);
+  white-space: pre-wrap;
+}
+
+.note-card-empty {
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-xs);
+  color: var(--sub);
+}
+
+.note-card-edit {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  color: var(--sub);
+  text-decoration: none;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: var(--fs-xs);
+}
+
+.note-card-edit:hover {
+  color: var(--seal);
+  border-color: var(--seal);
+}
+
+/* ── selection-triggered note capture: right-click (or long-press) a text
+   selection anywhere inside a wired-up container to add it as a note ── */
+
+.selection-note-menu {
+  position: fixed;
+  z-index: 80;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+
+.selection-note-menu-btn {
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-xs);
+  color: var(--bg);
+  white-space: nowrap;
+  cursor: pointer;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.selection-note-menu-btn:hover {
+  opacity: 0.9;
+}
+
+.selection-note-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  z-index: 80;
+  transform: translateX(-50%);
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-xs);
+  color: var(--bg);
+  background: var(--good);
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 /* ── shared filter chips (article levels, note tags) ── */
@@ -1587,18 +1734,174 @@ ruby rt {
   font-size: var(--fs-base);
 }
 
-/* ── grammar learning: category sections on the list page ── */
+/* ── grammar learning: level tabs + category jump chips stay reachable
+   while scrolling a long list, instead of forcing a scroll back to top
+   to switch level or find a category ── */
 
-.grammar-category {
-  margin-top: 2.4rem;
+.grammar-list-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
+  padding-top: 0.5rem;
+  margin: 0 -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.grammar-category-heading {
+@media (max-width: 640px) {
+  .grammar-list-sticky {
+    margin: 0 -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.grammar-list-sticky .article-tabs {
+  margin-top: 0;
+}
+
+.jump-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-bottom: 1.1rem;
+}
+
+.jump-chip {
   font-family: var(--font-zh), sans-serif;
   font-size: var(--fs-2xs);
-  letter-spacing: 0.15em;
+  color: var(--ai);
+  background: color-mix(in srgb, var(--ai) 9%, transparent);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  text-decoration: none;
+  transition: border-color var(--transition);
+}
+
+.jump-chip:hover {
+  border-color: var(--ai);
+}
+
+/* ── grammar learning: category sections on the list page, collapsed
+   into an accordion so a level with a dozen-plus categories doesn't force
+   one long undifferentiated scroll. Categories with at least one read
+   lesson start expanded (the ones mid-progress); untouched or fully
+   finished categories start collapsed. ── */
+
+.grammar-category-acc {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.grammar-category-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.grammar-category-summary::-webkit-details-marker {
+  display: none;
+}
+
+.grammar-category-summary-left {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+.grammar-category-chevron {
+  font-size: 0.85rem;
+  color: var(--ai);
+  display: inline-block;
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+
+.grammar-category-acc[open] .grammar-category-chevron {
+  transform: rotate(90deg);
+}
+
+/* the category name is the actual clickable control here, not a passive
+   divider label above a list — it needs to outweigh the lesson rows it's
+   hiding, not read smaller than them. Coloring it (instead of the
+   default ink) also keeps it visually distinct from the lesson rows once
+   expanded, so a lesson never reads as its own top-level section. */
+.grammar-category-heading {
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ai);
+}
+
+.grammar-category-count {
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-2xs);
   color: var(--sub);
-  margin-bottom: 0.4rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.grammar-category-summary-right {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-shrink: 0;
+}
+
+.grammar-category-bar {
+  width: 4.5rem;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.grammar-category-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--ai);
+}
+
+/* a real link/button nested in <summary> is excluded from the browser's
+   toggle-on-click default action, so this sits inside the clickable
+   summary row without collapsing/expanding it */
+.grammar-category-study-btn {
+  flex-shrink: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--ai);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.grammar-category-study-btn:hover {
+  border-color: var(--ai);
+  background: color-mix(in srgb, var(--ai) 10%, transparent);
+}
+
+/* indent + left rail so the expanded lesson rows visually hang off their
+   category heading instead of reading as their own top-level section */
+.grammar-category-acc .rows {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid color-mix(in srgb, var(--ai) 25%, var(--line));
 }
 
 .grammar-row-pattern {
@@ -1607,12 +1910,6 @@ ruby rt {
 
 .grammar-row-pattern.read {
   color: var(--sub);
-}
-
-.grammar-row-check {
-  font-family: var(--font-zh), sans-serif;
-  font-size: var(--fs-xs);
-  color: var(--ai);
 }
 
 /* ── grammar learning: lesson detail page ── */
@@ -1772,15 +2069,13 @@ ruby rt {
   margin-top: 0.3rem;
 }
 
-/* ── wide-screen layout: on desktop-width viewports the two long-form detail
-   pages get a second column for a small piece of standing context — the
-   "what's next" CTA on a grammar lesson, the chapter picker on a multi-part
-   article — instead of leaving the extra width as bare margin. Everything
-   else in the page stays in normal document flow in column 1; only the one
-   named element moves into the sticky rail. ── */
+/* ── wide-screen layout: on desktop-width viewports the multi-part reading
+   detail page gets a second column for the chapter picker instead of
+   leaving the extra width as bare margin. Everything else in the page
+   stays in normal document flow in column 1; only the one named element
+   moves into the sticky rail. ── */
 
 @media (min-width: 1200px) {
-  main.grammar-detail-page,
   main.reading-detail-page {
     max-width: 1180px;
     display: grid;
@@ -1789,18 +2084,8 @@ ruby rt {
     align-items: start;
   }
 
-  main.grammar-detail-page > *,
   main.reading-detail-page > * {
     grid-column: 1;
-  }
-
-  main.grammar-detail-page > .grammar-path {
-    grid-column: 2;
-    grid-row: 1 / -1;
-    align-self: start;
-    position: sticky;
-    top: 2rem;
-    margin-top: 0;
   }
 
   main.reading-detail-page > .part-tabs-row {
@@ -1831,81 +2116,6 @@ ruby rt {
   }
 }
 
-/* ── grammar learning: lesson detail page — link to the practice set it
-   belongs to, once the reading + inline quiz above are done ── */
-
-.grammar-path {
-  margin-top: 2.2rem;
-  border: 1px solid var(--ai);
-  border-radius: 8px;
-  padding: 1rem 1.2rem 1.15rem;
-  background: color-mix(in srgb, var(--ai) 7%, transparent);
-  font-family: var(--font-zh), sans-serif;
-}
-
-.grammar-path-label {
-  font-size: var(--fs-2xs);
-  letter-spacing: 0.12em;
-  color: var(--ai);
-}
-
-.grammar-path-steps {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: 0.75rem;
-}
-
-.grammar-path-step {
-  flex: 1;
-  text-align: center;
-  font-size: var(--fs-2xs);
-  color: var(--sub);
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid var(--line);
-}
-
-.grammar-path-step.done {
-  color: var(--ai);
-  border-bottom-color: var(--ai);
-}
-
-.grammar-path-step.current {
-  color: var(--seal);
-  border-bottom-color: var(--seal);
-  font-weight: 600;
-}
-
-.grammar-path-cta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.9rem;
-}
-
-.grammar-path-set-name {
-  font-size: var(--fs-sm);
-  color: var(--ink);
-}
-
-.grammar-path-set-sub {
-  font-size: var(--fs-2xs);
-  color: var(--sub);
-  margin-top: 0.2rem;
-}
-
-.grammar-path-btn {
-  flex-shrink: 0;
-  color: var(--bg);
-  background: var(--seal);
-  border-color: var(--seal);
-}
-
-.grammar-path-btn:hover {
-  border-color: var(--seal);
-  opacity: 0.9;
-}
 
 .grammar-nav {
   display: flex;
@@ -1927,10 +2137,6 @@ ruby rt {
 }
 
 /* ── grammar learning: per-lesson practice-mode checkmarks (list page) ── */
-
-.grammar-legend {
-  margin-bottom: 1.2rem;
-}
 
 .grammar-check-badges {
   display: flex;
@@ -1956,7 +2162,7 @@ ruby rt {
   background: var(--ai);
 }
 
-/* ── grammar practice: set list (/grammar/practice) ── */
+/* ── practice: set list (past-exam paper picker, etc.) ── */
 
 .practice-set-list {
   display: flex;
@@ -1983,13 +2189,6 @@ a.practice-set-card {
   margin-bottom: 0.2rem;
 }
 
-.practice-set-title-jp {
-  font-family: var(--font-jp), sans-serif;
-  font-size: var(--fs-sm);
-  color: var(--sub);
-  margin-bottom: 0.7rem;
-}
-
 .practice-title-jp {
   font-family: var(--font-jp), sans-serif;
   font-size: var(--fs-xs);
@@ -1997,34 +2196,7 @@ a.practice-set-card {
   margin-top: -0.4rem;
 }
 
-.practice-set-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
-}
-
-.practice-set-tag {
-  font-size: var(--fs-2xs);
-  font-family: var(--font-zh), sans-serif;
-}
-
-.practice-set-tag.done {
-  border-color: var(--seal);
-  color: var(--seal);
-}
-
-.practice-set-actions {
-  display: flex;
-  gap: 0.8rem;
-}
-
-.practice-mode-btn.done {
-  border-color: var(--ai);
-  color: var(--ai);
-}
-
-/* ── grammar practice: exercise pages (article / cloze) ── */
+/* ── practice: exercise pages (past-exam / general question bank) ── */
 
 .practice-intro {
   margin-bottom: 1.5rem;
@@ -2072,37 +2244,8 @@ a.practice-set-card {
   color: var(--sub);
 }
 
-.practice-cloze-zh {
-  font-size: var(--fs-sm);
-  margin-bottom: 0.6rem;
-}
-
-.practice-target {
-  background: color-mix(in srgb, var(--ai) 20%, transparent);
-  color: var(--ink);
-  border-radius: 3px;
-  padding: 0 0.15em;
-}
-
-.practice-target.correct {
-  background: color-mix(in srgb, var(--good) 22%, transparent);
-}
-
-.practice-target.wrong {
-  background: color-mix(in srgb, var(--seal) 22%, transparent);
-}
-
-.practice-blank {
-  display: inline-block;
-  min-width: 3em;
-  border-bottom: 2px solid var(--ai);
-  text-align: center;
-  color: var(--ai);
-}
-
-/* ── grammar practice: completion panel, shown once every sentence in the
-   set is answered — score + a way back to both the set list and each
-   drilled grammar point's own lesson page ── */
+/* ── practice: completion panel, shown once every question in the set
+   is answered ── */
 
 .practice-complete {
   margin-top: 2.5rem;

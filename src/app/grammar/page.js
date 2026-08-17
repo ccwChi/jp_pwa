@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const cards = [
   { name: '文法學習', desc: '依等級與分類系統整理文法點，附例句與練習題', href: '/grammar/lessons' },
-  { name: '文法練習', desc: '文章問答與克漏字練習，鞏固已學的文法點', href: '/grammar/practice' },
   { name: 'POS 標記工具', desc: '為題庫項目標記詞性資訊（開發用）', href: '/practice/tag', devOnly: true },
 ];
 

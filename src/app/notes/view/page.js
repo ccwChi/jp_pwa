@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useNote, deleteNote } from '@/lib/storage';
+import NoteCard from '../NoteCard';
 
 function NoteDetailContent() {
   const id = useSearchParams().get('id');
@@ -37,7 +38,7 @@ function NoteDetailContent() {
         </div>
       </div>
 
-      <p className="source-text">{note.content}</p>
+      <NoteCard note={note} size="lg" />
     </main>
   );
 }

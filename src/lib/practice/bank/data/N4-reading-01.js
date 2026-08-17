@@ -1530,6 +1530,1707 @@ const items = [
       ],
       "answerIndex": 3
     }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-1-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-1-1"
+    },
+    "meaning": {
+      "prompt": "ぎんこうは駅を出てすぐ右です。\n\n駅",
+      "options": [
+        "うち",
+        "えき",
+        "てら",
+        "もん"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-1-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-1-2"
+    },
+    "meaning": {
+      "prompt": "ぎんこうは駅を出てすぐ右です。\n\n出て",
+      "options": [
+        "てて",
+        "でて",
+        "たして",
+        "だして"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-1-3",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-1-3"
+    },
+    "meaning": {
+      "prompt": "ぎんこうは駅を出てすぐ右です。\n\n右",
+      "options": [
+        "みき",
+        "みぎ",
+        "ひたり",
+        "ひだり"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-2-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-2-1"
+    },
+    "meaning": {
+      "prompt": "毎日友だちとプールでおよぎます。\n\n毎日",
+      "options": [
+        "こんじつ",
+        "こんにち",
+        "まいじつ",
+        "まいにち"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-2-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-2-2"
+    },
+    "meaning": {
+      "prompt": "毎日友だちとプールでおよぎます。\n\n友だち",
+      "options": [
+        "とまだち",
+        "どまだち",
+        "ともだち",
+        "どもだち"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-3-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-3-1"
+    },
+    "meaning": {
+      "prompt": "それは二つで五万えんです。\n\n二つ",
+      "options": [
+        "よっつ",
+        "みっつ",
+        "いつつ",
+        "ふたつ"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-3-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-3-2"
+    },
+    "meaning": {
+      "prompt": "それは二つで五万えんです。\n\n五万",
+      "options": [
+        "ごせん",
+        "ごまん",
+        "ごうせん",
+        "ごうまん"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-4-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-4-1"
+    },
+    "meaning": {
+      "prompt": "大きなこえで言ってください。\n\n大きな",
+      "options": [
+        "おきな",
+        "おおきな",
+        "たいきな",
+        "だいきな"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-4-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-4-2"
+    },
+    "meaning": {
+      "prompt": "大きなこえで言ってください。\n\n言った",
+      "options": [
+        "いって",
+        "すって",
+        "とって",
+        "まって"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-5-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-5-1"
+    },
+    "meaning": {
+      "prompt": "この川には魚が多いです。\n\n川",
+      "options": [
+        "いけ",
+        "かわ",
+        "へん",
+        "むら"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-5-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-5-2"
+    },
+    "meaning": {
+      "prompt": "この川には魚が多いです。\n\n魚",
+      "options": [
+        "かさな",
+        "がさな",
+        "さかな",
+        "さがな"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-5-3",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-5-3"
+    },
+    "meaning": {
+      "prompt": "この川には魚が多いです。\n\n多い",
+      "options": [
+        "おい",
+        "おいい",
+        "おおい",
+        "おおいい"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-6-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-6-1"
+    },
+    "meaning": {
+      "prompt": "こどもに外国のお金を見せました。\n\n外国",
+      "options": [
+        "かいこく",
+        "かいごく",
+        "がいこく",
+        "がいごく"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-6-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-6-2"
+    },
+    "meaning": {
+      "prompt": "こどもに外国のお金を見せました。\n\nお金",
+      "options": [
+        "おかね",
+        "おがね",
+        "おかれ",
+        "おがれ"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2004-voc-I-6-3",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2004",
+      "year": 2004,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/2004/2004_N4 題+答+聽.pdf",
+      "sourceNote": "轉自 2004年日本語能力試験4級 真題PDF（一禄蔗制作重新排版版本，含手寫OCR辨識風險，見 needsReview 標記）。聴解原文另補自同資料夾附帶的「2004_N4 聽原文.doc」逐字稿（PDF本身該部分標示「原文欠奉」）。",
+      "questionNumber": "voc-I-6-3"
+    },
+    "meaning": {
+      "prompt": "こどもに外国のお金を見せました。\n\n見せました",
+      "options": [
+        "にせました",
+        "ねせました",
+        "みせました",
+        "めせました"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-1-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-1-1"
+    },
+    "meaning": {
+      "prompt": "たなか先生は 土よう日に きます。\n\n先生",
+      "options": [
+        "せいせ",
+        "せいせい",
+        "せんせ",
+        "せんせい"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-1-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-1-2"
+    },
+    "meaning": {
+      "prompt": "たなか先生は 土よう日に きます。\n\n土よう日",
+      "options": [
+        "とようび",
+        "どようび",
+        "かようび",
+        "がようび"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-2-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-2-1"
+    },
+    "meaning": {
+      "prompt": "この 道を 百メートル いって ください。左に こうばんが あります。\n\n道",
+      "options": [
+        "かど",
+        "はし",
+        "へん",
+        "みち"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-2-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-2-2"
+    },
+    "meaning": {
+      "prompt": "この 道を 百メートル いって ください。左に こうばんが あります。\n\n百",
+      "options": [
+        "ひゃく",
+        "びゃく",
+        "はく",
+        "ばく"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-2-3",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-2-3"
+    },
+    "meaning": {
+      "prompt": "この 道を 百メートル いって ください。左に こうばんが あります。\n\n左",
+      "options": [
+        "さき",
+        "ひだり",
+        "みぎ",
+        "むこう"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-3-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-3-1"
+    },
+    "meaning": {
+      "prompt": "北の まちに 電車で でかけました。\n\n北",
+      "options": [
+        "にし",
+        "ほか",
+        "きた",
+        "となり"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-3-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-3-2"
+    },
+    "meaning": {
+      "prompt": "北の まちに 電車で でかけました。\n\n電車",
+      "options": [
+        "てんしゃ",
+        "てんじゃ",
+        "でんしゃ",
+        "でんじゃ"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-4-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-4-1"
+    },
+    "meaning": {
+      "prompt": "あの 人は とても 有名です。\n\n人",
+      "options": [
+        "にん",
+        "ひと",
+        "しと",
+        "じん"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-4-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-4-2"
+    },
+    "meaning": {
+      "prompt": "あの 人は とても 有名です。\n\n有名",
+      "options": [
+        "ゆうめい",
+        "ゆうめ",
+        "ゆうまい",
+        "ゆうま"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-5-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-5-1"
+    },
+    "meaning": {
+      "prompt": "木の 上に ねこが います。\n\n木",
+      "options": [
+        "ぼん",
+        "ほん",
+        "ぎ",
+        "き"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-5-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-5-2"
+    },
+    "meaning": {
+      "prompt": "木の 上に ねこが います。\n\n上",
+      "options": [
+        "すた",
+        "した",
+        "うえ",
+        "うい"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-6-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-6-1"
+    },
+    "meaning": {
+      "prompt": "かわいい 女の子が 生まれました。\n\n女の子",
+      "options": [
+        "おんなのこ",
+        "おなのこ",
+        "あんなのこ",
+        "あなのこ"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-6-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-6-2"
+    },
+    "meaning": {
+      "prompt": "かわいい 女の子が 生まれました。\n\n生まれました",
+      "options": [
+        "ほまれました",
+        "ふまれました",
+        "おまれました",
+        "うまれました"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-7-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-7-1"
+    },
+    "meaning": {
+      "prompt": "店の 入り口は どこですか。\n\n店",
+      "options": [
+        "みせ",
+        "へや",
+        "えき",
+        "いえ"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2005-voc-I-7-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2005",
+      "year": 2005,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2005_N4 題+答+聽.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本；文字/語彙/文法題目與聴解もんだいII逐字稿為 PDF 內建可選取文字層，答案卡亦為文字層（非掃描圖片），もんだいI 聽力圖片為 PDF 內嵌圖片。",
+      "questionNumber": "voc-I-7-2"
+    },
+    "meaning": {
+      "prompt": "店の 入り口は どこですか。\n\n入り口",
+      "options": [
+        "のりぐち",
+        "かえりぐち",
+        "おりぐち",
+        "いりぐち"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2006-voc-I-1-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2006",
+      "year": 2006,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2006_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本。此年份 PDF 本身的「文字・語彙」與「読解・文法」答案卡數字整段空白（僅答案卡標題與題號存在，數字部分完全缺失），聽力もんだいI/II 逐字稿與答案改由同資料夾補充檔「2006_N4 聽+原文.doc」取得（完整可信）。另有一份補充答案檔（資料夾內檔名誤標為「2005_N4 答.doc」，內容實為「2006年N4答案」）僅涵蓋文字語彙問題1前5題、読解文法問題1前6題（且逐題語感驗證後發現與該6題語感判斷不符，判斷為誤植/對錯表格，不採用）、以及読解文法問題4/5/6全部（逐題驗證通過，可信）。其餘文字語彙問題1第6-15題、問題2/3/4全部、読解文法問題1第7-15題、問題2/3全部，共73題完全沒有可信來源答案數字，answerIndex 為依日文語感/文法判斷之推論結果，全部標記 needsReview，並在各題 reviewNote中說明依據與待複核原因。",
+      "questionNumber": "voc-I-1-1"
+    },
+    "meaning": {
+      "prompt": "えいがが すきですが、時間が なくて 見られません。\n\n時間",
+      "options": [
+        "しかん",
+        "じがん",
+        "しがん",
+        "じかん"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2006-voc-I-1-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2006",
+      "year": 2006,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2006_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本。此年份 PDF 本身的「文字・語彙」與「読解・文法」答案卡數字整段空白（僅答案卡標題與題號存在，數字部分完全缺失），聽力もんだいI/II 逐字稿與答案改由同資料夾補充檔「2006_N4 聽+原文.doc」取得（完整可信）。另有一份補充答案檔（資料夾內檔名誤標為「2005_N4 答.doc」，內容實為「2006年N4答案」）僅涵蓋文字語彙問題1前5題、読解文法問題1前6題（且逐題語感驗證後發現與該6題語感判斷不符，判斷為誤植/對錯表格，不採用）、以及読解文法問題4/5/6全部（逐題驗證通過，可信）。其餘文字語彙問題1第6-15題、問題2/3/4全部、読解文法問題1第7-15題、問題2/3全部，共73題完全沒有可信來源答案數字，answerIndex 為依日文語感/文法判斷之推論結果，全部標記 needsReview，並在各題 reviewNote中說明依據與待複核原因。",
+      "questionNumber": "voc-I-1-2"
+    },
+    "meaning": {
+      "prompt": "えいがが すきですが、時間が なくて 見られません。\n\n見られません",
+      "options": [
+        "きられません",
+        "みいられません",
+        "みられません",
+        "きいられません"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2006-voc-I-2-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2006",
+      "year": 2006,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2006_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.info 重新排版版本。此年份 PDF 本身的「文字・語彙」與「読解・文法」答案卡數字整段空白（僅答案卡標題與題號存在，數字部分完全缺失），聽力もんだいI/II 逐字稿與答案改由同資料夾補充檔「2006_N4 聽+原文.doc」取得（完整可信）。另有一份補充答案檔（資料夾內檔名誤標為「2005_N4 答.doc」，內容實為「2006年N4答案」）僅涵蓋文字語彙問題1前5題、読解文法問題1前6題（且逐題語感驗證後發現與該6題語感判斷不符，判斷為誤植/對錯表格，不採用）、以及読解文法問題4/5/6全部（逐題驗證通過，可信）。其餘文字語彙問題1第6-15題、問題2/3/4全部、読解文法問題1第7-15題、問題2/3全部，共73題完全沒有可信來源答案數字，answerIndex 為依日文語感/文法判斷之推論結果，全部標記 needsReview，並在各題 reviewNote中說明依據與待複核原因。",
+      "questionNumber": "voc-I-2-1"
+    },
+    "meaning": {
+      "prompt": "これは 一つ 千円です。\n\n一つ",
+      "options": [
+        "ひとつ",
+        "ふだつ",
+        "ふたつ",
+        "ひどつ"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-1-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-1-1"
+    },
+    "meaning": {
+      "prompt": "友だちが 外国から 来ました。\n\n友だち",
+      "options": [
+        "ともだち",
+        "どもだち",
+        "どむだち",
+        "とむだち"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-1-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-1-2"
+    },
+    "meaning": {
+      "prompt": "友だちが 外国から 来ました。\n\n外国",
+      "options": [
+        "がいごく",
+        "かいこく",
+        "がいこく",
+        "かいごく"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-2-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-2-1"
+    },
+    "meaning": {
+      "prompt": "おがわさんは 四月から 毎朝 ぎゅうにゅうを 飲んで います。\n\n四月",
+      "options": [
+        "よんげつ",
+        "しがつ",
+        "よんがつ",
+        "しげつ"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-2-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-2-2"
+    },
+    "meaning": {
+      "prompt": "おがわさんは 四月から 毎朝 ぎゅうにゅうを 飲んで います。\n\n毎朝",
+      "options": [
+        "めえさき",
+        "まいあさ",
+        "まえあさ",
+        "めいあさ"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-2-3",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-2-3"
+    },
+    "meaning": {
+      "prompt": "おがわさんは 四月から 毎朝 ぎゅうにゅうを 飲んで います。\n\n飲んで",
+      "options": [
+        "たのんで",
+        "すんで",
+        "のんで",
+        "やんで"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-3-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-3-1"
+    },
+    "meaning": {
+      "prompt": "きょうは お金が たくさん あります。\n\nお金",
+      "options": [
+        "おぎん",
+        "おかね",
+        "おがね",
+        "おきん"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-4-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-4-1"
+    },
+    "meaning": {
+      "prompt": "この 白い 魚は 高いです。\n\n白い",
+      "options": [
+        "あかい",
+        "くろい",
+        "あおい",
+        "しろい"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-4-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-4-2"
+    },
+    "meaning": {
+      "prompt": "この 白い 魚は 高いです。\n\n魚",
+      "options": [
+        "さかな",
+        "とり",
+        "かさ",
+        "つくえ"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-4-3",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-4-3"
+    },
+    "meaning": {
+      "prompt": "この 白い 魚は 高いです。\n\n高い",
+      "options": [
+        "ほそい",
+        "ひくい",
+        "ふとい",
+        "たかい"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-5-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-5-1"
+    },
+    "meaning": {
+      "prompt": "火よう日に 駅で 会いましょう。\n\n火よう日",
+      "options": [
+        "どようび",
+        "もくようび",
+        "すいようび",
+        "かようび"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-5-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-5-2"
+    },
+    "meaning": {
+      "prompt": "火よう日に 駅で 会いましょう。\n\n駅",
+      "options": [
+        "へや",
+        "もん",
+        "えき",
+        "うち"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-5-3",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-5-3"
+    },
+    "meaning": {
+      "prompt": "火よう日に 駅で 会いましょう。\n\n会いましょう",
+      "options": [
+        "あいましょう",
+        "かいましょう",
+        "つかいましょう",
+        "ならいましょう"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-6-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-6-1"
+    },
+    "meaning": {
+      "prompt": "母は かぜを ひいて いて 手が あつかったです。\n\n母",
+      "options": [
+        "ちち",
+        "はは",
+        "あね",
+        "いもうと"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-6-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-6-2"
+    },
+    "meaning": {
+      "prompt": "母は かぜを ひいて いて 手が あつかったです。\n\n手",
+      "options": [
+        "て",
+        "みみ",
+        "あたま",
+        "かお"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2007-voc-I-7-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2007",
+      "year": 2007,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2007_N4 題+答.pdf",
+      "sourceNote": "來源為 jlpt.biz 重新排版版本，文字層完整、答案卡（文字/語彙、聴解、読解文法皆為英文字母A-D對應選項1-4）也完整可信。聴解もんだいI/II 逐字稿另由同資料夾「听力原文」子資料夾內8張PNG圖片（掃描件）以視覺方式讀取（此為本年份唯一需要「類OCR」的部分）。読解文法もんだいV第41題的四個選項本身是一張火車路線圖（非文字），已改用 imageUrl+imageDescription 呈現，options 留 null。",
+      "questionNumber": "voc-I-7-1"
+    },
+    "meaning": {
+      "prompt": "しゃしんは かばんの 下に ありました。\n\n下",
+      "options": [
+        "ちだ",
+        "しだ",
+        "ちた",
+        "した"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-1-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-1-1"
+    },
+    "meaning": {
+      "prompt": "ここは 新しい 食堂です。\n\n新しい",
+      "options": [
+        "あらだしい",
+        "あたらしい",
+        "あらたしい",
+        "あだらしい"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-1-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-1-2"
+    },
+    "meaning": {
+      "prompt": "ここは 新しい 食堂です。\n\n食堂",
+      "options": [
+        "しょうくどう",
+        "じょくどう",
+        "じょうくどう",
+        "しょくどう"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-2-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-2-1"
+    },
+    "meaning": {
+      "prompt": "この むらの 男の ひとは 九十人です。\n\n男",
+      "options": [
+        "おとな",
+        "おどこ",
+        "おとこ",
+        "おどな"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-2-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-2-2"
+    },
+    "meaning": {
+      "prompt": "この むらの 男の ひとは 九十人です。\n\n九十人",
+      "options": [
+        "くじゅうにん",
+        "きゅじゅうにん",
+        "くうじゅうにん",
+        "きゅうじゅうにん"
+      ],
+      "answerIndex": 3
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-3-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-3-1"
+    },
+    "meaning": {
+      "prompt": "きょうは 天気が よくて 空が きれいだ。\n\n天気",
+      "options": [
+        "げんき",
+        "てんき",
+        "でんき",
+        "けんき"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-3-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-3-2"
+    },
+    "meaning": {
+      "prompt": "きょうは 天気が よくて 空が きれいだ。\n\n空",
+      "options": [
+        "そら",
+        "あき",
+        "はる",
+        "うみ"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-4-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-4-1"
+    },
+    "meaning": {
+      "prompt": "後で おふろに 入ります。\n\n後",
+      "options": [
+        "そこ",
+        "ほか",
+        "あと",
+        "うち"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-4-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-4-2"
+    },
+    "meaning": {
+      "prompt": "後で おふろに 入ります。\n\n入ります",
+      "options": [
+        "はいります",
+        "しまります",
+        "いります",
+        "おります"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-5-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-5-1"
+    },
+    "meaning": {
+      "prompt": "女の子が 生まれました。\n\n女の子",
+      "options": [
+        "おなのこ",
+        "おんなのこ",
+        "おなのこう",
+        "おんなのこう"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-5-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-5-2"
+    },
+    "meaning": {
+      "prompt": "女の子が 生まれました。\n\n生まれました",
+      "options": [
+        "うまれました",
+        "ふまれました",
+        "くまれました",
+        "つまれました"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-6-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-6-1"
+    },
+    "meaning": {
+      "prompt": "きのうは かんじを 二百かいも かきました。\n\n二百かい",
+      "options": [
+        "にびゃかい",
+        "にひゃかい",
+        "にひゃっかい",
+        "にびゃっかい"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-7-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-7-1"
+    },
+    "meaning": {
+      "prompt": "すみません、もう いちど 言って ください。\n\n言って",
+      "options": [
+        "すって",
+        "いって",
+        "とって",
+        "のって"
+      ],
+      "answerIndex": 1
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-8-1",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-8-1"
+    },
+    "meaning": {
+      "prompt": "この へんは 安い 店が 少ないです。\n\n安い",
+      "options": [
+        "たかい",
+        "せまい",
+        "やすい",
+        "ひろい"
+      ],
+      "answerIndex": 2
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-8-2",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-8-2"
+    },
+    "meaning": {
+      "prompt": "この へんは 安い 店が 少ないです。\n\n店",
+      "options": [
+        "みせ",
+        "みぜ",
+        "むぜ",
+        "むせ"
+      ],
+      "answerIndex": 0
+    }
+  },
+  {
+    "id": "exam-jlpt-n4-2008-voc-I-8-3",
+    "pointIds": [],
+    "level": "N4",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n4-2008",
+      "year": 2008,
+      "level": "N4",
+      "section": "文字・語彙",
+      "sourcePdf": "2008_N4 題.doc / 2008_N4 聽.doc / 2008_N4 聽+答.doc",
+      "sourceNote": "來源為同資料夾三份舊版binary .doc檔（非PDF）：「2008_N4 題.doc」（文字語彙+読解文法題目與完整字母/數字答案卡）、「2008_N4 聽.doc」（聴解もんだいI的8張嵌入JPEG圖片，供もんだいI選項用，無文字逐字稿）、「2008_N4 聽+答.doc」（聴解もんだいI/II完整逐字稿+答案，以文字形式提供）。以antiword抽取純文字，聴解もんだいI的8張圖片直接從doc二進位中以JPEG簽章(FFD8FF...FFD9)擷取（非OCR，為原始嵌入圖檔）。読解文法もんだいVI第45,46題原始為兩張圖片（きれいな手寫風格版面的閱讀短文），但圖片內文字清晰可完全判讀，已直接轉錄為passage文字，未附imageUrl（因reading-comprehension型別無此欄位）。全部104題答案卡完整，逐題語感/文法交叉驗證後僅読解文法もんだいII第18題（雨の接続形）答案卡數字與文法判斷不符，標記needsReview，其餘103題全數採用官方答案卡數字。",
+      "questionNumber": "voc-I-8-3"
+    },
+    "meaning": {
+      "prompt": "この へんは 安い 店が 少ないです。\n\n少ない",
+      "options": [
+        "すきない",
+        "すこない",
+        "すけない",
+        "すくない"
+      ],
+      "answerIndex": 3
+    }
   }
 ];
 

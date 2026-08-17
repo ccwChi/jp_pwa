@@ -99,6 +99,18 @@ export function deleteNote(id) {
   notesStore.set(notesStore.get().filter(n => n.id !== id));
 }
 
+// Merges an imported notes array into the existing set (upsert by id) rather
+// than replacing it outright, so importing a notes-only backup on a device
+// that already has its own notes adds/updates instead of wiping anything.
+export function importNotes(notes) {
+  const byId = new Map(notesStore.get().map(n => [n.id, n]));
+  for (const n of notes) {
+    if (!n || typeof n.id !== 'string' || typeof n.content !== 'string') continue;
+    byId.set(n.id, { id: n.id, content: n.content, createdAt: n.createdAt || Date.now() });
+  }
+  notesStore.set(Array.from(byId.values()));
+}
+
 const emptyArray = [];
 
 export function useNotes() {
@@ -171,41 +183,6 @@ export function useGrammarReadSet() {
   return useSyncExternalStore(subscribe, getSnapshot, () => emptyGrammarReadSet);
 }
 
-// ── Grammar practice: completed practice-set ids, one store per exercise
-// mode (文章問答 / 克漏字). A practice set groups several grammar lessons,
-// so "done" is tracked per set, not per lesson — the grammar list page
-// derives each lesson's per-mode checkmark by looking up which set
-// contains it (see getGrammarPracticeStatus in lib/grammar/practice). ────
-
-const practiceArticleDoneStore = createStore('nj_grammar_practice_article_done', []);
-const practiceClozeDoneStore = createStore('nj_grammar_practice_cloze_done', []);
-
-export function isPracticeSetDone(mode, setId) {
-  const store = mode === 'cloze' ? practiceClozeDoneStore : practiceArticleDoneStore;
-  return store.get().includes(setId);
-}
-
-export function setPracticeSetDone(mode, setId, value) {
-  const store = mode === 'cloze' ? practiceClozeDoneStore : practiceArticleDoneStore;
-  const current = store.get();
-  const next = value
-    ? (current.includes(setId) ? current : [...current, setId])
-    : current.filter(id => id !== setId);
-  store.set(next);
-}
-
-const emptyPracticeDoneSet = new Set();
-
-export function usePracticeArticleDoneSet() {
-  const getSnapshot = useMemo(() => cached(() => new Set(practiceArticleDoneStore.get())), []);
-  return useSyncExternalStore(subscribe, getSnapshot, () => emptyPracticeDoneSet);
-}
-
-export function usePracticeClozeDoneSet() {
-  const getSnapshot = useMemo(() => cached(() => new Set(practiceClozeDoneStore.get())), []);
-  return useSyncExternalStore(subscribe, getSnapshot, () => emptyPracticeDoneSet);
-}
-
 // ── Grammar: last-selected level tab on the /grammar list page ───────────
 
 const grammarLevelStore = createStore('nj_grammar_level', null);
@@ -219,20 +196,6 @@ export function setGrammarLevel(value) {
 }
 
 export const useGrammarLevel = grammarLevelStore.useValue;
-
-// ── Grammar: last-selected level tab on the /grammar/practice page ───────
-
-const grammarPracticeLevelStore = createStore('nj_grammar_practice_level', null);
-
-export function getGrammarPracticeLevel() {
-  return grammarPracticeLevelStore.get();
-}
-
-export function setGrammarPracticeLevel(value) {
-  grammarPracticeLevelStore.set(value);
-}
-
-export const useGrammarPracticeLevel = grammarPracticeLevelStore.useValue;
 
 // ── Reading: favorited seriesIds, shown pinned to the top of the list ────
 
