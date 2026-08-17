@@ -87,10 +87,15 @@
 // TYPES is a fixed, closed enum — don't invent new ones ad hoc, add to this
 // list (and update the comment) so the file-naming convention stays legible:
 //   - from real JLPT past exams: 'reading' (音読み) | 'kanji' (漢字書寫) |
-//     'fill-in-blank-vocab' | 'paraphrase' | 'listening-with-image-options' |
-//     'listening-text-only' | 'particle-fill-in-blank' |
-//     'conjugation-fill-in-blank' | 'dialogue-response' | 'dialogue-cloze' |
-//     'reading-comprehension'
+//     'fill-in-blank-vocab' | 'paraphrase' | 'word-usage' (用法 — given a
+//     word, judge which of 4 example sentences uses it correctly; only
+//     appears in the new-format JLPT vocabulary section, 2010+) |
+//     'sentence-ordering' (文の組み立て — arrange 4 word/phrase blocks into
+//     a sentence, identify which block lands in the ★ position; only
+//     appears in the new-format JLPT grammar section, 2010+) |
+//     'listening-with-image-options' | 'listening-text-only' |
+//     'particle-fill-in-blank' | 'conjugation-fill-in-blank' |
+//     'dialogue-response' | 'dialogue-cloze' | 'reading-comprehension'
 //   - app-authored learning content (no direct past-exam equivalent):
 //     'usage-choice' (scenario/production judgment, no jp/target — "『X』該怎麼說？")
 //     'pattern-practice' (has jp+target; meaning explains the pattern's
@@ -114,6 +119,8 @@ export const TYPES = [
   'kanji',
   'fill-in-blank-vocab',
   'paraphrase',
+  'word-usage',
+  'sentence-ordering',
   'listening-with-image-options',
   'listening-text-only',
   'particle-fill-in-blank',

@@ -144,13 +144,33 @@ body {
     to { opacity: 1; }
   }
 
+  /* .selection-note-menu/.selection-note-toast each already carry a static
+     positioning `transform` (centering + offset) — animating with the
+     generic panel-in above would fight that rule (its `to { transform: none }`
+     briefly wins, then the element snaps to its real position the instant
+     the animation ends), causing a visible jump right as they appear. These
+     keyframes fold the same fade+offset into the element's own transform
+     instead of replacing it. */
+  @keyframes selection-menu-in {
+    from { opacity: 0; transform: translate(-50%, calc(-100% - 10px + 8px)); }
+    to { opacity: 1; transform: translate(-50%, calc(-100% - 10px)); }
+  }
+
+  @keyframes selection-toast-in {
+    from { opacity: 0; transform: translate(-50%, 8px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+  }
+
   .vocab-panel {
     animation: panel-in 0.2s ease;
   }
 
-  .selection-note-menu,
+  .selection-note-menu {
+    animation: selection-menu-in 0.15s ease;
+  }
+
   .selection-note-toast {
-    animation: panel-in 0.15s ease;
+    animation: selection-toast-in 0.15s ease;
   }
 
   .pos-modal {
@@ -2403,6 +2423,52 @@ a.practice-set-card {
 
 .exam-review-answer.wrong {
   color: var(--seal);
+}
+
+.exam-option-explanations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--line);
+}
+
+.exam-option-explanation {
+  display: flex;
+  gap: 0.6rem;
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-sm);
+  color: var(--sub);
+}
+
+.exam-option-explanation-label {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  font-size: var(--fs-2xs);
+  color: var(--sub);
+}
+
+.exam-option-explanation.correct .exam-option-explanation-label {
+  border-color: var(--good);
+  color: var(--good);
+}
+
+.exam-option-explanation-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.exam-option-explanation-text strong {
+  color: var(--ink);
+  font-weight: 600;
 }
 
 .exam-quick-nav,
