@@ -8,6 +8,8 @@ const LABELS = {
   kanji: '漢字書寫',
   'fill-in-blank-vocab': '詞彙填空',
   paraphrase: '同義句判斷',
+  'word-usage': '詞彙用法判斷',
+  'sentence-ordering': '句子排序',
   'listening-with-image-options': '聽力（圖片選項）',
   'listening-text-only': '聽力（文字選項）',
   'particle-fill-in-blank': '助詞填空',

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { getPastExam, getPastExamStructure } from '@/lib/past-exams';
 import { getBankItems, resolveAssetUrl } from '@/lib/practice/bank';
-import { renderAnnotatedText, NotePanel } from '@/lib/practice/bank/notes';
+import { renderAnnotatedText, NotePanel, OptionExplanations } from '@/lib/practice/bank/notes';
 import SelectionNoteCapture from '@/app/notes/SelectionNoteCapture';
 import {
   setPracticeExamResult,
@@ -107,6 +107,11 @@ function ExamReviewItem({ structure: s, item, index, chosenIndex, showHeader, on
           你的答案：{chosenText}{isCorrect ? '（✓ 正確）' : '（✗ 錯誤）'}
         </p>
         {!isCorrect && <p className="exam-review-answer correct">正確答案：{correctText}</p>}
+        <OptionExplanations
+          options={item.meaning.options}
+          explanations={item.optionExplanations}
+          answerIndex={item.meaning.answerIndex}
+        />
       </div>
     </div>
   );
@@ -315,9 +320,11 @@ export default function ExamPracticeClient({ examId }) {
                 </div>
               )}
               <div className="practice-sentence-block">
-                {isListening && <ListeningAssets item={item} />}
+                {s.type === 'listening-with-image-options' && <ListeningAssets item={item} />}
                 <span className="exam-question-number">第 {i + 1} 題</span>
-                <p className="practice-question exam-question-prompt">{item.meaning.prompt}</p>
+                <p className="practice-question exam-question-prompt">
+                  {renderAnnotatedText(item.meaning.prompt, item.notes, item.id, { onClick: setActiveNote })}
+                </p>
                 <div className={`quiz-options${item.meaning.options.every(o => o.length <= 6) ? ' short' : ''}`}>
                   {item.meaning.options.map((opt, oi) => {
                     let state = '';
@@ -339,6 +346,13 @@ export default function ExamPracticeClient({ examId }) {
                     );
                   })}
                 </div>
+                {locked && (
+                  <OptionExplanations
+                    options={item.meaning.options}
+                    explanations={item.optionExplanations}
+                    answerIndex={item.meaning.answerIndex}
+                  />
+                )}
               </div>
             </div>
           );

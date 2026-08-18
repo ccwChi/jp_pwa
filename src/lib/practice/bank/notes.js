@@ -33,6 +33,33 @@ export function renderAnnotatedText(text, notes, keyPrefix, { onClick } = {}) {
   });
 }
 
+// Per-option answer breakdown (why each choice is right/wrong), shown once
+// an answer is revealed (instant-feedback lock, or the post-submit review
+// screen). `explanations` is optional and sparse — an item can annotate
+// only the options worth explaining, leaving the rest unset — so anything
+// falsy at an index is skipped rather than rendered as an empty row.
+const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+export function OptionExplanations({ options, explanations, answerIndex }) {
+  if (!explanations || !explanations.some(Boolean)) return null;
+  return (
+    <div className="exam-option-explanations">
+      {options.map((opt, i) => {
+        if (!explanations[i]) return null;
+        return (
+          <div key={i} className={`exam-option-explanation${i === answerIndex ? ' correct' : ''}`}>
+            <span className="exam-option-explanation-label">{OPTION_LABELS[i] || i + 1}</span>
+            <div className="exam-option-explanation-text">
+              <strong>{opt}</strong>
+              <span>{explanations[i]}</span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 // Pinned-to-bottom popover showing one note's detail, styled to match the
 // reading article's vocab-panel (see globals.css) since it's the same idea:
 // tap a highlighted word, read a short explanation, tap elsewhere to close.

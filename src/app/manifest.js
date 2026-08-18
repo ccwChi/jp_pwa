@@ -5,7 +5,7 @@ export default function manifest() {
   return {
     name: 'Nihongo Journey | 日文語感練習',
     short_name: 'Nihongo Journey',
-    description: '深夜和風的日文語感學習所，從 N5 一路衝向 N2',
+    description: 'AI配的描述都在羞恥play',
     start_url: `${basePath}/`,
     display: 'standalone',
     background_color: '#e9e5d8',
