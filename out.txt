@@ -1,0 +1,17 @@
+jlpt-n3-2001 2001 N3 轉自 2001年日本語能力試験3級 真題PDF（聴解／文字語彙／読解文法 三份分卷PDF）。答案來源：2001能力考3级答案.pdf（掃描表格，400dpi視覺讀取，含文字語彙・聴解問題I）與 读解文法.jpg（另一張清晰答案表，含聴解問題II・読解文法問題I〜VI），逐題以日文語感重新推導後與兩份答案表交叉核對，全部一致（僅文字語彙問題II第3問(2)小題因選項3・4印刷成完全相同的文字「健てられました」而標記needsReview並排除於題庫外，其餘皆可信）。此年份PDF文字層品質良好，未發現如2000年那樣大量的漢字選項亂碼問題。聴解問題II（13題）本年PDF本身已印出完整文字選項（不同於2000年「原文欠奉」的情況），且答案卡上有獨立印刷解答，故本年聴解問題II全部題目皆可正常收錄進題庫。 resources/past-exams/N3/2001/2001年日语能力考试3级真题-听力.pdf; resources/past-exams/N3/2001/2001年真题加答案/2001年日语能力考试3级真题-文字词汇.pdf; resources/past-exams/N3/2001/2001年真题加答案/2001年日语能力考试3级真题-读解文法.pdf
+SECTION vocabulary None None
+ problem I reading 20
+ problem II kanji 15
+ problem III fill-in-blank-vocab 10
+ problem IV paraphrase 5
+ problem V word-usage 5
+SECTION listening /exam-audio/jlpt-n3-2001/listening.mp3 整段聴解錄音（含問題I、II全部題目，依序播放）。
+ problem I listening-with-image-options 14
+ problem II listening-text-only 13
+SECTION readingGrammar None None
+ problem I particle-fill-in-blank 15
+ problem II conjugation-fill-in-blank 15
+ problem III conjugation-fill-in-blank 8
+ problem IV dialogue-response 5
+ problem V dialogue-cloze 4
+ problem VI reading-comprehension 3
