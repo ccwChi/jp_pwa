@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { getPastExam, getPastExamStructure } from '@/lib/past-exams';
 import { getBankItems, resolveAssetUrl } from '@/lib/practice/bank';
 import { renderAnnotatedText, NotePanel, OptionExplanations } from '@/lib/practice/bank/notes';
-import SelectionNoteCapture from '@/app/notes/SelectionNoteCapture';
 import {
   setPracticeExamResult,
   useSpeechRate,
@@ -155,7 +154,6 @@ export default function ExamPracticeClient({ examId }) {
   const [submitted, setSubmitted] = useState(false);
   const [reviewing, setReviewing] = useState(false);
   const [activeNote, setActiveNote] = useState(null);
-  const mainRef = useRef(null);
   const speechRate = useSpeechRate();
   const instantFeedback = usePracticeExamInstantFeedback();
 
@@ -237,7 +235,7 @@ export default function ExamPracticeClient({ examId }) {
   const totalCorrect = sectionBreakdown.reduce((sum, s) => sum + s.correct, 0);
 
   return (
-    <main className="container" ref={mainRef}>
+    <main className="container">
       <div className="page-head">
         <Link href="/practice/exam" className="back-link">← 考古題練習</Link>
       </div>
@@ -421,7 +419,6 @@ export default function ExamPracticeClient({ examId }) {
       )}
 
       {activeNote && <NotePanel note={activeNote} onClose={() => setActiveNote(null)} rate={speechRate} />}
-      <SelectionNoteCapture containerRef={mainRef} />
     </main>
   );
 }

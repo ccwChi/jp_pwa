@@ -2,7 +2,7 @@
 
 ## 前置：找檔案
 
-到 `resources/n4-exams/N4-1991-2009年/（1991年-2009年）N4真题听力/{年份}/` 底下找：
+到 `resources/past-exams/` 底下找：
 - `*題+答+聽.pdf`（或類似命名）：題目、答案卡、聽力原文（部分年份聽力原文會缺失，見下方「已知陷阱」）
 - `*聽.mp3`：整段聽力音檔
 - 若資料夾裡還有 `*聽原文.doc`（舊版 Word 二進位格式）：這通常是聽力逐字稿的補充檔，PDF 本身聽力部分若標示「原文欠奉」就要靠這份 doc 補完整。
@@ -84,7 +84,20 @@ JSON 裡 `listening-with-image-options` 每題的 `imageUrl` 欄位填對應的 
 
 寫檔規則：讀取 `src/lib/practice/bank/data/N4-{type對應的檔名}.js` 現有內容，在陣列結尾 `\n];\n` 前插入新項目（用 2 空格縮排格式化成跟現有內容一致的 JS 物件字面量寫法），不要整檔覆寫。每個 `type` 對應的檔名可以直接看 `src/lib/practice/bank/data/` 底下現有的 `N4-*-01.js` 檔名清單對照。
 
-## 第八步：驗證（每一步都要做，不能只做一部分）
+## 第八步：補上 notes／optionExplanations
+
+第七步轉出的 bank items 預設沒有 `notes`（單字／文法註解）跟 `optionExplanations`（逐選項解析）這兩個欄位——這兩個是選用的補充資料，但屬於新增題目時緊接著要做的步驟，不要轉完 bank items 就停手。完整規則見 `src/doc/bank-explanation-prompt.md`，這裡摘要跟這次解析流程特別相關的重點：
+
+- `notes[].surface` 必須是該題 `meaning.prompt`（或聽力的 `script`）裡逐字出現的原始文字，包含原文實際寫的形式（假名/漢字）；找不到可逐字比對的日文原文（例如 `usage-choice` 這種 `prompt` 是純中文情境描述、日文只出現在 `options` 裡的類型）就跳過該題的 `notes`，不要為了湊欄位硬選一個對不上原文的片段。
+- **不要只框「這題考的目標文法點」本身**：題目（`prompt`/`script`，選擇性也包含 `options`）裡只要出現了超出這份考卷等級、屬於更高等級（例如 N4 考卷裡出現 N3、N2 程度）的單字或文法，也要另外列一則 `notes`（`type: "vocab"` 或 `"grammar"`）加以說明，不能因為它不是這題的考點就跳過不管——對正在準備這個等級的學習者來說，讀懂題目本身用到的超綱字才是他真正卡住的地方。判斷等級可以憑教材經驗抓大概（常見生活詞彙、初階文法屬於該等級或以下；書面語、複雜句型、少用漢字詞通常偏高階），拿不準的話標保守一點、寧可多列一則。
+- `optionExplanations` 陣列的順序、長度要跟 `meaning.options` 完全一致；正解要講清楚「為什麼是它」，錯的選項要講「為什麼跟題目語意/文法不合」，不要只是重複翻譯選項字面意思。
+- 這次新解析的題目通常是同一個 `examId` 一次新增幾十題到同一個 bank 檔案，逐題用 Edit 工具手改效率太差、也容易漏改欄位順序。改用腳本化流程：寫一支 Node ESM 腳本 `import` 該 bank 檔案現有內容 → 在記憶體裡建一個 `{ id: { notes, opt } }` 的 mapping（人工逐題判斷、寫出正確的 notes/optionExplanations 內容） → 用 `JSON.stringify(newItems, null, 2)` 整個重新序列化寫回檔案。這個檔案格式本身就是 `JSON.stringify(items, null, 2)` 的輸出風格，所以重新序列化不會破壞既有排版或欄位順序（除了新插入的欄位本身）。**只新增 `notes`/`optionExplanations` 這兩個欄位，寫回時明確排除掉舊的 `notes`/`optionExplanations`（如果有）再重新賦值，避免腳本重跑時把新值又蓋回舊值。**
+- 每次寫回檔案後都要驗證：
+  1. Node `import()` 該檔案，檢查 `optionExplanations.length === meaning.options.length`、`notes` 存在的題目其 `surface` 都能在 `prompt` 裡 `.includes()` 找到。
+  2. `git diff` 檢查改動範圍——正常應該只看到新增的 `notes`/`optionExplanations` 區塊（加上因為插入內容而位移的括號行），不該看到其他既有欄位的內容被改掉；如果看到不相關欄位也被改動（例如 `sourceNote` 文字被動到），要停下來查清楚原因，不要當作正常現象忽略。
+  3. `npm run lint`，確認沒有新增 error。
+
+## 第九步：驗證（每一步都要做，不能只做一部分）
 
 1. 用 Node 逐一 `import()` 剛剛改過的每個 bank `.js` 檔，確認語法正確、印出 item 數量。
 2. `grep -c "^{$"` 檢查有沒有縮排跑掉的物件（正常應該是 0，因為每個插入的物件開頭都應該帶 2 空格縮排）。
@@ -98,4 +111,4 @@ JSON 裡 `listening-with-image-options` 每題的 `imageUrl` 欄位填對應的 
 
 ## 收尾
 
-跟使用者回報：這次解析了幾題、有幾題因為原始文件本身的問題（不是你的擷取失敗）被標記 needsReview 排除在題庫外，並具體說明每個 needsReview 的原因。不要在沒有把握的地方悄悄「腦補」修正題目——所有存疑之處都要留在 `reviewNote` 裡讓人工事後核對。
+跟使用者回報：這次解析了幾題、有幾題因為原始文件本身的問題（不是你的擷取失敗）被標記 needsReview 排除在題庫外，並具體說明每個 needsReview 的原因；以及第八步幫幾題加上了 `notes`／`optionExplanations`、有幾題因為找不到可逐字比對的日文原文而跳過 notes。不要在沒有把握的地方悄悄「腦補」修正題目或編造解析內容——所有存疑之處都要留在 `reviewNote` 裡讓人工事後核對。

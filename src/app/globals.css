@@ -144,33 +144,8 @@ body {
     to { opacity: 1; }
   }
 
-  /* .selection-note-menu/.selection-note-toast each already carry a static
-     positioning `transform` (centering + offset) — animating with the
-     generic panel-in above would fight that rule (its `to { transform: none }`
-     briefly wins, then the element snaps to its real position the instant
-     the animation ends), causing a visible jump right as they appear. These
-     keyframes fold the same fade+offset into the element's own transform
-     instead of replacing it. */
-  @keyframes selection-menu-in {
-    from { opacity: 0; transform: translate(-50%, calc(-100% - 10px + 8px)); }
-    to { opacity: 1; transform: translate(-50%, calc(-100% - 10px)); }
-  }
-
-  @keyframes selection-toast-in {
-    from { opacity: 0; transform: translate(-50%, 8px); }
-    to { opacity: 1; transform: translate(-50%, 0); }
-  }
-
   .vocab-panel {
     animation: panel-in 0.2s ease;
-  }
-
-  .selection-note-menu {
-    animation: selection-menu-in 0.15s ease;
-  }
-
-  .selection-note-toast {
-    animation: selection-toast-in 0.15s ease;
   }
 
   .pos-modal {
@@ -538,47 +513,6 @@ a.row {
 .note-card-edit:hover {
   color: var(--seal);
   border-color: var(--seal);
-}
-
-/* ── selection-triggered note capture: right-click (or long-press) a text
-   selection anywhere inside a wired-up container to add it as a note ── */
-
-.selection-note-menu {
-  position: fixed;
-  z-index: 80;
-  transform: translate(-50%, calc(-100% - 10px));
-}
-
-.selection-note-menu-btn {
-  font-family: var(--font-zh), sans-serif;
-  font-size: var(--fs-xs);
-  color: var(--bg);
-  white-space: nowrap;
-  cursor: pointer;
-  background: var(--ink);
-  border: 1px solid var(--ink);
-  border-radius: 6px;
-  padding: 0.5rem 0.9rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-}
-
-.selection-note-menu-btn:hover {
-  opacity: 0.9;
-}
-
-.selection-note-toast {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  z-index: 80;
-  transform: translateX(-50%);
-  font-family: var(--font-zh), sans-serif;
-  font-size: var(--fs-xs);
-  color: var(--bg);
-  background: var(--good);
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 /* ── shared filter chips (article levels, note tags) ── */
