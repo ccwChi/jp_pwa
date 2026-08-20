@@ -85,6 +85,42 @@ export async function saveItemTags(id, tags, notes) {
   throw new Error(`No bank item found with id "${id}"`);
 }
 
+// Backing store for the exam-review "編輯生字/解析" panel (see
+// src/app/practice/exam/[examId]/ExplainEditor.js) — lets `notes` and
+// `optionExplanations` be added/edited one bank item at a time while
+// reviewing a past exam, instead of only through the POS-tagging queue.
+export async function findItemById(id) {
+  const files = await listDataFiles();
+  for (const filename of files) {
+    const items = await loadFile(filename);
+    const item = items.find(i => i.id === id);
+    if (item) return { item, filename };
+  }
+  return { item: null, filename: null };
+}
+
+// Unlike saveItemTags's notes handling (which only overwrites on a
+// non-empty paste, to avoid wiping prior work from an unrelated empty
+// submit), this is a dedicated editor acting on one known item, so an
+// empty array is a deliberate "clear everything" and is honored as such.
+export async function saveItemExplain(id, { notes, optionExplanations }) {
+  const files = await listDataFiles();
+  for (const filename of files) {
+    const items = await loadFile(filename);
+    const index = items.findIndex(i => i.id === id);
+    if (index === -1) continue;
+
+    const item = { ...items[index] };
+    if (notes !== undefined) item.notes = notes;
+    if (optionExplanations !== undefined) item.optionExplanations = optionExplanations;
+    items[index] = item;
+
+    await saveFile(filename, items);
+    return item;
+  }
+  throw new Error(`No bank item found with id "${id}"`);
+}
+
 export async function loadPosOptions() {
   const raw = await fs.readFile(POS_OPTIONS_PATH, 'utf8');
   return JSON.parse(raw);

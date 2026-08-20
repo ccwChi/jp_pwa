@@ -5323,6 +5323,666 @@ const items = [
       "「たいどころ」清音「た」錯誤，應為濁音「だ」。",
       "「たいところ」兩處濁音皆錯誤。"
     ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-1",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-1"
+    },
+    "meaning": {
+      "prompt": "この にもつは 軽いので ひとりで 持てます。\n\n軽い",
+      "options": [
+        "うすい",
+        "かるい",
+        "ほそい",
+        "こまかい"
+      ],
+      "answerIndex": 1
+    },
+    "optionExplanations": [
+      "「あさい」意為淺",
+      "「ひくい」（低い）意為矮／低，正解",
+      "「まるい」意為圓",
+      "「かたい」意為硬。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-2",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-2"
+    },
+    "meaning": {
+      "prompt": "この にもつは 軽いので ひとりで 持てます。\n\n持てます",
+      "options": [
+        "いてます",
+        "たてます",
+        "まてます",
+        "もてます"
+      ],
+      "answerIndex": 3
+    },
+    "optionExplanations": [
+      "「いてます」非標準日語詞",
+      "「たてます」意為能立起（立てます）",
+      "「まてます」意為能等（待てます）",
+      "「もてます」（持てます）意為能拿，正解，指行李輕到一個人也能拿動。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-3",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-3"
+    },
+    "meaning": {
+      "prompt": "急いで 出発しないと おくれますよ。\n\n急いで",
+      "options": [
+        "いそいで",
+        "すぐいで",
+        "はやいで",
+        "きゅういで"
+      ],
+      "answerIndex": 0
+    },
+    "optionExplanations": [
+      "「いそいで」（急いで）意為急忙，正解",
+      "「すぐいで」非日語詞",
+      "「はやいで」非標準形",
+      "「きゅういで」非標準形。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-4",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-4"
+    },
+    "meaning": {
+      "prompt": "急いで 出発しないと おくれますよ。\n\n出発",
+      "options": [
+        "しゅはつ",
+        "しゅぱつ",
+        "しゅっはつ",
+        "しゅっぱつ"
+      ],
+      "answerIndex": 3
+    },
+    "optionExplanations": [
+      "「しゅはつ」非標準拗音拼法",
+      "「しゅぱつ」拼寫錯誤",
+      "「しゅっはつ」拼寫錯誤",
+      "「しゅっぱつ」（出発）為正確讀音，正解。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-5",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-5"
+    },
+    "meaning": {
+      "prompt": "あの 人は 声が よくて 歌が うまいです。\n\n声",
+      "options": [
+        "こえ",
+        "こい",
+        "せい",
+        "せえ"
+      ],
+      "answerIndex": 0
+    },
+    "optionExplanations": [
+      "「こえ」（声）意為聲音，正解",
+      "「こい」意為濃／戀愛",
+      "「せい」意為身高／原因",
+      "「せえ」非標準詞。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-6",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-6"
+    },
+    "meaning": {
+      "prompt": "あの 人は 声が よくて 歌が うまいです。\n\n歌",
+      "options": [
+        "おん",
+        "うそ",
+        "おと",
+        "うた"
+      ],
+      "answerIndex": 3
+    },
+    "optionExplanations": [
+      "「おん」意為音",
+      "「うそ」意為謊言",
+      "「おと」意為聲響",
+      "「うた」（歌）意為歌，正解。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-7",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-7"
+    },
+    "meaning": {
+      "prompt": "この 野菜は 味が いいです。\n\n野菜",
+      "options": [
+        "やさい",
+        "やざい",
+        "やせい",
+        "やぜい"
+      ],
+      "answerIndex": 0
+    },
+    "optionExplanations": [
+      "「やさい」（野菜）為正確讀音，正解",
+      "「やざい」濁音錯誤",
+      "「やせい」意思錯誤（野生）",
+      "「やぜい」讀音錯誤。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-8",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-8"
+    },
+    "meaning": {
+      "prompt": "この 野菜は 味が いいです。\n\n味",
+      "options": [
+        "あじ",
+        "いろ",
+        "かたち",
+        "におい"
+      ],
+      "answerIndex": 0
+    },
+    "optionExplanations": [
+      "「あじ」（味）意為味道，正解",
+      "「いろ」意為顏色",
+      "「かたち」意為形狀",
+      "「におい」意為氣味。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-9",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-9"
+    },
+    "meaning": {
+      "prompt": "気分が 悪く なったら 運動を 中止して ください。\n\n気分",
+      "options": [
+        "きふん",
+        "きぶん",
+        "きもち",
+        "きもぢ"
+      ],
+      "answerIndex": 1
+    },
+    "optionExplanations": [
+      "「きふん」讀音錯誤",
+      "「きぶん」（気分）意為心情，正解",
+      "「きもち」為訓讀詞非此漢字讀音",
+      "「きもぢ」濁音錯誤。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-10",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-10"
+    },
+    "meaning": {
+      "prompt": "気分が 悪く なったら 運動を 中止して ください。\n\n悪く",
+      "options": [
+        "いたく",
+        "ひどく",
+        "わるく",
+        "おかしく"
+      ],
+      "answerIndex": 2
+    },
+    "optionExplanations": [
+      "「いたく」意為疼痛地",
+      "「ひどく」意為嚴重地",
+      "「わるく」（悪く）意為變差，正解",
+      "「おかしく」意為奇怪地。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-11",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-11"
+    },
+    "meaning": {
+      "prompt": "気分が 悪く なったら 運動を 中止して ください。\n\n運動",
+      "options": [
+        "うんてん",
+        "うんでん",
+        "うんとう",
+        "うんどう"
+      ],
+      "answerIndex": 3
+    },
+    "optionExplanations": [
+      "「うんてん」意為駕駛",
+      "「うんでん」非日語詞",
+      "「うんとう」讀音錯誤",
+      "「うんどう」（運動）為正確讀音，正解。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-12",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-12"
+    },
+    "meaning": {
+      "prompt": "気分が 悪く なったら 運動を 中止して ください。\n\n中止",
+      "options": [
+        "じゅうし",
+        "じゅうと",
+        "ちゅうし",
+        "ちゅうと"
+      ],
+      "answerIndex": 2
+    },
+    "optionExplanations": [
+      "「じゅうし」讀音錯誤",
+      "「じゅうと」讀音錯誤",
+      "「ちゅうし」（中止）為正確讀音，正解",
+      "「ちゅうと」讀音錯誤（中途）。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-13",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-13"
+    },
+    "meaning": {
+      "prompt": "産業は 地理と ふかい かんけいが ある。\n\n産業",
+      "options": [
+        "さんきょう",
+        "さんぎょう",
+        "ざんきょう",
+        "ざんぎょう"
+      ],
+      "answerIndex": 1
+    },
+    "optionExplanations": [
+      "「さんきょう」讀音錯誤",
+      "「さんぎょう」（産業）為正確讀音，正解",
+      "「ざんきょう」濁音錯誤",
+      "「ざんぎょう」讀音錯誤（殘業）。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-14",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-14"
+    },
+    "meaning": {
+      "prompt": "産業は 地理と ふかい かんけいが ある。\n\n地理",
+      "options": [
+        "ちり",
+        "じり",
+        "ちいり",
+        "じいり"
+      ],
+      "answerIndex": 0
+    },
+    "optionExplanations": [
+      "「ちり」（地理）為正確讀音，正解",
+      "「じり」濁音錯誤",
+      "「ちいり」拼寫錯誤",
+      "「じいり」拼寫錯誤。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-15",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-15"
+    },
+    "meaning": {
+      "prompt": "この むしは 光の ほうに 進みます。\n\n光",
+      "options": [
+        "あかり",
+        "あかる",
+        "ひかり",
+        "ひかる"
+      ],
+      "answerIndex": 2
+    },
+    "optionExplanations": [
+      "「あかり」意為燈光",
+      "「あかる」非日語詞",
+      "「ひかり」（光）意為光，正解",
+      "「ひかる」為動詞「光る」的辭書形，非此處讀音。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-16",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-16"
+    },
+    "meaning": {
+      "prompt": "この むしは 光の ほうに 進みます。\n\n進みます",
+      "options": [
+        "こみます",
+        "ふみます",
+        "たのみます",
+        "すすみます"
+      ],
+      "answerIndex": 3
+    },
+    "optionExplanations": [
+      "「こみます」意為擁擠",
+      "「ふみます」意為踩踏",
+      "「たのみます」意為拜託",
+      "「すすみます」（進みます）意為前進，正解。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-17",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-17"
+    },
+    "meaning": {
+      "prompt": "短い 時間でしたが 楽しかったです。\n\n短い",
+      "options": [
+        "こわい",
+        "うるさい",
+        "みじかい",
+        "いそがしい"
+      ],
+      "answerIndex": 2
+    },
+    "optionExplanations": [
+      "「こわい」意為可怕",
+      "「うるさい」意為吵鬧",
+      "「みじかい」（短い）意為短，正解",
+      "「いそがしい」意為忙碌。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-18",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-18"
+    },
+    "meaning": {
+      "prompt": "短い 時間でしたが 楽しかったです。\n\n楽しかった",
+      "options": [
+        "うれしかった",
+        "たのしかった",
+        "すばらしかった",
+        "よろこばしかった"
+      ],
+      "answerIndex": 1
+    },
+    "optionExplanations": [
+      "「うれしかった」意為開心",
+      "「たのしかった」（楽しかった）意為愉快，正解",
+      "「すばらしかった」意為出色",
+      "「よろこばしかった」意為可喜。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-19",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-19"
+    },
+    "meaning": {
+      "prompt": "たなかさんは あしたの 昼 着きます。\n\n昼",
+      "options": [
+        "ごご",
+        "ひる",
+        "ゆう",
+        "あさ"
+      ],
+      "answerIndex": 1
+    },
+    "optionExplanations": [
+      "「ごご」意為下午",
+      "「ひる」（昼）意為中午，正解",
+      "「ゆう」意為傍晚",
+      "「あさ」意為早上。"
+    ]
+  },
+  {
+    "id": "exam-jlpt-n3-2007-voc-I-20",
+    "pointIds": [],
+    "level": "N3",
+    "section": "vocabulary",
+    "type": "reading",
+    "isPastExam": true,
+    "examMeta": {
+      "examId": "jlpt-n3-2007",
+      "year": 2007,
+      "level": "N3",
+      "section": "文字・語彙",
+      "sourcePdf": "resources/past-exams/N3/2007/2007年真题加答案/2007年日语能力考试3级真题.pdf; resources/past-exams/N3/2007/2007年真题加答案/2007能力考3级答案.pdf; resources/past-exams/N3/2007/听力原文以及答案.pdf",
+      "sourceNote": "轉自 2007年日本語能力試験3級 真題PDF（文字語彙／聴解／読解文法 合併一份問題卷PDF，共22頁，來自jlpt.info網站）。答案來源：2007能力考3级答案.pdf（新世界日語整理版，文字排版乾淨可直接判讀，非掃描圖）。聴解部分另有「听力原文以及答案.pdf」（沪江日语整理版）提供問題I・問題IIの完整逐字稿與逐題答案，兩份答案來源交叉核對完全一致。文字語彙問題II（漢字書寫）第(30)題選項1與選項4印刷成完全相同的「集まって」，屬原始印刷缺陷，標記needsReview。読解文法部分本年份問題VI（讀解短文）未如2005・2006年份被截斷，設問與選項完整，可正常收錄。読解文法問題V第47題（すずきさんが時計をどこに置くか）為圖片選項題，原始問題卷未印出文字選項，僅保留圖片與描述，不納入題庫的可作答meaning。聴解問題Iの12題圖片選項，逐張與聴解逐字稿情境比對確認題號順序無誤，並記錄imageDescription。",
+      "questionNumber": "voc-I-20"
+    },
+    "meaning": {
+      "prompt": "たなかさんは あしたの 昼 着きます。\n\n着きます",
+      "options": [
+        "おきます",
+        "すきます",
+        "つきます",
+        "うきます"
+      ],
+      "answerIndex": 2
+    },
+    "optionExplanations": [
+      "「おきます」意為起床",
+      "「すきます」意為變空",
+      "「つきます」（着きます）意為到達，正解",
+      "「うきます」意為漂浮。"
+    ]
   }
 ];
 

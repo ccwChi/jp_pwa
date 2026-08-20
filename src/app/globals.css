@@ -2405,6 +2405,95 @@ a.practice-set-card {
   font-weight: 600;
 }
 
+/* ── exam review: dev-only "編輯生字與解析" panel (ExplainEditor) ── */
+
+.exam-edit-explain-btn {
+  margin-top: 0.8rem;
+}
+
+.explain-editor {
+  margin-top: 0.8rem;
+  padding: 1rem;
+  border: 1px dashed var(--ai);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.explain-editor .field {
+  max-width: none;
+}
+
+.explain-editor-note-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.75rem;
+  margin-bottom: 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.explain-editor-note-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+}
+
+.explain-editor-note-grid-sentence {
+  grid-template-columns: 1fr 1fr;
+}
+
+.explain-editor-note-row input[type="text"],
+.explain-editor-note-row select {
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.5rem 0.6rem;
+  width: 100%;
+}
+
+.explain-editor-remove-btn {
+  align-self: flex-start;
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-2xs);
+  color: var(--seal);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.explain-editor-option-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.explain-editor-option-text {
+  flex: none;
+  width: 20%;
+  font-size: var(--fs-sm);
+  color: var(--sub);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.explain-editor-option-row input[type="text"] {
+  flex: 1;
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.5rem 0.6rem;
+}
+
 .exam-quick-nav,
 .exam-mode-toggle {
   display: flex;

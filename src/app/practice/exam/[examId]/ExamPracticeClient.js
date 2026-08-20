@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getPastExam, getPastExamStructure } from '@/lib/past-exams';
 import { getBankItems, resolveAssetUrl } from '@/lib/practice/bank';
 import { renderAnnotatedText, NotePanel, OptionExplanations } from '@/lib/practice/bank/notes';
+import ExplainEditor from './ExplainEditor';
 import {
   setPracticeExamResult,
   useSpeechRate,
@@ -13,6 +14,12 @@ import {
 } from '@/lib/storage';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+// Editing bank items on disk needs a real Node server behind
+// /api/practice-explain, which `deploy.yml` deletes wholesale before the
+// static-export build — so this must stay false on the deployed site, never
+// just fail quietly if clicked.
+const CAN_EDIT_EXPLANATIONS = process.env.NEXT_PUBLIC_STATIC_EXPORT !== 'true';
 
 function assetSrc(url) {
   return url ? `${basePath}${url}` : null;
@@ -65,12 +72,13 @@ function ExamListeningPlayer({ audioUrl, paused }) {
   );
 }
 
-function ExamReviewItem({ structure: s, item, index, chosenIndex, showHeader, onNoteClick, speechRate }) {
+function ExamReviewItem({ structure: s, item, index, chosenIndex, showHeader, onNoteClick, speechRate, onItemUpdated }) {
   const isListening = s.type === 'listening-text-only' || s.type === 'listening-with-image-options';
   const answered = chosenIndex !== undefined;
   const isCorrect = answered && chosenIndex === item.meaning.answerIndex;
   const chosenText = answered ? item.meaning.options[chosenIndex] : '（未作答）';
   const correctText = item.meaning.options[item.meaning.answerIndex];
+  const [editing, setEditing] = useState(false);
 
   function speakScript() {
     if (typeof window === 'undefined' || !window.speechSynthesis) return;
@@ -111,6 +119,21 @@ function ExamReviewItem({ structure: s, item, index, chosenIndex, showHeader, on
           explanations={item.optionExplanations}
           answerIndex={item.meaning.answerIndex}
         />
+        {CAN_EDIT_EXPLANATIONS && !editing && (
+          <button type="button" className="btn exam-edit-explain-btn" onClick={() => setEditing(true)}>
+            ✏️ 新增／修改生字與解析
+          </button>
+        )}
+        {CAN_EDIT_EXPLANATIONS && editing && (
+          <ExplainEditor
+            item={item}
+            onClose={() => setEditing(false)}
+            onSaved={updated => {
+              onItemUpdated(updated);
+              setEditing(false);
+            }}
+          />
+        )}
       </div>
     </div>
   );
@@ -140,7 +163,7 @@ export default function ExamPracticeClient({ examId }) {
   // authored yet — are skipped; they'll appear automatically once that
   // data is filled in. Drawn once per mount since the order is fixed
   // (unlike pickBankItem elsewhere, there's no randomness here).
-  const [slots] = useState(() => {
+  const [slots, setSlots] = useState(() => {
     if (!structure) return [];
     const byQuestionNumber = new Map(
       getBankItems({ examId }).map(item => [item.examMeta?.questionNumber, item])
@@ -149,6 +172,13 @@ export default function ExamPracticeClient({ examId }) {
       .map(s => ({ structure: s, item: byQuestionNumber.get(s.id) }))
       .filter(slot => slot.item?.meaning);
   });
+
+  // Reflects a saved edit from ExplainEditor (dev-only) back into this
+  // page's own item copies, so the new notes/optionExplanations render
+  // immediately without needing a reload.
+  function updateSlotItem(updatedItem) {
+    setSlots(prev => prev.map(slot => (slot.item.id === updatedItem.id ? { ...slot, item: updatedItem } : slot)));
+  }
 
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -375,6 +405,7 @@ export default function ExamPracticeClient({ examId }) {
                 showHeader={showHeader}
                 onNoteClick={setActiveNote}
                 speechRate={speechRate}
+                onItemUpdated={updateSlotItem}
               />
             );
           })}
