@@ -1,0 +1,1552 @@
+{
+  "examId": "jlpt-n3-2004",
+  "year": 2004,
+  "level": "N3",
+  "sourceNote": "轉自 2004年日本語能力試験3級 真題PDF（聴解／文字語彙／読解文法 三份分卷PDF）。答案來源：2004能力考3级答案.pdf（單頁掃描表格，1200dpi視覺讀取，分區裁切核對），本年份的掃描答案頁罕見地完整收錄全部三節的官方正解（文字語彙問題I〜V共55題、聴解問題I 1〜14ばん、聴解問題II 1〜11ばん、読解文法問題I〜VI共50題——読解文法的正解另外還有一份「读解文法.jpg」單頁清晰掃描可交叉核對，兩份來源完全一致），是目前已處理的四個年份（2000、2001、2002、2003）中唯一答案覆蓋率100%的一年。文字語彙、読解文法部分之官方答案已逐題以日文語感重新推導交叉驗證，全部吻合，信心度高。聴解問題Iの14題原始PDF本身（如同真實JLPT聴解考卷的慣例）僅印出插圖與選項編號、並未印出對話原文，本年份資料夾內也沒有.doc補充聽力原文檔案，且執行環境無法直接處理.mp3音檔進行逐字聽寫，故這14題的script欄位留null（僅靠imageDescription描述插圖內容），answerIndex取自官方答案卡但無法如同其他文字/文法題目一樣以日文語感逐句交叉驗證——這點與文字語彙/読解文法題目的驗證信心度不同，請人工留意。聴解問題II（11題）原始PDF該部分僅印出「絵などがありません」與空白的題號/選項編號、完全未印出對話原文或文字選項，本年份資料夾內亦無.doc補充聽力原文檔案可供補完，故全部11題標記needsReview，script/options留null，未擅自編造對話或選項。文字語彙問題II第2問(1)小題「しんせつ」選項2與選項4皆印刷成完全相同的文字「新扐」，屬原始印刷缺陷（雖不影響本題可作答性，正解為選項3「親切」，但兩個干擾選項重複印刷仍視為缺陷），標記needsReview並排除於題庫外。読解文法問題I第7問「ここをおす＿＿＿、にんぎょうが動きます。」選項4在原始PDF中完全空白（僅印出「４．」而無任何假名文字），屬原始印刷缺陷，標記needsReview並排除於題庫外（正解為選項3「と」，本身不受影響，但選項4缺字仍視為缺陷）。読解文法問題VI（最後一篇「アンさんへの手紙」）的読解文法.pdf原始文字層漏印了倒數第二段（「私は四月に高校生になりました…高校でもバスケットボールをつづけています。新しい友達がたくさんできました。」），資料夾內另附「最后一篇阅读卷子有漏倒数第二段.jpg」提供該段落的完整原文照片，本次已將該段落插回文章正確位置（第2段），並據此正確推導出問49「正しいものはどれですか」的答案（選項2「高校へ行くのに時間がかかります」，因為修復後的段落提到「一時間もかかる」），與官方答案卡的「2」完全吻合，可視為復原成功的驗證。",
+  "sourcePdf": "resources/past-exams/N3/2004/2004年日语能力考试3级真题-听力.pdf; resources/past-exams/N3/2004/2004年真题加答案/2004年日语能力考试3级真题-文字词汇.pdf; resources/past-exams/N3/2004/2004年真题加答案/2004年日语能力考试3级真题-读解文法.pdf",
+  "sections": [
+    {
+      "sectionId": "vocabulary",
+      "title": "文字・語彙",
+      "points": 100,
+      "minutes": 35,
+      "problems": [
+        {
+          "problemId": "I",
+          "instruction": "＿＿＿のことばはどうよみますか。１２３４からいちばんいいものをひとつえらびなさい。",
+          "type": "reading",
+          "items": [
+            {
+              "id": "voc-I-1-1",
+              "context": "わたしは西洋の文学が好きです。",
+              "prompt": "西洋",
+              "options": [
+                "せいゆう",
+                "せいよう",
+                "とうゆう",
+                "とうよう"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-I-1-2",
+              "context": "わたしは西洋の文学が好きです。",
+              "prompt": "文学",
+              "options": [
+                "いがく",
+                "かがく",
+                "おんがく",
+                "ぶんがく"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-I-1-3",
+              "context": "わたしは西洋の文学が好きです。",
+              "prompt": "好き",
+              "options": [
+                "すき",
+                "ずき",
+                "つき",
+                "づき"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-I-2-1",
+              "context": "7時までに会場に集まってください。",
+              "prompt": "会場",
+              "options": [
+                "あいば",
+                "かいば",
+                "あいじょう",
+                "かいじょう"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-I-2-2",
+              "context": "7時までに会場に集まってください。",
+              "prompt": "集まって",
+              "options": [
+                "きまって",
+                "とまって",
+                "あつまって",
+                "はじまって"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-I-3-1",
+              "context": "あの黒いビルが銀行です。",
+              "prompt": "黒い",
+              "options": [
+                "あおい",
+                "あさい",
+                "くろい",
+                "たかい"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-I-3-2",
+              "context": "あの黒いビルが銀行です。",
+              "prompt": "銀行",
+              "options": [
+                "きんこう",
+                "きんごう",
+                "ぎんこう",
+                "ぎんごう"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-I-4-1",
+              "context": "教室は広くて明るかった。",
+              "prompt": "教室",
+              "options": [
+                "きゅしつ",
+                "きょしつ",
+                "きゅうしつ",
+                "きょうしつ"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-I-4-2",
+              "context": "教室は広くて明るかった。",
+              "prompt": "広くて",
+              "options": [
+                "つえたくて",
+                "ふとくて",
+                "ひろくて",
+                "せまくて"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-I-4-3",
+              "context": "教室は広くて明るかった。",
+              "prompt": "明るかった",
+              "options": [
+                "ぬるかった",
+                "ふるかった",
+                "まるかった",
+                "あかるかった"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-I-5-1",
+              "context": "りんさんはいい声で歌います。",
+              "prompt": "声",
+              "options": [
+                "おと",
+                "おん",
+                "こえ",
+                "せい"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-I-5-2",
+              "context": "りんさんはいい声で歌います。",
+              "prompt": "歌います",
+              "options": [
+                "うたいます",
+                "うだいます",
+                "おたいます",
+                "おだいます"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-I-6-1",
+              "context": "きのう近所で火事があった。",
+              "prompt": "近所",
+              "options": [
+                "きんしょ",
+                "きんじょ",
+                "きんしょう",
+                "きんじょう"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-I-6-2",
+              "context": "きのう近所で火事があった。",
+              "prompt": "火事",
+              "options": [
+                "かじ",
+                "かち",
+                "ひじ",
+                "ひち"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-I-7-1",
+              "context": "日本の着物は有名です。",
+              "prompt": "着物",
+              "options": [
+                "きもの",
+                "きもん",
+                "つきもの",
+                "つきもん"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-I-7-2",
+              "context": "日本の着物は有名です。",
+              "prompt": "有名",
+              "options": [
+                "ゆめ",
+                "ゆめい",
+                "ゆうめ",
+                "ゆうめい"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-I-8-1",
+              "context": "楽しいしごとはどんどん進んですぐにおわります。",
+              "prompt": "楽しい",
+              "options": [
+                "かくしい",
+                "がくしい",
+                "たぬしい",
+                "たのしい"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-I-8-2",
+              "context": "楽しいしごとはどんどん進んですぐにおわります。",
+              "prompt": "進んで",
+              "options": [
+                "しんで",
+                "すんで",
+                "ししんで",
+                "すすんで"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-I-9-1",
+              "context": "出発に間に合わないかもしれません。",
+              "prompt": "出発",
+              "options": [
+                "しゅはつ",
+                "しゅぱる",
+                "しゅっはつ",
+                "しゅっぱつ"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-I-9-2",
+              "context": "出発に間に合わないかもしれません。",
+              "prompt": "間に合わない",
+              "options": [
+                "まにあわない",
+                "まにやわない",
+                "まにおわない",
+                "まによわない"
+              ],
+              "answerIndex": 0
+            }
+          ]
+        },
+        {
+          "problemId": "II",
+          "instruction": "＿＿＿のことばは漢字をつかってどう書きますか。1・2・3・4からいちばんいいものを一つえらびなさい。",
+          "type": "kanji",
+          "items": [
+            {
+              "id": "voc-II-1-1",
+              "context": "この かんじの もんだいに こたえて ください。",
+              "prompt": "かんじ",
+              "options": [
+                "漢宇",
+                "漢字",
+                "漠宇",
+                "漠字"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-II-1-2",
+              "context": "この かんじの もんだいに こたえて ください。",
+              "prompt": "もんだい",
+              "options": [
+                "門題",
+                "問題",
+                "門顕",
+                "問顕"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-II-1-3",
+              "context": "この かんじの もんだいに こたえて ください。",
+              "prompt": "こたえて",
+              "options": [
+                "応えて",
+                "応たえて",
+                "答えて",
+                "答たえて"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-II-2-1",
+              "context": "こばやしさんに みちを 聞いたら、しんせつに ちずを かいてくれました。",
+              "prompt": "しんせつ",
+              "options": [
+                "新切",
+                "新扐",
+                "親切",
+                "新扐"
+              ],
+              "answerIndex": 2,
+              "needsReview": true,
+              "reviewNote": "選項2與選項4皆印刷成完全相同的文字「新扐」，屬原始印刷缺陷（正解為選項3「親切」，本身不受影響，但兩個干擾選項重複印刷仍視為缺陷），暫不轉入題庫。"
+            },
+            {
+              "id": "voc-II-2-2",
+              "context": "こばやしさんに みちを 聞いたら、しんせつに ちずを かいてくれました。",
+              "prompt": "ちず",
+              "options": [
+                "他区",
+                "他図",
+                "地区",
+                "地図"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-II-3-1",
+              "context": "いしゃから くすり もらった",
+              "prompt": "いしゃ",
+              "options": [
+                "囶院",
+                "医院",
+                "囶者",
+                "医者"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-II-3-2",
+              "context": "いしゃから くすり もらった",
+              "prompt": "くすり",
+              "options": [
+                "薬",
+                "菜",
+                "茶",
+                "草"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-II-4-1",
+              "context": "じどうしゃの うんてんを ならって います。",
+              "prompt": "じどうしゃ",
+              "options": [
+                "自動車",
+                "自道車",
+                "自勤車",
+                "自働車"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-II-4-2",
+              "context": "じどうしゃの うんてんを ならって います。",
+              "prompt": "うんてん",
+              "options": [
+                "連転",
+                "運転",
+                "連軽",
+                "運軽"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-II-4-3",
+              "context": "じどうしゃの うんてんを ならって います。",
+              "prompt": "ならって",
+              "options": [
+                "勉って",
+                "習った",
+                "強って",
+                "練って"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-II-5-1",
+              "context": "きのうの ゆうがた たいふうが 来ました。",
+              "prompt": "ゆうがた",
+              "options": [
+                "夕万",
+                "夕方",
+                "多万",
+                "多方"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-II-5-2",
+              "context": "きのうの ゆうがた たいふうが 来ました。",
+              "prompt": "たいふう",
+              "options": [
+                "太凬",
+                "太風",
+                "台凬",
+                "台風"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-II-6-1",
+              "context": "はやく しゃしんを おくって ください。",
+              "prompt": "はやく",
+              "options": [
+                "早く",
+                "卓く",
+                "旱く",
+                "阜く"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-II-6-2",
+              "context": "はやく しゃしんを おくって ください。",
+              "prompt": "しゃしん",
+              "options": [
+                "曷真",
+                "曷頁",
+                "写真",
+                "写頁"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-II-6-3",
+              "context": "はやく しゃしんを おくって ください。",
+              "prompt": "おくって",
+              "options": [
+                "返って",
+                "送って",
+                "後って",
+                "遅って"
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "problemId": "III",
+          "instruction": "________のところに何を入れますか。1・2・3・4からいちばんいいものを一つえらびなさい。",
+          "type": "fill-in-blank-vocab",
+          "items": [
+            {
+              "id": "voc-III-1",
+              "prompt": "「いま、ファックスを おくっても いいですか。」\n「ええ、＿＿＿＿。」",
+              "options": [
+                "おだいじに",
+                "こちらこそ",
+                "かまいません",
+                "しつれいします"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-III-2",
+              "prompt": "この とおりは、よる くらくて＿＿＿。",
+              "options": [
+                "いたい",
+                "こわい",
+                "よわい",
+                "かなしい"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-III-3",
+              "prompt": "ずっと 日本に すむ つもりです。＿＿＿今、日本語を べんきょうして います。",
+              "options": [
+                "では",
+                "けれど",
+                "それで",
+                "たとえば"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-III-4",
+              "prompt": "この にくは かたいので、 よく＿＿＿食べて ください。",
+              "options": [
+                "かんで",
+                "こんで",
+                "のんで",
+                "やんで"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-III-5",
+              "prompt": "この ガラスの にんぎょうは こわれやすいので、＿＿＿ください。",
+              "options": [
+                "うつらないで",
+                "さわらないで",
+                "のこらないで",
+                "まわらないで"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-III-6",
+              "prompt": "らいねんの カレンダーを へやの＿＿＿に かけました。",
+              "options": [
+                "かべ",
+                "もん",
+                "たたみ",
+                "おくじょう"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-III-7",
+              "prompt": "きむらくんと＿＿＿して、けがをして しまった。",
+              "options": [
+                "けんか",
+                "けいけん",
+                "しょうち",
+                "しょうかい"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-III-8",
+              "prompt": "7時に レストランを＿＿＿して あります。",
+              "options": [
+                "ごちそう",
+                "よしゅう",
+                "やくそく",
+                "よやく"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-III-9",
+              "prompt": "たなかさんは、毎日＿＿＿に けんきゅうを して いる。",
+              "options": [
+                "あんしん",
+                "ざんねん",
+                "しんぱい",
+                "ねっしん"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-III-10",
+              "prompt": "わたしは＿＿＿で 一日 3時間 はたらいて います。",
+              "options": [
+                "ステレオ",
+                "テキスト",
+                "アクセサリー",
+                "パートタイム"
+              ],
+              "answerIndex": 3
+            }
+          ]
+        },
+        {
+          "problemId": "IV",
+          "instruction": "つぎの＿＿＿の文とだいたい同じいみの文はどれですか。1・2・3・4からいちばんいいものを一つえらびなさい。",
+          "type": "paraphrase",
+          "items": [
+            {
+              "id": "voc-IV-1",
+              "prompt": "すずきさん、ちょっと やせましたね。",
+              "options": [
+                "すずきさん、ちょっと ほそく なりました。",
+                "すずきさん、ちょっと はじめに なりました。",
+                "すずきさん、ちょっと うつくしく なりました。",
+                "すずきさん、ちょっと じょうぶに なりました。"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-IV-2",
+              "prompt": "名前を 書いたか どうか、もう いちど チェックして ください。",
+              "options": [
+                "もう いちど さがして ください。",
+                "もう いちど しまって ください。",
+                "もう いちど しらべて ください。",
+                "もう いちど たずねて ください。"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "voc-IV-3",
+              "prompt": "じを ていねいに 書きなさい。",
+              "options": [
+                "まんなかに じを 書きなさい。",
+                "きれいに じを 書きなさい。",
+                "おおきく じを 書きなさい。",
+                "いそいで じを 書きなさい。"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-IV-4",
+              "prompt": "ごごから こうぎに しゅっせきします。",
+              "options": [
+                "ごごから 大学で先生と かいぎを します。",
+                "ごごから 大学で 先生の 話を 聞きます。",
+                "ごごから 会社で 社長と かいぎを します。",
+                "ごごから 会社で 社長の 話を 聞きます。"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-IV-5",
+              "prompt": "きびしい じだいは もう すぎました。",
+              "options": [
+                "じゆうな じだいでした。",
+                "しずかな じだいでした。",
+                "にぎやかな じだいでした。",
+                "たいへんな じだいでした。"
+              ],
+              "answerIndex": 3
+            }
+          ]
+        },
+        {
+          "problemId": "V",
+          "instruction": "つぎの（1）から(5)のことばのつかいかたでいちばんいいものをえらびなさい。",
+          "type": "word-usage",
+          "items": [
+            {
+              "id": "voc-V-1",
+              "prompt": "だめ",
+              "options": [
+                "あしたは だめです。よていが あります。",
+                "わたしの だめが やっと なおりました。",
+                "きのうは 時間を だめに つかって しまった。",
+                "テレビを 買おうと したら、あと 2000円 だめだった。"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "voc-V-2",
+              "prompt": "おかげさまで",
+              "options": [
+                "Ａ「ごめんなさい。」Ｂ「いいえ、おかげさまで。」",
+                "Ａ「おげんきですか。」Ｂ「ええ、おかげさまで。」",
+                "Ａ「それは いけませんね。」Ｂ「ええ、おかげさまで。」",
+                "Ａ「ありがとうございました。」Ｂ「いいえ、おかげさまで。」"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-V-3",
+              "prompt": "かたづける",
+              "options": [
+                "毎日 かおを かたづけなさい。",
+                "毎日 へやを かたづけなさい。",
+                "毎日 カーテンを かたづけなさい。",
+                "毎日 きょうみを かたづけなさい。"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "voc-V-4",
+              "prompt": "あやまる",
+              "options": [
+                "こまった ときには すぐに あやまって ください。",
+                "友だちに おくりものを もらったので、あやまりました。",
+                "てつだって もらった ときには かならず あやまって ください。",
+                "しらない 人の 足を ふんで しまったので、あやまりました。"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "voc-V-5",
+              "prompt": "むかえる",
+              "options": [
+                "ひるが よるを むかえました。",
+                "えきから タクシーを むかえました。",
+                "友だちを むかえに くうこうへ いきました。",
+                "パソコンを むかえて メールを書いて います。"
+              ],
+              "answerIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "listening",
+      "title": "聴解",
+      "points": 100,
+      "minutes": 35,
+      "audioUrl": "/exam-audio/jlpt-n3-2004/listening.mp3",
+      "notes": "整段聴解錄音（含問題I、II全部題目，依序播放，前面另有例1・例2兩題練習範例未收錄於此）。原始PDF問題I（14題）僅印出插圖與選項編號、未印對話原文；問題II（11題）僅印出「絵などがありません」，完全未印出對話原文或選項文字，script/optionsはnull。",
+      "problems": [
+        {
+          "problemId": "I",
+          "instruction": "絵を見ながらもんだいをききます。",
+          "type": "listening-with-image-options",
+          "items": [
+            {
+              "id": "lis-I-1",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "テストの点数（点数のメモが書かれた4枚の紙）を示すイラスト。①40/100 ②50/100 ③60/100 ④70/100。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-1.png",
+              "options": null,
+              "answerIndex": 2
+            },
+            {
+              "id": "lis-I-2",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "4種類の行動をしている人物のイラスト。①洗濯機で洗濯をしている女性 ②掃除機をかけている女性 ③テニスをしている女性 ④パソコンの前で電話をしながら仕事をしている女性。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-2.png",
+              "options": null,
+              "answerIndex": 3
+            },
+            {
+              "id": "lis-I-3",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "すし・サンドイッチの盛り合わせパターンを示すイラスト。①すしのみ（サンドイッチの皿は空） ②サンドイッチのみ（すしの皿は空） ③すし・サンドイッチともに少量 ④すし・サンドイッチともにたくさん。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-3.png",
+              "options": null,
+              "answerIndex": 3
+            },
+            {
+              "id": "lis-I-4",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "電車・バス・IC カードのようなカードをタッチする機械の順番を示すイラスト。①電車→機械→バス ②機械→電車→バス ③電車→バス→機械 ④バス→機械→電車。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-4.png",
+              "options": null,
+              "answerIndex": 2
+            },
+            {
+              "id": "lis-I-5",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "テレビ台・本棚・観葉植物が並ぶ部屋の絵で、①〜④の位置に点線の丸（何かを置く場所の候補）が示されている。①はテレビの上あたり、②は本棚の上、③は本棚と観葉植物の間、④は観葉植物の右の壁。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-5.png",
+              "options": null,
+              "answerIndex": 2
+            },
+            {
+              "id": "lis-I-6",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "4種類の持ち物のイラスト。①ネクタイ ②靴下 ③ノートパソコン ④かばん（アタッシュケース）。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-6.png",
+              "options": null,
+              "answerIndex": 3
+            },
+            {
+              "id": "lis-I-7",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "日/月/火/水/木/金/土のカレンダー表で、10日・11日・12日・13日に丸印が付き、それぞれ矢印で選択肢①②③④に対応づけられている。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-7.png",
+              "options": null,
+              "answerIndex": 1
+            },
+            {
+              "id": "lis-I-8",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "4つの時刻を示す選択肢。①8:10 ②8:20 ③8:30 ④9:00。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-8.png",
+              "options": null,
+              "answerIndex": 1
+            },
+            {
+              "id": "lis-I-9",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "4種類の飲食物のイラスト。①ビールの瓶 ②すしの盛り合わせ ③ケーキ（一切れ） ④ぶどうとメロン。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-9.png",
+              "options": null,
+              "answerIndex": 0
+            },
+            {
+              "id": "lis-I-10",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "気温の年間変化を示す4種類の折れ線グラフ（縦軸℃、横軸1〜12月）。①山型の逆（冬が高く夏が低い) ②同じく逆山型で振れ幅が小さいもの ③夏に向かって上昇し秋にかけて下降する山型（変動が大きい） ④同じく山型だが振れ幅が小さいもの。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-10.png",
+              "options": null,
+              "answerIndex": 1
+            },
+            {
+              "id": "lis-I-11",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "4種類の物のイラスト。①テレビ ②一万円札（2枚） ③開いた本 ④ノートパソコン。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-11.png",
+              "options": null,
+              "answerIndex": 3
+            },
+            {
+              "id": "lis-I-12",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "庭（花壇・木・池）のレイアウトパターンを示す4種類のイラスト。①木2本＋花壇のみ ②木2本＋花壇＋池 ③木1本＋花壇のみ（木が右に1本だけ) ④木1本＋花壇＋池。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-12.png",
+              "options": null,
+              "answerIndex": 0
+            },
+            {
+              "id": "lis-I-13",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "人数を示す4つの選択肢。①10人 ②20人 ③30人 ④40人。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-13.png",
+              "options": null,
+              "answerIndex": 1
+            },
+            {
+              "id": "lis-I-14",
+              "script": null,
+              "hasImageOptions": true,
+              "imageDescription": "4種類のイラスト。①「フジアパート 35かい」と書かれたビルの案内図（矢印で35階を指す） ②「3500m 山にのぼろう！」と書かれた山のポスター ③椅子に座る女性（矢印で椅子を指す） ④ハイヒールの靴（矢印でかかとを指す）。",
+              "imageUrl": "/exam-images/jlpt-n3-2004/lis-I-14.png",
+              "options": null,
+              "answerIndex": 0
+            }
+          ]
+        },
+        {
+          "problemId": "II",
+          "instruction": "絵などがありません。",
+          "type": "listening-text-only",
+          "items": [
+            {
+              "id": "lis-II-1",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-2",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-3",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-4",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-5",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-6",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-7",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-8",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-9",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-10",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            },
+            {
+              "id": "lis-II-11",
+              "script": null,
+              "question": null,
+              "options": null,
+              "answerIndex": null,
+              "needsReview": true,
+              "reviewNote": "原始PDF該題完全未印出對話原文或文字選項（僅顯示「絵などがありません」與空白的題號/選項編號），本年份資料夾內亦無.doc補充聽力原文檔案可供補完，執行環境亦無法直接處理.mp3音檔進行逐字聽寫，故無法得知題目內容，未擅自編造對話或選項。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "readingGrammar",
+      "title": "読解・文法",
+      "points": 200,
+      "minutes": 70,
+      "problems": [
+        {
+          "problemId": "I",
+          "instruction": "＿＿＿のところに何をいれますか。１、２、３、４からいちばんいいものを一つえらびなさい。",
+          "type": "particle-fill-in-blank",
+          "items": [
+            {
+              "id": "gr-I-1",
+              "prompt": "じしん＿＿＿ビルが たおれました。",
+              "options": [
+                "を",
+                "と",
+                "に",
+                "で"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-I-2",
+              "prompt": "いっしょに コーヒー＿＿＿いかがですか。",
+              "options": [
+                "で",
+                "が",
+                "にも",
+                "でも"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-I-3",
+              "prompt": "来週 ここで テニスの 試合＿＿＿行われます。",
+              "options": [
+                "を",
+                "が",
+                "に",
+                "で"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-I-4",
+              "prompt": "じしょを わすれたので、友だち＿＿＿貸して もらった。",
+              "options": [
+                "へ",
+                "に",
+                "を",
+                "か"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-I-5",
+              "prompt": "私は、中川＿＿＿もうします。",
+              "options": [
+                "の",
+                "を",
+                "と",
+                "は"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-I-6",
+              "prompt": "せんぱい＿＿＿私に おみやげを くださいました。",
+              "options": [
+                "が",
+                "を",
+                "で",
+                "に"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-I-7",
+              "prompt": "ここを おす＿＿＿、にんぎょうが 動きます。",
+              "options": [
+                "の",
+                "で",
+                "と",
+                null
+              ],
+              "answerIndex": 2,
+              "needsReview": true,
+              "reviewNote": "選項4在原始PDF中完全空白（僅印出「４．」而無任何假名文字），屬原始印刷缺陷（正解為選項3「と」，本身不受影響，但選項4缺字仍視為缺陷），暫不轉入題庫。"
+            },
+            {
+              "id": "gr-I-8",
+              "prompt": "日本の 音楽は まだ 聞いた こと＿＿＿ありません。",
+              "options": [
+                "を",
+                "に",
+                "で",
+                "が"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-I-9",
+              "prompt": "だれ＿＿＿まどを しめて ください。",
+              "options": [
+                "は",
+                "が",
+                "か",
+                "に"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-I-10",
+              "prompt": "プレゼントは 花＿＿＿しましょう。",
+              "options": [
+                "に",
+                "が",
+                "を",
+                "も"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-I-11",
+              "prompt": "楽しかった 旅行の こと＿＿＿ 思い出して います。",
+              "options": [
+                "ながら",
+                "ばかり",
+                "しか",
+                "までに"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-I-12",
+              "prompt": "私は 母＿＿＿なかせる ような ことは したくない。",
+              "options": [
+                "へ",
+                "を",
+                "に",
+                "の"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-I-13",
+              "prompt": "空を 鳥が とんで いる＿＿＿見えます。",
+              "options": [
+                "が",
+                "を",
+                "のが",
+                "のを"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-I-14",
+              "prompt": "ふうとう＿＿＿切手を はって ください。",
+              "options": [
+                "に",
+                "で",
+                "を",
+                "が"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-I-15",
+              "prompt": "おとした さいふ＿＿＿あって、よかったですね。",
+              "options": [
+                "が",
+                "に",
+                "を",
+                "の"
+              ],
+              "answerIndex": 0
+            }
+          ]
+        },
+        {
+          "problemId": "II",
+          "instruction": "＿＿＿のところに何を入れますか。1・2・3・4からいちばんいいものを一つえらびなさい。",
+          "type": "conjugation-fill-in-blank",
+          "items": [
+            {
+              "id": "gr-II-1",
+              "prompt": "おきゃくさんが 来るから テーブルの 上に おさらを＿＿＿おきます。",
+              "options": [
+                "ならべて",
+                "ならんで",
+                "ならべる",
+                "ならぶ"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-II-2",
+              "prompt": "テキストを＿＿＿答えて ください。",
+              "options": [
+                "見なく",
+                "見なくて",
+                "見ずに",
+                "見ずで"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-II-3",
+              "prompt": "むすこは ひとりで くつが＿＿＿ように なりました。",
+              "options": [
+                "はけた",
+                "はいた",
+                "はかない",
+                "はける"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-II-4",
+              "prompt": "私は 仕事を＿＿＿つもりです。",
+              "options": [
+                "やめない",
+                "やめたい",
+                "やめよう",
+                "やめたくない"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-II-5",
+              "prompt": "意見が ある 方は、＿＿＿ください。",
+              "options": [
+                "おっしゃりて",
+                "おっしゃって",
+                "おっしゃい",
+                "おっしゃり"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-II-6",
+              "prompt": "＿＿＿ので、よく パソコンを 使います。",
+              "options": [
+                "へんりで",
+                "べんり",
+                "べんりな",
+                "べんりだ"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-II-7",
+              "prompt": "たぶん 明日も 風が＿＿＿だろう。",
+              "options": [
+                "強く",
+                "強い",
+                "強くて",
+                "強いと"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-II-8",
+              "prompt": "ねる 前に かならず はを＿＿＿いけません。",
+              "options": [
+                "みがけば",
+                "みがかないで",
+                "みがいても",
+                "みがかなくては"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-II-9",
+              "prompt": "これから パンを ＿＿＿ところです。",
+              "options": [
+                "やいている",
+                "やけている",
+                "やく",
+                "やける"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-II-10",
+              "prompt": "コピーの 字が＿＿＿すぎて、読めません。",
+              "options": [
+                "うす",
+                "うすく",
+                "うすい",
+                "うすくて"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-II-11",
+              "prompt": "ここで 写真を＿＿＿だめだよ。",
+              "options": [
+                "とって",
+                "とっちゃ",
+                "とるは",
+                "とっちゃう"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-II-12",
+              "prompt": "みなさん、どうぞ お＿＿＿ください。",
+              "options": [
+                "すわって",
+                "すわり",
+                "すわる",
+                "すわりて"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-II-13",
+              "prompt": "図書館で この 町の れきしを＿＿＿ことが できます。",
+              "options": [
+                "しらべた",
+                "しらべられる",
+                "しらべる",
+                "しらべて"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-II-14",
+              "prompt": "電車に おくれる。＿＿＿。",
+              "options": [
+                "急がず",
+                "急ぐな",
+                "急ぎ",
+                "急げ"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-II-15",
+              "prompt": "６さいから 小学校に＿＿＿はじめる。",
+              "options": [
+                "通わ",
+                "通う",
+                "通った",
+                "通い"
+              ],
+              "answerIndex": 3
+            }
+          ]
+        },
+        {
+          "problemId": "III",
+          "instruction": "＿＿＿のところに何を入れますか。1･2･3･4からいちばんいいものを一つえらびなさい。",
+          "type": "conjugation-fill-in-blank",
+          "items": [
+            {
+              "id": "gr-III-1",
+              "prompt": "ネクタイ売り場は ２かいに＿＿＿。",
+              "options": [
+                "あってございます",
+                "おあります",
+                "いらっしゃいます",
+                "ございます"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-III-2",
+              "prompt": "急に 雨が ふり＿＿＿。",
+              "options": [
+                "つづけた",
+                "だした",
+                "でた",
+                "きた"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-III-3",
+              "prompt": "めがねを かけた＿＿＿ねて しまいました。",
+              "options": [
+                "あいだ",
+                "ながら",
+                "まま",
+                "まえに"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-III-4",
+              "prompt": "アルコールは もう 飲まない＿＿＿に する。",
+              "options": [
+                "ところ",
+                "ため",
+                "こと",
+                "もの"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-III-5",
+              "prompt": "私の へやの＿＿＿は この へやと だいたい 同じです。",
+              "options": [
+                "広さ",
+                "広い",
+                "広く",
+                "広くて"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-III-6",
+              "prompt": "中田さんが 大学を そつぎょうできた＿＿＿知って いますか。",
+              "options": [
+                "ように",
+                "かどうか",
+                "だろうを",
+                "ことが"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-III-7",
+              "prompt": "先生は もう＿＿＿。",
+              "options": [
+                "お帰りいたしました",
+                "お帰りにしました",
+                "お帰りされました",
+                "お帰りになりました"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-III-8",
+              "prompt": "私が 弟の シャツを 洗って＿＿＿。",
+              "options": [
+                "やった",
+                "くれた",
+                "くださった",
+                "いただけた"
+              ],
+              "answerIndex": 0
+            }
+          ]
+        },
+        {
+          "problemId": "IV",
+          "instruction": "つぎの会話の＿＿＿には、どんなことばを入れたらいいですか。1･2･3･4からいちばんいいものを一つえらびなさい。",
+          "type": "dialogue-response",
+          "items": [
+            {
+              "id": "gr-IV-1",
+              "prompt": "大山「小川さん、この 本を 山田先生に わたして くださいませんか。」\n小川「わかりました。あどで＿＿＿。」",
+              "options": [
+                "おわたし します",
+                "おわたしに なります",
+                "わたされます",
+                "わたして おります"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-IV-2",
+              "prompt": "Ａ「カメラを 買いたいんですが、どこが いいですか。」\nＢ「カメラを＿＿＿、駅の そばの 店が 安くて いいですよ。」",
+              "options": [
+                "買うと",
+                "買えば",
+                "買ったら",
+                "買うなら"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-IV-3",
+              "prompt": "中村「山川さん、にもつが 重くて たいへんでしたね。」\n山川「ええ。でも、友だちが くうこうまで 車で 送って＿＿＿。」",
+              "options": [
+                "いただいたんです",
+                "くれたんです",
+                "もらったんです",
+                "あげたんです"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-IV-4",
+              "prompt": "Ａ「あ、たいへんだ。この車 ガソリンが＿＿＿よ。」\nＢ「ほんとうだ。早く 入れた ほうが いいですね。」",
+              "options": [
+                "なくなる らしいです",
+                "なくなる そうです",
+                "なくなる はずです",
+                "なくなりそうです"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-IV-5",
+              "prompt": "Ａ「きょうは、買い物に 行きますか。」\nＢ「雨が ＿＿＿、お金も いないので 行きません。」",
+              "options": [
+                "ふって いるし",
+                "ふって いるのに",
+                "ふって いるため",
+                "ふって いると"
+              ],
+              "answerIndex": 0
+            }
+          ]
+        },
+        {
+          "problemId": "V",
+          "instruction": "つぎの 会話を 読んで 質問に 答えなさい。答えは1．２．３．４からいちばんいいものを一つえらびなさい。",
+          "type": "dialogue-cloze",
+          "items": [
+            {
+              "id": "gr-V-1",
+              "passage": "田中さんと りーさんは 友だちです。こんばん、田中さんの 家で パーティーを します。今 二人は 田中さんの 家で 話して います。\n田中「そろそろ パーティーの じゅんびを しましょう。」\nリー「私も てつだいます。みんな 何時ごろ 来るんですか。」\n田中「５時ごろ 来ると 言って いました。」\nリー「はじめに 何を しますか。」\n田中「そうじは 朝 して しまいましたから、花を かざりましょう。さっき友だちに 花を もらったんです。」\nリー「私は 音楽の テープを たくさん 持って きました。みんな どんな音楽が 好きですか。」\n田中「何でも 好きですよ。でも、小林さんは しずかな 音楽が 好きだと思います。にぎやかな 音楽は あまり・・・。」\nリー「そうですか。料理はどうですか。」\n田中「料理は まだ ぜんぜん 作って いません。」\nリー「私の 国の 料理を 作っても いません。」\n田中「いいですね。（４４）。おねがいします。れいぞうこに やさいと 肉が （４５）から、よかったら 使って ください。」\nリー「ありがとう こざいます。」",
+              "question": "４４には何を入れますか。",
+              "options": [
+                "食べたがって",
+                "食べてみたいです",
+                "作ってあげます",
+                "作るつもりです"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-V-2",
+              "passage": "田中さんと りーさんは 友だちです。こんばん、田中さんの 家で パーティーを します。今 二人は 田中さんの 家で 話して います。\n田中「そろそろ パーティーの じゅんびを しましょう。」\nリー「私も てつだいます。みんな 何時ごろ 来るんですか。」\n田中「５時ごろ 来ると 言って いました。」\nリー「はじめに 何を しますか。」\n田中「そうじは 朝 して しまいましたから、花を かざりましょう。さっき友だちに 花を もらったんです。」\nリー「私は 音楽の テープを たくさん 持って きました。みんな どんな音楽が 好きですか。」\n田中「何でも 好きですよ。でも、小林さんは しずかな 音楽が 好きだと思います。にぎやかな 音楽は あまり・・・。」\nリー「そうですか。料理はどうですか。」\n田中「料理は まだ ぜんぜん 作って いません。」\nリー「私の 国の 料理を 作っても いません。」\n田中「いいですね。（４４）。おねがいします。れいぞうこに やさいと 肉が （４５）から、よかったら 使って ください。」\nリー「ありがとう こざいます。」",
+              "question": "４５には何を入れますか。",
+              "options": [
+                "入れてしまいます",
+                "入れておきます",
+                "入ってみます",
+                "入っています"
+              ],
+              "answerIndex": 3
+            },
+            {
+              "id": "gr-V-3",
+              "passage": "田中さんと りーさんは 友だちです。こんばん、田中さんの 家で パーティーを します。今 二人は 田中さんの 家で 話して います。\n田中「そろそろ パーティーの じゅんびを しましょう。」\nリー「私も てつだいます。みんな 何時ごろ 来るんですか。」\n田中「５時ごろ 来ると 言って いました。」\nリー「はじめに 何を しますか。」\n田中「そうじは 朝 して しまいましたから、花を かざりましょう。さっき友だちに 花を もらったんです。」\nリー「私は 音楽の テープを たくさん 持って きました。みんな どんな音楽が 好きですか。」\n田中「何でも 好きですよ。でも、小林さんは しずかな 音楽が 好きだと思います。にぎやかな 音楽は あまり・・・。」\nリー「そうですか。料理はどうですか。」\n田中「料理は まだ ぜんぜん 作って いません。」\nリー「私の 国の 料理を 作っても いません。」\n田中「いいですね。（４４）。おねがいします。れいぞうこに やさいと 肉が （４５）から、よかったら 使って ください。」\nリー「ありがとう こざいます。」",
+              "question": "リーさんは田中さんの家に来てから何をしますか。",
+              "options": [
+                "音楽のテープを買いに行きます。",
+                "田中さんに 花を 買います。",
+                "料理を作ります。",
+                "そうじをします。"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "id": "gr-V-4",
+              "passage": "田中さんと りーさんは 友だちです。こんばん、田中さんの 家で パーティーを します。今 二人は 田中さんの 家で 話して います。\n田中「そろそろ パーティーの じゅんびを しましょう。」\nリー「私も てつだいます。みんな 何時ごろ 来るんですか。」\n田中「５時ごろ 来ると 言って いました。」\nリー「はじめに 何を しますか。」\n田中「そうじは 朝 して しまいましたから、花を かざりましょう。さっき友だちに 花を もらったんです。」\nリー「私は 音楽の テープを たくさん 持って きました。みんな どんな音楽が 好きですか。」\n田中「何でも 好きですよ。でも、小林さんは しずかな 音楽が 好きだと思います。にぎやかな 音楽は あまり・・・。」\nリー「そうですか。料理はどうですか。」\n田中「料理は まだ ぜんぜん 作って いません。」\nリー「私の 国の 料理を 作っても いません。」\n田中「いいですね。（４４）。おねがいします。れいぞうこに やさいと 肉が （４５）から、よかったら 使って ください。」\nリー「ありがとう こざいます。」",
+              "question": "小林さんはどんな音楽が好きですか。",
+              "options": [
+                "どんな音楽も好きではありません。",
+                "にぎやかな音楽が 好きです。",
+                "しずかな音楽が好きです。",
+                "音楽は 何でも好きです。"
+              ],
+              "answerIndex": 2
+            }
+          ]
+        },
+        {
+          "problemId": "VI",
+          "instruction": "つぎの文を読んで、質問に答えなさい。答えは1･2･3･4からいちばんいいものを一つえらびなさい。",
+          "type": "reading-comprehension",
+          "items": [
+            {
+              "id": "gr-VI-1",
+              "passage": "アンさん、こんにちは。お元気ですか。\n今も 前と 同じ 会社で 仕事を して いますか。毎日 忙しいですか。アンさんが、３月に 国へ 帰ってから、私の 家は 少し さびしく なりました。アンさんが 使って いた へやは 今は だれも 使って いません。父も 母も よく アンさんの ことを 話して います。私も アンさんに いただいた にんぎょうを 見て 楽しかった ときのことを 思い出して います。そして アンさんに 教えて いただいた ケーキを ときどき 作って います。\n私は 四月に 高校生に なりました。高校は 家から 遠いので、電車に 乗って 通わなければ なりません。一時間も かかるので、少し たいへんです。勉強は まだ それほど 難しく ありません。高校でも バスケットボールを つづけて います。新しい 友達が たくさん できました。\nおととい、アンさんと いっしょに 行った 公園へ 高校の 友達と 行きました。いろいろな 花が 咲いて いて、とても きれいでした。そのときに 友達と とった 写真を いっしょに 送ります。\nそれでは、また 手紙を 書きます。\n５月７日\nさとう まりこ",
+              "question": "アンさんは日本へ来る前、何をしていまいたか。",
+              "options": [
+                "会社ではたらいていました。",
+                "店でケーキを作っていました。",
+                "にんぎょうを作っていました。",
+                "高校に通っていました。"
+              ],
+              "answerIndex": 0
+            },
+            {
+              "id": "gr-VI-2",
+              "passage": "アンさん、こんにちは。お元気ですか。\n今も 前と 同じ 会社で 仕事を して いますか。毎日 忙しいですか。アンさんが、３月に 国へ 帰ってから、私の 家は 少し さびしく なりました。アンさんが 使って いた へやは 今は だれも 使って いません。父も 母も よく アンさんの ことを 話して います。私も アンさんに いただいた にんぎょうを 見て 楽しかった ときのことを 思い出して います。そして アンさんに 教えて いただいた ケーキを ときどき 作って います。\n私は 四月に 高校生に なりました。高校は 家から 遠いので、電車に 乗って 通わなければ なりません。一時間も かかるので、少し たいへんです。勉強は まだ それほど 難しく ありません。高校でも バスケットボールを つづけて います。新しい 友達が たくさん できました。\nおととい、アンさんと いっしょに 行った 公園へ 高校の 友達と 行きました。いろいろな 花が 咲いて いて、とても きれいでした。そのときに 友達と とった 写真を いっしょに 送ります。\nそれでは、また 手紙を 書きます。\n５月７日\nさとう まりこ",
+              "question": "正しいものはどれですか。",
+              "options": [
+                "まりこさんは今友だちが あまりいません。",
+                "まりこさんは高校へ行くのに時間がかかります。",
+                "まりこさんは今勉強がむずかしくて たいへんです。",
+                "まりこさんは高校に入ってから バスケットボーツを はじめました。"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "id": "gr-VI-3",
+              "passage": "アンさん、こんにちは。お元気ですか。\n今も 前と 同じ 会社で 仕事を して いますか。毎日 忙しいですか。アンさんが、３月に 国へ 帰ってから、私の 家は 少し さびしく なりました。アンさんが 使って いた へやは 今は だれも 使って いません。父も 母も よく アンさんの ことを 話して います。私も アンさんに いただいた にんぎょうを 見て 楽しかった ときのことを 思い出して います。そして アンさんに 教えて いただいた ケーキを ときどき 作って います。\n私は 四月に 高校生に なりました。高校は 家から 遠いので、電車に 乗って 通わなければ なりません。一時間も かかるので、少し たいへんです。勉強は まだ それほど 難しく ありません。高校でも バスケットボールを つづけて います。新しい 友達が たくさん できました。\nおととい、アンさんと いっしょに 行った 公園へ 高校の 友達と 行きました。いろいろな 花が 咲いて いて、とても きれいでした。そのときに 友達と とった 写真を いっしょに 送ります。\nそれでは、また 手紙を 書きます。\n５月７日\nさとう まりこ",
+              "question": "手紙といっしょに何の写真を送りますか。",
+              "options": [
+                "まりこさんがとったアンさんの写真",
+                "まりこさんと りょうしんの 写真",
+                "まりこさんと友だちの写真",
+                "まりこさんの高校の写真"
+              ],
+              "answerIndex": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
