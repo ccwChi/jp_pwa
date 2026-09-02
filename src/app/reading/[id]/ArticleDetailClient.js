@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { getArticle, getAdjacentParts, getSeriesParts } from '@/lib/reading/articles';
 import { parseFurigana, readingOf } from '@/lib/reading/furigana';
+import { playAudioOrSpeak, stopAllPlayback } from '@/lib/audio/playback';
 import {
   setProgress,
   setRead,
@@ -20,6 +21,8 @@ import {
   setListenGap,
   useListenBlackout,
   setListenBlackout,
+  useDictationMode,
+  setDictationMode,
 } from '@/lib/storage';
 import Sentence from '../Sentence';
 
@@ -87,6 +90,7 @@ export default function ArticleDetailClient({ id }) {
   const readSet = useReadSet();
   const fontScale = useFontScale();
   const zhBlur = useZhBlur();
+  const dictationMode = useDictationMode();
   const speechRate = useSpeechRate();
   const listenZh = useListenZh();
   const listenGap = useListenGap();
@@ -180,11 +184,7 @@ export default function ArticleDetailClient({ id }) {
   }, [fontScale]);
 
   useEffect(() => {
-    return () => {
-      if (typeof window !== 'undefined' && window.speechSynthesis) {
-        window.speechSynthesis.cancel();
-      }
-    };
+    return () => stopAllPlayback();
   }, [article?.id]);
 
   if (!article) {
@@ -295,6 +295,18 @@ export default function ArticleDetailClient({ id }) {
                 中文翻譯
               </label>
 
+              <label className="zh-blur-toggle" title="先聽發音，點擊才顯示原文">
+                <span className="switch">
+                  <input
+                    type="checkbox"
+                    checked={dictationMode}
+                    onChange={e => setDictationMode(e.target.checked)}
+                  />
+                  <span className="switch-track" />
+                </span>
+                聽寫模式
+              </label>
+
               <div className="font-scale-control">
                 <button
                   type="button"
@@ -324,8 +336,10 @@ export default function ArticleDetailClient({ id }) {
                 zh={s.zh}
                 showRomaji={showRomaji}
                 blurZh={zhBlur}
+                dictationMode={dictationMode}
                 vocab={article.vocab}
                 rate={speechRate}
+                audioUrl={`/audio/reading/${article.id}/${i}.mp3`}
                 onVocabEnter={handleVocabEnter}
                 onVocabLeave={handleVocabLeave}
                 onVocabClick={handleVocabClick}
@@ -564,7 +578,7 @@ function ListenMode({ article, rate, listenZh, listenGap, listenBlackout, onExit
     return () => {
       cancelled = true;
       tokenRef.current += 1;
-      if (typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
+      stopAllPlayback();
       wakeLockRef.current?.release?.();
     };
   }, []);
@@ -624,27 +638,12 @@ function ListenMode({ article, rate, listenZh, listenGap, listenBlackout, onExit
       if (closest !== index) {
         if (playing) {
           tokenRef.current += 1;
-          if (typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
+          stopAllPlayback();
           setPlaying(false);
         }
         setIndex(closest);
       }
     }, 150);
-  }
-
-  function speakText(text, lang, utterRate) {
-    return new Promise(resolve => {
-      if (typeof window === 'undefined' || !window.speechSynthesis) {
-        resolve();
-        return;
-      }
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = lang;
-      utterance.rate = utterRate;
-      utterance.onend = resolve;
-      utterance.onerror = resolve;
-      window.speechSynthesis.speak(utterance);
-    });
   }
 
   function wait(ms) {
@@ -658,12 +657,17 @@ function ListenMode({ article, rate, listenZh, listenGap, listenBlackout, onExit
       if (tokenRef.current !== token) return;
       setIndex(i);
       const s = article.sentences[i];
-      await speakText(readingOf(s.jp), 'ja-JP', rate);
+      await playAudioOrSpeak({
+        url: `/audio/reading/${article.id}/${i}.mp3`,
+        text: readingOf(s.jp),
+        lang: 'ja-JP',
+        rate,
+      });
       if (tokenRef.current !== token) return;
       await wait(listenGap);
       if (tokenRef.current !== token) return;
       if (listenZh) {
-        await speakText(s.zh, 'zh-TW', 1);
+        await playAudioOrSpeak({ text: s.zh, lang: 'zh-TW', rate: 1 });
         if (tokenRef.current !== token) return;
         await wait(listenGap);
         if (tokenRef.current !== token) return;
@@ -675,7 +679,7 @@ function ListenMode({ article, rate, listenZh, listenGap, listenBlackout, onExit
   function togglePlay() {
     if (playing) {
       tokenRef.current += 1;
-      if (typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
+      stopAllPlayback();
       setPlaying(false);
     } else {
       runFrom(index);
@@ -686,7 +690,7 @@ function ListenMode({ article, rate, listenZh, listenGap, listenBlackout, onExit
   function jumpTo(i) {
     if (playing) {
       tokenRef.current += 1;
-      if (typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
+      stopAllPlayback();
       setPlaying(false);
     }
     setIndex(i);

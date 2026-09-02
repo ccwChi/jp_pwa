@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { getPastExam, getPastExamStructure } from '@/lib/past-exams';
 import { getBankItems, resolveAssetUrl } from '@/lib/practice/bank';
+import { playAudioOrSpeak } from '@/lib/audio/playback';
 import { renderAnnotatedText, NotePanel, OptionExplanations } from '@/lib/practice/bank/notes';
 import ExplainEditor from './ExplainEditor';
 import {
@@ -79,14 +80,10 @@ function ExamReviewItem({ structure: s, item, index, chosenIndex, showHeader, on
   const chosenText = answered ? item.meaning.options[chosenIndex] : '（未作答）';
   const correctText = item.meaning.options[item.meaning.answerIndex];
   const [editing, setEditing] = useState(false);
+  const scriptAudio = resolveAssetUrl(item, 'audio');
 
   function speakScript() {
-    if (typeof window === 'undefined' || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(item.script);
-    utterance.lang = 'ja-JP';
-    utterance.rate = speechRate || 1;
-    window.speechSynthesis.speak(utterance);
+    playAudioOrSpeak({ url: scriptAudio.url, text: item.script, lang: 'ja-JP', rate: speechRate || 1 });
   }
 
   return (
@@ -105,7 +102,7 @@ function ExamReviewItem({ structure: s, item, index, chosenIndex, showHeader, on
         {isListening && item.script && (
           <div className="exam-script-block">
             <button type="button" className="btn exam-script-play-btn" onClick={speakScript}>
-              🔊 朗讀原文（瀏覽器語音，非原始錄音，僅供檢討參考）
+              {scriptAudio.url ? '🔊 朗讀原文' : '🔊 朗讀原文（瀏覽器語音，非原始錄音，僅供檢討參考）'}
             </button>
             <p className="exam-listening-script">{item.script}</p>
           </div>

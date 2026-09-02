@@ -377,6 +377,22 @@ export function setListenGap(value) {
 
 export const useListenGap = listenGapStore.useValue;
 
+// ── Dictation mode: hide a sentence's Japanese text (like zh blur already
+// hides the translation) until the reader has listened and clicks to reveal
+// — forces listening-first instead of reading-first ─────────────────────
+
+const dictationModeStore = createStore('nj_dictation_mode', false);
+
+export function getDictationMode() {
+  return dictationModeStore.get();
+}
+
+export function setDictationMode(value) {
+  dictationModeStore.set(value);
+}
+
+export const useDictationMode = dictationModeStore.useValue;
+
 // ── Chinese translation blur: hide zh text behind a click-to-reveal blur ──
 
 const zhBlurStore = createStore('nj_zh_blur', false);
