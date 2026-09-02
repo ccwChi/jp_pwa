@@ -5,8 +5,9 @@ const features = [
   { num: '二', name: '文法學習', desc: '依等級與分類系統整理文法點，附例句與練習題', href: '/grammar', accent: 'seal' },
   { num: '三', name: '分級測驗', desc: '依你的程度出題，附文法解析與進度', href: '/practice' },
   { num: '四', name: '個人筆記', desc: '收藏句子與文法，建立可複習的語感庫', href: '/notes', accent: 'good' },
-  { num: '五', name: '歌詞解析', desc: '歌詞片段的文法拆解與聽力重點', soon: true },
-  { num: '六', name: '動畫翻譯', desc: '台詞聽力與文法解析，追番同步練習', soon: true },
+  { num: '五', name: '文化背景', desc: '搞笑套路、地域差異、社會潛規則等小知識，補上語言之外的理解落差', href: '/culture', accent: 'good' },
+  { num: '六', name: '歌詞解析', desc: '歌詞片段的文法拆解與聽力重點', soon: true },
+  { num: '七', name: '情境聽力短劇', desc: '原創連載對話劇本，練生活情境與口語節奏（非動畫台詞）', soon: true },
 ];
 
 export default function Home() {

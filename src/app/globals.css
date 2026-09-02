@@ -1792,6 +1792,47 @@ ruby rt {
    lesson start expanded (the ones mid-progress); untouched or fully
    finished categories start collapsed. ── */
 
+.culture-category {
+  margin-top: 1.6rem;
+}
+
+.culture-category-title {
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ai);
+  margin-bottom: 0.6rem;
+}
+
+.culture-note-acc {
+  padding: 0.85rem 0.9rem;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+
+.culture-note-acc + .culture-note-acc {
+  margin-top: 0.5rem;
+}
+
+.culture-note-summary {
+  cursor: pointer;
+  font-family: var(--font-zh), sans-serif;
+  font-weight: 600;
+}
+
+.culture-note-body {
+  margin-top: 0.6rem;
+  font-family: var(--font-zh), sans-serif;
+  font-size: var(--fs-sm);
+  line-height: 1.85;
+  color: var(--zh);
+}
+
+.culture-note-body p + p {
+  margin-top: 0.7rem;
+}
+
 .grammar-category-acc {
   margin-top: 1.4rem;
   padding-top: 1.4rem;
