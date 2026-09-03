@@ -37,6 +37,10 @@ export const metadata = {
     title: 'Nihongo Journey',
     statusBarStyle: 'black-translucent',
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export const viewport = {
