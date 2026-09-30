@@ -63,6 +63,7 @@ export function playAudioOrSpeak({ url, text, lang = 'ja-JP', rate = 1, onStart,
     window.speechSynthesis?.cancel();
     stopCurrentAudio();
     const audio = new Audio(withBasePath(url));
+    audio.playbackRate = rate || 1;
     currentAudio = audio;
     audio.onplay = () => onStart?.();
     audio.onended = finish;

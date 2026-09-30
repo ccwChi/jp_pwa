@@ -7,6 +7,7 @@ import { parseFurigana, readingOf } from '@/lib/reading/furigana';
 import { playAudioOrSpeak, stopAllPlayback } from '@/lib/audio/playback';
 import {
   setProgress,
+  recordQuestionAttempt,
   setRead,
   useReadSet,
   useFontScale,
@@ -349,7 +350,7 @@ export default function ArticleDetailClient({ id }) {
         </section>
       )}
 
-      {tab === '閱讀測驗' && <QuizTab quiz={article.quiz} />}
+      {tab === '閱讀測驗' && <QuizTab key={article.id} articleId={article.id} quiz={article.quiz} />}
 
       {tab === '重點單字' && (
         <div className="vocab-list">
@@ -836,11 +837,12 @@ function PartNav({ article }) {
   );
 }
 
-function QuizTab({ quiz }) {
+function QuizTab({ quiz, articleId }) {
   const [answers, setAnswers] = useState({});
 
   function choose(qIndex, optIndex) {
     if (answers[qIndex] !== undefined) return;
+    recordQuestionAttempt(`reading:${articleId}:${qIndex}`, optIndex === quiz[qIndex].answerIndex);
     setAnswers(prev => ({ ...prev, [qIndex]: optIndex }));
   }
 
@@ -872,6 +874,8 @@ function QuizTab({ quiz }) {
                 );
               })}
             </div>
+            {answered && q.explanation && <p className="journey-feedback" role="status">{q.explanation}</p>}
+            {answered && <button className="btn" onClick={() => setAnswers(previous => { const next = { ...previous }; delete next[qi]; return next; })}>遮住答案再試一次</button>}
           </div>
         );
       })}

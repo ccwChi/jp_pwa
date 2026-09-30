@@ -4,9 +4,11 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { getBankItems, TYPES } from '@/lib/practice/bank';
 import { labelForType } from '@/lib/practice/bank/typeLabels';
-import { parseFurigana } from '@/lib/reading/furigana';
+import { isPlayable, prepareQuestion, shuffle } from '@/lib/practice/session';
+import PracticeQuestion from '../PracticeQuestion';
 import { isLevelUnlocked } from '@/lib/entitlements';
 import {
+  useQuestionAttempts,
   setPracticeGeneralLevel,
   usePracticeGeneralLevel,
   setPracticeGeneralTypes,
@@ -16,44 +18,39 @@ import {
 const SESSION_SIZE = 10;
 const allLevels = [...new Set(getBankItems().map(i => i.level))].sort();
 
-function renderRuby(text, keyPrefix) {
-  return parseFurigana(text).map((p, i) =>
-    p.reading ? (
-      <ruby key={`${keyPrefix}-${i}`}>{p.text}<rt>{p.reading}</rt></ruby>
-    ) : (
-      <span key={`${keyPrefix}-${i}`}>{p.text}</span>
-    )
-  );
-}
-
-function drawSession(level, types) {
+function drawSession(level, types, attempts, reviewOnly) {
   const pool = getBankItems({ level, types: types.length > 0 ? types : undefined })
-    .filter(item => item.meaning);
-  const shuffled = [...pool].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, SESSION_SIZE);
+    .filter(isPlayable).filter(item => !reviewOnly || attempts[item.id]?.needsPractice);
+  return shuffle(pool).slice(0, SESSION_SIZE).map(item => prepareQuestion(item));
 }
 
-function QuizSession({ level, types, onExit }) {
-  const [slots, setSlots] = useState(() => drawSession(level, types));
+function QuizSession({ level, types, onExit, attempts, reviewOnly }) {
+  const [slots, setSlots] = useState(() => drawSession(level, types, attempts, reviewOnly));
   const [answers, setAnswers] = useState({});
+  const [round, setRound] = useState(0);
 
   const total = slots.length;
   const answeredCount = Object.keys(answers).length;
   const allAnswered = total > 0 && answeredCount === total;
-  const correctCount = slots.filter((item, i) => answers[i] === item.meaning.answerIndex).length;
+  const correctCount = slots.filter((item, i) => answers[i] === true).length;
 
   function choose(index, optionIndex) {
-    if (answers[index] !== undefined) return;
-    setAnswers(prev => ({ ...prev, [index]: optionIndex }));
+    setAnswers(prev => {
+      const next = { ...prev };
+      if (optionIndex === null) delete next[index];
+      else next[index] = optionIndex;
+      return next;
+    });
   }
 
   function redraw() {
-    setSlots(drawSession(level, types));
+    setSlots(drawSession(level, types, attempts, reviewOnly));
     setAnswers({});
+    setRound(value => value + 1);
   }
 
   if (total === 0) {
-    return <p className="empty-hint">這個程度／題型組合目前沒有可用的題目，換個選項試試。</p>;
+    return <><p className="empty-hint">這個範圍目前沒有可練習的題目。</p><button className="btn" onClick={onExit}>← 重新選擇</button></>;
   }
 
   return (
@@ -65,57 +62,25 @@ function QuizSession({ level, types, onExit }) {
         </div>
       </div>
 
-      <div className="quiz-list">
-        {slots.map((item, i) => {
-          const chosen = answers[i];
-          const answered = chosen !== undefined;
-          return (
-            <div className="quiz-item" key={`${item.id}-${i}`}>
-              {item.jp && (
-                <>
-                  <p className="practice-sentence-jp">{renderRuby(item.jp, `${i}-jp`)}</p>
-                  {item.zh && <p className="grammar-example-zh">{item.zh}</p>}
-                </>
-              )}
-              <p className="quiz-question">{item.meaning.prompt}</p>
-              <div className={`quiz-options${item.meaning.options.every(o => o.length <= 6) ? ' short' : ''}`}>
-                {item.meaning.options.map((opt, oi) => {
-                  let state = '';
-                  if (answered) {
-                    if (oi === item.meaning.answerIndex) state = 'correct';
-                    else if (oi === chosen) state = 'wrong';
-                  }
-                  return (
-                    <button
-                      key={oi}
-                      className={`quiz-option${state ? ` ${state}` : ''}`}
-                      onClick={() => choose(i, oi)}
-                      disabled={answered}
-                    >
-                      {opt}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <div className="quiz-list">{slots.map((item, i) => <PracticeQuestion key={`${round}-${item.id}`} item={item} onAnswer={correct => choose(i, correct)} />)}</div>
 
       {allAnswered && (
         <div className="practice-complete">
-          <p className="practice-complete-score">完成！答對 {correctCount} / {total} 題。</p>
+          <p className="practice-complete-score">完成！目前答對 {correctCount} / {total} 題（含重試）。</p>
           <div className="practice-complete-actions">
             <button type="button" className="btn" onClick={redraw}>換一組 →</button>
             <button type="button" className="btn" onClick={onExit}>← 重新選擇程度／題型</button>
           </div>
         </div>
       )}
+      {!allAnswered && <button type="button" className="btn" onClick={onExit}>← 回到選題（作答紀錄已保存）</button>}
     </>
   );
 }
 
 export default function PracticeGeneralPage() {
+  const attempts = useQuestionAttempts();
+  const [reviewOnly, setReviewOnly] = useState(false);
   const storedLevel = usePracticeGeneralLevel();
   const defaultLevel = allLevels.includes('N5') ? 'N5' : (allLevels[0] || 'N5');
   const activeLevel = storedLevel && allLevels.includes(storedLevel) && isLevelUnlocked(storedLevel)
@@ -125,7 +90,7 @@ export default function PracticeGeneralPage() {
   const [started, setStarted] = useState(false);
 
   const availableTypes = TYPES.filter(type =>
-    getBankItems({ level: activeLevel, type }).some(item => item.meaning)
+    getBankItems({ level: activeLevel, type }).some(isPlayable)
   );
 
   function toggleType(type) {
@@ -136,6 +101,7 @@ export default function PracticeGeneralPage() {
   }
 
   function changeLevel(level) {
+    setPracticeGeneralTypes([]);
     setPracticeGeneralLevel(level);
     setStarted(false);
   }
@@ -149,6 +115,7 @@ export default function PracticeGeneralPage() {
       <h1 className="page-title">一般練習</h1>
       <p className="row-meta">選程度與題型（可複選，不選代表不限題型），隨機抽 {SESSION_SIZE} 題練習。</p>
 
+      {!started && <label className="read-toggle"><input type="checkbox" checked={reviewOnly} onChange={e => setReviewOnly(e.target.checked)} />再試一次：只練習之前答錯的題目</label>}
       {!started && (
         <>
           <div className="tag-filter">
@@ -189,7 +156,7 @@ export default function PracticeGeneralPage() {
       )}
 
       {started && (
-        <QuizSession level={activeLevel} types={selectedTypes} onExit={() => setStarted(false)} />
+        <QuizSession attempts={attempts} reviewOnly={reviewOnly} level={activeLevel} types={selectedTypes} onExit={() => setStarted(false)} />
       )}
     </main>
   );

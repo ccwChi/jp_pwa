@@ -27,7 +27,7 @@ export default function GrammarLessonsPage() {
       </div>
 
       <h1 className="page-title">文法學習</h1>
-      <p className="row-meta">已學習 {readCount} / {total}</p>
+      <p className="row-meta">已看過 {readCount} / {total}</p>
 
       <div className="grammar-list-sticky">
         <div className="article-tabs">
@@ -75,7 +75,7 @@ export default function GrammarLessonsPage() {
               <span className="grammar-category-summary-left">
                 <span className="grammar-category-chevron" aria-hidden="true">▸</span>
                 <span className="grammar-category-heading">{category}</span>
-                <span className="grammar-category-count">{items.length} 點・已學 {catReadCount}</span>
+                <span className="grammar-category-count">{items.length} 點・已看 {catReadCount}</span>
               </span>
               <span className="grammar-category-summary-right">
                 <span className="grammar-category-bar">
@@ -107,7 +107,7 @@ export default function GrammarLessonsPage() {
                       <div className="desc">{lesson.meaning}</div>
                     </div>
                     <div className="grammar-check-badges">
-                      <span className={`grammar-check-badge${read ? ' done' : ''}`} title="已學習">讀</span>
+                      <span className={`grammar-check-badge${read ? ' done' : ''}`} title="已看過">讀</span>
                     </div>
                   </Link>
                 );

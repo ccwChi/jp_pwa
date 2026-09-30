@@ -423,6 +423,26 @@ export function setTheme(value) {
 
 export const useTheme = themeStore.useValue;
 
+// Persistent, untimed journeys. Included automatically in full backups.
+const journeyStore = createStore('nj_journeys', {});
+export const useJourneyProgress = journeyStore.useValue;
+export function saveJourneyProgress(id, patch) {
+  const all = journeyStore.get();
+  journeyStore.set({ ...all, [id]: { ...all[id], ...patch, updatedAt: Date.now() } });
+}
+
+const attemptsStore = createStore('nj_question_attempts', {});
+export const useQuestionAttempts = attemptsStore.useValue;
+export function recordQuestionAttempt(id, correct) {
+  const all = attemptsStore.get();
+  const previous = all[id] || {};
+  attemptsStore.set({ ...all, [id]: {
+    attempts: (previous.attempts || 0) + 1,
+    mistakes: (previous.mistakes || 0) + (correct ? 0 : 1),
+    needsPractice: !correct, updatedAt: Date.now(),
+  } });
+}
+
 // ── Import draft: autosaved in-progress state for the long-article import
 // tool (src/app/reading/import). Single slot, no subscribers — the import
 // tool reads it once on mount, so this skips the createStore/useSyncExternalStore

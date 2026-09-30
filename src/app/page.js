@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import JourneyShelf from './journey/JourneyShelf';
 
 const features = [
   { num: '一', name: '文章閱讀', desc: '逐句假名注音與翻譯，附閱讀測驗與文法整理', href: '/reading', accent: 'ai' },
@@ -14,6 +15,8 @@ export default function Home() {
   return (
     <main className="container">
       <div className="mark">NIHONGO JOURNEY</div>
+      <JourneyShelf />
+      <h2 className="journey-library-title">隨便逛逛</h2>
 
       <div className="rows">
         {features.map(f => {

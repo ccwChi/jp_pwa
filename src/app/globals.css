@@ -27,6 +27,43 @@
   --fs-3xl:  2.6rem;   /* hero pattern (grammar detail page) */
 }
 
+/* Open-ended journeys use the same paper and ink palette as the reading room. */
+.journey-shelf { margin-bottom: 3rem; }
+.journey-eyebrow { color: var(--seal); font-size: var(--fs-xs); letter-spacing: .12em; margin: 1rem 0; }
+.journey-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.6rem 0; }
+.journey-card { display: flex; flex-direction: column; gap: 1rem; color: var(--ink); text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 1.6rem; transition: border-color .2s, transform .2s; }
+.journey-card:hover { border-color: var(--seal); transform: translateY(-3px); }
+.journey-card h2 { font-size: var(--fs-xl); font-weight: 500; }
+.journey-card p { color: var(--sub); flex: 1; }
+.journey-card strong { color: var(--ai); font-size: var(--fs-sm); }
+.journey-resume { display: block; padding: 1rem 1.3rem; margin-top: 1.5rem; border-left: 3px solid var(--seal); background: var(--surface); color: var(--ink); text-decoration: none; }
+.journey-library-title { font-size: var(--fs-lg); margin-bottom: 1rem; }
+.journey-stage-nav, .journey-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; margin: 1rem 0; }
+.journey-goal { color: var(--sub); font-size: var(--fs-md); }
+.journey-step-label { border-bottom: 1px solid var(--line); margin: 2rem 0 1rem; padding-bottom: .7rem; color: var(--seal); }
+.journey-dialogue { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: .5rem 1.5rem; margin: 1rem 0; }
+.journey-line { padding: .75rem 0 1.2rem; border-bottom: 1px solid var(--line); }
+.journey-line:last-child { border-bottom: 0; }
+.journey-line .practice-sentence-jp { line-height: 2.5; }
+.journey-help { margin: 1.4rem 0; padding: 1rem; border: 1px solid var(--line); border-radius: 10px; }
+.journey-help summary { cursor: pointer; color: var(--ai); }
+.journey-help p { margin-top: .8rem; }
+.journey-feedback { margin-top: 1rem; padding: 1rem; border-left: 3px solid var(--ai); background: var(--surface); }
+.journey-feedback p { margin-bottom: .7rem; }
+.journey-complete { padding: 1.5rem; border: 1px solid var(--good); border-radius: 14px; background: var(--surface); }
+.journey-complete h2 { font-size: var(--fs-lg); margin-bottom: 1rem; }
+.journey-player button:disabled { cursor: default; }
+.journey-player .btn:disabled { opacity: .5; }
+.quiz-question { white-space: pre-wrap; }
+:is(.journey-card, .journey-resume, .journey-player button):focus-visible { outline: 3px solid var(--ai); outline-offset: 4px; }
+@media (max-width: 600px) {
+  .journey-grid { grid-template-columns: 1fr; }
+  .journey-card { padding: 1.2rem; }
+  .journey-dialogue { padding: .5rem 1rem; }
+  .journey-stage-nav .chip { white-space: normal; text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) { .journey-card { transition: none; } .journey-card:hover { transform: none; } }
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg:      #1c1a16;

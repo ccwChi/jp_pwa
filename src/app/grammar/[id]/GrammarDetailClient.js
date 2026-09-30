@@ -4,6 +4,8 @@ import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { hasQuizFor, pickBankItem } from '@/lib/practice/bank';
+import PracticeQuestion from '../../practice/PracticeQuestion';
+import { prepareQuestion } from '@/lib/practice/session';
 import { getLesson, getAdjacentLessons } from '@/lib/grammar/lessons';
 import { parseFurigana, readingOf } from '@/lib/reading/furigana';
 import { setGrammarRead, useGrammarReadSet, useSpeechRate } from '@/lib/storage';
@@ -37,7 +39,7 @@ export default function GrammarDetailClient({ id }) {
             checked={read}
             onChange={e => setGrammarRead(lesson.id, e.target.checked)}
           />
-          標記已學習
+          標記已看過
         </label>
       </div>
 
@@ -79,7 +81,7 @@ export default function GrammarDetailClient({ id }) {
       {hasQuizFor(lesson.id) && (
         <>
           <div className="grammar-section-label">練習</div>
-          <QuizTab lessonId={lesson.id} />
+          <QuizTab key={lesson.id} lessonId={lesson.id} />
         </>
       )}
 
@@ -177,52 +179,8 @@ function renderStructure(text) {
 // static export's HTML at build time and every visitor would see the same
 // "random" pick.
 function QuizTabInner({ lessonId }) {
-  const [item] = useState(() => pickBankItem({ pointId: lessonId, requireJp: false }));
-  const [answers, setAnswers] = useState({});
-
-  if (!item?.meaning) return null;
-  const quiz = [item.meaning];
-
-  function choose(qIndex, optIndex) {
-    if (answers[qIndex] !== undefined) return;
-    const next = { ...answers, [qIndex]: optIndex };
-    setAnswers(next);
-    if (Object.keys(next).length === quiz.length) setGrammarRead(lessonId, true);
-  }
-
-  return (
-    <div className="quiz-list">
-      {quiz.map((q, qi) => {
-        const chosen = answers[qi];
-        const answered = chosen !== undefined;
-
-        return (
-          <div className="quiz-item" key={qi}>
-            <p className="quiz-question">{q.prompt}</p>
-            <div className={`quiz-options${q.options.every(o => o.length <= 6) ? ' short' : ''}`}>
-              {q.options.map((opt, oi) => {
-                let state = '';
-                if (answered) {
-                  if (oi === q.answerIndex) state = 'correct';
-                  else if (oi === chosen) state = 'wrong';
-                }
-                return (
-                  <button
-                    key={oi}
-                    className={`quiz-option${state ? ` ${state}` : ''}`}
-                    onClick={() => choose(qi, oi)}
-                    disabled={answered}
-                  >
-                    {opt}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
+  const [item] = useState(() => prepareQuestion(pickBankItem({ pointId: lessonId, requireJp: false })));
+  return item ? <PracticeQuestion item={item} /> : null;
 }
 
 const QuizTab = dynamic(() => Promise.resolve(QuizTabInner), {
