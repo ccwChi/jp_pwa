@@ -1,5 +1,10 @@
-// Original introductory content. Level labels describe the intended learning range.
+import gon from './stories/gon.js';
+import kumo from './stories/kumo.js';
+
+// Level labels describe the intended learning range, not official JLPT grading.
 export const journeys = [
+  gon,
+  kumo,
   {
     id: 'konbini', title: '便利商店買晚餐', kind: '情境', level: 'N5–N4 入門',
     description: '從找便當到結帳，聽懂店員的問題，說出自己的選擇。',

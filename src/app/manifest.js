@@ -8,8 +8,8 @@ export default function manifest() {
     description: 'AI配的描述都在羞恥play',
     start_url: `${basePath}/`,
     display: 'standalone',
-    background_color: '#e9e5d8',
-    theme_color: '#a83c2b',
+    background_color: '#f4f8f7',
+    theme_color: '#14766b',
     lang: 'zh-TW',
     icons: [
       { src: `${basePath}/icon-192`, sizes: '192x192', type: 'image/png', purpose: 'any' },

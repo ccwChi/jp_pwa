@@ -1,17 +1,20 @@
 :root {
-  /* ── 日式留白 (Washi / Ma) ── */
-  --bg:      #e9e5d8;
-  --surface: #f6f3ea;
-  --ink:     #242220;
-  --sub:     #5c584e;
-  --line:    rgba(36, 34, 32, 0.16);
-  --seal:    #a83c2b;
-  --ai:      #2f4a5c;
-  --good:    #4a7a5f;
+  /* Quiet greens, clear reading surfaces, and a small warm accent. */
+  --bg:      #f4f8f7;
+  --surface: #ffffff;
+  --ink:     #203735;
+  --sub:     #536b67;
+  --line:    rgba(31, 80, 72, 0.18);
+  --seal:    #ad4938;
+  --ai:      #14766b;
+  --good:    #287748;
 
   --transition: 0.2s ease;
   --font-scale: 1;
-  --zh:      #3a362f;
+  --zh:      #3e5751;
+  --tint:    #e6f3ed;
+  --on-accent: #ffffff;
+  color-scheme: light;
 
   /* ── type scale: every font-size in this file should reference one of
      these instead of a one-off rem value. Floor is 0.8rem — below that,
@@ -66,40 +69,49 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg:      #1c1a16;
-    --surface: #302b1e;
-    --ink:     #ece7da;
-    --sub:     #c3bcaa;
-    --line:    rgba(236, 231, 218, 0.24);
-    --seal:    #ff8a54;
-    --ai:      #4fb8ea;
-    --good:    #3fcf82;
-    --zh:      #d9d4c5;
+    --bg:      #142322;
+    --surface: #1e3230;
+    --ink:     #e8f3ef;
+    --sub:     #acc5be;
+    --line:    rgba(190, 225, 213, 0.22);
+    --seal:    #f1a38e;
+    --ai:      #79d1bd;
+    --good:    #99d0a8;
+    --zh:      #c2d8d0;
+    --tint:    #243f38;
+    --on-accent: #142322;
+    color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg:      #1c1a16;
-  --surface: #302b1e;
-  --ink:     #ece7da;
-  --sub:     #c3bcaa;
-  --line:    rgba(236, 231, 218, 0.24);
-  --seal:    #ff8a54;
-  --ai:      #4fb8ea;
-  --good:    #3fcf82;
-  --zh:      #d9d4c5;
+  --bg:      #142322;
+  --surface: #1e3230;
+  --ink:     #e8f3ef;
+  --sub:     #acc5be;
+  --line:    rgba(190, 225, 213, 0.22);
+  --seal:    #f1a38e;
+  --ai:      #79d1bd;
+  --good:    #99d0a8;
+  --zh:      #c2d8d0;
+  --tint:    #243f38;
+  --on-accent: #142322;
+  color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --bg:      #e9e5d8;
-  --surface: #f6f3ea;
-  --ink:     #242220;
-  --sub:     #5c584e;
-  --line:    rgba(36, 34, 32, 0.16);
-  --seal:    #a83c2b;
-  --ai:      #2f4a5c;
-  --good:    #4a7a5f;
-  --zh:      #3a362f;
+  --bg:      #f4f8f7;
+  --surface: #ffffff;
+  --ink:     #203735;
+  --sub:     #536b67;
+  --line:    rgba(31, 80, 72, 0.18);
+  --seal:    #ad4938;
+  --ai:      #14766b;
+  --good:    #287748;
+  --zh:      #3e5751;
+  --tint:    #e6f3ed;
+  --on-accent: #ffffff;
+  color-scheme: light;
 }
 
 * {
@@ -369,7 +381,7 @@ a.row {
 /* the one filled button a page is allowed — reserve it for that page's
    single most important action, everything else stays outlined */
 .btn-primary {
-  color: var(--bg);
+  color: var(--on-accent);
   background: var(--ai);
   border-color: var(--ai);
   font-weight: 600;
@@ -1749,11 +1761,13 @@ ruby rt {
 .quiz-option.correct {
   border-color: var(--good);
   color: var(--good);
+  background: color-mix(in srgb, var(--good) 8%, var(--surface));
 }
 
 .quiz-option.wrong {
   border-color: var(--seal);
   color: var(--seal);
+  background: color-mix(in srgb, var(--seal) 8%, var(--surface));
 }
 
 .quiz-option.selected {
@@ -3066,7 +3080,7 @@ a.practice-set-card {
 }
 
 .import-warning {
-  background: rgba(168, 60, 43, 0.08);
+  background: color-mix(in srgb, var(--seal) 8%, transparent);
   border: 1px solid var(--seal);
   border-radius: 4px;
   padding: 1rem;
@@ -3135,3 +3149,15 @@ a.practice-set-card {
 :root[data-theme="light"] .theme-toggle-icon-moon {
   display: inline;
 }
+/* Story curriculum: a clear next action and a readable chapter map. */
+.story-next { margin: 24px 0; padding: clamp(20px, 4vw, 36px); border: 1px solid color-mix(in srgb, var(--ai) 30%, var(--line)); border-left: 4px solid var(--ai); border-radius: 16px; background: var(--tint); }
+.story-next h2 { margin: 12px 0; font-size: var(--fs-xl); }
+.story-next p { line-height: 1.8; }
+.journey-shelf .page-title { text-wrap: balance; }
+.story-progress { display: block; width: 100%; height: 8px; accent-color: var(--ai); margin: 12px 0 20px; }
+.journey-stage-nav .chip:disabled { opacity: .5; cursor: not-allowed; }
+.story-full-text section { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.story-full-text .practice-sentence-jp { line-height: 2.4; }
+.story-source { margin-top: 28px; font-size: var(--fs-2xs); line-height: 1.8; color: var(--sub); overflow-wrap: anywhere; }
+.story-source a { color: var(--ai); text-underline-offset: .2em; }
+::selection { background: color-mix(in srgb, var(--ai) 22%, var(--surface)); color: var(--ink); }
